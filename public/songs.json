@@ -1,0 +1,243 @@
+{
+    "albums": [
+      {
+        "artist": "Tyler the Creator",
+        "album": "Wolf",
+        "folder": "tylerthecreator/wolf",
+        "cover": "https://cdn.sillyangel.me/songs/tylerthecreator/wolf/albumcover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "Tyler the Creator",
+        "album": "Flower Boy",
+        "folder": "tylerthecreator/flowerboy",
+        "cover": "https://cdn.sillyangel.me/songs/tylerthecreator/flowerboy/albumcover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "Tyler the Creator",
+        "album": "Igor",
+        "folder": "tylerthecreator/igor",
+        "cover": "https://cdn.sillyangel.me/songs/tylerthecreator/igor/igorcover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "Tyler the Creator",
+        "album": "Cherry Bomb",
+        "folder": "tylerthecreator/cherrybomb",
+        "cover": "https://cdn.sillyangel.me/songs/tylerthecreator/cherrybomb/cherrybomb.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "Tyler the Creator",
+        "album": "Goblin",
+        "folder": "tylerthecreator/goblin",
+        "cover": "https://cdn.sillyangel.me/songs/tylerthecreator/goblin/Goblincover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "Tyler the Creator",
+        "album": "Bastard",
+        "folder": "tylerthecreator/bas",
+        "cover": "https://cdn.sillyangel.me/songs/tylerthecreator/bas/bas.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "Arctic Monkeys",
+        "album": "AM",
+        "folder": "arcticmonkeys/am",
+        "cover": "https://cdn.sillyangel.me/songs/arcticmonkeys/am/albumcover.webp",
+        "explicit": "false"
+      },
+      {
+        "artist": "Arctic Monkeys",
+        "album": "Humbug",
+        "folder": "arcticmonkeys/humbug",
+        "cover": "https://cdn.sillyangel.me/songs/arcticmonkeys/humbug/albumcover.webp",
+        "explicit": "false"
+      },
+      {
+        "artist": "Arctic Monkeys",
+        "album": "WPSIATWIN",
+        "folder": "arcticmonkeys/wpsiatwin",
+        "cover": "https://cdn.sillyangel.me/songs/arcticmonkeys/wpsiatwin/albumcover.webp",
+        "explicit": "false"
+      },
+      {
+        "artist": "Arctic Monkeys",
+        "album": "Favourite Worst Nightmare",
+        "folder": "arcticmonkeys/fwn",
+        "cover": "https://cdn.sillyangel.me/songs/arcticmonkeys/fwn/albumcover.webp",
+        "explicit": "false"
+      },
+      {
+        "artist": "Arctic Monkeys",
+        "album": "Suck It and See",
+        "folder": "arcticmonkeys/sias",
+        "cover": "https://cdn.sillyangel.me/songs/arcticmonkeys/sias/albumcover.webp",
+        "explicit": "false"
+      },
+      {
+        "artist": "Arctic Monkeys",
+        "album": "Tranquility Base Hotel & Casino",
+        "folder": "arcticmonkeys/tbhc",
+        "cover": "https://cdn.sillyangel.me/songs/arcticmonkeys/tbhc/albumcover.webp",
+        "explicit": "false"
+      },
+      {
+        "artist": "Arctic Monkeys",
+        "album": "The Car",
+        "folder": "arcticmonkeys/car",
+        "cover": "https://cdn.sillyangel.me/songs/arcticmonkeys/car/albumcover.webp",
+        "explicit": "false"
+      },
+      {
+        "artist": "Wallows",
+        "album": "Nothing Happens",
+        "folder": "wallows/nonthinghappens",
+        "cover": "https://cdn.sillyangel.me/songs/wallows/nonthinghappens/albumcover.webp",
+        "explicit": "false"
+      },
+      {
+        "artist": "Melanie Martinez",
+        "album": "Crybaby",
+        "folder": "melanie/crybaby",
+        "cover": "https://cdn.sillyangel.me/songs/melanie/crybaby/albumcover.webp",
+        "explicit": "false"
+      },
+      {
+        "artist": "Melanie Martinez",
+        "album": "K-12",
+        "folder": "melanie/k12",
+        "cover": "https://cdn.sillyangel.me/songs/melanie/k12/albumcover.webp",
+        "explicit": "false"
+      },
+      {
+        "artist": "Melanie Martinez",
+        "album": "Portals",
+        "folder": "melanie/portals",
+        "cover": "https://cdn.sillyangel.me/songs/melanie/portals/albumcover.webp",
+        "explicit": "false"
+      },
+      {
+        "artist": "The weeknd",
+        "album": "Kiss Land",
+        "folder": "theweekend/kissland",
+        "cover": "https://cdn.sillyangel.me/songs/theweekend/kissland/albumcover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "The weeknd",
+        "album": "Beauty Behind the Madness",
+        "folder": "theweekend/bbtm",
+        "cover": "https://cdn.sillyangel.me/songs/theweekend/bbtm/albumcover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "The weeknd",
+        "album": "starboy",
+        "folder": "theweekend/starboy",
+        "cover": "https://cdn.sillyangel.me/songs/theweekend/starboy/albumcover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "The weeknd",
+        "album": "Afterhours",
+        "folder": "theweekend/afterhours",
+        "cover": "https://cdn.sillyangel.me/songs/theweekend/afterhours/albumcover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "The weeknd",
+        "album": "Dawnfm",
+        "folder": "theweekend/dawnfm",
+        "cover": "https://cdn.sillyangel.me/songs/theweekend/dawnfm/albumcover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "Laufey",
+        "album": "Bewitched",
+        "folder": "laufey/bewitched",
+        "cover": "https://cdn.sillyangel.me/songs/laufey/bewitched/albumcover.webp",
+        "explicit": "false"
+      },
+      {
+        "artist": "Laufey",
+        "album": "Everything I Know About Love",
+        "folder": "laufey/eikal",
+        "cover": "https://cdn.sillyangel.me/songs/laufey/eikal/albumcover.webp",
+        "explicit": "false"
+      },
+      {
+        "artist": "Roddy Ricch",
+        "album": "Life Lives Fast",
+        "folder": "rr/llf",
+        "cover": "https://cdn.sillyangel.me/songs/rr/llf/albumcover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "Roddy Ricch",
+        "album": "Please Excuse Me for Being Antisocial",
+        "folder": "rr/pemfba",
+        "cover": "https://cdn.sillyangel.me/songs/rr/pemfba/albumcover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "Lemon Demon",
+        "album": "Spirit Phone",
+        "folder": "ld/sp",
+        "cover": "https://cdn.sillyangel.me/songs/ld/sp/albumcover.webp",
+        "explicit": "false"
+      },
+      {
+        "artist": "Lemon Demon",
+        "album": "Clown",
+        "folder": "ld/cc",
+        "cover": "https://cdn.sillyangel.me/songs/ld/cc/albumcover.webp",
+        "explicit": "false"
+      },
+      {
+        "artist": "Kanye West",
+        "album": "My Beautiful Dark Twisted Fantasy",
+        "folder": "kanyewest/mbdtf",
+        "cover": "https://cdn.sillyangel.me/songs/kanyewest/mbdtf/albumcover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "Kanye West",
+        "album": "Yeezus",
+        "folder": "kanyewest/yeezus",
+        "cover": "https://cdn.sillyangel.me/songs/kanyewest/yeezus/Cover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "Kanye West",
+        "album": "Ye",
+        "folder": "kanyewest/ye",
+        "cover": "https://cdn.sillyangel.me/songs/kanyewest/ye/Cover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "Kanye West",
+        "album": "Jesus Is King",
+        "folder": "kanyewest/jesusisking",
+        "cover": "https://cdn.sillyangel.me/songs/kanyewest/jesusisking/Cover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "Kanye West",
+        "album": "Donda",
+        "folder": "kanyewest/donda",
+        "cover": "https://cdn.sillyangel.me/songs/kanyewest/donda/cover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "Kanye West",
+        "album": "Donda 2",
+        "folder": "kanyewest/donda2",
+        "cover": "https://cdn.sillyangel.me/songs/kanyewest/donda2/",
+        "explicit": "true"
+      }
+    ]
+  }
+  
