@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>‎</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="./assets/nonealbum.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfhO68oAAAAAH-9cGAU4C9VEZHm0gzxXmS0ubbw"></script>
+    <script defer src="./ipcfun.js"></script>
+    <link rel="stylesheet" href="toast.css">
+    </head>
+<body>
+  <div id="snackbar"></div>
+  <div class="topBar">
+    <div class="titleBar">
+        <div id="title">
+          Music Player
+        </div>
+      </div>
+      <div class="titleBarBtns">
+        <button aria-label="Minimize" class="topBtn minimizebtn" id="minimizebtn"><i class="fas fa-window-minimize" style="color: #ffffff;"></i></button>
+        <button aria-label="Maximize" class="topBtn maximizebtn" id="maximizebtn"><i class="fas fa-window-maximize" style="color: #ffffff;"></i></button>
+        <button aria-label="Close" class="topBtn closebtn" id="closebtn"><i class="fas fa-times" style="color: #ffffff;"></i></button>
+    </div>
+  </div>
+            <div class="sidebarmen">
+              <img src="./assets/nonealbum.png" alt="main image icon" width="50px" height="50px">
+              <br>
+                          <br>
+                                      <br>
+              <br>
+              <ul>
+                  <li><button aria-label="Account Menu/button" id="accountmainbutton" onclick="switchthingy('user')"><i class="fa-regular fa-user" style="color: #ffffff;"></i></button></li>
+                  <li><button aria-label="Search" onclick="switchthingy('search')"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i> </button></li>
+                  <li><button aria-label="Home" onclick="switchthingy('hom')"><i class="fa-solid fa-house" style="color: #ffffff;"></i> </button></li>
+                  <li><button aria-label="Library" onclick="switchthingy('lil')"><i class="fa-solid fa-lines-leaning" style="color: #ffffff;"></i> </button></li>
+              </ul>
+          </div>
+          <div id="accountsettings" style="display: none;">
+            <h2>Account Settings</h2>
+            <input id="displayname" type="text" placeholder="Display Name / Username">
+            <input id="PhotoUrl" type="url" placeholder="Photo Url">
+          <button id="logout-button">Logout</button>
+          <button id="savebutton">Save Settings</button>
+            </div>
+          <div id="songselector">
+            <h2>Home</h2>
+            <div id="user">
+              <i class="fas fa-user"></i>
+              <span id="username">Not Logged In</span>
+            </div>
+            <div id="farts">
+            </div>
+            <br>
+            <footer>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScymP9oW3nYbjWESJlCYK5EWa3NrnmfbCi7DXRjXkczjVB60g/viewform">Request a artist</a>
+              </footer>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
+          <div style="display: none;" id="searching">
+            <h2>Search</h2>
+            <input type="text" id="myInput" onkeyup="searchfunction()" placeholder="Search for songs">
+            <ul id="list-holder">
+            </ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+          </div>
+          <div style="display: none;" id="lilbrary">
+            <h2>Your Library</h2>
+            <span>
+            <button type="submit" id="createplaylist"><img src="assets/addplaylist.png" alt="createa playlist" width="120px" height="120px"></button>
+            <div id="playlistContainer">
+            </div>
+            </span>
+          </div>
+        </div>
+          <div style="display: none;" id="mlogin">
+            <h2>Account Login</h2>
+        <div class="container">
+          <div class="lisuf">
+          <div id="login">
+              <h3>Login</h3>
+              <form id="login-form">
+                  <input type="email" id="login-email" placeholder="Email" required>
+                  <input type="password" id="login-password" placeholder="Password" required>
+                  <button type="submit">Login</button>
+              </form>
+          </div>
+          <div id="signup">
+              <h3>Sign Up</h3>
+              <form id="signup-form">
+                  <input type="email" id="signup-email" placeholder="Email" required>
+                  <input type="password" id="signup-password" placeholder="Password" required>
+                  <button type="submit">Sign Up</button>
+              </form>
+          </div><br>
+          <div id="oauthgi">
+            <button id="githubuttonlogin"><i class="fa-brands fa-github" style="color: #ffffff;"></i></button>
+            </div>
+          <div id="forgotrest">
+            <h3>Forgot Password?</h3>
+            <form id="reset-form">
+              <input type="email" id="reset-email" placeholder="Email to reset" required>
+              <button id="resetbutton" type="submit">Send reset email</button>
+              </form> 
+          </div>
+          </div>
+          This site is protected by reCAPTCHA and the Google
+      <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+      <a href="https://policies.google.com/terms">Terms of Service</a> apply. 
+      <br><br><br><br><br><br><br><br><br>
+      </div>
+      </div>
+    <div class="audio-controls">
+          <div class="album-cover">
+              <img id="albumCover" src="https://" alt="Album Cover" width="60px" height="60px">
+          </div>
+            <div class="currentTrack"> </div>
+              <button aria-label="Back" onclick="previousTrack()"><i class="fas fa-backward"></i></button>
+              <button aria-label="Play/Pause" id="playbuttonthung" onclick="playPause()"><i class="fas fa-play"></i></button>
+              <button aria-label="Skip Track" onclick="skipTrack()"><i class="fas fa-forward"></i></button>
+              <input type="range" id="volume" min="0" max="1" step="0.01" onchange="setVolume()">
+              <div id="songTime">0:00</div>
+              <progress id="progress" value="0" max="100" onclick="seek(event)"></progress>
+              <div id="songDuration">0:00</div>
+          </div>
+      <audio id="myAudio" controls>
+          Your browser does not support the audio element.
+      </audio>
+  <script type="module" src="./dist/bundle.js"></script>
+  
+  </body>
+  <script src="main.js"></script>
+  
+  
+  <script>
+      function isMobileDevice() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      }
+  
+      // If the user is on a mobile device, redirect to 'mobile.html'
+      if (isMobileDevice()) {
+          window.location.href = 'moblie.html';
+      }
+  </script>
+  <script type="module">
+    import { toast } from "./toast.js"
+    toast("loaded data")
+  </script>
+  </html>
