@@ -1,1 +1,0 @@
-imagess for logos
