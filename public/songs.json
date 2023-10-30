@@ -235,7 +235,84 @@
         "artist": "Kanye West",
         "album": "Donda 2",
         "folder": "kanyewest/donda2",
-        "cover": "https://cdn.sillyangel.me/songs/kanyewest/donda2/",
+        "cover": "https://cdn.sillyangel.me/songs/kanyewest/donda2/albumcover.webp",
+        "explicit": "true"
+      },
+      {
+        "artist": "Drake",
+        "album": "",
+        "folder": "",
+        "cover": "",
+        "explicit": "true"
+      },
+      {
+        "artist": "Frank Ocean",
+        "album": "",
+        "folder": "",
+        "cover": "",
+        "explicit": "true"
+      },
+      {
+        "artist": "Heaven Pierce Her",
+        "album": "",
+        "folder": "",
+        "cover": "",
+        "explicit": "true"
+      },
+      {
+        "artist": "Kellin Quinn",
+        "album": "",
+        "folder": "",
+        "cover": "",
+        "explicit": "true"
+      },
+      {
+        "artist": "Pierce The Veil",
+        "album": "",
+        "folder": "",
+        "cover": "",
+        "explicit": "true"
+      },
+      {
+        "artist": "The Smiths",
+        "album": "",
+        "folder": "",
+        "cover": "",
+        "explicit": "true"
+      },
+      {
+        "artist": "The Cure",
+        "album": "",
+        "folder": "",
+        "cover": "",
+        "explicit": "true"
+      },
+      {
+        "artist": "TV Girl",
+        "album": "",
+        "folder": "",
+        "cover": "",
+        "explicit": "true"
+      },
+      {
+        "artist": "Radiohead",
+        "album": "",
+        "folder": "",
+        "cover": "",
+        "explicit": "true"
+      },
+      {
+        "artist": "Elita",
+        "album": "",
+        "folder": "",
+        "cover": "",
+        "explicit": "true"
+      },
+      {
+        "artist": "Gorillaz",
+        "album": "",
+        "folder": "",
+        "cover": "",
         "explicit": "true"
       }
     ]
