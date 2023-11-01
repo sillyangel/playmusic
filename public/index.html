@@ -61,7 +61,6 @@
           <input id="displayname" type="text" placeholder="Display Name / Username">
           <input id="PhotoUrl" type="url" placeholder="Photo Url">
           <input id="email" type="email" placeholder="Email">
-          <!--add a checkbox for wanting explicit and update localStorage.setItem("hideExplicit", "true");    -->
           <label>
           <input type="checkbox" id="hideExplicitCheckbox">Hide Explicit Songs
         </label>
@@ -69,12 +68,18 @@
         <button id="savebutton">Save Settings</button>
           </div>
         <div id="songselector">
-          <h2>Home</h2>
+          <h2>Home</h2>      
+<label class="switch">
+  <input id="swithcbox" type="checkbox">
+  <span class="slider round"></span>
+</label>
           <div id="user">
             <i class="fas fa-user"></i>
             <span id="username">Not Logged In</span>
           </div>
           <div id="farts">
+          </div>
+          <div id="single">
           </div>
           <br>
 
