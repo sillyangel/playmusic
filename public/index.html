@@ -50,10 +50,11 @@
                                     <br>
             <br>
             <ul>
-                <li><button aria-label="Account Menu/button" id="accountmainbutton" onclick="switchthingy('user')"><i class="fa-regular fa-user" style="color: #ffffff;"></i></button></li>
+                <li><button aria-label="Account Menu/button" id="accountmainbutton" onclick="switchthingy('user')"><i class="fa-solid fa-user" style="color: #ffffff;"></i></button></li>
                 <li><button aria-label="Search" onclick="switchthingy('search')"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i> </button></li>
                 <li><button aria-label="Home" onclick="switchthingy('hom')"><i class="fa-solid fa-house" style="color: #ffffff;"></i> </button></li>
                 <li><button aria-label="Library" onclick="switchthingy('lil')"><i class="fa-solid fa-lines-leaning" style="color: #ffffff;"></i> </button></li>
+                <li><button aria-label="App Settings" onclick="switchthingy('set')"><i class="fa-solid fa-gear" style="color: #ffffff;"></i></button></li>
             </ul>
         </div>
         <div id="accountsettings" style="display: none;">
@@ -62,17 +63,12 @@
           <input id="PhotoUrl" type="url" placeholder="Photo Url">
           <input id="email" type="email" placeholder="Email">
           <label>
-          <input type="checkbox" id="hideExplicitCheckbox">Hide Explicit Songs
         </label>
         <button id="logout-button">Logout</button>
         <button id="savebutton">Save Settings</button>
           </div>
         <div id="songselector">
           <h2>Home</h2>      
-<label class="switch">
-  <input id="swithcbox" type="checkbox">
-  <span class="slider round"></span>
-</label>
           <div id="user">
             <i class="fas fa-user"></i>
             <span id="username">Not Logged In</span>
@@ -104,6 +100,19 @@
           </div>
           </span>
         </div>
+      </div>
+      <div style="display: none;" id="settings">
+        <h2>Settings</h2>
+        <label>
+        <input type="checkbox" id="hideExplicitCheckbox">Hide Explicit Songs
+        </label>
+            <input type="radio" id="small" name="sizeimg" value="small" checked />
+            <label for="small">Small</label>
+            <input type="radio" id="medium" name="sizeimg" value="medium" />
+            <label for="medium">Medium</label>
+            <input type="radio" id="large" name="sizeimg" value="large" />
+            <label for="large">Large</label>
+          <button onclick="savesettings()">Save & Apply</button>
       </div>
         <div style="display: none;" id="mlogin">
           <h2>Account Login</h2>

@@ -412,6 +412,20 @@ input[type=password] {
   flex-direction: row;
   align-items: baseline;
 }
+
+#settings {
+  left: 20px;
+  padding-left: 20px;
+  margin-top: 0 10px;
+  float: right;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+
 /* Color of the progress bar */
 #progress::-webkit-progress-value {
   background-color: lightblue; /* You can change this color to the one you prefer */
@@ -420,4 +434,3 @@ input[type=password] {
   font-weight: bolder;
 }
 .grecaptcha-badge { visibility: hidden; }
-

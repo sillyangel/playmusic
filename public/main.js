@@ -607,7 +607,25 @@ try {
         skipTrack();
     });
     
-    
+    function savesettings() {
+        var small = document.getElementById("small");
+        var med = document.getElementById("medium");
+        var large = document.getElementById("large");
+        const allDivs = document.querySelectorAll('.itemplaylist'); // Select all elements with the class 'playlist-item'
+
+        if (small.checked==true) {
+            allDivs.forEach((div) => {
+                div.style.weight = '';
+                div.style.height = '';
+            });
+        }
+        if (med.checked==true) {
+            
+        }
+        if (large.checked==true) {
+            
+        }
+    }
     
     function updateTrackText() {
         var artist = albums[currentAlbumIndex].artist;
@@ -654,14 +672,18 @@ try {
         }
     });
     // load the songs
-    
+    if (localStorage.getItem("hideExplicit") !== null) {
+        document.getElementById('hideExplicitCheckbox').checked = localStorage.getItem('hideExplict');
+    }
     document.getElementById('hideExplicitCheckbox').addEventListener('change', (event) => {
         localStorage.setItem('hideExplicit', event.target.checked ? 'true' : 'false');
+
         // Clear existing content and re-fetch the data
         const songSelector = document.getElementById('farts');
         songSelector.innerHTML = '';
         fetchAndDisplayAlbums();
       });
+      /*
       document.getElementById('swithcbox').addEventListener('change', (event) => {
         if (event.target.checked == true) {
             document.getElementById('farts').style.display = "none";
@@ -670,7 +692,7 @@ try {
             document.getElementById('farts').style.display = "block";
             document.getElementById("single").style.display = "none";
         }
-    });
+    }); */
     function fetchAndDisplayAlbums () {
     fetch('songs.json')
         .then((response) => response.json())
@@ -691,7 +713,7 @@ try {
     
                 // Create a button for the album
                 const albumButton = document.createElement('button');
-                albumButton.innerHTML = `<img src="${album.cover}" alt="${album.album}" width="100px" height="100px">`;
+                albumButton.innerHTML = `<img class="itemplaylist" src="${album.cover}" class=alt="${album.album}" width="100px" height="100px">`;
                 albumButton.onclick = () => albumsec(albumIndex);
                 songSelector.appendChild(albumButton);
     
@@ -823,12 +845,14 @@ try {
         var libaraby = document.getElementById("lilbrary");
         var login = document.getElementById("mlogin");
         var accountsettings = document.getElementById("accountsettings");
+        var settings = document.getElementById("settings");
     
         home.style.display = "none";
         search.style.display = "none";
         libaraby.style.display = "none";
         login.style.display = "none";
         accountsettings.style.display = "none";
+        settings.style.display = "none";
     
         switch(st) {
             case "hom":
@@ -841,7 +865,10 @@ try {
                 login.style.display = "block";
                 break;
             case "search":
-                search.style.display = "block";
+                search.style.display = "flex";
+                break;
+            case "set":
+                settings.style.display = "flex";
                 break;
         }
     }
