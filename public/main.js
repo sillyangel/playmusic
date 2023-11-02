@@ -428,14 +428,132 @@ try {
             "15 City of Gods (with Fivio Foreign _ Alicia Keys).mp3",
             "16 First Time in a Long Time (feat. Soulja Boy).mp3"
         ],
-        "drake/tml": [],
+        "drake/tml": [
+            "01 Fireworks (Ft. Alicia Keys).mp3",
+            "02 Karaoke.mp3",
+            "03 The Resistance.mp3",
+            "04 Over.mp3",
+            "05 Show Me A Good Time.mp3",
+            "06 Up All Night (Ft. Nicki Minaj).mp3",
+            "07 Fancy (Ft. T.I. & Swizz Beatz).mp3",
+            "08 Shut It Down (Ft. The-Dream).mp3",
+            "09 Unforgettable (Ft. Young Jeezy).mp3",
+            "10 Light Up (Ft. Jay-Z).mp3",
+            "11 Miss Me (Ft. Lil Wayne).mp3",
+            "12 Cece's Interlude.mp3",
+            "13 Find Your Love.mp3",
+            "14 Thank Me Now.mp3"
+        ],
         "drake/tc": [],
-        "drake/nwts": [],
-        "drake/views": [],
-        "drake/scorp": [],
-        "drake/clb": [],
+        "drake/nwts": [
+            "01 - Drake - Tuscan Leather.mp3",
+            "02 - Drake - Furthest Thing.mp3",
+            "03 - Drake - Started From the Bottom.mp3",
+            "04 - Drake - Wu-Tang Forever.mp3",
+            "05 - Drake - Own It.mp3",
+            "06 - Drake - Worst Behavior.mp3",
+            "07 - Drake - From Time (Feat. Jhene Aiko).mp3",
+            "08 - Drake - Hold On, We're Going Home (Feat. Majid Jordan).mp3",
+            "09 - Drake - Connect.mp3",
+            "10 - Drake - The Language.mp3",
+            "11 - Drake - 305 To My City (Feat. Detail).mp3",
+            "12 - Drake - Too Much (Feat. Sampha).mp3",
+            "13 - Drake - Pound Cake (Feat. Jay-Z).mp3",
+            "14 - Drake - Come Thru.mp3",
+            "15 - Drake - All Me (Feat. Big Sean & 2 Chainz).mp3",
+            "16 - Drake - The Motion (Feat. Sampha).mp3"
+        ],
+        "drake/views": [
+            "01 Keep the Family Close.mp3",
+            "02 9.mp3",
+            "03 U With Me_.mp3",
+            "04 Feel No Ways.mp3",
+            "05 Hype.mp3",
+            "06 Weston Road Flows.mp3",
+            "07 Redemption.mp3",
+            "08 With You (feat. PARTYNEXTDOOR).mp3",
+            "09 Faithful (feat. Pimp C & dvsn).mp3",
+            "10 Still Here.mp3",
+            "11 Controlla.mp3",
+            "12 One Dance (feat. Wizkid & Kyla).mp3",
+            "13 Grammys (feat. Future).mp3",
+            "14 Childs Play.mp3",
+            "15 Pop Style.mp3",
+            "16 Too Good (feat. Rihanna).mp3",
+            "17 Summers Over Interlude.mp3",
+            "18 Fire & Desire.mp3",
+            "19 Views.mp3",
+            "20 Hotline Bling.mp3"
+        ],
+        "drake/scorp": [
+            "1-01 Survival.mp3",
+            "1-02 Nonstop.mp3",
+            "1-03 Elevate.mp3",
+            "1-04 Emotionless.mp3",
+            "1-05 God_s Plan.mp3",
+            "1-06 I_m Upset.mp3",
+            "1-07 8 Out Of 10.mp3",
+            "1-08 Mob Ties.mp3",
+            "1-09 Can_t Take A Joke.mp3",
+            "1-10 Sandra_s Rose.mp3",
+            "1-11 Talk Up (feat. JAY-Z).mp3",
+            "1-12 Is There More.mp3",
+            "2-01 Peak.mp3",
+            "2-02 Summer Games.mp3",
+            "2-03 Jaded.mp3",
+            "2-04 Nice For What.mp3",
+            "2-05 Finesse.mp3",
+            "2-06 Ratchet Happy Birthday.mp3",
+            "2-07 That_s How You Feel.mp3",
+            "2-08 Blue Tint.mp3",
+            "2-09 In My Feelings.mp3",
+            "2-10 Don_t Matter To Me (feat. Michael Jackson).mp3",
+            "2-11 After Dark (feat. Static Major & Ty Dolla $ign).mp3",
+            "2-12 Final Fantasy.mp3",
+            "2-13 March 14.mp3"
+        ],
+        "drake/certifiedloverboy": [
+            "01. Champagne Poetry.mp3",
+            "02. Papi's Home.mp3",
+            "03. Girls Want Girls.mp3",
+            "04. In The Bible.mp3",
+            "05. Love All.mp3",
+            "06. Fair Trade.mp3",
+            "07. Way 2 Sexy.mp3",
+            "08. TSU.mp3",
+            "09. N 2 Deep.mp3",
+            "10. Pipe Down.mp3",
+            "11. Yebba's Heartbreak.mp3",
+            "12. No Friends In The Industry.mp3",
+            "13. Knife Talk.mp3",
+            "14. 7am On Bridle Path.mp3",
+            "15. Race My Mind.mp3",
+            "16. Fountains.mp3",
+            "17. Get Along Better.mp3",
+            "18. You Only Live Twice.mp3",
+            "19. IMY2.mp3",
+            "20. Fucking Fans.mp3",
+            "21. The Remorse.mp3"
+        ],
         "drake/honnvm": [],
-        "drake/herloss": [],
+        "drake/herloss": [
+            "01. Rich Flex.mp3",
+            "02. Major Distribution.mp3",
+            "03. On BS.mp3",
+            "04. BackOutsideBoyz.mp3",
+            "05. Privileged Rappers.mp3",
+            "06. Spin Bout U.mp3",
+            "07. Hours in Silence.mp3",
+            "08. Treacherous Twins.mp3",
+            "09. Circo Loco.mp3",
+            "10. Pussy & Millions.mp3",
+            "11. Broke Boys.mp3",
+            "12. Middle of the Ocean.mp3",
+            "13. Jumbotron Shit Poppin.mp3",
+            "14. More M's.mp3",
+            "15. 3AM on Glenwood.mp3",
+            "16. I Guess It's Fuck Me.mp3",
+        ],
         "drake/fatd": [],
         "franko/co": [],
         "franko/blonde": [],
@@ -607,25 +725,7 @@ try {
         skipTrack();
     });
     
-    function savesettings() {
-        var small = document.getElementById("small");
-        var med = document.getElementById("medium");
-        var large = document.getElementById("large");
-        const allDivs = document.querySelectorAll('.itemplaylist'); // Select all elements with the class 'playlist-item'
-
-        if (small.checked==true) {
-            allDivs.forEach((div) => {
-                div.style.weight = '';
-                div.style.height = '';
-            });
-        }
-        if (med.checked==true) {
-            
-        }
-        if (large.checked==true) {
-            
-        }
-    }
+    
     
     function updateTrackText() {
         var artist = albums[currentAlbumIndex].artist;
@@ -672,18 +772,14 @@ try {
         }
     });
     // load the songs
-    if (localStorage.getItem("hideExplicit") !== null) {
-        document.getElementById('hideExplicitCheckbox').checked = localStorage.getItem('hideExplict');
-    }
+    
     document.getElementById('hideExplicitCheckbox').addEventListener('change', (event) => {
         localStorage.setItem('hideExplicit', event.target.checked ? 'true' : 'false');
-
         // Clear existing content and re-fetch the data
         const songSelector = document.getElementById('farts');
         songSelector.innerHTML = '';
         fetchAndDisplayAlbums();
       });
-      /*
       document.getElementById('swithcbox').addEventListener('change', (event) => {
         if (event.target.checked == true) {
             document.getElementById('farts').style.display = "none";
@@ -692,7 +788,7 @@ try {
             document.getElementById('farts').style.display = "block";
             document.getElementById("single").style.display = "none";
         }
-    }); */
+    });
     function fetchAndDisplayAlbums () {
     fetch('songs.json')
         .then((response) => response.json())
@@ -713,7 +809,7 @@ try {
     
                 // Create a button for the album
                 const albumButton = document.createElement('button');
-                albumButton.innerHTML = `<img class="itemplaylist" src="${album.cover}" class=alt="${album.album}" width="100px" height="100px">`;
+                albumButton.innerHTML = `<img src="${album.cover}" alt="${album.album}" width="100px" height="100px">`;
                 albumButton.onclick = () => albumsec(albumIndex);
                 songSelector.appendChild(albumButton);
     
@@ -845,14 +941,12 @@ try {
         var libaraby = document.getElementById("lilbrary");
         var login = document.getElementById("mlogin");
         var accountsettings = document.getElementById("accountsettings");
-        var settings = document.getElementById("settings");
     
         home.style.display = "none";
         search.style.display = "none";
         libaraby.style.display = "none";
         login.style.display = "none";
         accountsettings.style.display = "none";
-        settings.style.display = "none";
     
         switch(st) {
             case "hom":
@@ -865,10 +959,7 @@ try {
                 login.style.display = "block";
                 break;
             case "search":
-                search.style.display = "flex";
-                break;
-            case "set":
-                settings.style.display = "flex";
+                search.style.display = "block";
                 break;
         }
     }

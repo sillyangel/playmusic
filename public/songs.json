@@ -454,41 +454,6 @@
       "folder": "smiths/swhwc",
       "cover": "https://cdn.sillyangel.me/songs/smiths/swhwc/albumcover.webp",
       "explicit": "true"
-    },
-    {
-      "artist": "The Cure",
-      "album": "",
-      "folder": "",
-      "cover": "",
-      "explicit": "true"
-    },
-    {
-      "artist": "TV Girl",
-      "album": "",
-      "folder": "",
-      "cover": "",
-      "explicit": "true"
-    },
-    {
-      "artist": "Radiohead",
-      "album": "",
-      "folder": "",
-      "cover": "",
-      "explicit": "true"
-    },
-    {
-      "artist": "Elita",
-      "album": "",
-      "folder": "",
-      "cover": "",
-      "explicit": "true"
-    },
-    {
-      "artist": "Gorillaz",
-      "album": "",
-      "folder": "",
-      "cover": "",
-      "explicit": "true"
-    } 
+    }
   ]
 }
