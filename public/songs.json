@@ -256,7 +256,7 @@
       "artist": "Drake",
       "album": "Nothing Was the Same",
       "folder": "drake/nwts",
-      "cover": "https://cdn.sillyangel.me/songs/drake//albumcover.webp",
+      "cover": "https://cdn.sillyangel.me/songs/drake/nwts/albumcover.webp",
       "explicit": "true"
     },
     {
@@ -332,7 +332,7 @@
     {
       "artist": "Heaven Pierce Her",
       "album": "Ultrakill: Inf Hyperdeath",
-      "folder": "hph/ukih2",
+      "folder": "hph/ukih",
       "cover": "https://cdn.sillyangel.me/songs/hph/ukih/albumcover.webp",
       "explicit": "false"
     },
@@ -344,24 +344,115 @@
       "explicit": "false"
     },
     {
-      "artist": "Kellin Quinn",
-      "album": "",
-      "folder": "",
-      "cover": "",
+      "artist": "Sleeping with Sirens",
+      "album": "With Ears to See and Eyes to Hear",
+      "folder": "kq/wetsaeth",
+      "cover": "https://cdn.sillyangel.me/songs/kq/wetsaeth/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Sleeping with Sirens",
+      "album": "Let's Cheers to This",
+      "folder": "kq/lctt",
+      "cover": "https://cdn.sillyangel.me/songs/kq/lctt/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Sleeping with Sirens",
+      "album": "Feel",
+      "folder": "kq/fe",
+      "cover": "https://cdn.sillyangel.me/songs/kq/fe/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Sleeping with Sirens",
+      "album": "Madness",
+      "folder": "kq/mad",
+      "cover": "https://cdn.sillyangel.me/songs/kq/mad/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Sleeping with Sirens",
+      "album": "Gossip",
+      "folder": "kq/gos",
+      "cover": "https://cdn.sillyangel.me/songs/kq/gos/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Sleeping with Sirens",
+      "album": "How It Feels to Be Lost",
+      "folder": "kq/hif",
+      "cover": "https://cdn.sillyangel.me/songs/kq/hif/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Sleeping with Sirens",
+      "album": "Complete Collapse",
+      "folder": "kq/cc",
+      "cover": "https://cdn.sillyangel.me/songs/kq/cc/albumcover.webp",
       "explicit": "true"
     },
     {
       "artist": "Pierce The Veil",
-      "album": "",
-      "folder": "",
-      "cover": "",
+      "album": "A Flair for the Dramatic",
+      "folder": "ptv/afftd",
+      "cover": "https://cdn.sillyangel.me/songs/ptv/afftd/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Pierce The Veil",
+      "album": "Selfish Machines",
+      "folder": "ptv/sm",
+      "cover": "https://cdn.sillyangel.me/songs/ptv/sm/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Pierce The Veil",
+      "album": "Collide with the Sky",
+      "folder": "ptv/cwts",
+      "cover": "https://cdn.sillyangel.me/songs/ptv/cwts/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Pierce The Veil",
+      "album": "Misadventures",
+      "folder": "ptv/madv",
+      "cover": "https://cdn.sillyangel.me/songs/ptv/madv/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Pierce The Veil",
+      "album": "The Jaws of Life",
+      "folder": "ptv/tjofl",
+      "cover": "https://cdn.sillyangel.me/songs/ptv/tjofl/albumcover.webp",
       "explicit": "true"
     },
     {
       "artist": "The Smiths",
       "album": "",
-      "folder": "",
-      "cover": "",
+      "folder": "smiths/",
+      "cover": "https://cdn.sillyangel.me/songs/smiths//albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "The Smiths",
+      "album": "",
+      "folder": "smiths/",
+      "cover": "https://cdn.sillyangel.me/songs/smiths//albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "The Smiths",
+      "album": "",
+      "folder": "smiths/",
+      "cover": "https://cdn.sillyangel.me/songs/smiths//albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "The Smiths",
+      "album": "",
+      "folder": "smiths/",
+      "cover": "https://cdn.sillyangel.me/songs/smiths//albumcover.webp",
       "explicit": "true"
     },
     {
