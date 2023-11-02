@@ -429,30 +429,30 @@
     },
     {
       "artist": "The Smiths",
-      "album": "",
-      "folder": "smiths/",
-      "cover": "https://cdn.sillyangel.me/songs/smiths//albumcover.webp",
+      "album": "The Smiths",
+      "folder": "smiths/tsm",
+      "cover": "https://cdn.sillyangel.me/songs/smiths/tsm/albumcover.webp",
       "explicit": "true"
     },
     {
       "artist": "The Smiths",
-      "album": "",
-      "folder": "smiths/",
-      "cover": "https://cdn.sillyangel.me/songs/smiths//albumcover.webp",
+      "album": "Meat is Murder",
+      "folder": "smiths/mim",
+      "cover": "https://cdn.sillyangel.me/songs/smiths/mim/albumcover.webp",
       "explicit": "true"
     },
     {
       "artist": "The Smiths",
-      "album": "",
-      "folder": "smiths/",
-      "cover": "https://cdn.sillyangel.me/songs/smiths//albumcover.webp",
+      "album": "The Queen is Dead",
+      "folder": "smiths/tqid",
+      "cover": "https://cdn.sillyangel.me/songs/smiths/tqid/albumcover.webp",
       "explicit": "true"
     },
     {
       "artist": "The Smiths",
-      "album": "",
-      "folder": "smiths/",
-      "cover": "https://cdn.sillyangel.me/songs/smiths//albumcover.webp",
+      "album": "Strangeways, Here We Come",
+      "folder": "smiths/swhwc",
+      "cover": "https://cdn.sillyangel.me/songs/smiths/swhwc/albumcover.webp",
       "explicit": "true"
     },
     {
