@@ -849,4 +849,6 @@ try {
     } catch(error) {
         alert(error);
         alert(error.message);
+        console.log(error);
+        console.log(error.message);
     }

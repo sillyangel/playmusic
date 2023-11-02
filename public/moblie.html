@@ -4,6 +4,7 @@
         <title>‎</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
         <link rel="stylesheet" href="moblie.css">
+        <link rel="stylesheet" href="thing.css">
         <link rel="manifest" href="app.webmanifest">
         <meta name="description" content="A simple audio player website by angel">
         <meta name="keywords" content="audio player, music, playmusic, angel">
@@ -30,6 +31,18 @@
     <script src="https://www.google.com/recaptcha/api.js?render=6LfhO68oAAAAAH-9cGAU4C9VEZHm0gzxXmS0ubbw"></script>
     </head>
 <body>
+  <div id="myModalU" class="modal">
+
+    <div class="modal-content">
+      <span class="closeU">&times;</span>
+      <p>upload mp3 files</p>
+      <form id="mp3file">
+        <input type="file" id="myFile" name="filename"  accept=".mp3">
+        <input type="submit">
+      </form>
+      
+    </div>
+    </div>
   <div class="sidebarmen">
     <ul>
         <li><button id="accountmainbutton" onclick="switchthingy('user')"><i class="fa-regular fa-user" style="color: #ffffff;"></i></button></li>
@@ -41,11 +54,14 @@
      <div id="songselector">
        <h2>Home</h2>
        <div id="user">
-        
+
         <i class="fas fa-user"></i>
         <span id="username">Not Logged In</span>
       </div>
       <div id="farts">
+      </div>
+      <div id="single">
+
       </div>
     <br>
     <br>
@@ -89,6 +105,13 @@
   <h2>Account Settings</h2>
   <input id="displayname" type="text" placeholder="Display Name / Username">
   <input id="PhotoUrl" type="url" placeholder="Photo Url">
+  <label>
+    <input type="checkbox" id="hideExplicitCheckbox">Hide Explicit Songs
+  </label>        
+  <label class="switch">
+    <input id="swithcbox" type="checkbox">
+    <span class="slider round"></span>
+  </label>
 <button id="logout-button">Logout</button>
 <button id="savebutton">Save Settings</button>
   </div>
@@ -179,12 +202,34 @@ function openfullplayer() {
     sidebarmen[i].style.display = "none";
   }
 }
-
+function switchthingy(st) {
+        var home = document.getElementById("songselector");
+        var search = document.getElementById("searching");
+        var libaraby = document.getElementById("lilbrary");
+        var login = document.getElementById("mlogin");
+        var accountsettings = document.getElementById("accountsettings");
+    
+        home.style.display = "none";
+        search.style.display = "none";
+        libaraby.style.display = "none";
+        login.style.display = "none";
+        accountsettings.style.display = "none";
+    
+        switch(st) {
+            case "hom":
+                home.style.display = "flex";
+                break;
+            case "lil":
+                libaraby.style.display = "flex";
+                break;
+            case "user":
+                login.style.display = "block";
+                break;
+            case "search":
+                search.style.display = "block";
+                break;
+        }
+    }
 </script>
-<script type="module">
-  import { toast } from "./toast.js"
 
-  
-
-</script>
 </html>
