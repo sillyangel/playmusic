@@ -102,7 +102,7 @@ try {
             "08 Boredom (feat. Rex Orange County _ Anna of the North).mp3",
             "09 I Ain_t Got Time!.mp3",
             "10 911 _ Mr. Lonely (feat. Frank Ocean _ Steve Lacy).mp3",
-            "11 Droppin _ Seeds (feat. Lil Wayne).mp3",
+            "11 Droppin_ Seeds (feat. Lil Wayne).mp3",
             "November.mp3",
             "Glitter.mp3",
             "Enjoy Right Now, Today.mp3"
@@ -119,7 +119,7 @@ try {
             "09 WHAT_S GOOD (feat. Slowthai).mp3",
             "10 GONE, GONE _ THANK YOU (feat. CeeLo Green, Cullen Omori _ La Roux).mp3",
             "11 I DON_T LOVE YOU ANYMORE (feat. Charlie Wilson, Jessy Wilson _ Solange).mp3",
-            "12 ARE WE STILL FRIENDS_ (feat. Pharell Williams).mp3"
+            "12 ARE WE STILL FRIENDS_ (feat. Pharrell Williams).mp3"
         ],
         "tylerthecreator/cherrybomb": [
             "1 Deathcamp.mp3",
@@ -140,24 +140,18 @@ try {
           "01 Goblin.mp3",
           "02 Yonkers.mp3",
           "03 Radicals.mp3",
-          "04 She (feat. Frank Ocean.mp3)",
+          "04 She (feat. Frank Ocean).mp3",
           "05 Transylvania.mp3",
           "06 Nightmare.mp3",
           "07 Tron Cat.mp3",
           "08 Her.mp3",
-          "",
-          "",
-          "",
-          "",
-          "13 Window (feat. Domo Genesis, Frank Ocean, Hodgy Beats _ Mike G).mp3",
+          "13 Window (feat. Domo Genesis, Hodgy Beats, Frank Ocean & Mike G).mp3",
           "14 AU79.mp3",
           "15 Golden.mp3",
           "2-01 Burger (feat. Hodgy Beats).mp3",
-          "",
           "2-03 Steak Sauce.mp3",
         ],
         "tylerthecreator/bas": [
-          ""
         ],
         "arcticmonkeys/am": [
             "01 - Do I Wanna Know.mp3",
@@ -201,7 +195,7 @@ try {
           "12 From the Ritz to the Rubble.mp3",
           "13 A Certain Romance.mp3",
         ],
-        "arcticmonkeys/fwn": [
+/*      "arcticmonkeys/fwn": [
           "01 Brainstorm.mp3",
           "02 Teddy Picker.mp3",
           "03 D is For Dangerous.mp3",
@@ -214,15 +208,12 @@ try {
           "10 The Bad Thing.mp3",
           "11 Old Yellow Bricks.mp3",
           "12 505.mp3",
-        ],
+       ], */
         "arcticmonkeys/sias": [
-          ""
         ],
         "arcticmonkeys/tbhc": [
-          ""
         ],
         "arcticmonkeys/car": [
-          ""
         ],
         "wallows/nonthinghappens": [
           "Only Friend.mp3",
@@ -250,29 +241,29 @@ try {
             "01 - The Weeknd - Professional.mp3",
             "02 - The Weeknd - The Town.mp3",
             "03 - The Weeknd - Adaptation.mp3",
-            "04 - The Weeknd - Love In The Sky.mp3",
-            "05 - The Weeknd - Belong To The World.mp3",
-            "06 - The Weeknd - Live For (feat. Drake).mp3",
+            "04 - The Weeknd - Love in the Sky.mp3",
+            "05 - The Weeknd - Belong to the World.mp3",
+            "06 - The Weeknd - Live For (Feat. Drake).mp3",
             "07 - The Weeknd - Wanderlust.mp3",
             "08 - The Weeknd - Kiss Land.mp3",
             "09 - The Weeknd - Pretty.mp3",
-            "10 - The Weeknd - Tears In The Rain.mp3",
+            "10 - The Weeknd - Tears in the Rain.mp3",
         ],
         "theweekend/bbtm": [
-            "01 - Real Life.mp3",
-            "02 - Losers (feat. Labrinth).mp3",
-            "03 - Tell Your Friends.mp3",
-            "04 - Often.mp3",
-            "05 - The Hills.mp3",
-            "06 - Acquainted.mp3",
-            "07 - Can't Feel My Face.mp3",
-            "08 - Shameless.mp3",
-            "09 - Earned It (Fifty Shades of Grey).mp3",
-            "10 - In the Night.mp3",
-            "11 - As You Are.mp3",
-            "12 - Dark Times.mp3",
-            "13 - Prisoner.mp3",
-            "14 - Angel.mp3"
+            "01 Real Life.mp3",
+            "02 Losers.mp3",
+            "03 Tell Your Friends.mp3",
+            "04 Often.mp3",
+            "05 The Hills.mp3",
+            "06 Acquainted.mp3",
+            "07 Can't Feel My Face.mp3",
+            "08 Shameless.mp3",
+            "09 Earned It (Fifty Shades Of Grey).mp3",
+            "10 In The Night.mp3",
+            "11 As You Are.mp3",
+            "12 Dark Times.mp3",
+            "13 Prisoner.mp3",
+            "14 Angel.mp3"
         ],
         "theweekend/starboy": [
             "01. Starboy.mp3",
@@ -295,24 +286,24 @@ try {
             "18. I Feel It Coming.mp3",
             "19. Die For You (Remix).mp3",
             "20. Starboy (Kygo Remix).mp3",
-            "21 Reminder (Remix).mp3"
+            "21. Reminder (Remix).mp3"
     
         ],
         "theweekend/afterhours": [
-            "01. Alone Again.mp3",
-            "02. Too Late.mp3",
-            "03. Hardest To Love.mp3",
-            "04. Scared To Live.mp3",
-            "05. Snowchild.mp3",
-            "06. Escape From LA.mp3",
-            "07. Heartless.mp3",
-            "08. Faith.mp3",
-            "09. Blinding Lights.mp3",
-            "10. In Your Eyes.mp3",
-            "11. Save Your Tears.mp3",
-            "12. Repeat After Me (Interlude).mp3",
-            "13. After Hours.mp3",
-            "14. Until I Bleed Out.mp3"
+            "01 Alone Again.mp3",
+            "02 Too Late.mp3",
+            "03 Hardest To Love.mp3",
+            "04 Scared To Live.mp3",
+            "05 Snowchild.mp3",
+            "06 Escape From LA.mp3",
+            "07 Heartless.mp3",
+            "08 Faith.mp3",
+            "09 Blinding Lights.mp3",
+            "10 In Your Eyes.mp3",
+            "11 Save Your Tears.mp3",
+            "12 Repeat After Me (Interlude).mp3",
+            "13 After Hours.mp3",
+            "14 Until I Bleed Out.mp3"
         ],
         "theweekend/dawnfm": [
             "01. Dawn FM.mp3",
@@ -321,14 +312,14 @@ try {
             "04. Take My Breath.mp3",
             "05. Sacrifice.mp3",
             "06. A Tale By Quincy.mp3",
-            "07. Out Of Time.mp3",
-            "08. Here We Go... Again.mp3",
+            "07. Out of Time.mp3",
+            "08. Here We Go… Again.mp3",
             "09. Best Friends.mp3",
             "10. Is There Someone Else_.mp3",
             "11. Starry Eyes.mp3",
             "12. Every Angel is Terrifying.mp3",
-            "13 Don't Break My Heart.mp3",
-            "14. I Heard You Married.mp3",
+            "13. Don’t Break My Heart.mp3",
+            "14. I Heard You’re Married.mp3",
             "15. Less Than Zero.mp3",
             "16. Phantom Regret by Jim.mp3"
         ],
@@ -339,13 +330,13 @@ try {
             "04 Must Be Love.mp3",
             "05 While You Were Sleeping.mp3",
             "06 Lovesick.mp3",
-            "07 Cailfornia and Me (feat. Philharm.mp3",
+            "07 California and Me (feat. Philharm.mp3",
             "08 Nocturne (Interlude).mp3",
             "09 Promise.mp3",
             "10 From The Start.mp3",
             "11 Misty.mp3",
             "12 Serendipity.mp3",
-            "13 letter To My 13 Year Old Self.mp3",
+            "13 Letter To My 13 Year Old Self.mp3",
             "14 Bewitched.mp3"
         ],
         "laufey/eikal": [
@@ -413,10 +404,10 @@ try {
             "07. Violent Crimes.mp3"
         ],
         "kanyewest/jesusisking": [
-            "01 Every Hour (feat. Sunday Service Choir).mp3",
+            "01 Every Hour (feat. Sunday Service.mp3",
             "02 Selah.mp3",
             "03 Follow God.mp3",
-            "04 Closed On Sunday.mp3",
+            "04 Closed on Sunday.mp3",
             "05 On God.mp3",
             "06 Everything We Need (feat. Ty Doll.mp3",
             "07 Water (feat. Ant Clemons).mp3",
@@ -426,33 +417,33 @@ try {
             "11 Jesus Is Lord.mp3"
         ],
         "kanyewest/donda": [
-            "01 Donda Chant.mp3",
-            "02 Jail.mp3",
-            "03 God Breathed.mp3",
-            "04 Off The Grid.mp3",
-            "05 Hurricane.mp3",
-            "06 Praise God.mp3",
-            "07 Jonah.mp3",
-            "08 Ok Ok.mp3",
-            "09 Junya.mp3",
-            "10 Believe What I Say.mp3",
-            "11 24.mp3",
-            "12 Remote.mp3",
-            "13 Moon.mp3",
-            "14 Heaven And Hell.mp3",
-            "15 Donda.mp3",
-            "16 Keep My Spirit Alive.mp3",
-            "17 Jesus Lord.mp3",
-            "18 New Again.mp3",
-            "19 Tell The Vision.mp3",
-            "20 Lord I Need You.mp3",
-            "21 Pure Souls.mp3",
-            "22 Come To Life.mp3",
-            "23 No Child Left Behind.mp3",
-            "24 Jail Pt 2.mp3",
-            "25 Ok Ok Pt 2.mp3",
-            "26 Junya Pt 2.mp3",
-            "27 Jesus Lord Pt 2.mp3"
+            "01. Donda Chant.mp3",
+            "02. Jail.mp3",
+            "03. God Breathed.mp3",
+            "04. Off The Grid.mp3",
+            "05. Hurricane.mp3",
+            "06. Praise God.mp3",
+            "07. Jonah.mp3",
+            "08. Ok Ok.mp3",
+            "09. Junya.mp3",
+            "10. Believe What I Say.mp3",
+            "11. 24.mp3",
+            "12. Remote Control.mp3",
+            "13. Moon.mp3",
+            "14. Heaven and Hell.mp3",
+            "15. Donda.mp3",
+            "16. Keep My Spirit Alive.mp3",
+            "17. Jesus Lord.mp3",
+            "18. New Again.mp3",
+            "19. Tell The Vision.mp3",
+            "20. Lord I Need You.mp3",
+            "21. Pure Souls.mp3",
+            "22. Come to Life.mp3",
+            "23. No Child Left Behind.mp3",
+            "24. Jail pt 2.mp3",
+            "25. Ok Ok pt 2.mp3",
+            "26. Junya pt 2.mp3",
+            "27. Jesus Lord pt 2.mp3"
         ],
         "kanyewest/donda2": [
             "01 True Love (feat. XXXTentacion).mp3",
@@ -494,7 +485,7 @@ try {
         "drake/nwts": [
             "01 - Drake - Tuscan Leather.mp3",
             "02 - Drake - Furthest Thing.mp3",
-            "03 - Drake - Started From the Bottom.mp3",
+            "03 - Drake - Started From The Bottom.mp3",
             "04 - Drake - Wu-Tang Forever.mp3",
             "05 - Drake - Own It.mp3",
             "06 - Drake - Worst Behavior.mp3",
@@ -504,7 +495,7 @@ try {
             "10 - Drake - The Language.mp3",
             "11 - Drake - 305 To My City (Feat. Detail).mp3",
             "12 - Drake - Too Much (Feat. Sampha).mp3",
-            "13 - Drake - Pound Cake (Feat. Jay-Z).mp3",
+            "13 - Drake - Pound Cake-Paris Morton Music 2 (Feat. Jay-Z).mp3",
             "14 - Drake - Come Thru.mp3",
             "15 - Drake - All Me (Feat. Big Sean & 2 Chainz).mp3",
             "16 - Drake - The Motion (Feat. Sampha).mp3"
@@ -536,12 +527,12 @@ try {
             "1-02 Nonstop.mp3",
             "1-03 Elevate.mp3",
             "1-04 Emotionless.mp3",
-            "1-05 God_s Plan.mp3",
-            "1-06 I_m Upset.mp3",
+            "1-05 God's Plan.mp3",
+            "1-06 I'm Upset.mp3",
             "1-07 8 Out Of 10.mp3",
             "1-08 Mob Ties.mp3",
-            "1-09 Can_t Take A Joke.mp3",
-            "1-10 Sandra_s Rose.mp3",
+            "1-09 Can't Take a Joke.mp3",
+            "1-10 Sandra's Rose.mp3",
             "1-11 Talk Up (feat. JAY-Z).mp3",
             "1-12 Is There More.mp3",
             "2-01 Peak.mp3",
@@ -550,17 +541,17 @@ try {
             "2-04 Nice For What.mp3",
             "2-05 Finesse.mp3",
             "2-06 Ratchet Happy Birthday.mp3",
-            "2-07 That_s How You Feel.mp3",
+            "2-07 That's How You Feel.mp3",
             "2-08 Blue Tint.mp3",
             "2-09 In My Feelings.mp3",
-            "2-10 Don_t Matter To Me (feat. Michael Jackson).mp3",
+            "2-10 Don't Matter to Me (feat. Michael Jackson).mp3",
             "2-11 After Dark (feat. Static Major & Ty Dolla $ign).mp3",
             "2-12 Final Fantasy.mp3",
             "2-13 March 14.mp3"
         ],
-        "drake/certifiedloverboy": [
+        "drake/clb": [
             "01. Champagne Poetry.mp3",
-            "02. Papi's Home.mp3",
+            "02. Papi’s Home.mp3",
             "03. Girls Want Girls.mp3",
             "04. In The Bible.mp3",
             "05. Love All.mp3",
@@ -569,7 +560,7 @@ try {
             "08. TSU.mp3",
             "09. N 2 Deep.mp3",
             "10. Pipe Down.mp3",
-            "11. Yebba's Heartbreak.mp3",
+            "11. Yebba’s Heartbreak.mp3",
             "12. No Friends In The Industry.mp3",
             "13. Knife Talk.mp3",
             "14. 7am On Bridle Path.mp3",
@@ -591,16 +582,16 @@ try {
             "04. BackOutsideBoyz.mp3",
             "05. Privileged Rappers.mp3",
             "06. Spin Bout U.mp3",
-            "07. Hours in Silence.mp3",
+            "07. Hours In Silence.mp3",
             "08. Treacherous Twins.mp3",
             "09. Circo Loco.mp3",
             "10. Pussy & Millions.mp3",
             "11. Broke Boys.mp3",
             "12. Middle of the Ocean.mp3",
             "13. Jumbotron Shit Poppin.mp3",
-            "14. More M's.mp3",
+            "14. More M’s.mp3",
             "15. 3AM on Glenwood.mp3",
-            "16. I Guess It's Fuck Me.mp3",
+            "16. I Guess It’s Fuck Me.mp3",
         ],
         "drake/fatd": [
 
@@ -615,7 +606,7 @@ try {
             "07 Super Rich Kids (feat. Earl Sweat.mp3",
             "08 Pilot Jones.mp3",
             "09 Crack Rock.mp3",
-            "10 Pyramids..mp3",
+            "10 Pyramids.mp3",
             "11 Lost.mp3",
             "12 White (feat. John Mayer).mp3",
             "13 Monks.mp3",
@@ -633,7 +624,7 @@ try {
             "06 Skyline To.mp3",
             "07 Self Control.mp3",
             "08 Good Guy.mp3",
-            "09 Night.mp3",
+            "09 Nights.mp3",
             "10 Solo (Reprise).mp3",
             "11 Pretty Sweet.mp3",
             "12 Facebook Story.mp3",
@@ -702,6 +693,15 @@ try {
         localStorage.setItem("Albumindex", currentAlbumIndex);
         localStorage.setItem("Trackindex", currentTrackIndex);
         localStorage.setItem("CurrentAlbum", currentAlbum);
+    }
+    for (let album in audioTracks) {
+        for (let i = 0; i < audioTracks[album].length; i++) {
+            let trackPath = audioTracks[album][i];
+            let url = "https://cdn.sillyangel.me/songs/" + album + "/" + trackPath;
+            let request = new XMLHttpRequest();
+            request.open('HEAD', url, false);
+            request.send();
+        }
     }
     function playPause() {
         if (audio.paused) {
