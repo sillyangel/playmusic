@@ -684,7 +684,6 @@ try {
     
     function loadTrack() {
         var trackPath = audioTracks[currentAlbum][currentTrackIndex];
-        console.log(trackPath);
         audio.src = "https://cdn.sillyangel.me/" + "songs/" + currentAlbum + "/" + trackPath;
         audio.load();
         updateTrackText();
@@ -694,13 +693,15 @@ try {
         localStorage.setItem("Trackindex", currentTrackIndex);
         localStorage.setItem("CurrentAlbum", currentAlbum);
     }
-    for (let album in audioTracks) {
-        for (let i = 0; i < audioTracks[album].length; i++) {
-            let trackPath = audioTracks[album][i];
-            let url = "https://cdn.sillyangel.me/songs/" + album + "/" + trackPath;
-            let request = new XMLHttpRequest();
-            request.open('HEAD', url, false);
-            request.send();
+    function testthing() {
+        for (let album in audioTracks) {
+            for (let i = 0; i < audioTracks[album].length; i++) {
+                let trackPath = audioTracks[album][i];
+                let url = "https://cdn.sillyangel.me/songs/" + album + "/" + trackPath;
+                let request = new XMLHttpRequest();
+                request.open('HEAD', url, false);
+                request.send();
+            }
         }
     }
     function playPause() {
@@ -950,11 +951,8 @@ try {
     
     function mediathinggy() {
         var track = audioTracks[currentAlbum][currentTrackIndex]
-        console.log("Original track:", track);
         track = track.replace(".mp3", "");
-        console.log("Track after removing .mp3:", track);
         track = track.replace(/^\d+\s*[-.]*\s*/, "");
-        console.log("Track after regex replacement:", track);
         if ("mediaSession" in navigator) {
             navigator.mediaSession.metadata = new MediaMetadata({
                 title: track,
@@ -1027,6 +1025,7 @@ try {
         var libaraby = document.getElementById("lilbrary");
         var login = document.getElementById("mlogin");
         var accountsettings = document.getElementById("accountsettings");
+        var settings = document.getElementById("settings");
     
         home.style.display = "none";
         search.style.display = "none";
@@ -1046,6 +1045,9 @@ try {
                 break;
             case "search":
                 search.style.display = "block";
+                break;
+            case "set":
+                settings.style.display = "block";
                 break;
         }
     }
