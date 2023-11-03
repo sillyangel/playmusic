@@ -237,9 +237,15 @@ try {
           "I_m Full.mp3",
           "Do Not Wait.mp3"
       ],
-        "melanie/crybaby": [],
-        "melanie/k12": [],
-        "melanie/portals": [],
+        "melanie/crybaby": [
+
+        ],
+        "melanie/k12": [
+
+        ],
+        "melanie/portals": [
+
+        ],
         "theweekend/kissland": [
             "01 - The Weeknd - Professional.mp3",
             "02 - The Weeknd - The Town.mp3",
@@ -326,12 +332,50 @@ try {
             "15. Less Than Zero.mp3",
             "16. Phantom Regret by Jim.mp3"
         ],
-        "laufey/bewitched": [],
-        "laufey/eikal": [],
-        "rr/llf": [],
-        "rr/pemfba": [],
-        "ld/sp": [],
-        "ld/cc": [],
+        "laufey/bewitched": [
+            "01 Dreamer.mp3",
+            "02 Second Best.mp3",
+            "03 Haunted.mp3",
+            "04 Must Be Love.mp3",
+            "05 While You Were Sleeping.mp3",
+            "06 Lovesick.mp3",
+            "07 Cailfornia and Me (feat. Philharm.mp3",
+            "08 Nocturne (Interlude).mp3",
+            "09 Promise.mp3",
+            "10 From The Start.mp3",
+            "11 Misty.mp3",
+            "12 Serendipity.mp3",
+            "13 letter To My 13 Year Old Self.mp3",
+            "14 Bewitched.mp3"
+        ],
+        "laufey/eikal": [
+
+        ],
+        "rr/llf": [
+
+        ],
+        "rr/pemfba": [
+
+        ],
+        "ld/sp": [
+
+        ],
+        "ld/cc": [
+            "01. Error.mp3",
+            "02. Lemon Demon.mp3",
+            "03. Ten Thousand Light Years Away.mp3",
+            "04. Don't Be Like the Sun.mp3",
+            "05. Bowling Alley.mp3",
+            "06. Wrong.mp3",
+            "07. Hazel's Modus Operandi.mp3",
+            "08. Idiot Control Now.mp3",
+            "09. Pepper and Salt.mp3",
+            "10. Holy Bison Beaks!.mp3",
+            "11. Somnolence.mp3",
+            "12. Fire Motif.mp3",
+            "13. Hyakugojyuuichi 2003.mp3",
+            "14. Elsewhere.mp3",
+        ],
         "kanyewest/mbdtf": [
             "01. Dark Fantasy.mp3",
             "02. Who Will Survive In America.mp3",
@@ -444,7 +488,9 @@ try {
             "13 Find Your Love.mp3",
             "14 Thank Me Now.mp3"
         ],
-        "drake/tc": [],
+        "drake/tc": [
+
+        ],
         "drake/nwts": [
             "01 - Drake - Tuscan Leather.mp3",
             "02 - Drake - Furthest Thing.mp3",
@@ -535,7 +581,9 @@ try {
             "20. Fucking Fans.mp3",
             "21. The Remorse.mp3"
         ],
-        "drake/honnvm": [],
+        "drake/honnvm": [
+
+        ],
         "drake/herloss": [
             "01. Rich Flex.mp3",
             "02. Major Distribution.mp3",
@@ -554,44 +602,46 @@ try {
             "15. 3AM on Glenwood.mp3",
             "16. I Guess It's Fuck Me.mp3",
         ],
-        "drake/fatd": [],
-        "frankocean/channelorange": [
+        "drake/fatd": [
+
+        ],
+        "franko/co": [
             "01 Start.mp3",
             "02 Thinkin Bout You.mp3",
             "03 Fertilizer.mp3",
             "04 Sierra Leone.mp3",
             "05 Sweet Life.mp3",
             "06 Not Just Money.mp3",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "07 Super Rich Kids (feat. Earl Sweat.mp3",
+            "08 Pilot Jones.mp3",
+            "09 Crack Rock.mp3",
+            "10 Pyramids..mp3",
+            "11 Lost.mp3",
+            "12 White (feat. John Mayer).mp3",
+            "13 Monks.mp3",
+            "14 Bad Religion.mp3",
+            "15 Pink Matter (feat. André 3000).mp3",
+            "16 Forrest Gump.mp3",
+            "17 End.mp3",
         ],
-        "frankocean/blonde": [
+        "franko/blonde": [
             "01 Nikes.mp3",
             "02 Ivy.mp3",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
+            "03 Pink + White.mp3",
+            "04 Be Yourself.mp3",
+            "05 Solo.mp3",
+            "06 Skyline To.mp3",
+            "07 Self Control.mp3",
+            "08 Good Guy.mp3",
+            "09 Night.mp3",
+            "10 Solo (Reprise).mp3",
+            "11 Pretty Sweet.mp3",
+            "12 Facebook Story.mp3",
+            "13 Close to You.mp3",
+            "14 White Ferrari.mp3",
+            "15 Seigfried.mp3",
+            "16 Godspeed.mp3",
+            "17 Futura Free.mp3",
         ],
         "hph/zotmwe": [],
         "hph/flowerworks": [],
