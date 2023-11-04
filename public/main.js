@@ -1,6 +1,5 @@
 
 try {
-
     var albums = [
         { artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "https://cdn.sillyangel.me/songs/tylerthecreator/wolf/albumcover.png" },
         { artist: "Tyler, The Creator", album: "Flower Boy", folder: "tylerthecreator/flowerboy", image: "https://cdn.sillyangel.me/songs/tylerthecreator/flowerboy/albumcover.png" },
@@ -896,7 +895,8 @@ try {
     
                 // Create a button for the album
                 const albumButton = document.createElement('button');
-                albumButton.innerHTML = `<img src="${album.cover}" alt="${album.album}" width="100px" height="100px">`;
+                const imageSize = getSelectedSize(); // Call a function to get the selected size
+                albumButton.innerHTML = `<img src="${album.cover}" alt="${album.album}" class="album-${imageSize}">`;
                 albumButton.onclick = () => albumsec(albumIndex);
                 songSelector.appendChild(albumButton);
     
@@ -913,7 +913,8 @@ try {
                     }});
                 }
             });
-        
+            const selectedSize = getSelectedSize();
+            localStorage.setItem('selectedSize', selectedSize);
             // After all albums have been processed, check if all albums of an artist are explicit
     
         })
@@ -923,6 +924,37 @@ try {
         });
     }
     fetchAndDisplayAlbums();
+    const radioOptions = document.getElementsByName('size');
+    radioOptions.forEach(option => {
+        option.addEventListener('click', fetchAndDisplayAlbums);
+    });
+// Function to get the selected size from the radio button
+function getSelectedSize() {
+    const radioOptions = document.getElementsByName('size');
+    let selectedSize = localStorage.getItem('selectedSize'); // Check if a value is saved in localStorage
+
+    // If no value is saved in localStorage, set the default to "medium"
+    if (!selectedSize) {
+        selectedSize = 'medium';
+    }
+
+    for (let i = 0; i < radioOptions.length; i++) {
+        if (radioOptions[i].value === selectedSize) {
+            radioOptions[i].checked = true; // Check the appropriate radio button based on the saved value
+        }
+        radioOptions[i].addEventListener('click', function() {
+            if (this.checked && this.value !== selectedSize) { // Check if the selected size is different
+                selectedSize = this.value;
+                localStorage.setItem('selectedSize', selectedSize); // Save the selected size to localStorage
+                fetchAndDisplayAlbums(); // Fetch and display albums with the updated size
+            }
+        });
+    }
+
+    // Return the selected size
+    return selectedSize;
+}
+
     document.getElementById("single").style.display = "none"; 
     function albumsec(albumnumber) {
         // Retrieve the album details from the albums array
@@ -1032,6 +1064,7 @@ try {
         libaraby.style.display = "none";
         login.style.display = "none";
         accountsettings.style.display = "none";
+        settings.style.display = "none";
     
         switch(st) {
             case "hom":
@@ -1051,6 +1084,7 @@ try {
                 break;
         }
     }
+
     function searchfunction() {
         const input = document.getElementById('myInput').value.toLowerCase();
         const listHolder = document.querySelector('#list-holder');

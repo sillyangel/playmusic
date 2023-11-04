@@ -137,7 +137,11 @@ li {
   text-decoration: none;
 }
 /* Change the link color on hover */
-  
+.sidebarmen button {
+  height: 22px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
 .sidebarmen img {
   padding-top: 20px;
   padding-left: 5px;
@@ -153,10 +157,6 @@ li {
 }
 
 
-#songselector img {
-  width: 120px;
-  height: 120px;
-}
 #playlistContainer img {
   width: 120px;
   height: 120px;
@@ -434,3 +434,18 @@ input[type=password] {
   font-weight: bolder;
 }
 .grecaptcha-badge { visibility: hidden; }
+
+.album-small {
+  width: 105px;
+  height: 105px;
+}
+
+.album-medium {
+  width: 140px;
+  height: 140px;
+}
+
+.album-large {
+  width: 160px;
+  height: 160px;
+}
