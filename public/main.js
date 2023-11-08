@@ -757,15 +757,12 @@ try {
             for (let i = 0; i < audioTracks[album].length; i++) {
                 let trackPath = audioTracks[album][i];
                 let url = "https://cdn.sillyangel.me/songs/" + album + "/" + trackPath;
-                let proxyUrl = "https://cors-anywhere.herokuapp.com/" + url; // Using a CORS proxy here
-    
                 let request = new XMLHttpRequest();
-                request.open('HEAD', proxyUrl, false);
+                request.open('HEAD', url, false);
                 request.send();
             }
         }
     }
-    
     function playPause() {
         if (audio.paused) {
             audio.play();
