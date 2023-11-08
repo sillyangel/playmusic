@@ -454,6 +454,30 @@
       "folder": "smiths/swhwc",
       "cover": "https://cdn.sillyangel.me/songs/smiths/swhwc/albumcover.webp",
       "explicit": "true"
+    },
+    {
+      "artist": "Billie eilish",
+      "album": "Happy than ever",
+      "folder": "be/hte",
+      "cover": "https://cdn.sillyangel.me/songs/be/hte/albumcover.jpg"
+    },
+    {
+      "artist": "SZA",
+      "album": "SOS",
+      "folder": "sza/sos",
+      "cover": "https://cdn.sillyangel.me/songs/sza/sos/albumcover.jpg"
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "album": "Mr morale and the big steppers",
+      "folder": "kenla/mmtbs",
+      "cover": "https://cdn.sillyangel.me/songs/kenla/mmtbs/albumcover.jpg"
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "album": "To a pimp a butterfly",
+      "folder": "kenla/tpabf",
+      "cover": "https://cdn.sillyangel.me/songs/kenla/tpabf/albumcover.jpg"
     }
   ]
 }

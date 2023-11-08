@@ -66,6 +66,8 @@ try {
         { artist: "The Smiths", album: "Meat is Murder", folder: "smiths/mim", image: "https://cdn.sillyangel.me/songs/smiths/mim/albumcover.webp" },
         { artist: "The Smiths", album: "The Queen is Dead", folder: "smiths/tqid", image: "https://cdn.sillyangel.me/songs/smiths/tqid/albumcover.webp" },
         { artist: "The Smiths", album: "Strangeways, Here We Come", folder: "smiths/swhwc", image: "https://cdn.sillyangel.me/songs/smiths/swhwc/albumcover.webp" },
+        { artist: "Billie Eilish", album: "Happy Than Ever", folder: "be/hte", image: "https://cdn.sillyangel.me/songs/be/hte/albumcover.jpg" },
+        { artist: "SZA", album: "SOS", folder: "sza/sos", image: "https://cdn.sillyangel.me/songs/sza/sos/albumcover.jpg" }
     //  { artist: "", album: "", folder: "/", image: "https://cdn.sillyangel.me/songs///albumcover.webp" },
         // Add more albums here
     ];
@@ -653,7 +655,25 @@ try {
         "smiths/tsm": [],
         "smiths/mim": [],
         "smiths/tqid": [],
-        "smiths/swhwc": []
+        "smiths/swhwc": [],
+        "be/hte": [
+            "01. getting older.mp3",
+            "02. i didn't change my number(explicit).mp3",
+            "03. billie bossa nova.mp3",
+            "04. my future.mp3",
+            "05. oxytocin.mp3",
+            "06. goldwing.mp3",
+            "07. lost cause(explicit).mp3",
+            "08. halley's comet.mp3",
+            "09. not my responsibility.mp3",
+            "10. overheated(explicit).mp3",
+            "11. everybody dies.mp3",
+            "12. your power.mp3",
+            "13. nda(explicit).mp3",
+            "14. therefore i am.mp3",
+            "15. happier than ever(explicit).mp3",
+            "16. male fantasy.mp3"
+        ]
     };
     var audio = document.getElementById("myAudio");
     var playButton = document.getElementById("playbuttonthung");
