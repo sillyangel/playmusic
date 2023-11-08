@@ -67,7 +67,9 @@ try {
         { artist: "The Smiths", album: "The Queen is Dead", folder: "smiths/tqid", image: "https://cdn.sillyangel.me/songs/smiths/tqid/albumcover.webp" },
         { artist: "The Smiths", album: "Strangeways, Here We Come", folder: "smiths/swhwc", image: "https://cdn.sillyangel.me/songs/smiths/swhwc/albumcover.webp" },
         { artist: "Billie Eilish", album: "Happy Than Ever", folder: "be/hte", image: "https://cdn.sillyangel.me/songs/be/hte/albumcover.jpg" },
-        { artist: "SZA", album: "SOS", folder: "sza/sos", image: "https://cdn.sillyangel.me/songs/sza/sos/albumcover.jpg" }
+        { artist: "SZA", album: "SOS", folder: "sza/sos", image: "https://cdn.sillyangel.me/songs/sza/sos/albumcover.jpg" },
+        { artist: "Kendrick Lamar", album: "Mr morale and the big steppers", folder: "kenla/mmtbs", image: "https://cdn.sillyangel.me/songs/kenla/mmtbs/albumcover.jpg" },
+        { artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "https://cdn.sillyangel.me/songs/kenla/tpabf/albumcover.jpg" },
     //  { artist: "", album: "", folder: "/", image: "https://cdn.sillyangel.me/songs///albumcover.webp" },
         // Add more albums here
     ];
@@ -673,7 +675,45 @@ try {
             "14. therefore i am.mp3",
             "15. happier than ever(explicit).mp3",
             "16. male fantasy.mp3"
-        ]
+        ],
+        "kenla/mmtbs": [
+            "01. United In Grief.mp3",
+            "02. N95.mp3",
+            "03. Worldwide Steppers.mp3",
+            "04. Die Hard.mp3",
+            "05. Father Time.mp3",
+            "06. Rich (Interlude).mp3",
+            "07. Rich Spirit.mp3",
+            "08. We Cry Together.mp3",
+            "09. Purple Hearts.mp3",
+            "10. Count Me Out.mp3",
+            "11. Crown.mp3",
+            "12. Silent Hill.mp3",
+            "13. Savior (Interlude).mp3",
+            "14. Savior.mp3",
+            "15. Auntie Diaries.mp3",
+            "16. Mr.Morale.mp3",-
+            "17. Mother I Sober.mp3",
+            "18. Mirror.mp3",
+        ],
+        "kenla/tpabf": [
+            "01. Wesley's Theory.mp3",
+            "02. For Free! (Interlude).mp3",
+            "03. King Kunta.mp3",
+            "04. Institutionalized.mp3",
+            "05. These Walls.mp3",
+            "06. u.mp3",
+            "07. Alright.mp3",
+            "08. For Sale! (Interlude).mp3",
+            "09. Momma.mp3",
+            "10. Hood Politics.mp3",
+            "11. How Much A Dollar Cost.mp3",
+            "12. Complexion (A Zulu Love).mp3",
+            "13. The Blacker The Berry.mp3",
+            "14. You Ain't Gotta Lie (Momma Said).mp3",
+            "15. i.mp3",
+            "16. Mortal Man.mp3"
+        ],
     };
     var audio = document.getElementById("myAudio");
     var playButton = document.getElementById("playbuttonthung");
@@ -717,12 +757,15 @@ try {
             for (let i = 0; i < audioTracks[album].length; i++) {
                 let trackPath = audioTracks[album][i];
                 let url = "https://cdn.sillyangel.me/songs/" + album + "/" + trackPath;
+                let proxyUrl = "https://cors-anywhere.herokuapp.com/" + url; // Using a CORS proxy here
+    
                 let request = new XMLHttpRequest();
-                request.open('HEAD', url, false);
+                request.open('HEAD', proxyUrl, false);
                 request.send();
             }
         }
     }
+    
     function playPause() {
         if (audio.paused) {
             audio.play();
