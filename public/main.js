@@ -752,7 +752,7 @@ try {
         localStorage.setItem("Trackindex", currentTrackIndex);
         localStorage.setItem("CurrentAlbum", currentAlbum);
     }
-    function testthing() {
+    function w() {
         for (let album in audioTracks) {
             for (let i = 0; i < audioTracks[album].length; i++) {
                 let trackPath = audioTracks[album][i];
@@ -1156,9 +1156,13 @@ function getSelectedSize() {
             const artistName = obj.artist.toLowerCase();
     
             if (albumName.includes(input) || artistName.includes(input)) {
-                const listItem = document.createElement("li");
-                listItem.textContent = `${obj.album} - ${obj.artist}`;
-                listHolder.appendChild(listItem);
+                const listitem = document.createElement('li')
+                const albumButton = document.createElement('button');
+                albumButton.onclick = () => albumsec(i);
+                albumButton.id = "buttonys"
+                albumButton.textContent = `${obj.album} - ${obj.artist}`;
+                listitem.appendChild(albumButton)
+                listHolder.appendChild(listitem);
                 listHolder.appendChild(document.createElement('br'));
             }
         }

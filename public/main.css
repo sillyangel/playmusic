@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Montserrat&display=swap');
 @font-face {
   font-family: SFPRO;
@@ -7,10 +9,14 @@
   font-family: SFPROS;
   src: url("assets/fonts/SF-Pro-Text-Medium.otf") format("opentype");
 }
+@font-face {
+  font-family: Heleovm;
+  src: url("assets/fonts/FreeSans.otf") format("opentype");
+}
 body {
      background-color: #222;
      color: #fff;
-     font-family: SFPRO;
+     font-family: Heleovm;
      margin: 0;
      padding: 0;
 }
@@ -107,7 +113,7 @@ h2 {
   bottom: 0px;
   border-top:1px solid #333;
 }
-ul {
+.sidebarmen ul {
   list-style-type: none;
   margin: 0;
   padding-left: 10px;
@@ -118,20 +124,20 @@ ul {
   border-color: #333;
   
 }
-li i {
+.sidebarmen li i {
   display: flex;
   color: #fff;
   text-decoration: none;
   font-size: 35px;
   padding-bottom: 60px;
 }
-li button {
+.sidebarmen li button {
   text-decoration: none;
   background: none;
   border: none;
   cursor: pointer;
 }
-li {
+.sidebarmen li {
   display: flex;
   color: #fff;
   text-decoration: none;
@@ -231,12 +237,6 @@ input[type=text]:focus {
   border: 3px solid #ffffff;
 }
 
-#list-holder li {
-  font-weight: bold;
-  font-size: 15px;
-  padding-bottom: 5px;
-  padding-top: 5px;
-}
 
 #lilbrary button {
   background: none;
@@ -443,4 +443,21 @@ input[type=password] {
 .album-large {
   width: 160px;
   height: 160px;
+}
+
+#buttonys {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+#list-holder {
+  list-style-type: none;
+  margin: 0;
+  height: auto;
+  background-color: #222;
+  border-right: 5px;
+  border-color: #333;  
 }
