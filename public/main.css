@@ -76,17 +76,22 @@ h2 {
      margin-left: 10px;
      font-size: 15px;
 }
+.audio-controls-full progress {
+  width: 80%;
+ /* 25% smaller progress bar */
+}
+.currentTrack2 {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 400;
+}
 /* Add styles to position the song time and duration */
  #audio-controls {
      display: flex;
      align-items: center;
      justify-content: space-between;
 }
- #progress {
-     flex-grow: 1;
-     margin: 0 10px;
-    /* Adjust the margin as needed */
-}
+
  #songTime, #songDuration {
      white-space: nowrap;
      margin: 0 10px;
@@ -175,6 +180,23 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+}
+.audio-controls-full {
+  width: 100%;
+  margin: 20px;
+  height: auto;
+}
+.audio-controls-full button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 54px;
+ /* Increase icon size */
+}
+.audio-controls-full progress {
+  width: 80%;
+ /* 25% smaller progress bar */
 }
 #songselector button {
 background: none;

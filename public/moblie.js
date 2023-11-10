@@ -716,7 +716,7 @@ try {
         ],
     };
     var audio = document.getElementById("myAudio");
-    var playButton = document.querySelectorAll("#playbuttonthung");
+    var playButton = document.getElementById("playbuttonthung");
     var volumeControl = document.getElementById("volume");
     var progressBar = document.getElementById("progress");
     var currentTrackIndex = 0;
@@ -766,20 +766,18 @@ try {
     function playPause() {
         if (audio.paused) {
             audio.play();
-            playButton.forEach(function(element) {
-                element.innerHTML = '<i class="fas fa-pause"></i>';
-            });
+            playButton.innerHTML = '<i class="fas fa-pause"></i>';
         } else {
             audio.pause();
-            playButton.forEach(function(element) {
-                element.innerHTML = '<i class="fas fa-play"></i>';
-            });
+            playButton.innerHTML = '<i class="fas fa-play"></i>';
         }
     }
+    
     function setVolume() {
         localStorage.setItem("Volume", volumeControl.value);
         audio.volume = localStorage.getItem("Volume")
     }
+    
     function skipTrack() {
         currentTrackIndex++;
         if (currentTrackIndex >= audioTracks[currentAlbum].length) {
@@ -788,6 +786,7 @@ try {
         loadTrack();
         audio.play();
     }
+    
     function previousTrack() {
         currentTrackIndex--;
         if (currentTrackIndex < 0) {
@@ -796,6 +795,7 @@ try {
         loadTrack();
         audio.play();
     }
+    
     function seek(event) {
         const progressBar = document.getElementById('progress');
         const percent = event.offsetX / progressBar.offsetWidth;
@@ -806,6 +806,8 @@ try {
             console.error("Invalid seek time");
         }
     }
+    
+    // Modify the updateAlbumCover function
     function updateAlbumCover() {
         // Get all elements with the same ID "albumCover"
         var albumCovers = document.querySelectorAll('[id="albumCover"]');
@@ -891,36 +893,7 @@ try {
             element.textContent = artist + " - " + track;
         });
     }
-    var songselectorjs = document.getElementById("songselector");
-    var accountsettings = document.getElementById("accountsettings");
-    var searchingthi = document.getElementById("searching");
-    var lilbrarys = document.getElementById("lilbrary");
-    var settongs = document.getElementById("settings");
-    var mlogin = document.getElementById("mlogin");
-    var playerfull = document.getElementsByClassName("audio-controls-full");
-    var playermini = document.getElementsByClassName("audio-controls");
-    var sidebarmen = document.getElementsByClassName("sidebarmen");
     
-    function hidefullplayer() {
-      songselectorjs.style.display = "flex";
-      playerfull[0].style.display = "none";
-      playermini[0].style.display = "flex";
-      sidebarmen[0].style.display = "block";
-    }
-    
-    function openfullplayer() {
-    accountsettings.style.display = "none";
-    searchingthi.style.display = "none";
-    lilbrarys.style.display = "none";
-    settongs.style.display = "none";
-    mlogin.style.display = "none";
-      songselectorjs.style.display = "none";
-      playerfull[0].style.display = "block";
-      playermini[0].style.display = "none";
-      sidebarmen[0].style.display = "none";
-    }
-    
- 
     
     // Call the function to update both elements
     updateTrackText();
@@ -933,7 +906,6 @@ try {
         // Check if duration is a finite number before calculating percentComplete
         if (isFinite(duration)) {
             var percentComplete = (currentTime / duration) * 100;
-            
             progressBar.value = percentComplete;
             // Update the song duration and current time
             var currentMinutes = Math.floor(currentTime / 60);

@@ -44,7 +44,7 @@
     </div>
   
   </div>
-          <div class="sidebarmen">
+          <div class="sidebarmen" >
             <img src="./assets/nonealbum.png" id="iconsa" alt="main image icon" width="50px" height="50px">
             <br>
                         <br>
@@ -102,6 +102,7 @@
           </span>
         </div>
       </div>
+
       <div style="display: none;" id="settings">
         <h2>Settings</h2>
         <label>
@@ -165,7 +166,22 @@
             <div id="songTime">0:00</div>
             <progress id="progress" value="0" max="100" onclick="seek(event)"></progress>
             <div id="songDuration">0:00</div>
+      <button onclick="openfullplayer()" id="arrow-button"><i class="fas fa-chevron-up"></i></button>
         </div>
+        <div class="audio-controls-full" style="display: none;">
+      <button onclick="hidefullplayer()" id="arrow-button"><i class="fas fa-chevron-down"></i></button>
+          <div class="album-cover">
+              <img id="albumCover" src="https://cdn.sillyangel.me/songs/tylerthecreator/wolf/albumcover.webp" alt="Album Cover" width="250px" height="250px">
+          </div>
+            <div class="currentTrack2"> </div>
+              <button aria-label="Back" onclick="previousTrack()"><i class="fas fa-backward"></i></button>
+              <button aria-label="Play/Pause" id="playbuttonthung" onclick="playPause()"><i class="fas fa-play"></i></button>
+              <button aria-label="Skip Track" onclick="skipTrack()"><i class="fas fa-forward"></i></button>
+              <div id="songTime">0:00</div>
+              <progress id="progress" value="0" max="100" onclick="seek(event)"></progress>
+              <div id="songDuration">0:00</div>
+          </div>
+        
     <audio id="myAudio" controls>
         Your browser does not support the audio element.
     </audio>
