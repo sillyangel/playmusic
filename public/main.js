@@ -718,7 +718,7 @@ try {
     var audio = document.getElementById("myAudio");
     var playButton = document.querySelectorAll("#playbuttonthung");
     var volumeControl = document.getElementById("volume");
-    var progressBar = document.getElementById("progress");
+    var progressBar = document.querySelectorAll("progress");
     var currentTrackIndex = 0;
     var currentAlbum = "tylerthecreator/wolf"
     var currentAlbumIndex = 0;
@@ -855,8 +855,10 @@ try {
         // Check if duration is a finite number before calculating percentComplete
         if (isFinite(duration)) {
             var percentComplete = (currentTime / duration) * 100;
-            progressBar.value = percentComplete;
-        }
+            progressBar.forEach(function(element) {
+                element.value = percentComplete;
+            });
+            }
         localStorage.setItem("timerforaudio", audio.currentTime);
     });
     audio.currentTime = localStorage.getItem("timerforaudio");
@@ -925,8 +927,8 @@ try {
     // Call the function to update both elements
     updateTrackText();
     // Add these lines to update the song duration and current time
-    var songTimeElement = document.getElementById("songTime");
-    var songDurationElement = document.getElementById("songDuration");
+    var songTimeElement = document.querySelectorAll("#songTime");
+    var songDurationElement = document.querySelectorAll("#songDuration");
     audio.addEventListener("timeupdate", function() {
         var currentTime = audio.currentTime;
         var duration = audio.duration;
@@ -934,15 +936,21 @@ try {
         if (isFinite(duration)) {
             var percentComplete = (currentTime / duration) * 100;
             
-            progressBar.value = percentComplete;
+            progressBar.forEach(function(element) {
+                element.value = percentComplete;
+            });
             // Update the song duration and current time
             var currentMinutes = Math.floor(currentTime / 60);
             var currentSeconds = Math.floor(currentTime % 60);
             var durationMinutes = Math.floor(duration / 60);
             var durationSeconds = Math.floor(duration % 60);
             // Display current time and duration in the format "M:SS"
-            songTimeElement.textContent = currentMinutes + ":" + (currentSeconds < 10 ? "0" : "") + currentSeconds;
-            songDurationElement.textContent = durationMinutes + ":" + (durationSeconds < 10 ? "0" : "") + durationSeconds;
+            songTimeElement.forEach(function(element) {
+                element.textContent = textContent = currentMinutes + ":" + (currentSeconds < 10 ? "0" : "") + currentSeconds;;
+            });
+            songDurationElement.forEach(function(element) {
+                element.textContent = durationMinutes + ":" + (durationSeconds < 10 ? "0" : "") + durationSeconds;
+            })
         }
     });
     // load the songs

@@ -76,10 +76,6 @@ h2 {
      margin-left: 10px;
      font-size: 15px;
 }
-.audio-controls-full progress {
-  width: 80%;
- /* 25% smaller progress bar */
-}
 .currentTrack2 {
   color: #fff;
   font-size: 35px;
