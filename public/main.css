@@ -177,21 +177,40 @@ h2 {
   flex-direction: column;
 }
 .audio-controls-full {
+  position: fixed;
   width: 100%;
-  margin: 20px;
-  height: auto;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* Ensure it appears on top of other elements */
 }
+
+.audio-controls-full img {
+  width: 200px; /* Adjust the size of the album cover as needed */
+  height: 200px;
+}
+
 .audio-controls-full button {
   background: none;
   border: none;
   color: #fff;
   cursor: pointer;
-  font-size: 54px;
- /* Increase icon size */
+  font-size: 36px; /* Increase icon size */
+  margin: 10px; /* Adjust spacing between buttons */
+}
+#arrow-button2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 .audio-controls-full progress {
   width: 80%;
- /* 25% smaller progress bar */
+  /* 25% smaller progress bar */
 }
 #songselector button {
 background: none;

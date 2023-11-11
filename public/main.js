@@ -917,7 +917,7 @@ try {
     settongs.style.display = "none";
     mlogin.style.display = "none";
       songselectorjs.style.display = "none";
-      playerfull[0].style.display = "block";
+      playerfull[0].style.display = "flex";
       playermini[0].style.display = "none";
       sidebarmen[0].style.display = "none";
     }
