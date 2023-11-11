@@ -1,7 +1,7 @@
 const path = require('path')
 const express = require('express')
 const app = express()
-const port = 80;
+const port = 8080;
 
 app.use((req, res, next) => {
     console.log(`User with IP: ${req.ip} made a request to ${req.originalUrl}`);

@@ -929,6 +929,8 @@ try {
     // Add these lines to update the song duration and current time
     var songTimeElement = document.querySelectorAll("#songTime");
     var songDurationElement = document.querySelectorAll("#songDuration");
+    var songTimeElement2 = document.getElementById("songTime2");
+    var songDurationElement2 = document.getElementById("songDuration2");
     audio.addEventListener("timeupdate", function() {
         var currentTime = audio.currentTime;
         var duration = audio.duration;
@@ -951,6 +953,8 @@ try {
             songDurationElement.forEach(function(element) {
                 element.textContent = durationMinutes + ":" + (durationSeconds < 10 ? "0" : "") + durationSeconds;
             })
+            songTimeElement2.textContent = textContent = currentMinutes + ":" + (currentSeconds < 10 ? "0" : "") + currentSeconds;;
+            songDurationElement2.textContent = durationMinutes + ":" + (durationSeconds < 10 ? "0" : "") + durationSeconds;
         }
     });
     // load the songs

@@ -14,67 +14,67 @@
   src: url("assets/fonts/FreeSans.otf") format("opentype");
 }
 body {
-     background-color: #222;
-     color: #fff;
-     font-family: Heleovm;
-     margin: 0;
-     padding: 0;
+  background-color: #222;
+  color: #fff;
+  font-family: Heleovm;
+  margin: 0;
+  padding: 0;
 }
 h1 {
-    font-size: 30px;
+  font-size: 30px;
 }
 h2 {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .reqformgg {
-    text-align: right;
-    padding: 20px;
-    font-size: 15px;
+  text-align: right;
+  padding: 20px;
+  font-size: 15px;
 }
- a {
-     text-decoration: none;
-     color: #ccc;
-     margin: 10px;
-     padding-left: 20px;
+a {
+  text-decoration: none;
+  color: #ccc;
+  margin: 10px;
+  padding-left: 20px;
 }
 /* Style the custom audio controls */
- .audio-controls {
-     display: flex;
-     align-items: center;
-     background-color: #242424;
-     color: #fff;
-     padding: 10px;
+.audio-controls {
+  display: flex;
+  align-items: center;
+  background-color: #242424;
+  color: #fff;
+  padding: 10px;
 }
- .audio-controls button {
-     background: none;
-     border: none;
-     color: #fff;
-     cursor: pointer;
-     font-size: 24px;
-    /* Increase icon size */
+.audio-controls button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  /* Increase icon size */
 }
- .audio-controls hr {
-     width: 100%;
-    /* Full width line */
-     margin-top: 10px;
-    /* Space between line and text */
-     border: 1px solid #555;
-    /* Line color */
+.audio-controls hr {
+  width: 100%;
+  /* Full width line */
+  margin-top: 10px;
+  /* Space between line and text */
+  border: 1px solid #555;
+  /* Line color */
 }
- .audio-controls progress {
-     width: 80%;
-    /* 25% smaller progress bar */
+.audio-controls progress {
+  width: 80%;
+  /* 25% smaller progress bar */
 }
 /* Hide the default audio player */
- audio {
-     display: none;
+audio {
+  display: none;
 }
- .currentTrack {
-     text-align: center;
-     color: #fff;
-     margin-left: 10px;
-     font-size: 15px;
+.currentTrack {
+  text-align: center;
+  color: #fff;
+  margin-left: 10px;
+  font-size: 15px;
 }
 .currentTrack2 {
   color: #fff;
@@ -82,22 +82,28 @@ h2 {
   font-weight: 400;
 }
 /* Add styles to position the song time and duration */
- #audio-controls {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
+#audio-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
- #songTime, #songDuration {
-     white-space: nowrap;
-     margin: 0 10px;
-    /* Adjust the margin as needed */
+#songTime,
+#songDuration {
+  white-space: nowrap;
+  margin: 0 10px;
+  /* Adjust the margin as needed */
 }
+#songTime2, #songDuration2 {
+  white-space: nowrap;
+  margin: 0 10px; /* Adjust the margin as needed */
+}
+
 .audio-controls {
-    position: fixed;
-    width: 99%;
-    bottom: 0px;
-    border-top: 2px solid #333;
+  position: fixed;
+  width: 99%;
+  bottom: 0px;
+  border-top: 2px solid #333;
 }
 .topnav {
   width: 100%;
@@ -105,14 +111,14 @@ h2 {
   text-align: left;
   padding: 20px;
   font-size: 15px;
-  border-bottom:2px solid #333;
+  border-bottom: 2px solid #333;
 }
 
 .playerm {
   position: fixed;
   width: 100%;
   bottom: 0px;
-  border-top:1px solid #333;
+  border-top: 1px solid #333;
 }
 .sidebarmen ul {
   list-style-type: none;
@@ -123,7 +129,6 @@ h2 {
   background-color: #222;
   border-right: 5px;
   border-color: #333;
-  
 }
 .sidebarmen li i {
   display: flex;
@@ -163,7 +168,8 @@ h2 {
   height: 120px;
 }
 #playlistContainer {
-  display: inline-block; /* Make it inline to adjust to content */
+  display: inline-block;
+  /* Make it inline to adjust to content */
 }
 #songselector {
   left: 20px;
@@ -187,35 +193,40 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 999; /* Ensure it appears on top of other elements */
+  z-index: 999;
+  /* Ensure it appears on top of other elements */
 }
 
 .audio-controls-full img {
-  width: 200px; /* Adjust the size of the album cover as needed */
+  width: 200px;
+  /* Adjust the size of the album cover as needed */
   height: 200px;
 }
-
+.progress-container {
+  display: flex;
+  align-items: center;
+}
 .audio-controls-full button {
   background: none;
   border: none;
   color: #fff;
   cursor: pointer;
-  font-size: 36px; /* Increase icon size */
-  margin: 10px; /* Adjust spacing between buttons */
+  font-size: 36px;
+  margin: 10px;
+}
+.audio-controls-full progress {
+  width: 500px;
+  /* 25% smaller progress bar */
 }
 #arrow-button2 {
   position: absolute;
   top: 10px;
   right: 10px;
 }
-.audio-controls-full progress {
-  width: 80%;
-  /* 25% smaller progress bar */
-}
 #songselector button {
-background: none;
-border: none;
-cursor: pointer;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 #songselector h2 {
@@ -273,7 +284,6 @@ input[type=text]:focus {
   border: 3px solid #ffffff;
 }
 
-
 #lilbrary button {
   background: none;
   border: none;
@@ -321,7 +331,7 @@ h3 {
   font-size: 25px;
 }
 input[type=email]:focus {
-  border: 3px solid #ffffff
+  border: 3px solid #ffffff;
 }
 input[type=email] {
   box-sizing: border-box;
@@ -353,7 +363,7 @@ input[type=password] {
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
 }
-#list-holder li{
+#list-holder li {
   color: white;
   cursor: pointer;
 }
@@ -371,7 +381,6 @@ input[type=password] {
   font-size: 30px;
   margin-bottom: 33.2px;
   margin-top: 33.2px;
-
 }
 
 #user {
@@ -411,7 +420,7 @@ input[type=password] {
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
 }
-.playlist-item img{
+.playlist-item img {
   width: 120px;
   height: 120px;
 }
@@ -453,31 +462,29 @@ input[type=password] {
   flex-direction: column;
 }
 
-
 /* Color of the progress bar */
 #progress::-webkit-progress-value {
-  background-color: lightblue; /* You can change this color to the one you prefer */
+  background-color: lightblue;
+  /* You can change this color to the one you prefer */
 }
 #footer a {
   font-weight: bolder;
 }
-.grecaptcha-badge { visibility: hidden; }
-
+.grecaptcha-badge {
+  visibility: hidden;
+}
 .album-small {
   width: 105px;
   height: 105px;
 }
-
 .album-medium {
   width: 140px;
   height: 140px;
 }
-
 .album-large {
   width: 160px;
   height: 160px;
 }
-
 #buttonys {
   background: none;
   border: none;
@@ -492,5 +499,5 @@ input[type=password] {
   height: auto;
   background-color: #222;
   border-right: 5px;
-  border-color: #333;  
+  border-color: #333;
 }
