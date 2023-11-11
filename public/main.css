@@ -158,7 +158,6 @@ h2 {
   border-radius: 20px;
 }
 
-
 #playlistContainer img {
   width: 120px;
   height: 120px;
@@ -276,9 +275,6 @@ input[type=text]:focus {
 }
 
 footer {
-  left: 20px;
-  padding-left: 20px;
-  margin-top: 0 10px;
   float: right;
   width: 90%;
   height: auto;

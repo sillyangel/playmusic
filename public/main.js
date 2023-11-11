@@ -69,7 +69,7 @@ try {
         { artist: "Billie Eilish", album: "Happy Than Ever", folder: "be/hte", image: "https://cdn.sillyangel.me/songs/be/hte/albumcover.jpg" },
         { artist: "SZA", album: "SOS", folder: "sza/sos", image: "https://cdn.sillyangel.me/songs/sza/sos/albumcover.jpg" },
         { artist: "Kendrick Lamar", album: "Mr morale and the big steppers", folder: "kenla/mmtbs", image: "https://cdn.sillyangel.me/songs/kenla/mmtbs/albumcover.jpg" },
-        { artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "https://cdn.sillyangel.me/songs/kenla/tpabf/albumcover.jpg" },
+        { artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "https://cdn.sillyangel.me/songs/kenla/tpabf/albumcover.jpg" }
     //  { artist: "", album: "", folder: "/", image: "https://cdn.sillyangel.me/songs///albumcover.webp" },
         // Add more albums here
     ];
