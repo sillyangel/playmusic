@@ -806,16 +806,60 @@ try {
             console.error("Invalid seek time");
         }
     }
-    function updateAlbumCover() {
-        // Get all elements with the same ID "albumCover"
-        var albumCovers = document.querySelectorAll('[id="albumCover"]');
-        var selectedAlbum = albums[currentAlbumIndex];
+    function getContrastColor(rgbColor) {
+        // Extract the RGB values
+        const rgbValues = rgbColor.match(/\d+/g);
+        const r = parseInt(rgbValues[0], 10);
+        const g = parseInt(rgbValues[1], 10);
+        const b = parseInt(rgbValues[2], 10);
     
-        // Loop through each element with the same ID and update its src attribute
-        albumCovers.forEach(function(element) {
-            element.src = selectedAlbum.image;
-        });
+        // Calculate the relative luminance
+        const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+    
+        // Choose white or black based on the luminance
+        return luminance > 0.5 ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)';
     }
+    
+    
+    function updateAlbumCover() {
+        var selectedAlbum = albums[currentAlbumIndex];
+        var image = new Image();
+    
+        image.crossOrigin = "Anonymous";
+        image.src = selectedAlbum.image;
+    
+        image.onload = function() {
+            var canvas = document.createElement('canvas');
+            var context = canvas.getContext('2d');
+    
+            canvas.width = image.width;
+            canvas.height = image.height;
+    
+            context.drawImage(image, 0, 0, image.width, image.height);
+    
+            var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+            var pixels = imageData.data;
+    
+            var red = pixels[0];
+            var green = pixels[1];
+            var blue = pixels[2];
+    
+            var varsa = document.getElementsByClassName("audio-controls-full")[0];
+            var textContrastColor = getContrastColor('rgb(' + red + ',' + green + ',' + blue + ')');
+            if (varsa) {
+                varsa.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+                varsa.style.color = textContrastColor;
+            } else {
+                console.error("Element with class 'audio-controls-full' not found");
+            }
+    
+            var albumCovers = document.querySelectorAll('[id="albumCover"]');
+            albumCovers.forEach(function(element) {
+                element.src = selectedAlbum.image;
+            });
+        };
+    }
+    
     
     // Call the updateAlbumCover function when changing albums
     function nextAlbum() {

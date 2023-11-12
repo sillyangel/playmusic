@@ -77,7 +77,7 @@ audio {
   font-size: 15px;
 }
 .currentTrack2 {
-  color: #fff;
+  color: inherit;
   font-size: 35px;
   font-weight: 400;
 }
@@ -97,8 +97,8 @@ audio {
 #songTime2, #songDuration2 {
   white-space: nowrap;
   margin: 0 10px; /* Adjust the margin as needed */
+  color: inherit;
 }
-
 .audio-controls {
   position: fixed;
   width: 99%;
@@ -209,7 +209,7 @@ audio {
 .audio-controls-full button {
   background: none;
   border: none;
-  color: #fff;
+  color: inherit;
   cursor: pointer;
   font-size: 36px;
   margin: 10px;
