@@ -778,8 +778,12 @@ try {
     }
     function setVolume() {
         localStorage.setItem("Volume", volumeControl.value);
-        audio.volume = localStorage.getItem("Volume")
+        audio.volume = localStorage.getItem("Volume");
     }
+    
+    var volumeControl = document.getElementById('volume');
+    volumeControl.addEventListener('input', setVolume);
+    
     function skipTrack() {
         currentTrackIndex++;
         if (currentTrackIndex >= audioTracks[currentAlbum].length) {
@@ -796,16 +800,18 @@ try {
         loadTrack();
         audio.play();
     }
-    function seek(event) {
-        const progressBar = document.getElementById('progress');
+    function seek(event, progressBarId) {
+        const progressBar = document.getElementById(progressBarId);
         const percent = event.offsetX / progressBar.offsetWidth;
         const seekTime = percent * audio.duration;
+        
         if (isFinite(seekTime)) {
             audio.currentTime = seekTime;
         } else {
             console.error("Invalid seek time");
         }
     }
+    
     function getContrastColor(rgbColor) {
         // Extract the RGB values
         const rgbValues = rgbColor.match(/\d+/g);

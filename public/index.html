@@ -162,9 +162,9 @@
             <button aria-label="Back" onclick="previousTrack()"><i class="fas fa-backward"></i></button>
             <button aria-label="Play/Pause" id="playbuttonthung" onclick="playPause()"><i class="fas fa-play"></i></button>
             <button aria-label="Skip Track" onclick="skipTrack()"><i class="fas fa-forward"></i></button>
-            <input type="range" id="volume" min="0" max="1" step="0.01" onchange="setVolume()">
+            <input type="range" id="volume" min="0" max="1" step="0.01">
             <div id="songTime">0:00</div>
-            <progress id="progress" value="0" max="100" onclick="seek(event)"></progress>
+            <progress id="progress" value="0" max="100" onclick="seek(event, 'progress')"></progress>
             <div id="songDuration">0:00</div>
       <button onclick="openfullplayer()" id="arrow-button"><i class="fas fa-chevron-up"></i></button>
         </div>
@@ -183,7 +183,7 @@
           </div>
           <div class="progress-container">
             <div id="songTime2">0:00</div>
-            <progress id="progress2" value="0" max="100" onclick="seek(event)"></progress>
+            <progress id="progress2" value="0" max="100" onclick="seek(event, 'progress2')"></progress>
             <div id="songDuration2">0:00</div>
           </div>
         </div>
