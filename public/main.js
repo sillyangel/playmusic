@@ -752,7 +752,7 @@ try {
         localStorage.setItem("Trackindex", currentTrackIndex);
         localStorage.setItem("CurrentAlbum", currentAlbum);
     }
-    const apiKey = '7l7zuvMh89n8LZJwmyKb7OrjiROoCEpZhjgTAlgXcS3AXdOwLExTAcr_NUXAxG27';
+    const apiKey = 'fiE1SC2YyfP5bN4Ku6BqChOfU46ltaZMhFxOVjlknfeIZG9Glkp5yCU_Kve1qlvo';
     const searchQuery = 'Bohemian Rhapsody Queen';
 
     fetch(`https://api.genius.com/search?q=${encodeURIComponent(searchQuery)}&access_token=${apiKey}`, {})
