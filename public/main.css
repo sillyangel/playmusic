@@ -223,6 +223,11 @@ audio {
   top: 10px;
   right: 10px;
 }
+#lyricsbutton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
 #songselector button {
   background: none;
   border: none;
