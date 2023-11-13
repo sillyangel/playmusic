@@ -752,6 +752,23 @@ try {
         localStorage.setItem("Trackindex", currentTrackIndex);
         localStorage.setItem("CurrentAlbum", currentAlbum);
     }
+    const apiKey = '7l7zuvMh89n8LZJwmyKb7OrjiROoCEpZhjgTAlgXcS3AXdOwLExTAcr_NUXAxG27';
+    const searchQuery = 'Bohemian Rhapsody Queen';
+
+    fetch(`https://api.genius.com/search?q=${encodeURIComponent(searchQuery)}&access_token=${apiKey}`, {})
+        .then(response => response.json())
+            .then(data => {
+                if (data.response && data.response.hits && data.response.hits.length > 0) {
+                    const songId = data.response.hits[0].result.id;
+                    alert(`Song ID: ${songId}`);
+                } else {
+                    alert('No matching song found.');
+                }
+            })
+        .catch(error => {
+            alert('Error:', error);
+            alert('Response:', error.response); // Alerting the response object for debugging
+        });
     function w() {
         for (let album in audioTracks) {
             for (let i = 0; i < audioTracks[album].length; i++) {
