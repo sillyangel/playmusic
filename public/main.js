@@ -715,6 +715,7 @@ try {
             "16. Mortal Man.mp3"
         ],
     };
+    var apiKey = 'fiE1SC2YyfP5bN4Ku6BqChOfU46ltaZMhFxOVjlknfeIZG9Glkp5yCU_Kve1qlvo';
     var audio = document.getElementById("myAudio");
     var playButton = document.querySelectorAll("#playbuttonthung");
     var volumeControl = document.getElementById("volume");
@@ -751,16 +752,21 @@ try {
         localStorage.setItem("Albumindex", currentAlbumIndex);
         localStorage.setItem("Trackindex", currentTrackIndex);
         localStorage.setItem("CurrentAlbum", currentAlbum);
+        getlyrics();
     }
-    const apiKey = 'fiE1SC2YyfP5bN4Ku6BqChOfU46ltaZMhFxOVjlknfeIZG9Glkp5yCU_Kve1qlvo';
-    const searchQuery = 'Bohemian Rhapsody Queen';
-
-    fetch(`https://api.genius.com/search?q=${encodeURIComponent(searchQuery)}&access_token=${apiKey}`, {})
+    function getlyrics() {
+        var track = audioTracks[currentAlbum][currentTrackIndex];
+    
+        // Remove the .mp3 extension from the track name
+        track = track.replace(".mp3", "");
+    
+        // Remove the numbering at the beginning of the track name, handling extra dash or period
+        track = track.replace(/^\d+\s*[-.]*\s*/, "");
+    fetch(`https://api.genius.com/search?q=${track}&access_token=${apiKey}`, {})
         .then(response => response.json())
             .then(data => {
                 if (data.response && data.response.hits && data.response.hits.length > 0) {
                     const songId = data.response.hits[0].result.id;
-                    alert(`Song ID: ${songId}`);
                 } else {
                     alert('No matching song found.');
                 }
@@ -769,6 +775,8 @@ try {
             alert('Error:', error);
             alert('Response:', error.response); // Alerting the response object for debugging
         });
+    }
+    
     function w() {
         for (let album in audioTracks) {
             for (let i = 0; i < audioTracks[album].length; i++) {
