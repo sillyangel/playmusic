@@ -198,20 +198,8 @@ try {
           "12 From the Ritz to the Rubble.mp3",
           "13 A Certain Romance.mp3",
         ],
-/*      "arcticmonkeys/fwn": [
-          "01 Brainstorm.mp3",
-          "02 Teddy Picker.mp3",
-          "03 D is For Dangerous.mp3",
-          "04 Balaclava.mp3",
-          "05 Fluorescent Adolescent.mp3",
-          "06 Only Ones Who Know.mp3",
-          "07 Do Me a Favour.mp3",
-          "08 This House Is A Circus.mp3",
-          "09 If You Were There, Beware.mp3",
-          "10 The Bad Thing.mp3",
-          "11 Old Yellow Bricks.mp3",
-          "12 505.mp3",
-       ], */
+        "arcticmonkeys/fwn": [
+       ], 
         "arcticmonkeys/sias": [
         ],
         "arcticmonkeys/tbhc": [
@@ -715,7 +703,6 @@ try {
             "16. Mortal Man.mp3"
         ],
     };
-    var apiKey = 'fiE1SC2YyfP5bN4Ku6BqChOfU46ltaZMhFxOVjlknfeIZG9Glkp5yCU_Kve1qlvo';
     var audio = document.getElementById("myAudio");
     var playButton = document.querySelectorAll("#playbuttonthung");
     var volumeControl = document.getElementById("volume");
@@ -752,54 +739,62 @@ try {
         localStorage.setItem("Albumindex", currentAlbumIndex);
         localStorage.setItem("Trackindex", currentTrackIndex);
         localStorage.setItem("CurrentAlbum", currentAlbum);
-        getlyrics();
-    }
-    function getlyrics() {
         var track = audioTracks[currentAlbum][currentTrackIndex];
-    
-        // Remove the .mp3 extension from the track name
         track = track.replace(".mp3", "");
-    
-        // Remove the numbering at the beginning of the track name, handling extra dash or period
         track = track.replace(/^\d+\s*[-.]*\s*/, "");
-    fetch(`https://api.genius.com/search?q=${track}&access_token=${apiKey}`, {})
-        .then(response => response.json())
-            .then(data => {
-                if (data.response && data.response.hits && data.response.hits.length > 0) {
-                    const songId = data.response.hits[0].result.id;
-                } else {
-                    alert('No matching song found.');
-                }
-            })
-        .catch(error => {
-            alert('Error:', error);
-            alert('Response:', error.response); // Alerting the response object for debugging
-        });
+        getLyrics(track);
+        consoled(currentAlbum.replace("/", " "), track);
     }
+const serverUrl = 'https://congenial-halibut-jqp6r9q4rxgh47w-8080.app.github.dev/'; // Update with your server URL
+
+function getLyrics(track) {
+  var apiKey = 'fiE1SC2YyfP5bN4Ku6BqChOfU46ltaZMhFxOVjlknfeIZG9Glkp5yCU_Kve1qlvo';
+
+  fetch(`https://api.genius.com/search?q=${track}&access_token=${apiKey}`, {})
+    .then(response => response.json())
+    .then(data => {
+      if (data.response && data.response.hits && data.response.hits.length > 0) {
+        var song = data.response.hits[0].result;
+        console.log(`Title: ${song.title} by ${song.primary_artist.name}`);
+        console.log(`URL: ${song.url}`);
+        console.log(`Thumbnail: ${song.song_art_image_thumbnail_url}`);
+        console.log(`Image: ${song.song_art_image_url}`);
+        console.log(`Lyrics:\n${song.path}`);
+        console.log(`https://api.genius.com/search?q=${track}?access_token=${apiKey}`);
+        console.log(`https://api.genius.com/songs/${song.id}?access_token=${apiKey}`);
+        fetch(`https://api.genius.com/songs/${song.id}?access_token=${apiKey}`, {})
+        
+    .then(response => response.json())
+    .then(data => {
+        let embedContent = `<div id='rg_embed_link_${song.id}' class='rg_embed_link' data-song-id='${song.id}'>Read <a href='https://genius.com/${song.path}'></a></div> <script crossorigin src='//genius.com/songs/${song.id}/embed.js'></script>`;
+    document.getElementById('lyrics').innerHTML = embedContent;
+})
+      } else {
+        console.log('No matching song found.');
+      }
+    })
+    .catch(error => {
+      console.log('Error:', error);
+    });
+}
+
     
+        
     function w() {
         for (let album in audioTracks) {
-            for (let i = 0; i < audioTracks[album].length; i++) {
-                let trackPath = audioTracks[album][i];
-                let url = "https://cdn.sillyangel.me/songs/" + album + "/" + trackPath;
+            audioTracks[album].forEach(trackPath => {
+                let url = `https://cdn.sillyangel.me/songs/${album}/${trackPath}`;
                 let request = new XMLHttpRequest();
                 request.open('HEAD', url, false);
                 request.send();
-            }
+            });
         }
     }
     function playPause() {
-        if (audio.paused) {
-            audio.play();
-            playButton.forEach(function(element) {
-                element.innerHTML = '<i class="fas fa-pause"></i>';
-            });
-        } else {
-            audio.pause();
-            playButton.forEach(function(element) {
-                element.innerHTML = '<i class="fas fa-play"></i>';
-            });
-        }
+        const isPaused = audio.paused;
+        audio[isPaused ? 'play' : 'pause']();
+        const iconClass = isPaused ? 'fas fa-pause' : 'fas fa-play';
+        playButton.forEach(element => element.innerHTML = `<i class="${iconClass}"></i>`);
     }
     function setVolume() {
         localStorage.setItem("Volume", volumeControl.value);
@@ -809,145 +804,102 @@ try {
     var volumeControl = document.getElementById('volume');
     volumeControl.addEventListener('input', setVolume);
     
+    function changeTrack(step) {
+        currentTrackIndex += step;
+        let trackCount = audioTracks[currentAlbum].length;
+        currentTrackIndex = ((currentTrackIndex % trackCount) + trackCount) % trackCount;
+        loadTrack();
+        audio.play();
+    }
+
     function skipTrack() {
-        currentTrackIndex++;
-        if (currentTrackIndex >= audioTracks[currentAlbum].length) {
-            currentTrackIndex = 0; // Loop back to the first track
-        }
-        loadTrack();
-        audio.play();
+        changeTrack(1);
     }
+
     function previousTrack() {
-        currentTrackIndex--;
-        if (currentTrackIndex < 0) {
-            currentTrackIndex = audioTracks[currentAlbum].length - 1; // Go to the last track
-        }
-        loadTrack();
-        audio.play();
+        changeTrack(-1);
     }
+
     function seek(event, progressBarId) {
-        const progressBar = document.getElementById(progressBarId);
-        const percent = event.offsetX / progressBar.offsetWidth;
-        const seekTime = percent * audio.duration;
-        
-        if (isFinite(seekTime)) {
-            audio.currentTime = seekTime;
-        } else {
-            console.error("Invalid seek time");
-        }
+        const percent = event.offsetX / document.getElementById(progressBarId).offsetWidth;
+        audio.currentTime = isFinite(percent * audio.duration) ? percent * audio.duration : console.error("Invalid seek time");
     }
     
     function getContrastColor(rgbColor) {
-        // Extract the RGB values
-        const rgbValues = rgbColor.match(/\d+/g);
-        const r = parseInt(rgbValues[0], 10);
-        const g = parseInt(rgbValues[1], 10);
-        const b = parseInt(rgbValues[2], 10);
-    
-        // Calculate the relative luminance
+        const [r, g, b] = rgbColor.match(/\d+/g).map(Number);
         const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-    
-        // Choose white or black based on the luminance
         return luminance > 0.5 ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)';
     }
-    
-    
+
     function updateAlbumCover() {
-        var selectedAlbum = albums[currentAlbumIndex];
-        var image = new Image();
-    
+        const selectedAlbum = albums[currentAlbumIndex];
+        const image = new Image();
         image.crossOrigin = "Anonymous";
         image.src = selectedAlbum.image;
-    
+
         image.onload = function() {
-            var canvas = document.createElement('canvas');
-            var context = canvas.getContext('2d');
-    
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
             canvas.width = image.width;
             canvas.height = image.height;
-    
             context.drawImage(image, 0, 0, image.width, image.height);
-    
-            var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-            var pixels = imageData.data;
-    
-            var red = pixels[0];
-            var green = pixels[1];
-            var blue = pixels[2];
-    
-            var varsa = document.getElementsByClassName("audio-controls-full")[0];
-            var textContrastColor = getContrastColor('rgb(' + red + ',' + green + ',' + blue + ')');
-            if (varsa) {
-                varsa.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-                varsa.style.color = textContrastColor;
+
+            const [red, green, blue] = context.getImageData(0, 0, canvas.width, canvas.height).data;
+            const audioControls = document.querySelector(".audio-controls-full");
+            const rgbColor = `rgb(${red},${green},${blue})`;
+            const textContrastColor = getContrastColor(rgbColor);
+
+            if (audioControls) {
+                audioControls.style.backgroundColor = rgbColor;
+                audioControls.style.color = textContrastColor;
             } else {
                 console.error("Element with class 'audio-controls-full' not found");
             }
-    
-            var albumCovers = document.querySelectorAll('[id="albumCover"]');
-            albumCovers.forEach(function(element) {
-                element.src = selectedAlbum.image;
-            });
+
+            document.querySelectorAll('[id="albumCover"]').forEach(element => element.src = selectedAlbum.image);
         };
     }
     
     
     // Call the updateAlbumCover function when changing albums
-    function nextAlbum() {
-        currentAlbumIndex++;
-        if (currentAlbumIndex >= albums.length) {
-            currentAlbumIndex = 0; // Loop back to the first album
-        }
+    function changeAlbum(step) {
+        currentAlbumIndex += step;
+        let albumCount = albums.length;
+        currentAlbumIndex = ((currentAlbumIndex % albumCount) + albumCount) % albumCount;
         currentAlbum = albums[currentAlbumIndex].folder;
         currentTrackIndex = 0;
-        // Check if audioTracks[currentAlbum] exists before loading
         if (audioTracks[currentAlbum]) {
             loadTrack();
             audio.play();
-            // Update the album cover image
             updateAlbumCover();
         } else {
-            // Handle the case when the album is not found
-            console.error("Album not found: " + currentAlbum);
+            console.error(`Album not found: ${currentAlbum}`);
         }
     }
-    
+
+    function nextAlbum() {
+        changeAlbum(1);
+    }
+
     function previousAlbum() {
-        currentAlbumIndex--;
-        if (currentAlbumIndex < 0) {
-            currentAlbumIndex = albums.length - 1; // Go to the last album
-        }
-        currentAlbum = albums[currentAlbumIndex].folder;
-        currentTrackIndex = 0;
-        loadTrack();
-        audio.play();
-        // Update the album cover image
-        updateAlbumCover();
+        changeAlbum(-1);
     }
+
     audio.addEventListener("timeupdate", function() {
-        var currentTime = audio.currentTime;
-        var duration = audio.duration;
-        // Check if duration is a finite number before calculating percentComplete
+        const duration = audio.duration;
         if (isFinite(duration)) {
-            var percentComplete = (currentTime / duration) * 100;
-            progressBar.forEach(function(element) {
-                element.value = percentComplete;
-            });
-            }
+            const percentComplete = (audio.currentTime / duration) * 100;
+            progressBar.forEach(element => element.value = percentComplete);
+        }
         localStorage.setItem("timerforaudio", audio.currentTime);
     });
+
     audio.currentTime = localStorage.getItem("timerforaudio");
-    
-    // Load the first track when the page loads
+
     loadTrack();
-    // Event listener for when the current track ends
-    audio.addEventListener("ended", function() {
-        // Play the next track automatically
-        skipTrack();
-    });
-    
-    
-    
+
+    audio.addEventListener("ended", skipTrack);
+
     function updateTrackText() {
         var artist = albums[currentAlbumIndex].artist;
         var track = audioTracks[currentAlbum][currentTrackIndex];
@@ -968,33 +920,29 @@ try {
             element.textContent = artist + " - " + track;
         });
     }
-    var songselectorjs = document.getElementById("songselector");
-    var accountsettings = document.getElementById("accountsettings");
-    var searchingthi = document.getElementById("searching");
-    var lilbrarys = document.getElementById("lilbrary");
-    var settongs = document.getElementById("settings");
-    var mlogin = document.getElementById("mlogin");
-    var playerfull = document.getElementsByClassName("audio-controls-full");
-    var playermini = document.getElementsByClassName("audio-controls");
-    var sidebarmen = document.getElementsByClassName("sidebarmen");
-    
+    const elementsById = ['songselector', 'accountsettings', 'searching', 'lilbrary', 'settings', 'mlogin'].reduce((obj, id) => {
+        obj[id] = document.getElementById(id);
+        return obj;
+    }, {});
+
+    const elementsByClassName = ['audio-controls-full', 'audio-controls', 'sidebarmen'].reduce((obj, className) => {
+        obj[className] = document.getElementsByClassName(className);
+        return obj;
+    }, {});
+
     function hidefullplayer() {
-      songselectorjs.style.display = "flex";
-      playerfull[0].style.display = "none";
-      playermini[0].style.display = "flex";
-      sidebarmen[0].style.display = "block";
+        elementsById['songselector'].style.display = "flex";
+        elementsByClassName['audio-controls-full'][0].style.display = "none";
+        elementsByClassName['audio-controls'][0].style.display = "flex";
+        elementsByClassName['sidebarmen'][0].style.display = "block";
     }
-    
+
     function openfullplayer() {
-    accountsettings.style.display = "none";
-    searchingthi.style.display = "none";
-    lilbrarys.style.display = "none";
-    settongs.style.display = "none";
-    mlogin.style.display = "none";
-      songselectorjs.style.display = "none";
-      playerfull[0].style.display = "flex";
-      playermini[0].style.display = "none";
-      sidebarmen[0].style.display = "none";
+        Object.values(elementsById).forEach(element => element.style.display = "none");
+        elementsById['songselector'].style.display = "none";
+        elementsByClassName['audio-controls-full'][0].style.display = "flex";
+        elementsByClassName['audio-controls'][0].style.display = "none";
+        elementsByClassName['sidebarmen'][0].style.display = "none";
     }
     
  
@@ -1094,7 +1042,7 @@ try {
     
         })
         .catch((error) => {
-            alert('Error loading JSON data:', error);
+            console.log('Error loading JSON data:', error);
             console.log('Error loading JSON data:', error);
         });
     }
@@ -1317,8 +1265,8 @@ function getSelectedSize() {
     
     
     } catch(error) {
-        alert(error);
-        alert(error.message);
+        console.log(error);
+        console.log(error.message);
         console.log(error);
         console.log(error.message);
     }

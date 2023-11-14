@@ -1,8 +1,12 @@
 const path = require('path');
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors'); 
+
 const app = express();
 const port = 8080;
+
+app.use(cors());
 
 app.use((req, res, next) => {
     console.log(`User with IP: ${req.ip} made a request to ${req.originalUrl}`);
@@ -12,16 +16,30 @@ app.use((req, res, next) => {
 // Serve your static files from the 'public' directory
 app.use(express.static('public'));
 
-// Proxy route to fetch images
-app.get('/proxy', async (req, res) => {
+// Handle requests to /genius/:path using the server-side proxy
+app.get('/genius/:path', async (req, res) => {
+    const path = req.params.path;
     try {
-        const response = await axios.get(req.query.url, { responseType: 'arraybuffer' });
-        const headers = response.headers;
-        const imageBuffer = Buffer.from(response.data, 'binary');
-        res.set(headers);
-        res.send(imageBuffer);
+        const response = await axios.get(`https://genius.com/${path}`, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+                'Authorization': 'Bearer fiE1SC2YyfP5bN4Ku6BqChOfU46ltaZMhFxOVjlknfeIZG9Glkp5yCU_Kve1qlvo',
+            },
+        });
+        
+        // Handle potential rate limiting or other checks here
+        // For example, you might want to check response.status and response.data
+        
+        res.send(response.data);
     } catch (error) {
-        res.status(500).send('Internal Server Error');
+        console.error('Error fetching Genius data:', error.message);
+
+        // Handle specific HTTP status codes if needed
+        if (error.response && error.response.status === 403) {
+            res.status(403).send('Access Denied');
+        } else {
+            res.status(500).send('Internal Server Error');
+        }
     }
 });
 
