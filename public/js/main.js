@@ -867,10 +867,7 @@ document.addEventListener('keydown', function(event) {
     }
     // if spacebar is clicked pause without keycode since keycode is deprecated
     document.addEventListener('keydown', function(event) {
-        if (event.code === 'Space') {
-            event.preventDefault(); // This line prevents the default behavior
-            playPause();
-        } else if (event.code === 'ArrowRight') {
+        if (event.code === 'ArrowRight') {
             event.preventDefault(); // This line prevents the default behavior
             skipTrack();
         } else if (event.code === 'ArrowLeft') {
@@ -888,15 +885,6 @@ document.addEventListener('keydown', function(event) {
             volumeControl.value = parseFloat(volumeControl.value) - 0.01;
             audio.volume = volumeControl.value;
             setVolume();
-        } else if (event.code === 'KeyF') {
-            event.preventDefault(); // This line prevents the default behavior
-            openfullplayer();
-        } else if (event.code === 'KeyG') {
-            event.preventDefault(); // This line prevents the default behavior
-            hidefullplayer();
-        } else if (event.code === 'KeyL') {
-            event.preventDefault(); // This line prevents the default behavior
-            toggleRepeat();
         }
         });
 
