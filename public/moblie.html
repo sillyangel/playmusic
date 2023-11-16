@@ -3,14 +3,14 @@
     <head>
         <title>‎</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-        <link rel="stylesheet" href="moblie.css">
-        <link rel="stylesheet" href="thing.css">
+        <link rel="stylesheet" href="css/moblie.css">
+        <link rel="stylesheet" href="css/thing.css">
         <link rel="manifest" href="app.webmanifest">
         <meta name="description" content="A simple audio player website by angel">
         <meta name="keywords" content="audio player, music, playmusic, angel">
         <meta name="author" content="sillyangel3">
         <meta name="theme-color" content="#222222"> <!-- Set the theme color to match your background/theme -->
-        <link rel="stylesheet" href="toast.css">
+        <link rel="stylesheet" href="css/toast.css">
         <!-- Open Graph meta tags for social sharing -->
         <meta property="og:title" content="Your PlayMusic Website">
         <meta property="og:description" content="A simple audio player website by angel">
@@ -24,7 +24,7 @@
         <meta name="twitter:description" content="A simple audio player website by angel">
         <meta name="twitter:image" content="./assets/nonealbum.png"> <!-- Replace with a link to your website's image -->
         <script>
-        navigator.serviceWorker.register("sw.js")
+        navigator.serviceWorker.register("js/sw.js")
         </script>
         <!-- Favicon (you can create a favicon.ico and place it in the root directory of your website) -->
         <link rel="icon" href="assets/logo/mlogo.png" type="image/png">
@@ -171,8 +171,8 @@
     Your browser does not support the audio element.
 </audio>
 </body>
-<script src="moblie.js"></script>
-<script type="module" src="./dist/main.bundle.js"></script>
+<script src="./js/moblie.js"></script>
+<script type="module" src="./js/dist/firebase.bundle.js"></script>
 <script>
 var songselectorjs = document.getElementById("songselector");
 var playerfull = document.getElementById("playerfull");

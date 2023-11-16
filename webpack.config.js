@@ -5,11 +5,10 @@ const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const config = {
   mode: 'none', // Add this line to disable strict mode
   entry: {
-    firebase: './public/firebase.js',
-    sw: './public/firebase-messaging-sw.js',
+    firebase: './public/js/firebase.js',
   },
   output: {
-    path: path.resolve(__dirname, './public/dist'),
+    path: path.resolve(__dirname, './public/js/dist/'),
     filename: '[name].bundle.js'
   },
   module: {

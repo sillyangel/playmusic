@@ -69,7 +69,7 @@ try {
         { artist: "Billie Eilish", album: "Happy Than Ever", folder: "be/hte", image: "https://cdn.sillyangel.me/songs/be/hte/albumcover.jpg" },
         { artist: "SZA", album: "SOS", folder: "sza/sos", image: "https://cdn.sillyangel.me/songs/sza/sos/albumcover.jpg" },
         { artist: "Kendrick Lamar", album: "Mr morale and the big steppers", folder: "kenla/mmtbs", image: "https://cdn.sillyangel.me/songs/kenla/mmtbs/albumcover.jpg" },
-        { artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "https://cdn.sillyangel.me/songs/kenla/tpabf/albumcover.jpg" }
+        { artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "https://cdn.sillyangel.me/songs/kenla/tpabf/albumcover.jpg" },
     //  { artist: "", album: "", folder: "/", image: "https://cdn.sillyangel.me/songs///albumcover.webp" },
         // Add more albums here
     ];
@@ -198,8 +198,20 @@ try {
           "12 From the Ritz to the Rubble.mp3",
           "13 A Certain Romance.mp3",
         ],
-        "arcticmonkeys/fwn": [
-       ], 
+/*      "arcticmonkeys/fwn": [
+          "01 Brainstorm.mp3",
+          "02 Teddy Picker.mp3",
+          "03 D is For Dangerous.mp3",
+          "04 Balaclava.mp3",
+          "05 Fluorescent Adolescent.mp3",
+          "06 Only Ones Who Know.mp3",
+          "07 Do Me a Favour.mp3",
+          "08 This House Is A Circus.mp3",
+          "09 If You Were There, Beware.mp3",
+          "10 The Bad Thing.mp3",
+          "11 Old Yellow Bricks.mp3",
+          "12 505.mp3",
+       ], */
         "arcticmonkeys/sias": [
         ],
         "arcticmonkeys/tbhc": [
@@ -704,9 +716,9 @@ try {
         ],
     };
     var audio = document.getElementById("myAudio");
-    var playButton = document.querySelectorAll("#playbuttonthung");
+    var playButton = document.getElementById("playbuttonthung");
     var volumeControl = document.getElementById("volume");
-    var progressBar = document.querySelectorAll("progress");
+    var progressBar = document.getElementById("progress");
     var currentTrackIndex = 0;
     var currentAlbum = "tylerthecreator/wolf"
     var currentAlbumIndex = 0;
@@ -739,167 +751,128 @@ try {
         localStorage.setItem("Albumindex", currentAlbumIndex);
         localStorage.setItem("Trackindex", currentTrackIndex);
         localStorage.setItem("CurrentAlbum", currentAlbum);
-        var track = audioTracks[currentAlbum][currentTrackIndex];
-        track = track.replace(".mp3", "");
-        track = track.replace(/^\d+\s*[-.]*\s*/, "");
-        getLyrics(track);
-        consoled(currentAlbum.replace("/", " "), track);
     }
-const serverUrl = 'https://congenial-halibut-jqp6r9q4rxgh47w-8080.app.github.dev/'; // Update with your server URL
-
-function getLyrics(track) {
-  var apiKey = 'fiE1SC2YyfP5bN4Ku6BqChOfU46ltaZMhFxOVjlknfeIZG9Glkp5yCU_Kve1qlvo';
-
-  fetch(`https://api.genius.com/search?q=${track}&access_token=${apiKey}`, {})
-    .then(response => response.json())
-    .then(data => {
-      if (data.response && data.response.hits && data.response.hits.length > 0) {
-        var song = data.response.hits[0].result;
-        console.log(`Title: ${song.title} by ${song.primary_artist.name}`);
-        console.log(`URL: ${song.url}`);
-        console.log(`Thumbnail: ${song.song_art_image_thumbnail_url}`);
-        console.log(`Image: ${song.song_art_image_url}`);
-        console.log(`Lyrics:\n${song.path}`);
-        console.log(`https://api.genius.com/search?q=${track}?access_token=${apiKey}`);
-        console.log(`https://api.genius.com/songs/${song.id}?access_token=${apiKey}`);
-        fetch(`https://api.genius.com/songs/${song.id}?access_token=${apiKey}`, {})
-        
-    .then(response => response.json())
-    .then(data => {
-        let embedContent = `<div id='rg_embed_link_${song.id}' class='rg_embed_link' data-song-id='${song.id}'>Read <a href='https://genius.com/${song.path}'></a></div> <script crossorigin src='//genius.com/songs/${song.id}/embed.js'></script>`;
-    document.getElementById('lyrics').innerHTML = embedContent;
-})
-      } else {
-        console.log('No matching song found.');
-      }
-    })
-    .catch(error => {
-      console.log('Error:', error);
-    });
-}
-
-    
-        
     function w() {
         for (let album in audioTracks) {
-            audioTracks[album].forEach(trackPath => {
-                let url = `https://cdn.sillyangel.me/songs/${album}/${trackPath}`;
+            for (let i = 0; i < audioTracks[album].length; i++) {
+                let trackPath = audioTracks[album][i];
+                let url = "https://cdn.sillyangel.me/songs/" + album + "/" + trackPath;
                 let request = new XMLHttpRequest();
                 request.open('HEAD', url, false);
                 request.send();
-            });
+            }
         }
     }
     function playPause() {
-        const isPaused = audio.paused;
-        audio[isPaused ? 'play' : 'pause']();
-        const iconClass = isPaused ? 'fas fa-pause' : 'fas fa-play';
-        playButton.forEach(element => element.innerHTML = `<i class="${iconClass}"></i>`);
+        if (audio.paused) {
+            audio.play();
+            playButton.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+            audio.pause();
+            playButton.innerHTML = '<i class="fas fa-play"></i>';
+        }
     }
+    
     function setVolume() {
         localStorage.setItem("Volume", volumeControl.value);
-        audio.volume = localStorage.getItem("Volume");
+        audio.volume = localStorage.getItem("Volume")
     }
     
-    var volumeControl = document.getElementById('volume');
-    volumeControl.addEventListener('input', setVolume);
-    
-    function changeTrack(step) {
-        currentTrackIndex += step;
-        let trackCount = audioTracks[currentAlbum].length;
-        currentTrackIndex = ((currentTrackIndex % trackCount) + trackCount) % trackCount;
+    function skipTrack() {
+        currentTrackIndex++;
+        if (currentTrackIndex >= audioTracks[currentAlbum].length) {
+            currentTrackIndex = 0; // Loop back to the first track
+        }
         loadTrack();
         audio.play();
     }
-
-    function skipTrack() {
-        changeTrack(1);
-    }
-
+    
     function previousTrack() {
-        changeTrack(-1);
-    }
-
-    function seek(event, progressBarId) {
-        const percent = event.offsetX / document.getElementById(progressBarId).offsetWidth;
-        audio.currentTime = isFinite(percent * audio.duration) ? percent * audio.duration : console.error("Invalid seek time");
+        currentTrackIndex--;
+        if (currentTrackIndex < 0) {
+            currentTrackIndex = audioTracks[currentAlbum].length - 1; // Go to the last track
+        }
+        loadTrack();
+        audio.play();
     }
     
-    function getContrastColor(rgbColor) {
-        const [r, g, b] = rgbColor.match(/\d+/g).map(Number);
-        const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-        return luminance > 0.5 ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)';
+    function seek(event) {
+        const progressBar = document.getElementById('progress');
+        const percent = event.offsetX / progressBar.offsetWidth;
+        const seekTime = percent * audio.duration;
+        if (isFinite(seekTime)) {
+            audio.currentTime = seekTime;
+        } else {
+            console.error("Invalid seek time");
+        }
     }
-
+    
+    // Modify the updateAlbumCover function
     function updateAlbumCover() {
-        const selectedAlbum = albums[currentAlbumIndex];
-        const image = new Image();
-        image.crossOrigin = "Anonymous";
-        image.src = selectedAlbum.image;
-
-        image.onload = function() {
-            const canvas = document.createElement('canvas');
-            const context = canvas.getContext('2d');
-            canvas.width = image.width;
-            canvas.height = image.height;
-            context.drawImage(image, 0, 0, image.width, image.height);
-
-            const [red, green, blue] = context.getImageData(0, 0, canvas.width, canvas.height).data;
-            const audioControls = document.querySelector(".audio-controls-full");
-            const rgbColor = `rgb(${red},${green},${blue})`;
-            const textContrastColor = getContrastColor(rgbColor);
-
-            if (audioControls) {
-                audioControls.style.backgroundColor = rgbColor;
-                audioControls.style.color = textContrastColor;
-            } else {
-                console.error("Element with class 'audio-controls-full' not found");
-            }
-
-            document.querySelectorAll('[id="albumCover"]').forEach(element => element.src = selectedAlbum.image);
-        };
-    }
+        // Get all elements with the same ID "albumCover"
+        var albumCovers = document.querySelectorAll('[id="albumCover"]');
+        var selectedAlbum = albums[currentAlbumIndex];
     
+        // Loop through each element with the same ID and update its src attribute
+        albumCovers.forEach(function(element) {
+            element.src = selectedAlbum.image;
+        });
+    }
     
     // Call the updateAlbumCover function when changing albums
-    function changeAlbum(step) {
-        currentAlbumIndex += step;
-        let albumCount = albums.length;
-        currentAlbumIndex = ((currentAlbumIndex % albumCount) + albumCount) % albumCount;
+    function nextAlbum() {
+        currentAlbumIndex++;
+        if (currentAlbumIndex >= albums.length) {
+            currentAlbumIndex = 0; // Loop back to the first album
+        }
         currentAlbum = albums[currentAlbumIndex].folder;
         currentTrackIndex = 0;
+        // Check if audioTracks[currentAlbum] exists before loading
         if (audioTracks[currentAlbum]) {
             loadTrack();
             audio.play();
+            // Update the album cover image
             updateAlbumCover();
         } else {
-            console.error(`Album not found: ${currentAlbum}`);
+            // Handle the case when the album is not found
+            console.error("Album not found: " + currentAlbum);
         }
     }
-
-    function nextAlbum() {
-        changeAlbum(1);
-    }
-
+    
     function previousAlbum() {
-        changeAlbum(-1);
+        currentAlbumIndex--;
+        if (currentAlbumIndex < 0) {
+            currentAlbumIndex = albums.length - 1; // Go to the last album
+        }
+        currentAlbum = albums[currentAlbumIndex].folder;
+        currentTrackIndex = 0;
+        loadTrack();
+        audio.play();
+        // Update the album cover image
+        updateAlbumCover();
     }
-
     audio.addEventListener("timeupdate", function() {
-        const duration = audio.duration;
+        var currentTime = audio.currentTime;
+        var duration = audio.duration;
+        // Check if duration is a finite number before calculating percentComplete
         if (isFinite(duration)) {
-            const percentComplete = (audio.currentTime / duration) * 100;
-            progressBar.forEach(element => element.value = percentComplete);
+            var percentComplete = (currentTime / duration) * 100;
+            progressBar.value = percentComplete;
         }
         localStorage.setItem("timerforaudio", audio.currentTime);
     });
-
     audio.currentTime = localStorage.getItem("timerforaudio");
-
+    
+    // Load the first track when the page loads
     loadTrack();
-
-    audio.addEventListener("ended", skipTrack);
-
+    // Event listener for when the current track ends
+    audio.addEventListener("ended", function() {
+        // Play the next track automatically
+        skipTrack();
+    });
+    
+    
+    
     function updateTrackText() {
         var artist = albums[currentAlbumIndex].artist;
         var track = audioTracks[currentAlbum][currentTrackIndex];
@@ -920,64 +893,28 @@ function getLyrics(track) {
             element.textContent = artist + " - " + track;
         });
     }
-    const elementsById = ['songselector', 'accountsettings', 'searching', 'lilbrary', 'settings', 'mlogin'].reduce((obj, id) => {
-        obj[id] = document.getElementById(id);
-        return obj;
-    }, {});
-
-    const elementsByClassName = ['audio-controls-full', 'audio-controls', 'sidebarmen'].reduce((obj, className) => {
-        obj[className] = document.getElementsByClassName(className);
-        return obj;
-    }, {});
-
-    function hidefullplayer() {
-        elementsById['songselector'].style.display = "flex";
-        elementsByClassName['audio-controls-full'][0].style.display = "none";
-        elementsByClassName['audio-controls'][0].style.display = "flex";
-        elementsByClassName['sidebarmen'][0].style.display = "block";
-    }
-
-    function openfullplayer() {
-        Object.values(elementsById).forEach(element => element.style.display = "none");
-        elementsById['songselector'].style.display = "none";
-        elementsByClassName['audio-controls-full'][0].style.display = "flex";
-        elementsByClassName['audio-controls'][0].style.display = "none";
-        elementsByClassName['sidebarmen'][0].style.display = "none";
-    }
     
- 
     
     // Call the function to update both elements
     updateTrackText();
     // Add these lines to update the song duration and current time
-    var songTimeElement = document.querySelectorAll("#songTime");
-    var songDurationElement = document.querySelectorAll("#songDuration");
-    var songTimeElement2 = document.getElementById("songTime2");
-    var songDurationElement2 = document.getElementById("songDuration2");
+    var songTimeElement = document.getElementById("songTime");
+    var songDurationElement = document.getElementById("songDuration");
     audio.addEventListener("timeupdate", function() {
         var currentTime = audio.currentTime;
         var duration = audio.duration;
         // Check if duration is a finite number before calculating percentComplete
         if (isFinite(duration)) {
             var percentComplete = (currentTime / duration) * 100;
-            
-            progressBar.forEach(function(element) {
-                element.value = percentComplete;
-            });
+            progressBar.value = percentComplete;
             // Update the song duration and current time
             var currentMinutes = Math.floor(currentTime / 60);
             var currentSeconds = Math.floor(currentTime % 60);
             var durationMinutes = Math.floor(duration / 60);
             var durationSeconds = Math.floor(duration % 60);
             // Display current time and duration in the format "M:SS"
-            songTimeElement.forEach(function(element) {
-                element.textContent = textContent = currentMinutes + ":" + (currentSeconds < 10 ? "0" : "") + currentSeconds;;
-            });
-            songDurationElement.forEach(function(element) {
-                element.textContent = durationMinutes + ":" + (durationSeconds < 10 ? "0" : "") + durationSeconds;
-            })
-            songTimeElement2.textContent = textContent = currentMinutes + ":" + (currentSeconds < 10 ? "0" : "") + currentSeconds;;
-            songDurationElement2.textContent = durationMinutes + ":" + (durationSeconds < 10 ? "0" : "") + durationSeconds;
+            songTimeElement.textContent = currentMinutes + ":" + (currentSeconds < 10 ? "0" : "") + currentSeconds;
+            songDurationElement.textContent = durationMinutes + ":" + (durationSeconds < 10 ? "0" : "") + durationSeconds;
         }
     });
     // load the songs
@@ -999,7 +936,7 @@ function getLyrics(track) {
         }
     });
     function fetchAndDisplayAlbums () {
-    fetch('songs.json')
+    fetch('./json/songs.json')
         .then((response) => response.json())
         .then((data) => {
             const songSelector = document.getElementById('farts');
@@ -1042,7 +979,7 @@ function getLyrics(track) {
     
         })
         .catch((error) => {
-            console.log('Error loading JSON data:', error);
+            alert('Error loading JSON data:', error);
             console.log('Error loading JSON data:', error);
         });
     }
@@ -1265,8 +1202,8 @@ function getSelectedSize() {
     
     
     } catch(error) {
-        console.log(error);
-        console.log(error.message);
+        alert(error);
+        alert(error.message);
         console.log(error);
         console.log(error.message);
     }

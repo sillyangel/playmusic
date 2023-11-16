@@ -69,7 +69,7 @@ try {
         { artist: "Billie Eilish", album: "Happy Than Ever", folder: "be/hte", image: "https://cdn.sillyangel.me/songs/be/hte/albumcover.jpg" },
         { artist: "SZA", album: "SOS", folder: "sza/sos", image: "https://cdn.sillyangel.me/songs/sza/sos/albumcover.jpg" },
         { artist: "Kendrick Lamar", album: "Mr morale and the big steppers", folder: "kenla/mmtbs", image: "https://cdn.sillyangel.me/songs/kenla/mmtbs/albumcover.jpg" },
-        { artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "https://cdn.sillyangel.me/songs/kenla/tpabf/albumcover.jpg" },
+        { artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "https://cdn.sillyangel.me/songs/kenla/tpabf/albumcover.jpg" }
     //  { artist: "", album: "", folder: "/", image: "https://cdn.sillyangel.me/songs///albumcover.webp" },
         // Add more albums here
     ];
@@ -198,20 +198,8 @@ try {
           "12 From the Ritz to the Rubble.mp3",
           "13 A Certain Romance.mp3",
         ],
-/*      "arcticmonkeys/fwn": [
-          "01 Brainstorm.mp3",
-          "02 Teddy Picker.mp3",
-          "03 D is For Dangerous.mp3",
-          "04 Balaclava.mp3",
-          "05 Fluorescent Adolescent.mp3",
-          "06 Only Ones Who Know.mp3",
-          "07 Do Me a Favour.mp3",
-          "08 This House Is A Circus.mp3",
-          "09 If You Were There, Beware.mp3",
-          "10 The Bad Thing.mp3",
-          "11 Old Yellow Bricks.mp3",
-          "12 505.mp3",
-       ], */
+        "arcticmonkeys/fwn": [
+       ], 
         "arcticmonkeys/sias": [
         ],
         "arcticmonkeys/tbhc": [
@@ -716,13 +704,16 @@ try {
         ],
     };
     var audio = document.getElementById("myAudio");
-    var playButton = document.getElementById("playbuttonthung");
+    var playButton = document.querySelectorAll("#playbuttonthung");
     var volumeControl = document.getElementById("volume");
-    var progressBar = document.getElementById("progress");
+    var progressBar = document.querySelectorAll("progress");
     var currentTrackIndex = 0;
     var currentAlbum = "tylerthecreator/wolf"
     var currentAlbumIndex = 0;
     var audiotimern;
+    var repeatButtonClickCount = 0;
+    let playbackMode = "none";
+    let currentTime = 0;
     if (localStorage.getItem("Albumindex") !== null) {
         currentAlbumIndex = localStorage.getItem("Albumindex");
     }
@@ -752,127 +743,253 @@ try {
         localStorage.setItem("Trackindex", currentTrackIndex);
         localStorage.setItem("CurrentAlbum", currentAlbum);
     }
-    function w() {
-        for (let album in audioTracks) {
-            for (let i = 0; i < audioTracks[album].length; i++) {
-                let trackPath = audioTracks[album][i];
-                let url = "https://cdn.sillyangel.me/songs/" + album + "/" + trackPath;
-                let request = new XMLHttpRequest();
-                request.open('HEAD', url, false);
-                request.send();
-            }
-        }
+const serverUrl = 'https://congenial-halibut-jqp6r9q4rxgh47w-8080.app.github.dev/'; // Update with your server URL
+
+function getLyrics(track) {
+  var apiKey = 'fiE1SC2YyfP5bN4Ku6BqChOfU46ltaZMhFxOVjlknfeIZG9Glkp5yCU_Kve1qlvo';
+
+  fetch(`https://api.genius.com/search?q=${track}&access_token=${apiKey}`, {})
+    .then(response => response.json())
+    .then(data => {
+      if (data.response && data.response.hits && data.response.hits.length > 0) {
+        var song = data.response.hits[0].result;
+        console.log(`Title: ${song.title} by ${song.primary_artist.name}`);
+        console.log(`URL: ${song.url}`);
+        console.log(`Thumbnail: ${song.song_art_image_thumbnail_url}`);
+        console.log(`Image: ${song.song_art_image_url}`);
+        console.log(`Lyrics:\n${song.path}`);
+        console.log(`https://api.genius.com/search?q=${track}?access_token=${apiKey}`);
+        console.log(`https://api.genius.com/songs/${song.id}?access_token=${apiKey}`);
+        fetch(`https://api.genius.com/songs/${song.id}?access_token=${apiKey}`, {})
+        
+    .then(response => response.json())
+    .then(data => {
+        let embedContent = `<div id='rg_embed_link_${song.id}' class='rg_embed_link' data-song-id='${song.id}'><a href='https://genius.com/${song.path}'></a></div> <script crossorigin src='//genius.com/songs/${song.id}/embed.js'></script>`;
+    document.getElementById('lyrics').innerHTML = embedContent;
+    navigator.clipboard.writeText(embedContent)
+    alert(document.getElementById('lyrics').innerHTML);
+})
+      } else {
+        console.log('No matching song found.');
+      }
+    })
+    .catch(error => {
+      console.log('Error:', error);
+    });
+}
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === '\\') {
+      doSomething();
     }
-    function playPause() {
-        if (audio.paused) {
-            audio.play();
-            playButton.innerHTML = '<i class="fas fa-pause"></i>';
-        } else {
-            audio.pause();
-            playButton.innerHTML = '<i class="fas fa-play"></i>';
-        }
+  });
+  
+  function doSomething() {
+    var iframethingy = document.getElementById("iframeas");
+    if (iframethingy.style.display === "block") {
+        iframethingy.style.display = "none";
+    } else {
+        iframethingy.style.display = "block";
     }
+}
+
+  
     
+        
+    
+    function playPause() {
+        const isPaused = audio.paused;
+        audio[isPaused ? 'play' : 'pause']();
+        const iconClass = isPaused ? 'fas fa-pause' : 'fas fa-play';
+        playButton.forEach(element => element.innerHTML = `<i class="${iconClass}"></i>`);
+    }
     function setVolume() {
         localStorage.setItem("Volume", volumeControl.value);
-        audio.volume = localStorage.getItem("Volume")
+        audio.volume = localStorage.getItem("Volume");
     }
     
-    function skipTrack() {
-        currentTrackIndex++;
-        if (currentTrackIndex >= audioTracks[currentAlbum].length) {
-            currentTrackIndex = 0; // Loop back to the first track
+    var volumeControl = document.getElementById('volume');
+    volumeControl.addEventListener('input', setVolume);
+    
+    function changeTrack(step) {
+        currentTrackIndex += step;
+        let trackCount = audioTracks[currentAlbum].length;
+    
+        if (playbackMode === "repeat-song") {
+            audio.currentTime = 0;
+            audio.play();
+            playbackMode = "none";
+        updatePlaybackModeText();
+            return;
         }
-        loadTrack();
-        audio.play();
-    }
     
-    function previousTrack() {
-        currentTrackIndex--;
-        if (currentTrackIndex < 0) {
-            currentTrackIndex = audioTracks[currentAlbum].length - 1; // Go to the last track
-        }
-        loadTrack();
-        audio.play();
-    }
-    
-    function seek(event) {
-        const progressBar = document.getElementById('progress');
-        const percent = event.offsetX / progressBar.offsetWidth;
-        const seekTime = percent * audio.duration;
-        if (isFinite(seekTime)) {
-            audio.currentTime = seekTime;
+        // The rest of the previous logic remains unchanged
+        if (playbackMode === "repeat") {
+            currentTrackIndex = ((currentTrackIndex % trackCount) + trackCount) % trackCount;
+        } else if (playbackMode === "loop" && currentTrackIndex < 0) {
+            currentTrackIndex = trackCount - 1;        
         } else {
-            console.error("Invalid seek time");
+            currentTrackIndex = currentTrackIndex % trackCount;
+        }
+        updatePlaybackModeText();
+        loadTrack();
+        audio.play();
+    }
+    
+
+    function toggleRepeat() {
+        repeatButtonClickCount += 1;
+    
+        // After the third click, reset the counter to return to normal playback
+        if (repeatButtonClickCount > 2) {
+            repeatButtonClickCount = 0;
+            playbackMode = "none";
+        } else if (repeatButtonClickCount === 1) {
+            // On the first click, enable album repeat
+            playbackMode = "repeat-song";
+
+        } else if (repeatButtonClickCount === 2) {
+            playbackMode = "repeat";
+        }
+    
+        updatePlaybackModeText();
+    }
+    
+    function updatePlaybackModeText() {
+        var buttonrepeat = document.getElementById("repeatbutton");
+        if (playbackMode === "none") {
+            buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #ffffff;"></i>';
+        } else if (playbackMode === "repeatalbum") {
+            buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #ff0000;"></i>';
+        } else if (playbackMode === "repeat-song") {
+            buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #00ff00;"></i>';
         }
     }
-    
-    // Modify the updateAlbumCover function
-    function updateAlbumCover() {
-        // Get all elements with the same ID "albumCover"
-        var albumCovers = document.querySelectorAll('[id="albumCover"]');
-        var selectedAlbum = albums[currentAlbumIndex];
-    
-        // Loop through each element with the same ID and update its src attribute
-        albumCovers.forEach(function(element) {
-            element.src = selectedAlbum.image;
+    // if spacebar is clicked pause without keycode since keycode is deprecated
+    document.addEventListener('keydown', function(event) {
+        if (event.code === 'Space') {
+            event.preventDefault(); // This line prevents the default behavior
+            playPause();
+        } else if (event.code === 'ArrowRight') {
+            event.preventDefault(); // This line prevents the default behavior
+            skipTrack();
+        } else if (event.code === 'ArrowLeft') {
+            previousTrack();
+            event.preventDefault(); // This line prevents the default behavior
+        } else if (event.code === 'ArrowUp') {
+            event.preventDefault(); // This line prevents the default behavior
+            volumeControl = document.getElementById("volume");
+            volumeControl.value = parseFloat(volumeControl.value) + 0.03;
+            audio.volume = volumeControl.value;
+            setVolume();
+        } else if (event.code === 'ArrowDown') {
+            event.preventDefault(); // This line prevents the default behavior
+            volumeControl = document.getElementById("volume");
+            volumeControl.value = parseFloat(volumeControl.value) - 0.01;
+            audio.volume = volumeControl.value;
+            setVolume();
+        } else if (event.code === 'KeyF') {
+            event.preventDefault(); // This line prevents the default behavior
+            openfullplayer();
+        } else if (event.code === 'KeyG') {
+            event.preventDefault(); // This line prevents the default behavior
+            hidefullplayer();
+        } else if (event.code === 'KeyL') {
+            event.preventDefault(); // This line prevents the default behavior
+            toggleRepeat();
+        }
         });
+
+
+
+    function skipTrack() {
+        changeTrack(1);
     }
+
+    function previousTrack() {
+        changeTrack(-1);
+    }
+
+    function seek(event, progressBarId) {
+        const percent = event.offsetX / document.getElementById(progressBarId).offsetWidth;
+        audio.currentTime = isFinite(percent * audio.duration) ? percent * audio.duration : console.error("Invalid seek time");
+    }
+    
+    function getContrastColor(rgbColor) {
+        const [r, g, b] = rgbColor.match(/\d+/g).map(Number);
+        const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+        return luminance > 0.5 ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)';
+    }
+
+    function updateAlbumCover() {
+        const selectedAlbum = albums[currentAlbumIndex];
+        const image = new Image();
+        image.crossOrigin = "Anonymous";
+        image.src = selectedAlbum.image;
+
+        image.onload = function() {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.width = image.width;
+            canvas.height = image.height;
+            context.drawImage(image, 0, 0, image.width, image.height);
+
+            const [red, green, blue] = context.getImageData(0, 0, canvas.width, canvas.height).data;
+            const audioControls = document.querySelector(".audio-controls-full");
+            const rgbColor = `rgb(${red},${green},${blue})`;
+            const textContrastColor = getContrastColor(rgbColor);
+
+            if (audioControls) {
+                audioControls.style.backgroundColor = rgbColor;
+                audioControls.style.color = textContrastColor;
+            } else {
+                console.error("Element with class 'audio-controls-full' not found");
+            }
+
+            document.querySelectorAll('[id="albumCover"]').forEach(element => element.src = selectedAlbum.image);
+        };
+    }
+    
     
     // Call the updateAlbumCover function when changing albums
-    function nextAlbum() {
-        currentAlbumIndex++;
-        if (currentAlbumIndex >= albums.length) {
-            currentAlbumIndex = 0; // Loop back to the first album
-        }
+    function changeAlbum(step) {
+        currentAlbumIndex += step;
+        let albumCount = albums.length;
+        currentAlbumIndex = ((currentAlbumIndex % albumCount) + albumCount) % albumCount;
         currentAlbum = albums[currentAlbumIndex].folder;
         currentTrackIndex = 0;
-        // Check if audioTracks[currentAlbum] exists before loading
         if (audioTracks[currentAlbum]) {
             loadTrack();
             audio.play();
-            // Update the album cover image
             updateAlbumCover();
         } else {
-            // Handle the case when the album is not found
-            console.error("Album not found: " + currentAlbum);
+            console.error(`Album not found: ${currentAlbum}`);
         }
     }
-    
+
+    function nextAlbum() {
+        changeAlbum(1);
+    }
+
     function previousAlbum() {
-        currentAlbumIndex--;
-        if (currentAlbumIndex < 0) {
-            currentAlbumIndex = albums.length - 1; // Go to the last album
-        }
-        currentAlbum = albums[currentAlbumIndex].folder;
-        currentTrackIndex = 0;
-        loadTrack();
-        audio.play();
-        // Update the album cover image
-        updateAlbumCover();
+        changeAlbum(-1);
     }
+
     audio.addEventListener("timeupdate", function() {
-        var currentTime = audio.currentTime;
-        var duration = audio.duration;
-        // Check if duration is a finite number before calculating percentComplete
+        const duration = audio.duration;
         if (isFinite(duration)) {
-            var percentComplete = (currentTime / duration) * 100;
-            progressBar.value = percentComplete;
+            const percentComplete = (audio.currentTime / duration) * 100;
+            progressBar.forEach(element => element.value = percentComplete);
         }
         localStorage.setItem("timerforaudio", audio.currentTime);
     });
+
     audio.currentTime = localStorage.getItem("timerforaudio");
-    
-    // Load the first track when the page loads
+
     loadTrack();
-    // Event listener for when the current track ends
-    audio.addEventListener("ended", function() {
-        // Play the next track automatically
-        skipTrack();
-    });
-    
-    
-    
+
+    audio.addEventListener("ended", skipTrack);
+
     function updateTrackText() {
         var artist = albums[currentAlbumIndex].artist;
         var track = audioTracks[currentAlbum][currentTrackIndex];
@@ -893,28 +1010,64 @@ try {
             element.textContent = artist + " - " + track;
         });
     }
+    const elementsById = ['songselector', 'accountsettings', 'searching', 'lilbrary', 'settings', 'mlogin'].reduce((obj, id) => {
+        obj[id] = document.getElementById(id);
+        return obj;
+    }, {});
+
+    const elementsByClassName = ['audio-controls-full', 'audio-controls', 'sidebarmen'].reduce((obj, className) => {
+        obj[className] = document.getElementsByClassName(className);
+        return obj;
+    }, {});
+
+    function hidefullplayer() {
+        elementsById['songselector'].style.display = "flex";
+        elementsByClassName['audio-controls-full'][0].style.display = "none";
+        elementsByClassName['audio-controls'][0].style.display = "flex";
+        elementsByClassName['sidebarmen'][0].style.display = "block";
+    }
+
+    function openfullplayer() {
+        Object.values(elementsById).forEach(element => element.style.display = "none");
+        elementsById['songselector'].style.display = "none";
+        elementsByClassName['audio-controls-full'][0].style.display = "flex";
+        elementsByClassName['audio-controls'][0].style.display = "none";
+        elementsByClassName['sidebarmen'][0].style.display = "none";
+    }
     
+ 
     
     // Call the function to update both elements
     updateTrackText();
     // Add these lines to update the song duration and current time
-    var songTimeElement = document.getElementById("songTime");
-    var songDurationElement = document.getElementById("songDuration");
+    var songTimeElement = document.querySelectorAll("#songTime");
+    var songDurationElement = document.querySelectorAll("#songDuration");
+    var songTimeElement2 = document.getElementById("songTime2");
+    var songDurationElement2 = document.getElementById("songDuration2");
     audio.addEventListener("timeupdate", function() {
         var currentTime = audio.currentTime;
         var duration = audio.duration;
         // Check if duration is a finite number before calculating percentComplete
         if (isFinite(duration)) {
             var percentComplete = (currentTime / duration) * 100;
-            progressBar.value = percentComplete;
+            
+            progressBar.forEach(function(element) {
+                element.value = percentComplete;
+            });
             // Update the song duration and current time
             var currentMinutes = Math.floor(currentTime / 60);
             var currentSeconds = Math.floor(currentTime % 60);
             var durationMinutes = Math.floor(duration / 60);
             var durationSeconds = Math.floor(duration % 60);
             // Display current time and duration in the format "M:SS"
-            songTimeElement.textContent = currentMinutes + ":" + (currentSeconds < 10 ? "0" : "") + currentSeconds;
-            songDurationElement.textContent = durationMinutes + ":" + (durationSeconds < 10 ? "0" : "") + durationSeconds;
+            songTimeElement.forEach(function(element) {
+                element.textContent = textContent = currentMinutes + ":" + (currentSeconds < 10 ? "0" : "") + currentSeconds;;
+            });
+            songDurationElement.forEach(function(element) {
+                element.textContent = durationMinutes + ":" + (durationSeconds < 10 ? "0" : "") + durationSeconds;
+            })
+            songTimeElement2.textContent = textContent = currentMinutes + ":" + (currentSeconds < 10 ? "0" : "") + currentSeconds;;
+            songDurationElement2.textContent = durationMinutes + ":" + (durationSeconds < 10 ? "0" : "") + durationSeconds;
         }
     });
     // load the songs
@@ -936,7 +1089,7 @@ try {
         }
     });
     function fetchAndDisplayAlbums () {
-    fetch('songs.json')
+    fetch('json/songs.json')
         .then((response) => response.json())
         .then((data) => {
             const songSelector = document.getElementById('farts');
@@ -979,7 +1132,7 @@ try {
     
         })
         .catch((error) => {
-            alert('Error loading JSON data:', error);
+            console.log('Error loading JSON data:', error);
             console.log('Error loading JSON data:', error);
         });
     }
@@ -1195,15 +1348,31 @@ function getSelectedSize() {
         deferredPrompt = null;
       }
     }
-    function consoled(text) {
-          console.log(text);
+    function consoled(text, type) {
+        if (type === 'error') {
+            console.error(text);
+        } else if (type == 'warn') {
+          console.warn(text);
+        } else if (type == 'debug') {
+        console.debug(text);
+        }
     }
-    navigator.serviceWorker.register("sw.js");
+    function w() {
+        for (let album in audioTracks) {
+            audioTracks[album].forEach(trackPath => {
+                let url = `https://cdn.sillyangel.me/songs/${album}/${trackPath}`;
+                let request = new XMLHttpRequest();
+                request.open('HEAD', url, false);
+                request.send();
+            });
+        }
+    }
+    navigator.serviceWorker.register("/js/sw.js");
     
     
     } catch(error) {
-        alert(error);
-        alert(error.message);
+        console.log(error);
+        console.log(error.message);
         console.log(error);
         console.log(error.message);
     }
