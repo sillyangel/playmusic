@@ -78,7 +78,7 @@ audio {
 }
 .currentTrack2 {
   color: inherit;
-  font-size: 35px;
+  font-size: 29px;
   font-weight: 400;
 }
 /* Add styles to position the song time and duration */
@@ -223,7 +223,7 @@ audio {
   top: 10px;
   right: 10px;
 }
-#lyricsbutton {
+#bottombuttons {
   position: absolute;
   bottom: 10px;
   right: 10px;

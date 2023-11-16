@@ -711,7 +711,9 @@ try {
     var currentAlbum = "tylerthecreator/wolf"
     var currentAlbumIndex = 0;
     var audiotimern;
+    var repeatButtonClickCount = 0;
     let playbackMode = "none";
+    let currentTime = 0;
     if (localStorage.getItem("Albumindex") !== null) {
         currentAlbumIndex = localStorage.getItem("Albumindex");
     }
@@ -816,18 +818,20 @@ document.addEventListener('keydown', function(event) {
         if (playbackMode === "repeat-song") {
             audio.currentTime = 0;
             audio.play();
+            playbackMode = "none";
+        updatePlaybackModeText();
             return;
         }
     
         // The rest of the previous logic remains unchanged
         if (playbackMode === "repeat") {
-            // ...
+            currentTrackIndex = ((currentTrackIndex % trackCount) + trackCount) % trackCount;
         } else if (playbackMode === "loop" && currentTrackIndex < 0) {
-            // ...
+            currentTrackIndex = trackCount - 1;        
         } else {
-            // ...
+            currentTrackIndex = currentTrackIndex % trackCount;
         }
-    
+        updatePlaybackModeText();
         loadTrack();
         audio.play();
     }
@@ -842,10 +846,10 @@ document.addEventListener('keydown', function(event) {
             playbackMode = "none";
         } else if (repeatButtonClickCount === 1) {
             // On the first click, enable album repeat
-            playbackMode = "repeat";
-        } else if (repeatButtonClickCount === 2) {
-            // On the second click, enable single track repeat
             playbackMode = "repeat-song";
+
+        } else if (repeatButtonClickCount === 2) {
+            playbackMode = "repeat";
         }
     
         updatePlaybackModeText();
@@ -855,13 +859,48 @@ document.addEventListener('keydown', function(event) {
         var buttonrepeat = document.getElementById("repeatbutton");
         if (playbackMode === "none") {
             buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #ffffff;"></i>';
-        } else if (playbackMode === "repeat") {
-            buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #;"></i';
+        } else if (playbackMode === "repeatalbum") {
+            buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #ff0000;"></i>';
         } else if (playbackMode === "repeat-song") {
-
+            buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #00ff00;"></i>';
         }
     }
-    
+    // if spacebar is clicked pause without keycode since keycode is deprecated
+    document.addEventListener('keydown', function(event) {
+        if (event.code === 'Space') {
+            event.preventDefault(); // This line prevents the default behavior
+            playPause();
+        } else if (event.code === 'ArrowRight') {
+            event.preventDefault(); // This line prevents the default behavior
+            skipTrack();
+        } else if (event.code === 'ArrowLeft') {
+            previousTrack();
+            event.preventDefault(); // This line prevents the default behavior
+        } else if (event.code === 'ArrowUp') {
+            event.preventDefault(); // This line prevents the default behavior
+            volumeControl = document.getElementById("volume");
+            volumeControl.value = parseFloat(volumeControl.value) + 0.03;
+            audio.volume = volumeControl.value;
+            setVolume();
+        } else if (event.code === 'ArrowDown') {
+            event.preventDefault(); // This line prevents the default behavior
+            volumeControl = document.getElementById("volume");
+            volumeControl.value = parseFloat(volumeControl.value) - 0.01;
+            audio.volume = volumeControl.value;
+            setVolume();
+        } else if (event.code === 'KeyF') {
+            event.preventDefault(); // This line prevents the default behavior
+            openfullplayer();
+        } else if (event.code === 'KeyG') {
+            event.preventDefault(); // This line prevents the default behavior
+            hidefullplayer();
+        } else if (event.code === 'KeyL') {
+            event.preventDefault(); // This line prevents the default behavior
+            toggleRepeat();
+        }
+        });
+
+
 
     function skipTrack() {
         changeTrack(1);

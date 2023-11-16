@@ -8,7 +8,7 @@ const config = {
     firebase: './public/js/firebase.js',
   },
   output: {
-    path: path.resolve(__dirname, './public/js/dist'),
+    path: path.resolve(__dirname, './public/js/dist/'),
     filename: '[name].bundle.js'
   },
   module: {
