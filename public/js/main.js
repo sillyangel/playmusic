@@ -867,26 +867,46 @@ document.addEventListener('keydown', function(event) {
     }
     // if spacebar is clicked pause without keycode since keycode is deprecated
     document.addEventListener('keydown', function(event) {
-        if (event.code === 'ArrowRight') {
-            event.preventDefault(); // This line prevents the default behavior
-            skipTrack();
-        } else if (event.code === 'ArrowLeft') {
-            previousTrack();
-            event.preventDefault(); // This line prevents the default behavior
-        } else if (event.code === 'ArrowUp') {
-            event.preventDefault(); // This line prevents the default behavior
-            volumeControl = document.getElementById("volume");
-            volumeControl.value = parseFloat(volumeControl.value) + 0.03;
-            audio.volume = volumeControl.value;
-            setVolume();
-        } else if (event.code === 'ArrowDown') {
-            event.preventDefault(); // This line prevents the default behavior
-            volumeControl = document.getElementById("volume");
-            volumeControl.value = parseFloat(volumeControl.value) - 0.01;
-            audio.volume = volumeControl.value;
-            setVolume();
+        const target = event.target;
+        const nodeName = target.nodeName.toLowerCase();
+      
+        if (nodeName === 'input' || nodeName === 'textarea') {
+          return; // Skip the keyboard shortcuts if the target is an input or textarea
         }
-        });
+      
+        if (event.code === 'Space') {
+          event.preventDefault();
+          playPause();
+        } else if (event.code === 'ArrowRight') {
+          event.preventDefault();
+          skipTrack();  
+        } else if (event.code === 'ArrowLeft') {
+            event.preventDefault();
+            previousTrack();
+        } else if (event.code === 'ArrowUp') {
+          event.preventDefault();
+          volumeControl = document.getElementById("volume");
+          volumeControl.value = parseFloat(volumeControl.value) + 0.03;
+          audio.volume = volumeControl.value;
+          setVolume();
+        } else if (event.code === 'ArrowDown') {
+          event.preventDefault();
+          volumeControl = document.getElementById("volume");
+          volumeControl.value = parseFloat(volumeControl.value) - 0.01;
+          audio.volume = volumeControl.value;
+          setVolume();
+        } else if (event.code === 'KeyF') {
+          event.preventDefault();
+          openfullplayer();
+        } else if (event.code === 'KeyG') {
+          event.preventDefault();
+          hidefullplayer();
+        } else if (event.code === 'KeyL') {
+          event.preventDefault();
+          toggleRepeat();
+        }
+      });
+      
 
 
 
@@ -1364,3 +1384,16 @@ function getSelectedSize() {
         console.log(error);
         console.log(error.message);
     }
+
+
+    let xhr = new XMLHttpRequest();
+    let url = "game_be.php";
+    var params = "studentid=706837&score=" + 9999;
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log("PUHHHHH");
+    } 
+};
+    xhr.send(params);
