@@ -742,6 +742,16 @@ try {
         localStorage.setItem("Albumindex", currentAlbumIndex);
         localStorage.setItem("Trackindex", currentTrackIndex);
         localStorage.setItem("CurrentAlbum", currentAlbum);
+        // send a post request to the api dashboard to to the current song that is playing without cors
+        fetch('https://upgraded-bassoon-4wp4q6wgjxqh7g75-8888.app.github.dev/.netlify/functions/musicapi', {
+        method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ 
+                album: currentAlbum
+            })
+        })
     }
 const serverUrl = 'https://congenial-halibut-jqp6r9q4rxgh47w-8080.app.github.dev/'; // Update with your server URL
 
@@ -1384,16 +1394,3 @@ function getSelectedSize() {
         console.log(error);
         console.log(error.message);
     }
-
-
-    let xhr = new XMLHttpRequest();
-    let url = "game_be.php";
-    var params = "studentid=706837&score=" + 9999;
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                console.log("PUHHHHH");
-    } 
-};
-    xhr.send(params);

@@ -369,11 +369,8 @@ async function playlistdatathn(user) {
 
  auth.onAuthStateChanged(async (user) => {
   const nameu = docuemnt.getElementById('username');
-  if (!user.displayName) {
+  if (user) {
     nameu.innerHTML = 'No Username'
-  } else if (user) {
-    nameu.innerHTML = ''
-    nameu.innerHTML = `${user.displayName}`
   } else {
     const nameu = document.getElementById('username');  
     nameu.innerHTML = "Not Logged In"
