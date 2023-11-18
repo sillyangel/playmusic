@@ -143,7 +143,7 @@ function handleSignup(event) {
       let user = auth.currentUser;
       alert("Signed up:", user);
       window.location.reload();
-    window.location.href = "https://sillyangel.me/"
+    window.location.href = "https://music.sillyangel.me/"
     })
     .catch((error) => {
       alert("Signup error:", error.message);
@@ -154,7 +154,7 @@ function logout(event) {
   signOut(auth).then(() => {
     // Sign-out successful.
     alert("Log Out")
-    window.location.href = "https://sillyangel.me/"
+    window.location.href = "https://music.sillyangel.me/"
   }).catch((error) => {
     alert("a error happened when loging out", error.message)
   });
@@ -368,12 +368,12 @@ async function playlistdatathn(user) {
 }};
 
  auth.onAuthStateChanged(async (user) => {
-  if (user) {
-    const nameu = document.getElementById('username');
-    var divsl = document.getElementById("lisuf");
+  const nameu = docuemnt.getElementById('username');
+  if (!user.displayName) {
+    nameu.innerHTML = 'No Username'
+  } else if (user) {
     nameu.innerHTML = ''
     nameu.innerHTML = `${user.displayName}`
-
   } else {
     const nameu = document.getElementById('username');  
     nameu.innerHTML = "Not Logged In"
@@ -381,7 +381,9 @@ async function playlistdatathn(user) {
  });
  auth.onAuthStateChanged(async (user) => {
   var profiled = document.getElementById("iconsa");
-  if (user) {
+  if (!user.photoURL) {
+    profiled.src = "./assets/nonealubm.png"
+  } else {
     profiled.src = user.photoURL;
   }
  });
