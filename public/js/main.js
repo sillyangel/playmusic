@@ -744,14 +744,15 @@ try {
         localStorage.setItem("CurrentAlbum", currentAlbum);
         // send a post request to the api dashboard to to the current song that is playing without cors
         fetch('https://upgraded-bassoon-4wp4q6wgjxqh7g75-8888.app.github.dev/.netlify/functions/musicapi', {
-        method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ 
-                album: currentAlbum
-            })
-        })
+            method: 'POST',
+        mode: 'no-cors', // no-cors mode
+        headers: {
+              'Content-Type': 'application/json'
+    },
+        body: JSON.stringify({ 
+              album: currentAlbum
+    })
+})
     }
 const serverUrl = 'https://congenial-halibut-jqp6r9q4rxgh47w-8080.app.github.dev/'; // Update with your server URL
 
