@@ -15,7 +15,7 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "webpack --mode development  && node app.js",
+    "start": "webpack --mode development  && nodemon app.js",
     "build-dev": "webpack --mode development",
     "build-prod": "webpack --mode production",
     "build": "rollup -c rollup.config.js --bundleConfigAsCjs",
@@ -27,7 +27,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/cors": "^2.8.16",
     "cors": "^2.8.5",
-    "nodemon": "^3.0.1",
+    "nodemon": "^3.0.3",
     "rollup": "^4.1.4",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"

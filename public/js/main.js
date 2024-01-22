@@ -25,7 +25,7 @@ try {
         { artist: "The weeknd", album: "Dawnfm", folder: "theweekend/dawnfm", image: "https://cdn.sillyangel.me/songs/theweekend/dawnfm/albumcover.png"},
         { artist: "Laufey", album: "Bewitched", folder: "laufey/bewitched", image: "https://cdn.sillyangel.me/songs/laufey/bewitched/albumcover.png"},
         { artist: "Laufey", album: "Everything I know about love", folder: "laufey/eikal", image: "https://cdn.sillyangel.me/songs/laufey/eikal/albumcover.png"},
-        { artist: "Roddy Ricch", album: "life lives fast", folder: "rr/llf", image: "https://cdn.sillyangel.me/songs/rr/llf/albumcover.png"},
+        { artist: "Roddy Ricch", album: "Life lives fast", folder: "rr/llf", image: "https://cdn.sillyangel.me/songs/rr/llf/albumcover.png"},
         { artist: "Roddy Ricch", album: "Please excuse me for being antisocial", folder: "rr/pemfba", image: "https://cdn.sillyangel.me/songs/rr/pemfba/albumcover.png"},
         { artist: "Lemon Demon", album: "Spirit phone", folder: "ld/sp", image: "https://cdn.sillyangel.me/songs/ld/sp/albumcover.png"},
         { artist: "Lemon Demon", album: "Clown", folder: "ld/cc", image: "https://cdn.sillyangel.me/songs/ld/cc/albumcover.jpg"},
@@ -742,19 +742,7 @@ try {
         localStorage.setItem("Albumindex", currentAlbumIndex);
         localStorage.setItem("Trackindex", currentTrackIndex);
         localStorage.setItem("CurrentAlbum", currentAlbum);
-        // send a post request to the api dashboard to to the current song that is playing without cors
-        fetch('https://api.sillyangel.me/.netlify/functions/musicapi', {
-            method: 'POST',
-        mode: 'no-cors', // no-cors mode
-        headers: {
-              'Content-Type': 'application/json'
-    },
-        body: JSON.stringify({ 
-              album: currentAlbum
-    })
-})
     }
-const serverUrl = 'https://congenial-halibut-jqp6r9q4rxgh47w-8080.app.github.dev/'; // Update with your server URL
 
 function getLyrics(track) {
   var apiKey = 'fiE1SC2YyfP5bN4Ku6BqChOfU46ltaZMhFxOVjlknfeIZG9Glkp5yCU_Kve1qlvo';
@@ -955,12 +943,18 @@ document.addEventListener('keydown', function(event) {
 
             const [red, green, blue] = context.getImageData(0, 0, canvas.width, canvas.height).data;
             const audioControls = document.querySelector(".audio-controls-full");
+            const audioControlsMini = document.querySelector(".audio-controls");
             const rgbColor = `rgb(${red},${green},${blue})`;
             const textContrastColor = getContrastColor(rgbColor);
 
             if (audioControls) {
                 audioControls.style.backgroundColor = rgbColor;
                 audioControls.style.color = textContrastColor;
+
+                audioControlsMini.style.backgroundColor = rgbColor;
+                audioControlsMini.style.color = textContrastColor;
+                audioControlsMini.style.borderColor = rgbColor;
+
             } else {
                 console.error("Element with class 'audio-controls-full' not found");
             }
@@ -1327,16 +1321,46 @@ function getSelectedSize() {
             const albumName = obj.album.toLowerCase();
             const artistName = obj.artist.toLowerCase();
     
-            if (albumName.includes(input) || artistName.includes(input)) {
-                const listitem = document.createElement('li')
-                const albumButton = document.createElement('button');
-                albumButton.onclick = () => albumsec(i);
-                albumButton.id = "buttonys"
-                albumButton.textContent = `${obj.album} - ${obj.artist}`;
-                listitem.appendChild(albumButton)
-                listHolder.appendChild(listitem);
-                listHolder.appendChild(document.createElement('br'));
-            }
+          // ... (previous code)
+
+if (albumName.includes(input) || artistName.includes(input)) {
+    const div = document.createElement('div');
+    const imagealbum = document.createElement('img');
+    const listitem = document.createElement('li');
+    const albumButton = document.createElement('button');
+    const label = document.createElement('span');
+    const label2 = document.createElement('span');
+    const br = document.createElement('br');
+    label.style.fontSize = "20px";
+    albumButton.onclick = () => albumsec(i);
+    albumButton.id = "buttonys";
+
+    div.style.padding = "10px";
+    div.style.margin = "10px";
+    div.style.display = "inline-block";
+    div.style.backgroundColor = "#343434";
+    div.style.borderRadius = "10px";
+    imagealbum.style.borderRadius = "5px";
+    imagealbum.style.width = "200px";
+    imagealbum.style.height = "200px";
+    label2.fontSize = "15px";
+    label2.style.color = "grey";
+    label.fontSize = "20px";
+    label.style.color = "white";
+
+    label.textContent = `${obj.album}`;
+    label2.textContent = `${obj.artist}`;
+    
+    imagealbum.src = obj.image;
+    imagealbum.appendChild(albumButton);
+    listitem.appendChild(label);
+    listitem.appendChild(label2);
+    div.appendChild(imagealbum);
+    div.appendChild(listitem);
+    div.appendChild(document.createElement('br'));
+    listHolder.appendChild(div);
+}
+
         }
     }
     

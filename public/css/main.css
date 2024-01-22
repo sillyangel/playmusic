@@ -45,11 +45,14 @@ a {
   background-color: #242424;
   color: #fff;
   padding: 10px;
+  position: fixed;
+  width: 99%;
+  bottom: 0px;
+  border-top: 2px solid #333;
 }
 .audio-controls button {
   background: none;
   border: none;
-  color: #fff;
   cursor: pointer;
   font-size: 24px;
   /* Increase icon size */
@@ -72,7 +75,6 @@ audio {
 }
 .currentTrack {
   text-align: center;
-  color: #fff;
   margin-left: 10px;
   font-size: 15px;
 }
@@ -98,12 +100,6 @@ audio {
   white-space: nowrap;
   margin: 0 10px; /* Adjust the margin as needed */
   color: inherit;
-}
-.audio-controls {
-  position: fixed;
-  width: 99%;
-  bottom: 0px;
-  border-top: 2px solid #333;
 }
 .topnav {
   width: 100%;
@@ -155,12 +151,11 @@ audio {
 }
 .sidebarmen {
   float: left;
-  height: 89%;
+  height: 100%;
   position: fixed;
   width: auto;
   left: 2px;
   border-right: 2px solid #333;
-  border-radius: 20px;
 }
 
 #playlistContainer img {
