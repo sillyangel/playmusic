@@ -1,76 +1,76 @@
-
+// https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/
 try {
     var albums = [
-        { artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "https://cdn.sillyangel.me/songs/tylerthecreator/wolf/albumcover.png" },
-        { artist: "Tyler, The Creator", album: "Flower Boy", folder: "tylerthecreator/flowerboy", image: "https://cdn.sillyangel.me/songs/tylerthecreator/flowerboy/albumcover.png" },
-        { artist: "Tyler, The Creator", album: "Igor", folder: "tylerthecreator/igor", image: "https://cdn.sillyangel.me/songs/tylerthecreator/igor/igorcover.png" },
-        { artist: "Tyler, The Creator", album: "Cherry Bomb", folder: "tylerthecreator/cherrybomb", image: "https://cdn.sillyangel.me/songs/tylerthecreator/cherrybomb/cherrybomb.png" },
-        { artist: "Tyler, The Creator", album: "Goblin", folder: "tylerthecreator/goblin", image: "https://cdn.sillyangel.me/songs/tylerthecreator/goblin/Goblincover.png" },
-        { artist: "Tyler, The Creator", album: "Bastard", folder: "tylerthecreator/bas", image: "https://cdn.sillyangel.me/songs/tylerthecreator/bas/bas.png" },
-        { artist: "Arctic Monkeys", album: "AM", folder: "arcticmonkeys/am", image: "https://cdn.sillyangel.me/songs/arcticmonkeys/am/albumcover.jpg"},
-        { artist: "Arctic Monkeys", album: "Humbug", folder: "arcticmonkeys/humbug", image: "https://cdn.sillyangel.me/songs/arcticmonkeys/humbug/albumcover.jpg"},
-        { artist: "Arctic Monkeys", album: "WPSIATWIN", folder: "arcticmonkeys/wpsiatwin", image: "https://cdn.sillyangel.me/songs/arcticmonkeys/wpsiatwin/albumcover.jpg"},
-        { artist: "Arctic Monkeys", album: "Favourite Worst Nightmare", folder: "arcticmonkeys/fwn", image: "https://cdn.sillyangel.me/songs/arcticmonkeys/fwn/albumcover.jpg"},
-        { artist: "Arctic Monkeys", album: "Suck It and See", folder: "arcticmonkeys/sias", image: "https://cdn.sillyangel.me/songs/arcticmonkeys/sias/albumcover.jpg"},
-        { artist: "Arctic Monkeys", album: "Tranquility Base Hotel & Casino", folder: "arcticmonkeys/tbhc", image: "https://cdn.sillyangel.me/songs/arcticmonkeys/tbhc/albumcover.png"},
-        { artist: "Arctic Monkeys", album: "The Car", folder: "arcticmonkeys/car", image: "https://cdn.sillyangel.me/songs/arcticmonkeys/car/albumcover.jpg"},
-        { artist: "Wallows", album: "Nothing Happens", folder: "wallows/nonthinghappens", image: "https://cdn.sillyangel.me/songs/wallows/nonthinghappens/albumcover.png"},
-        { artist: "Melanie Martinez", album: "Crybaby", folder: "melanie/crybaby", image: "https://cdn.sillyangel.me/songs/melanie/crybaby/albumcover.png"},
-        { artist: "Melanie Martinez", album: "K-12", folder: "melanie/k12", image: "https://cdn.sillyangel.me/songs/melanie/k12/albumcover.png"},
-        { artist: "Melanie Martinez", album: "Portals", folder: "melanie/portals", image: "https://cdn.sillyangel.me/songs/melanie/portals/albumcover.png"},
-        { artist: "The weeknd", album: "Kiss Land", folder: "theweekend/kissland", image: "https://cdn.sillyangel.me/songs/theweekend/kissland/albumcover.png"},
-        { artist: "The weeknd", album: "Beauty Behind the Madness", folder: "theweekend/bbtm", image: "https://cdn.sillyangel.me/songs/theweekend/bbtm/albumcover.png"},
-        { artist: "The weeknd", album: "starboy", folder: "theweekend/starboy", image: "https://cdn.sillyangel.me/songs/theweekend/starboy/albumcover.png"},
-        { artist: "The weeknd", album: "Afterhours", folder: "theweekend/afterhours", image: "https://cdn.sillyangel.me/songs/theweekend/afterhours/albumcover.png"},
-        { artist: "The weeknd", album: "Dawnfm", folder: "theweekend/dawnfm", image: "https://cdn.sillyangel.me/songs/theweekend/dawnfm/albumcover.png"},
-        { artist: "Laufey", album: "Bewitched", folder: "laufey/bewitched", image: "https://cdn.sillyangel.me/songs/laufey/bewitched/albumcover.png"},
-        { artist: "Laufey", album: "Everything I know about love", folder: "laufey/eikal", image: "https://cdn.sillyangel.me/songs/laufey/eikal/albumcover.png"},
-        { artist: "Roddy Ricch", album: "Life lives fast", folder: "rr/llf", image: "https://cdn.sillyangel.me/songs/rr/llf/albumcover.png"},
-        { artist: "Roddy Ricch", album: "Please excuse me for being antisocial", folder: "rr/pemfba", image: "https://cdn.sillyangel.me/songs/rr/pemfba/albumcover.png"},
-        { artist: "Lemon Demon", album: "Spirit phone", folder: "ld/sp", image: "https://cdn.sillyangel.me/songs/ld/sp/albumcover.png"},
-        { artist: "Lemon Demon", album: "Clown", folder: "ld/cc", image: "https://cdn.sillyangel.me/songs/ld/cc/albumcover.jpg"},
-        { artist: "Kanye West", album: "My Beautiful Dark Twisted Fantasy", folder: "kanyewest/mbdtf", image: "https://cdn.sillyangel.me/songs/kanyewest/mbdtf/albumcover.jpg"},
-        { artist: "Kanye West", album: "Yeezus", folder: "kanyewest/yeezus", image: "https://cdn.sillyangel.me/songs/kanyewest/yeezus/Cover.jpg"},
-        { artist: "Kanye West", album: "Ye", folder: "kanyewest/ye", image: "https://cdn.sillyangel.me/songs/kanyewest/ye/Cover.jpg" },
-        { artist: "Kanye West", album: "Jesus Is King", folder: "kanyewest/jesusisking", image: "https://cdn.sillyangel.me/songs/kanyewest/jesusisking/Cover.jpg" },
-        { artist: "Kanye West", album: "Donda", folder: "kanyewest/donda", image: "https://cdn.sillyangel.me/songs/kanyewest/donda/cover.jpg" },
-        { artist: "Kanye West", album: "Donda 2", folder: "kanyewest/donda2", image: "https://cdn.sillyangel.me/songs/kanyewest/donda2/" },
-        { artist: "Drake", album: "Thank Me Later", folder: "drake/tml", image: "https://cdn.sillyangel.me/songs/drake/tml/albumcover.webp"},
-        { artist: "Drake", album: "Take Care", folder: "drake/tc", image: "https://cdn.sillyangel.me/songs/drake/tc/albumcover.webp" },
-        { artist: "Drake", album: "Nothing Was the Same", folder: "drake/nwts", image: "https://cdn.sillyangel.me/songs/drake/nwts/albumcover.webp "},
-        { artist: "Drake", album: "Views", folder: "drake/views", image: "https://cdn.sillyangel.me/songs/drake/views/albumcover.webp "},
-        { artist: "Drake", album: "Scorpion", folder: "drake/scorp", image: "https://cdn.sillyangel.me/songs/drake/scorp/albumcover.webp "},
-        { artist: "Drake", album: "Certified Lover Boy", folder: "drake/clb", image: "https://cdn.sillyangel.me/songs/drake/clb/albumcover.webp "},
-        { artist: "Drake", album: "Honestly, Nevermind", folder: "drake/honnvm", image: "https://cdn.sillyangel.me/songs/drake/honnvm/albumcover.webp "},
-        { artist: "Drake", album: "Her Loss", folder: "drake/herloss", image: "https://cdn.sillyangel.me/songs/drake/herloss/albumcover.webp "},
-        { artist: "Drake", album: "For All the Dogs", folder: "drake/fatd", image: "https://cdn.sillyangel.me/songs/drake/fatd/albumcover.webp "},
-        { artist: "Frank Ocean", album: "Channel Orange", folder: "franko/co", image:"https://cdn.sillyangel.me/songs/franko/co/albumcover.webp" },
-        { artist: "Frank Ocean", album: "Blonde", folder: "franko/blonde", image:"https://cdn.sillyangel.me/songs/franko/blonde/albumcover.webp" },
-        { artist: "Heaven Pierce Her", album: "Zen, or the  Means Without Ends", folder: "hph/zotmwe", image: "https://cdn.sillyangel.me/songs/hph/zotmwe/albumcover.webp" },
-        { artist: "Heaven Pierce Her", album: "Flowerworks", folder: "hph/flowerworks", image: "https://cdn.sillyangel.me/songs/hph/flowerworks/albumcover.webp" },
-        { artist: "Heaven Pierce Her", album: "Ultrakill: Inf Hyperdeath", folder: "hph/ukih", image: "https://cdn.sillyangel.me/songs/hph/ukih/albumcover.webp" },
-        { artist: "Heaven Pierce Her", album: "Ultrakill: IMperfect Hatred", folder: "hph/ukih2", image: "https://cdn.sillyangel.me/songs/hph/ukih2/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "With Ears to See and Eyes to Hear", folder: "kq/wetsaeth", image: "https://cdn.sillyangel.me/songs/kq/wetsaeth/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "Let's Cheers to This", folder: "kq/lctt", image: "https://cdn.sillyangel.me/songs/kq/lctt/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "Feel", folder: "kq/fe", image: "https://cdn.sillyangel.me/songs/kq/fe/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "Madness", folder: "kq/mad", image: "https://cdn.sillyangel.me/songs/kq/mad/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "Gossip", folder: "kq/gos", image: "https://cdn.sillyangel.me/songs/kq/gos/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "How It Feels to Be Lost", folder: "kq/hif", image: "https://cdn.sillyangel.me/songs/kq/hif/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "Commplete Collapse", folder: "kq/cc", image: "https://cdn.sillyangel.me/songs/kq/cc/albumcover.webp" },
-        { artist: "Pierce The Veil", album: "A Flair for the Dramatic", folder: "ptv/afftd", image: "https://cdn.sillyangel.me/songs/ptv/afftd/albumcover.webp" },
-        { artist: "Pierce The Veil", album: "Selfish Machines", folder: "ptv/sm", image: "https://cdn.sillyangel.me/songs/ptv/sm/albumcover.webp" },
-        { artist: "Pierce The Veil", album: "Collide with the Sky", folder: "ptv/cwts", image: "https://cdn.sillyangel.me/songs/ptv/cwts/albumcover.webp" },
-        { artist: "Pierce The Veil", album: "Misadventures", folder: "ptv/madv", image: "https://cdn.sillyangel.me/songs/ptv/madv/albumcover.webp" },
-        { artist: "Pierce The Veil", album: "The Jaws of Life", folder: "ptv/tjofl", image: "https://cdn.sillyangel.me/songs/ptv/tjofl/albumcover.webp" },
-        { artist: "The Smiths", album: "Smiths", folder: "smiths/tsm", image: "https://cdn.sillyangel.me/songs/smiths/tsm/albumcover.webp" },
-        { artist: "The Smiths", album: "Meat is Murder", folder: "smiths/mim", image: "https://cdn.sillyangel.me/songs/smiths/mim/albumcover.webp" },
-        { artist: "The Smiths", album: "The Queen is Dead", folder: "smiths/tqid", image: "https://cdn.sillyangel.me/songs/smiths/tqid/albumcover.webp" },
-        { artist: "The Smiths", album: "Strangeways, Here We Come", folder: "smiths/swhwc", image: "https://cdn.sillyangel.me/songs/smiths/swhwc/albumcover.webp" },
-        { artist: "Billie Eilish", album: "Happy Than Ever", folder: "be/hte", image: "https://cdn.sillyangel.me/songs/be/hte/albumcover.jpg" },
-        { artist: "SZA", album: "SOS", folder: "sza/sos", image: "https://cdn.sillyangel.me/songs/sza/sos/albumcover.jpg" },
-        { artist: "Kendrick Lamar", album: "Mr morale and the big steppers", folder: "kenla/mmtbs", image: "https://cdn.sillyangel.me/songs/kenla/mmtbs/albumcover.jpg" },
-        { artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "https://cdn.sillyangel.me/songs/kenla/tpabf/albumcover.jpg" }
-    //  { artist: "", album: "", folder: "/", image: "https://cdn.sillyangel.me/songs///albumcover.webp" },
+        { artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/tylerthecreator/wolf/albumcover.png" },
+        { artist: "Tyler, The Creator", album: "Flower Boy", folder: "tylerthecreator/flowerboy", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/tylerthecreator/flowerboy/albumcover.png" },
+        { artist: "Tyler, The Creator", album: "Igor", folder: "tylerthecreator/igor", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/tylerthecreator/igor/igorcover.png" },
+        { artist: "Tyler, The Creator", album: "Cherry Bomb", folder: "tylerthecreator/cherrybomb", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/tylerthecreator/cherrybomb/cherrybomb.png" },
+        { artist: "Tyler, The Creator", album: "Goblin", folder: "tylerthecreator/goblin", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/tylerthecreator/goblin/Goblincover.png" },
+        { artist: "Tyler, The Creator", album: "Bastard", folder: "tylerthecreator/bas", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/tylerthecreator/bas/bas.png" },
+        { artist: "Arctic Monkeys", album: "AM", folder: "arcticmonkeys/am", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/arcticmonkeys/am/albumcover.jpg"},
+        { artist: "Arctic Monkeys", album: "Humbug", folder: "arcticmonkeys/humbug", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/arcticmonkeys/humbug/albumcover.jpg"},
+        { artist: "Arctic Monkeys", album: "WPSIATWIN", folder: "arcticmonkeys/wpsiatwin", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/arcticmonkeys/wpsiatwin/albumcover.jpg"},
+        { artist: "Arctic Monkeys", album: "Favourite Worst Nightmare", folder: "arcticmonkeys/fwn", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/arcticmonkeys/fwn/albumcover.jpg"},
+        { artist: "Arctic Monkeys", album: "Suck It and See", folder: "arcticmonkeys/sias", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/arcticmonkeys/sias/albumcover.jpg"},
+        { artist: "Arctic Monkeys", album: "Tranquility Base Hotel & Casino", folder: "arcticmonkeys/tbhc", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/arcticmonkeys/tbhc/albumcover.png"},
+        { artist: "Arctic Monkeys", album: "The Car", folder: "arcticmonkeys/car", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/arcticmonkeys/car/albumcover.jpg"},
+        { artist: "Wallows", album: "Nothing Happens", folder: "wallows/nonthinghappens", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/wallows/nonthinghappens/albumcover.png"},
+        { artist: "Melanie Martinez", album: "Crybaby", folder: "melanie/crybaby", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/melanie/crybaby/albumcover.png"},
+        { artist: "Melanie Martinez", album: "K-12", folder: "melanie/k12", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/melanie/k12/albumcover.png"},
+        { artist: "Melanie Martinez", album: "Portals", folder: "melanie/portals", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/melanie/portals/albumcover.png"},
+        { artist: "The weeknd", album: "Kiss Land", folder: "theweekend/kissland", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/theweekend/kissland/albumcover.png"},
+        { artist: "The weeknd", album: "Beauty Behind the Madness", folder: "theweekend/bbtm", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/theweekend/bbtm/albumcover.png"},
+        { artist: "The weeknd", album: "starboy", folder: "theweekend/starboy", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/theweekend/starboy/albumcover.png"},
+        { artist: "The weeknd", album: "Afterhours", folder: "theweekend/afterhours", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/theweekend/afterhours/albumcover.png"},
+        { artist: "The weeknd", album: "Dawnfm", folder: "theweekend/dawnfm", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/theweekend/dawnfm/albumcover.png"},
+        { artist: "Laufey", album: "Bewitched", folder: "laufey/bewitched", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/laufey/bewitched/albumcover.png"},
+        { artist: "Laufey", album: "Everything I know about love", folder: "laufey/eikal", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/laufey/eikal/albumcover.png"},
+        { artist: "Roddy Ricch", album: "Life lives fast", folder: "rr/llf", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/rr/llf/albumcover.png"},
+        { artist: "Roddy Ricch", album: "Please excuse me for being antisocial", folder: "rr/pemfba", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/rr/pemfba/albumcover.png"},
+        { artist: "Lemon Demon", album: "Spirit phone", folder: "ld/sp", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/ld/sp/albumcover.png"},
+        { artist: "Lemon Demon", album: "Clown", folder: "ld/cc", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/ld/cc/albumcover.jpg"},
+        { artist: "Kanye West", album: "My Beautiful Dark Twisted Fantasy", folder: "kanyewest/mbdtf", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/kanyewest/mbdtf/albumcover.jpg"},
+        { artist: "Kanye West", album: "Yeezus", folder: "kanyewest/yeezus", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/kanyewest/yeezus/Cover.jpg"},
+        { artist: "Kanye West", album: "Ye", folder: "kanyewest/ye", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/kanyewest/ye/Cover.jpg" },
+        { artist: "Kanye West", album: "Jesus Is King", folder: "kanyewest/jesusisking", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/kanyewest/jesusisking/Cover.jpg" },
+        { artist: "Kanye West", album: "Donda", folder: "kanyewest/donda", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/kanyewest/donda/cover.jpg" },
+        { artist: "Kanye West", album: "Donda 2", folder: "kanyewest/donda2", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/kanyewest/donda2/" },
+        { artist: "Drake", album: "Thank Me Later", folder: "drake/tml", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/drake/tml/albumcover.webp"},
+        { artist: "Drake", album: "Take Care", folder: "drake/tc", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/drake/tc/albumcover.webp" },
+        { artist: "Drake", album: "Nothing Was the Same", folder: "drake/nwts", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/drake/nwts/albumcover.webp "},
+        { artist: "Drake", album: "Views", folder: "drake/views", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/drake/views/albumcover.webp "},
+        { artist: "Drake", album: "Scorpion", folder: "drake/scorp", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/drake/scorp/albumcover.webp "},
+        { artist: "Drake", album: "Certified Lover Boy", folder: "drake/clb", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/drake/clb/albumcover.webp "},
+        { artist: "Drake", album: "Honestly, Nevermind", folder: "drake/honnvm", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/drake/honnvm/albumcover.webp "},
+        { artist: "Drake", album: "Her Loss", folder: "drake/herloss", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/drake/herloss/albumcover.webp "},
+        { artist: "Drake", album: "For All the Dogs", folder: "drake/fatd", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/drake/fatd/albumcover.webp "},
+        { artist: "Frank Ocean", album: "Channel Orange", folder: "franko/co", image:"https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/franko/co/albumcover.webp" },
+        { artist: "Frank Ocean", album: "Blonde", folder: "franko/blonde", image:"https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/franko/blonde/albumcover.webp" },
+        { artist: "Heaven Pierce Her", album: "Zen, or the  Means Without Ends", folder: "hph/zotmwe", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/hph/zotmwe/albumcover.webp" },
+        { artist: "Heaven Pierce Her", album: "Flowerworks", folder: "hph/flowerworks", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/hph/flowerworks/albumcover.webp" },
+        { artist: "Heaven Pierce Her", album: "Ultrakill: Inf Hyperdeath", folder: "hph/ukih", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/hph/ukih/albumcover.webp" },
+        { artist: "Heaven Pierce Her", album: "Ultrakill: IMperfect Hatred", folder: "hph/ukih2", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/hph/ukih2/albumcover.webp" },
+        { artist: "Sleeping with Siren", album: "With Ears to See and Eyes to Hear", folder: "kq/wetsaeth", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/kq/wetsaeth/albumcover.webp" },
+        { artist: "Sleeping with Siren", album: "Let's Cheers to This", folder: "kq/lctt", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/kq/lctt/albumcover.webp" },
+        { artist: "Sleeping with Siren", album: "Feel", folder: "kq/fe", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/kq/fe/albumcover.webp" },
+        { artist: "Sleeping with Siren", album: "Madness", folder: "kq/mad", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/kq/mad/albumcover.webp" },
+        { artist: "Sleeping with Siren", album: "Gossip", folder: "kq/gos", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/kq/gos/albumcover.webp" },
+        { artist: "Sleeping with Siren", album: "How It Feels to Be Lost", folder: "kq/hif", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/kq/hif/albumcover.webp" },
+        { artist: "Sleeping with Siren", album: "Commplete Collapse", folder: "kq/cc", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/kq/cc/albumcover.webp" },
+        { artist: "Pierce The Veil", album: "A Flair for the Dramatic", folder: "ptv/afftd", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/ptv/afftd/albumcover.webp" },
+        { artist: "Pierce The Veil", album: "Selfish Machines", folder: "ptv/sm", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/ptv/sm/albumcover.webp" },
+        { artist: "Pierce The Veil", album: "Collide with the Sky", folder: "ptv/cwts", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/ptv/cwts/albumcover.webp" },
+        { artist: "Pierce The Veil", album: "Misadventures", folder: "ptv/madv", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/ptv/madv/albumcover.webp" },
+        { artist: "Pierce The Veil", album: "The Jaws of Life", folder: "ptv/tjofl", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/ptv/tjofl/albumcover.webp" },
+        { artist: "The Smiths", album: "Smiths", folder: "smiths/tsm", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/smiths/tsm/albumcover.webp" },
+        { artist: "The Smiths", album: "Meat is Murder", folder: "smiths/mim", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/smiths/mim/albumcover.webp" },
+        { artist: "The Smiths", album: "The Queen is Dead", folder: "smiths/tqid", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/smiths/tqid/albumcover.webp" },
+        { artist: "The Smiths", album: "Strangeways, Here We Come", folder: "smiths/swhwc", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/smiths/swhwc/albumcover.webp" },
+        { artist: "Billie Eilish", album: "Happy Than Ever", folder: "be/hte", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/be/hte/albumcover.jpg" },
+        { artist: "SZA", album: "SOS", folder: "sza/sos", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/sza/sos/albumcover.jpg" },
+        { artist: "Kendrick Lamar", album: "Mr morale and the big steppers", folder: "kenla/mmtbs", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/kenla/mmtbs/albumcover.jpg" },
+        { artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/kenla/tpabf/albumcover.jpg" }
+    //  { artist: "", album: "", folder: "/", image: "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs///albumcover.webp" },
         // Add more albums here
     ];
     var audioTracks = {
@@ -647,12 +647,12 @@ try {
         "smiths/tqid": [],
         "smiths/swhwc": [],
         "be/hte": [
-            "01. getting older.mp3",
-            "02. i didn't change my number(explicit).mp3",
-            "03. billie bossa nova.mp3",
+            "01. Getting Older.mp3",
+            "02. I Didn't Change My Number(Explicit).mp3",
+            "03. Billie Bossa Nova.mp3",
             "04. my future.mp3",
-            "05. oxytocin.mp3",
-            "06. goldwing.mp3",
+            "05. Oxytocin.mp3",
+            "06. GOLDWING.mp3",
             "07. lost cause(explicit).mp3",
             "08. halley's comet.mp3",
             "09. not my responsibility.mp3",
@@ -731,10 +731,11 @@ try {
     }
     var currentTrackElements = document.querySelectorAll(".currentTrack");
     var currentTrack2Elements = document.querySelectorAll(".currentTrack2");
-    
+    var DatabaseDomain = "https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/";
+
     function loadTrack() {
         var trackPath = audioTracks[currentAlbum][currentTrackIndex];
-        audio.src = "https://cdn.sillyangel.me/" + "songs/" + currentAlbum + "/" + trackPath;
+        audio.src = DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath;
         audio.load();
         updateTrackText();
         updateAlbumCover();
@@ -933,35 +934,30 @@ document.addEventListener('keydown', function(event) {
         const image = new Image();
         image.crossOrigin = "Anonymous";
         image.src = selectedAlbum.image;
-
+        
         image.onload = function() {
             const canvas = document.createElement('canvas');
             const context = canvas.getContext('2d');
             canvas.width = image.width;
             canvas.height = image.height;
             context.drawImage(image, 0, 0, image.width, image.height);
-
             const [red, green, blue] = context.getImageData(0, 0, canvas.width, canvas.height).data;
             const audioControls = document.querySelector(".audio-controls-full");
             const audioControlsMini = document.querySelector(".audio-controls");
             const rgbColor = `rgb(${red},${green},${blue})`;
             const textContrastColor = getContrastColor(rgbColor);
 
-            if (audioControls) {
-                audioControls.style.backgroundColor = rgbColor;
-                audioControls.style.color = textContrastColor;
+            audioControls.style.backgroundColor = rgbColor;
+            audioControls.style.color = textContrastColor;
+            audioControlsMini.style.backgroundColor = rgbColor;
+            audioControlsMini.style.color = textContrastColor;
+            audioControlsMini.style.borderColor = rgbColor;
+        }   
+        
+        document.querySelectorAll('[id="albumCover"]').forEach(element => element.src = selectedAlbum.image);
 
-                audioControlsMini.style.backgroundColor = rgbColor;
-                audioControlsMini.style.color = textContrastColor;
-                audioControlsMini.style.borderColor = rgbColor;
-
-            } else {
-                console.error("Element with class 'audio-controls-full' not found");
-            }
-
-            document.querySelectorAll('[id="albumCover"]').forEach(element => element.src = selectedAlbum.image);
-        };
     }
+                    
     
     
     // Call the updateAlbumCover function when changing albums
@@ -1403,7 +1399,7 @@ if (albumName.includes(input) || artistName.includes(input)) {
     function w() {
         for (let album in audioTracks) {
             audioTracks[album].forEach(trackPath => {
-                let url = `https://cdn.sillyangel.me/songs/${album}/${trackPath}`;
+                let url = `https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/songs/${album}/${trackPath}`;
                 let request = new XMLHttpRequest();
                 request.open('HEAD', url, false);
                 request.send();
