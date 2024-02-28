@@ -793,9 +793,6 @@ document.addEventListener('keydown', function(event) {
     }
 }
 
-  
-    
-        
     
     function playPause() {
         const isPaused = audio.paused;
@@ -855,14 +852,15 @@ document.addEventListener('keydown', function(event) {
         updatePlaybackModeText();
     }
     
+    // repeat function and all of the other stuff
     function updatePlaybackModeText() {
         var buttonrepeat = document.getElementById("repeatbutton");
         if (playbackMode === "none") {
             buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #ffffff;"></i>';
         } else if (playbackMode === "repeatalbum") {
-            buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #ff0000;"></i>';
+            buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #889ab3;"></i>';
         } else if (playbackMode === "repeat-song") {
-            buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #00ff00;"></i>';
+            buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #889ab3;"></i>';
         }
     }
     // if spacebar is clicked pause without keycode since keycode is deprecated
@@ -934,28 +932,28 @@ document.addEventListener('keydown', function(event) {
         const image = new Image();
         image.crossOrigin = "Anonymous";
         image.src = selectedAlbum.image;
-        
+        document.querySelectorAll('[id="albumCover"]').forEach(element => element.src = selectedAlbum.image);
+
         image.onload = function() {
             const canvas = document.createElement('canvas');
             const context = canvas.getContext('2d');
             canvas.width = image.width;
             canvas.height = image.height;
             context.drawImage(image, 0, 0, image.width, image.height);
+
             const [red, green, blue] = context.getImageData(0, 0, canvas.width, canvas.height).data;
             const audioControls = document.querySelector(".audio-controls-full");
             const audioControlsMini = document.querySelector(".audio-controls");
             const rgbColor = `rgb(${red},${green},${blue})`;
             const textContrastColor = getContrastColor(rgbColor);
 
-            audioControls.style.backgroundColor = rgbColor;
-            audioControls.style.color = textContrastColor;
-            audioControlsMini.style.backgroundColor = rgbColor;
-            audioControlsMini.style.color = textContrastColor;
-            audioControlsMini.style.borderColor = rgbColor;
-        }   
-        
-        document.querySelectorAll('[id="albumCover"]').forEach(element => element.src = selectedAlbum.image);
+                audioControls.style.backgroundColor = rgbColor;
+                audioControls.style.color = textContrastColor;
 
+                audioControlsMini.style.backgroundColor = rgbColor;
+                audioControlsMini.style.color = textContrastColor;
+                audioControlsMini.style.borderColor = rgbColor;
+        };
     }
                     
     

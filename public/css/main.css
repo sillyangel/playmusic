@@ -16,7 +16,7 @@
 body {
   background-color: #222;
   color: #fff;
-  font-family: SFPRO;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -43,10 +43,11 @@ a {
   display: flex;
   align-items: center;
   background-color: #242424;
-  color: #fff;
+  color: #ffffff;
   padding: 10px;
   position: fixed;
   width: 99%;
+  font-size: 16px;
   bottom: 0px;
   border-top: 2px solid #333;
 }
@@ -54,6 +55,7 @@ a {
   background: none;
   border: none;
   cursor: pointer;
+  color: inherit;
   font-size: 24px;
   /* Increase icon size */
 }
@@ -76,7 +78,7 @@ audio {
 .currentTrack {
   text-align: center;
   margin-left: 10px;
-  font-size: 15px;
+  font-size: inherit;
 }
 .currentTrack2 {
   color: inherit;
@@ -122,7 +124,6 @@ audio {
   padding-left: 10px;
   padding-right: 10px;
   height: auto;
-  background-color: #222;
   border-right: 5px;
   border-color: #333;
 }
@@ -156,6 +157,7 @@ audio {
   position: fixed;
   width: auto;
   left: 2px;
+  background-color: #222;
   border-right: 2px solid #333;
 }
 
@@ -167,16 +169,18 @@ audio {
   display: inline-block;
   /* Make it inline to adjust to content */
 }
+
+
 #songselector {
-  left: 20px;
-  padding-left: 20px;
-  margin-top: 0 10px;
   float: right;
-  width: 90%;
-  height: auto;
+  width: fit-content;
+  padding-left: 20px;
+  margin-top: 10px; /* Updated syntax for margin-top */
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 6%; /* Adjust value based on the width of the sidebarmen div */
+  /* Additional styling properties */
 }
 .audio-controls-full {
   position: fixed;
@@ -304,6 +308,9 @@ input[type=text]:focus {
   align-items: center;
 }
 
+.mnkjiu {
+  display: flex;
+}
 footer {
   float: right;
   width: 90%;

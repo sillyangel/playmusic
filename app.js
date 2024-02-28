@@ -1,25 +1,11 @@
 const express = require('express');
 const app = express();
 const port = 8080;
-const mongodb = require('mongodb');
 
-app.get('/api/listening', async (req, res) => {
-  try {
-    const client = await mongodb.MongoClient.connect('YOUR_DATABASE_CONNECTION_URL');
-    const collection = client.db().collection('listening');
-    
-    const result = await collection.find().toArray();
-    
-    res.json(result);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Internal server error' });
-  }
-});
 
 
 app.use((req, res, next) => {
-    console.log(`User with IP: ${req.ip} made a request to ${req.originalUrl}`);
+    console.log(`Request to ${req.originalUrl}`);
     next();
 });
 

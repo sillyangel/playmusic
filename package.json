@@ -13,9 +13,9 @@
   "name": "playmusic",
   "description": "a spofity ripoff",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
-    "start": "webpack --mode development  && nodemon app.js",
+    "start": "webpack --mode development && nodemon app.js --watch ./public",
     "build-dev": "webpack --mode development",
     "build-prod": "webpack --mode production",
     "build": "rollup -c rollup.config.js --bundleConfigAsCjs",
