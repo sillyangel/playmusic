@@ -18,7 +18,6 @@
     "start": "webpack --mode development && nodemon app.js --watch ./public",
     "build-dev": "webpack --mode development",
     "build-prod": "webpack --mode production",
-    "build": "rollup -c rollup.config.js --bundleConfigAsCjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
