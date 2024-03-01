@@ -1145,6 +1145,7 @@ document.addEventListener('keydown', function(event) {
         .then((response) => response.json())
         .then((data) => {
             const songSelector = document.getElementById('farts');
+            
             songSelector.innerHTML = ''; // Clear existing content
     
             let currentArtist = ''; // Initialize the current artist
@@ -1152,8 +1153,30 @@ document.addEventListener('keydown', function(event) {
                 if (album.artist !== currentArtist) {
                     // Create a new <h1> for a different artist
                     const artistHeader = document.createElement('h1');
+                    const icon = document.createElement('i');
+                    const buttonstar = document.createElement('button');
+                    icon.className = "fa-regular fa-star";
                     artistHeader.textContent = album.artist;
+                    buttonstar.style.backgroundColor = "none";
+                    icon.style.fontSize = "25px";
+                    icon.style.marginLeft = "15px";
+                    icon.style.color = "#ffffff";
                     songSelector.appendChild(artistHeader);
+                    artistHeader.appendChild(buttonstar)
+                    buttonstar.appendChild(icon);
+
+                    var clickcount = 0;
+                    buttonstar.addEventListener("click", function() {
+                        clickcount += 1;
+                        
+                        if (clickcount > 1) {
+                            clickcount = 0;
+                            icon.className = "fa-regular fa-star";
+                        } else if (clickcount === 1) {
+                            icon.className = "fa-solid fa-star";
+                        }
+                    });
+                    
                     // Update the current artist
                     currentArtist = album.artist;
                 }
