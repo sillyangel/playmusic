@@ -1,0 +1,560 @@
+{
+  "albums": [
+    {
+      "artist": "Tyler the Creator",
+      "album": "Wolf",
+      "folder": "tylerthecreator/wolf",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/tylerthecreator/wolf/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Tyler the Creator",
+      "album": "Flower Boy",
+      "folder": "tylerthecreator/flowerboy",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/tylerthecreator/flowerboy/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Tyler the Creator",
+      "album": "Igor",
+      "folder": "tylerthecreator/igor",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/tylerthecreator/igor/igorcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Tyler the Creator",
+      "album": "Cherry Bomb",
+      "folder": "tylerthecreator/cherrybomb",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/tylerthecreator/cherrybomb/cherrybomb.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Tyler the Creator",
+      "album": "Goblin",
+      "folder": "tylerthecreator/goblin",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/tylerthecreator/goblin/Goblincover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Tyler the Creator",
+      "album": "Bas",
+      "folder": "tylerthecreator/bas",
+      "cover": "http",
+      "explicit": "true"
+    },
+    {
+      "artist": "Arctic Monkeys",
+      "album": "AM",
+      "folder": "arcticmonkeys/am",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/arcticmonkeys/am/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Arctic Monkeys",
+      "album": "Humbug",
+      "folder": "arcticmonkeys/humbug",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/arcticmonkeys/humbug/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Arctic Monkeys",
+      "album": "WPSIATWIN",
+      "folder": "arcticmonkeys/wpsiatwin",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/arcticmonkeys/wpsiatwin/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Arctic Monkeys",
+      "album": "Favourite Worst Nightmare",
+      "folder": "arcticmonkeys/fwn",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/arcticmonkeys/fwn/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Arctic Monkeys",
+      "album": "Suck It and See",
+      "folder": "arcticmonkeys/sias",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/arcticmonkeys/sias/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Arctic Monkeys",
+      "album": "Tranquility Base Hotel & Casino",
+      "folder": "arcticmonkeys/tbhc",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/arcticmonkeys/tbhc/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Arctic Monkeys",
+      "album": "The Car",
+      "folder": "arcticmonkeys/car",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/arcticmonkeys/car/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Wallows",
+      "album": "Nothing Happens",
+      "folder": "wallows/nonthinghappens",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/wallows/nonthinghappens/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Melanie Martinez",
+      "album": "Crybaby",
+      "folder": "melanie/crybaby",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/melanie/crybaby/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Melanie Martinez",
+      "album": "K-12",
+      "folder": "melanie/k12",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/melanie/k12/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Melanie Martinez",
+      "album": "Portals",
+      "folder": "melanie/portals",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/melanie/portals/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "The weeknd",
+      "album": "Kiss Land",
+      "folder": "theweekend/kissland",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/theweekend/kissland/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "The weeknd",
+      "album": "Beauty Behind the Madness",
+      "folder": "theweekend/bbtm",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/theweekend/bbtm/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "The weeknd",
+      "album": "starboy",
+      "folder": "theweekend/starboy",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/theweekend/starboy/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "The weeknd",
+      "album": "Afterhours",
+      "folder": "theweekend/afterhours",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/theweekend/afterhours/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "The weeknd",
+      "album": "Dawnfm",
+      "folder": "theweekend/dawnfm",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/theweekend/dawnfm/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Laufey",
+      "album": "Bewitched",
+      "folder": "laufey/bewitched",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/laufey/bewitched/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Laufey",
+      "album": "Everything I Know About Love",
+      "folder": "laufey/eikal",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/laufey/eikal/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Roddy Ricch",
+      "album": "Life Lives Fast",
+      "folder": "rr/llf",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/rr/llf/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Roddy Ricch",
+      "album": "Please Excuse Me for Being Antisocial",
+      "folder": "rr/pemfba",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/rr/pemfba/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Lemon Demon",
+      "album": "Spirit Phone",
+      "folder": "ld/sp",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/ld/sp/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Lemon Demon",
+      "album": "Clown",
+      "folder": "ld/cc",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/ld/cc/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Kanye West",
+      "album": "The College Dropout",
+      "folder": "kanyewest/tcd",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/tcd/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Kanye West",
+      "album": "Late Registration",
+      "folder": "kanyewest/lr",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/lr/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Kanye West",
+      "album": "Graduation",
+      "folder": "kanyewest/grad",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/grad/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Kanye West",
+      "album": "808s & Heartbreak",
+      "folder": "kanyewest/808s",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/808s/albumcover.webp",
+      "explicit": ""
+    },
+    {
+      "artist": "Kanye West",
+      "album": "My Beautiful Dark Twisted Fantasy",
+      "folder": "kanyewest/mbdtf",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/mbdtf/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Kanye West",
+      "album": "Watch the Throne",
+      "folder": "kanyewest/wtt",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/wtt/albumcover.webp",
+      "explicit": ""
+    },
+    {
+      "artist": "Kanye West",
+      "album": "Cruel Summer",
+      "folder": "kanyewest/cs",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/cs/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Kanye West",
+      "album": "Yeezus",
+      "folder": "kanyewest/yeezus",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/yeezus/Cover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Kanye West",
+      "album": "The Life of Pablo",
+      "folder": "kanyewest/tlop",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/tlop/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Kanye West",
+      "album": "Ye",
+      "folder": "kanyewest/ye",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/ye/Cover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Kanye West",
+      "album": "Kids See Ghosts",
+      "folder": "kanyewest/ksg",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/ksg/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Kanye West",
+      "album": "Jesus Is King",
+      "folder": "kanyewest/jesusisking",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/jesusisking/Cover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Kanye West",
+      "album": "Donda",
+      "folder": "kanyewest/donda",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/donda/cover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Kanye West",
+      "album": "Donda 2",
+      "folder": "kanyewest/donda2",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/donda2/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Kanye West",
+      "album": "Vultures 1",
+      "folder": "kanyewest/vult1",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/vult1/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Kanye West",
+      "album": "Vultures 2",
+      "folder": "kanyewest/vult2",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/vult2/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Kanye West",
+      "album": "Vultures 3",
+      "folder": "kanyewest/vult3",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/vult3/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Drake",
+      "album": "Thank Me Later",
+      "folder": "drake/tml",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/tml/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Drake",
+      "album": "Take Care",
+      "folder": "drake/tc",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/tc/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Drake",
+      "album": "Nothing Was the Same",
+      "folder": "drake/nwts",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/nwts/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Drake",
+      "album": "Views",
+      "folder": "drake/views",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/views/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Drake",
+      "album": "Scorpion",
+      "folder": "drake/scorp",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/scorp/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Drake",
+      "album": "Certified Lover Boy",
+      "folder": "drake/clb",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/clb/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Drake",
+      "album": "Honestly, Nevermind",
+      "folder": "drake/honnvm",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/honnvm/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Drake",
+      "album": "Her Loss",
+      "folder": "drake/herloss",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/herloss/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Drake",
+      "album": "For All the Dogs",
+      "folder": "drake/fatd",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/fatd/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Frank Ocean",
+      "album": "Channel Orange",
+      "folder": "franko/co",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/franko/co/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Frank Ocean",
+      "album": "Blonde",
+      "folder": "franko/blonde",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/franko/blonde/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Heaven Pierce Her",
+      "album": "Zen, or the Means Without Ends",
+      "folder": "hph/zotmwe",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/hph/zotmwe/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Heaven Pierce Her",
+      "album": "Flowerworks",
+      "folder": "hph/flowerworks",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/hph/flowerworks/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Heaven Pierce Her",
+      "album": "Ultrakill: Inf Hyperdeath",
+      "folder": "hph/ukih",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/hph/ukih/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Heaven Pierce Her",
+      "album": "Ultrakill: Imperfect Hatred",
+      "folder": "hph/ukih2",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/hph/ukih2/albumcover.webp",
+      "explicit": "false"
+    },
+    {
+      "artist": "Sleeping with Sirens",
+      "album": "With Ears to See and Eyes to Hear",
+      "folder": "kq/wetsaeth",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kq/wetsaeth/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Sleeping with Sirens",
+      "album": "Let's Cheers to This",
+      "folder": "kq/lctt",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kq/lctt/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Sleeping with Sirens",
+      "album": "Feel",
+      "folder": "kq/fe",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kq/fe/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Sleeping with Sirens",
+      "album": "Madness",
+      "folder": "kq/mad",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kq/mad/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Sleeping with Sirens",
+      "album": "Gossip",
+      "folder": "kq/gos",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kq/gos/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Sleeping with Sirens",
+      "album": "How It Feels to Be Lost",
+      "folder": "kq/hif",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kq/hif/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Sleeping with Sirens",
+      "album": "Complete Collapse",
+      "folder": "kq/cc",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kq/cc/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Pierce The Veil",
+      "album": "A Flair for the Dramatic",
+      "folder": "ptv/afftd",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/ptv/afftd/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Pierce The Veil",
+      "album": "Selfish Machines",
+      "folder": "ptv/sm",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/ptv/sm/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Pierce The Veil",
+      "album": "Collide with the Sky",
+      "folder": "ptv/cwts",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/ptv/cwts/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Pierce The Veil",
+      "album": "Misadventures",
+      "folder": "ptv/madv",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/ptv/madv/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Pierce The Veil",
+      "album": "The Jaws of Life",
+      "folder": "ptv/tjofl",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/ptv/tjofl/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "The Smiths",
+      "album": "The Smiths",
+      "folder": "smiths/tsm",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/smiths/tsm/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "The Smiths",
+      "album": "Meat is Murder",
+      "folder": "smiths/mim",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/smiths/mim/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "The Smiths",
+      "album": "The Queen is Dead",
+      "folder": "smiths/tqid",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/smiths/tqid/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "The Smiths",
+      "album": "Strangeways, Here We Come",
+      "folder": "smiths/swhwc",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/smiths/swhwc/albumcover.webp",
+      "explicit": "true"
+    },
+    {
+      "artist": "Billie eilish",
+      "album": "Happy than ever",
+      "folder": "be/hte",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/be/hte/albumcover.jpg"
+    },
+    {
+      "artist": "SZA",
+      "album": "SOS",
+      "folder": "sza/sos",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/sza/sos/albumcover.jpg"
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "album": "Mr morale and the big steppers",
+      "folder": "kenla/mmtbs",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kenla/mmtbs/albumcover.jpg"
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "album": "To a pimp a butterfly",
+      "folder": "kenla/tpabf",
+      "cover": "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kenla/tpabf/albumcover.jpg"
+    }
+  ]
+}

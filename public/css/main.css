@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Montserrat&display=swap');
+@font-face {
+  font-family: SFPRO;
+  src: url("/assets/fonts/SF-Pro-Rounded-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: SFPROS;
+  src: url("/assets/fonts/SF-Pro-Text-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: Heleovm;
+  src: url("/assets/fonts/FreeSans.otf") format("opentype");
+}
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 40px;
+}
+
+.reqformgg {
+  text-align: right;
+  padding: 20px;
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+  color: #ccc;
+  margin: 10px;
+  padding-left: 20px;
+}
+/* Style the custom audio controls */
+.audio-controls {
+  display: flex;
+  align-items: center;
+  background-color: #242424;
+  color: #ffffff;
+  padding: 10px;
+  position: fixed;
+  width: 99%;
+  font-size: 16px;
+  bottom: 0px;
+  border-top: 2px solid #333;
+}
+.audio-controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 24px;
+  /* Increase icon size */
+}
+.audio-controls hr {
+  width: 100%;
+  /* Full width line */
+  margin-top: 10px;
+  /* Space between line and text */
+  border: 1px solid #555;
+  /* Line color */
+}
+.audio-controls progress {
+  width: 80%;
+  /* 25% smaller progress bar */
+}
+/* Hide the default audio player */
+audio {
+  display: none;
+}
+.currentTrack {
+  text-align: center;
+  margin-left: 10px;
+  font-size: inherit;
+}
+.currentTrack2 {
+  color: inherit;
+  font-size: 29px;
+  font-weight: 400;
+}
+/* Add styles to position the song time and duration */
+#audio-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#songTime,
+#songDuration {
+  white-space: nowrap;
+  margin: 0 10px;
+  /* Adjust the margin as needed */
+}
+#songTime2, #songDuration2 {
+  white-space: nowrap;
+  margin: 0 10px; /* Adjust the margin as needed */
+  color: inherit;
+}
+.topnav {
+  width: 100%;
+  top: 0px;
+  text-align: left;
+  padding: 20px;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
+}
+
+.playerm {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  border-top: 1px solid #333;
+}
+.sidebarmen ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: auto;
+  border-right: 5px;
+  border-color: #333;
+}
+.sidebarmen li i {
+  display: flex;
+  color: #fff;
+  text-decoration: none;
+  font-size: 35px;
+}
+.sidebarmen li button {
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.sidebarmen li {
+  display: flex;
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 40px;
+
+}
+/* Change the link color on hover */
+.sidebarmen img {
+  padding-top: 20px;
+  padding-left: 9px;
+}
+.sidebarmen {
+  float: left;
+  height: 100%;
+  position: fixed;
+  width: auto;
+  left: 2px;
+  background-color: #222;
+  border-right: 2px solid #333;
+}
+
+#playlistContainer img {
+  width: 120px;
+  height: 120px;
+}
+#playlistContainer {
+  display: inline-block;
+  /* Make it inline to adjust to content */
+}
+
+
+#songselector {
+  float: right;
+  width: fit-content;
+  padding-left: 20px;
+  margin-top: 10px; /* Updated syntax for margin-top */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 6%; /* Adjust value based on the width of the sidebarmen div */
+  /* Additional styling properties */
+}
+.audio-controls-full {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  /* Ensure it appears on top of other elements */
+}
+
+.audio-controls-full img {
+  width: 200px;
+  /* Adjust the size of the album cover as needed */
+  height: 200px;
+}
+.progress-container {
+  display: flex;
+  align-items: center;
+}
+.audio-controls-full button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 36px;
+  margin: 10px;
+}
+.audio-controls-full progress {
+  width: 500px;
+  /* 25% smaller progress bar */
+}
+#arrow-button2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#bottombuttons {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+#songselector button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#songselector h2 {
+  width: auto;
+  height: auto;
+}
+
+#lilbrary {
+  left: 20px;
+  padding-left: 20px;
+  margin-top: 0 10px;
+  float: right;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+#accountsettings {
+  left: 20px;
+  padding-left: 20px;
+  margin-top: 0 10px;
+  float: right;
+  width: 90%;
+  height: auto;
+  display: flex;
+}
+#searching {
+  float: right;
+  width: fit-content;
+  padding-left: 20px;
+  margin-top: 10px; /* Updated syntax for margin-top */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 5%; /* Adjust value based on the width of the sidebarmen div */
+  /* Additional styling properties */
+}
+#searching input[type=text] {
+  width: 50%;
+  box-sizing: border-box;
+  border: 2px solid #acacac;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('/assets/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+#searching input[type=text] {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus {
+  border: 3px solid #ffffff;
+}
+
+#lilbrary button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#mlogin {
+  left: 20px;
+  padding-left: 20px;
+  margin-top: 0 10px;
+  float: right;
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.mnkjiu {
+  display: flex;
+}
+footer {
+  float: right;
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+#mlogin button {
+  box-sizing: border-box;
+  border: 2px solid #131313;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #1e1e1e;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 20px;
+  color: #fff;
+}
+#mlogin h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 25px;
+}
+input[type=email]:focus {
+  border: 3px solid #ffffff;
+}
+input[type=email] {
+  box-sizing: border-box;
+  border: 2px solid #acacac;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+input[type=password] {
+  box-sizing: border-box;
+  border: 2px solid #acacac;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+.container input {
+  box-sizing: border-box;
+  border: 2px solid #acacac;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+#list-holder li {
+  color: white;
+  cursor: pointer;
+}
+
+.dark-mode {
+  background-color: white;
+  color: #222;
+}
+
+#user {
+  right: 100px;
+  position: absolute;
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  margin-bottom: 33.2px;
+  margin-top: 33.2px;
+}
+
+#user {
+  cursor: pointer;
+}
+
+#accountsettings button {
+  opacity: 0.9;
+  transition: 0.3s;
+  background-color: #5c5c5c;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 6px 6px 6px 6px;
+}
+#accountsettings button:hover {
+  opacity: 1;
+}
+#accountsettings input[type=text] {
+  box-sizing: border-box;
+  border: 2px solid #acacac;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+#accountsettings input[type=url] {
+  box-sizing: border-box;
+  border: 2px solid #acacac;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+.playlist-item img {
+  width: 120px;
+  height: 120px;
+}
+.playlist-item button {
+  border: none;
+  background: #5c5c5c;
+}
+#deletebutton {
+  background: red;
+}
+.playlist-item button {
+  display: inline;
+  color: #fff;
+  font-weight: bolder;
+  margin: 2px;
+}
+.playlist-item {
+  left: 20px;
+  padding-left: 20px;
+  margin-top: 0 10px;
+  float: right;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+#settings {
+  left: 20px;
+  padding-left: 20px;
+  margin-top: 0 10px;
+  float: right;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+/* Color of the progress bar */
+#progress::-webkit-progress-value {
+  background-color: lightblue;
+  /* You can change this color to the one you prefer */
+}
+#footer a {
+  font-weight: bolder;
+}
+.grecaptcha-badge {
+  visibility: hidden;
+}
+.album-small {
+  width: 105px;
+  height: 105px;
+}
+.album-medium {
+  width: 140px;
+  height: 140px;
+}
+.album-large {
+  width: 160px;
+  height: 160px;
+}
+#buttonys {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+#list-holder {
+  list-style-type: none;
+  margin: 0;
+  height: auto;
+  background-color: #222;
+  border-right: 5px;
+  border-color: #333;
+}
+
+#lyrics {
+  max-width: 200px;
+  max-height: 300px;
+}
+
+iframe {
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 10000;
+  border: none;
+}

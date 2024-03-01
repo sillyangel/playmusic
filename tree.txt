@@ -1,0 +1,78 @@
+[01;34m.[0m
+├── deploy-and-commit.sh
+├── firebase.json
+├── firestore.indexes.json
+├── firestore.rules
+├── main.js
+├── main.ts
+├── package.json
+├── package-lock.json
+├── [01;34mpublic[0m
+│   ├── 404.html
+│   ├── app.webmanifest
+│   ├── [01;34massets[0m
+│   │   ├── [01;35maddplaylist.png[0m
+│   │   ├── [01;34mfonts[0m
+│   │   │   ├── FreeSans.otf
+│   │   │   ├── PublicPixel.ttf
+│   │   │   ├── SF-Pro-Display-Regular.otf
+│   │   │   ├── SF-Pro-Rounded-Regular.otf
+│   │   │   ├── SF-Pro-Text-Medium.otf
+│   │   │   └── SF-Pro-Text-Regular.otf
+│   │   ├── [01;35mkey-solid.svg[0m
+│   │   ├── [01;34mlogo[0m
+│   │   │   ├── [01;35micon-192x192.png[0m
+│   │   │   ├── [01;35micon-256x256.png[0m
+│   │   │   ├── [01;35micon-384x384.png[0m
+│   │   │   ├── [01;35micon-512x512.png[0m
+│   │   │   ├── [01;35mmlogo.png[0m
+│   │   │   └── readme.md
+│   │   ├── [01;35mnonealbum.png[0m
+│   │   ├── [01;35msearchicon.png[0m
+│   │   └── [01;35muser-solid.svg[0m
+│   ├── [01;34mcss[0m
+│   │   ├── main.css
+│   │   ├── moblie.css
+│   │   ├── thing.css
+│   │   └── toast.css
+│   ├── [01;34mdevelopment[0m
+│   │   └── test.html
+│   ├── index.html
+│   ├── [01;34mjs[0m
+│   │   ├── [01;34mdist[0m
+│   │   │   ├── bundle.js
+│   │   │   ├── firebase.bundle.js
+│   │   │   ├── main.bundle.js
+│   │   │   ├── main.bundle.js.LICENSE.txt
+│   │   │   ├── sw.bundle.js
+│   │   │   └── sw.bundle.js.LICENSE.txt
+│   │   ├── firebase.js
+│   │   ├── firebase-messaging-sw.js
+│   │   ├── main.js
+│   │   ├── moblie.js
+│   │   ├── notif.js
+│   │   ├── poup.js
+│   │   ├── service-worker.js
+│   │   ├── sw.js
+│   │   └── toast.js
+│   ├── [01;34mjson[0m
+│   │   ├── audioTracks.json
+│   │   ├── song2.json
+│   │   └── songs.json
+│   ├── moblie.html
+│   ├── [01;34mprivacypolicy[0m
+│   │   └── index.html
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   └── [01;34msm64[0m
+│       ├── kdpicsentquaker.htm
+│       ├── sm64.us.f3dex2e.js
+│       ├── sm64.us.f3dex2e.wasm
+│       └── sm64.us.f3dex2e.wasm.map
+├── README.md
+├── rollup.config.js
+├── run.sh
+├── token.txt
+├── tree.txt
+├── tsconfig.json
+└── webpack.config.js
