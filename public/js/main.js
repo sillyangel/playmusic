@@ -773,8 +773,7 @@ try {
     if (localStorage.getItem("timerforaudio") !== null) {
         audiotimern = localStorage.getItem("timerforaudio");
     }
-    var currentTrackElements = document.querySelectorAll(".currentTrack");
-    var currentTrack2Elements = document.querySelectorAll(".currentTrack2");
+    
     var DatabaseDomain = "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/";
 
     function loadTrack() {
@@ -1043,6 +1042,11 @@ document.addEventListener('keydown', function(event) {
     audio.addEventListener("ended", skipTrack);
 
     function updateTrackText() {
+        var currentTrackElements = document.querySelectorAll(".currentTrack");
+        var currentTrack2Elements = document.querySelectorAll(".currentTrack2");
+        var currentartist = document.querySelectorAll(".currentartist");
+        var currentartist2  = document.querySelectorAll('.currentartist2')
+        
         var artist = albums[currentAlbumIndex].artist;
         var track = audioTracks[currentAlbum][currentTrackIndex];
     
@@ -1052,14 +1056,20 @@ document.addEventListener('keydown', function(event) {
         // Remove the numbering at the beginning of the track name, handling extra dash or period
         track = track.replace(/^\d+\s*[-.]*\s*/, "");
     
-        // Loop through each element with class "currentTrack" and update its content
         currentTrackElements.forEach(function(element) {
-            element.textContent = artist + " - " + track;
+            element.textContent = track;
         });
-    
-        // Loop through each element with class "currentTrack2" and update its content
+        
+        currentartist.forEach(function(element) {
+            element.textContent = artist;
+        });
+
+        currentartist2.forEach(function(element){
+            element.textContent = artist;
+        });
+
         currentTrack2Elements.forEach(function(element) {
-            element.textContent = artist + " - " + track;
+            element.textContent =  track;
         });
     }
     const elementsById = ['songselector', 'accountsettings', 'searching', 'lilbrary', 'settings', 'mlogin'].reduce((obj, id) => {
@@ -1174,6 +1184,7 @@ document.addEventListener('keydown', function(event) {
                             icon.className = "fa-regular fa-star";
                         } else if (clickcount === 1) {
                             icon.className = "fa-solid fa-star";
+                            alert(album.a)
                         }
                     });
                     

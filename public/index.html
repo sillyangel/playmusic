@@ -166,6 +166,7 @@
             <img id="albumCover" src="https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/" alt="Album Cover" width="60px" height="60px">
         </div>
           <div class="currentTrack"> </div>
+          <div class="currentartist"> </div>
             <button aria-label="Back" onclick="previousTrack()"><i class="fas fa-backward"></i></button>
             <button aria-label="Play/Pause" id="playbuttonthung" onclick="playPause()"><i class="fas fa-play"></i></button>
             <button aria-label="Skip Track" onclick="skipTrack()"><i class="fas fa-forward"></i></button>
@@ -179,20 +180,26 @@
         <!--FULLPLAYER-->
         <div class="audio-controls-full" style="display: none;">
           <button onclick="hidefullplayer()" id="arrow-button2"><i class="fas fa-chevron-down"></i></button>
-          <div class="album-cover">
-            <img id="albumCover" src="https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/" alt="Album Cover" width="250px" height="250px">
+          <div class="mediacontrols"> <!-- Audio Controls-->
+            <div class="album-cover">
+              <img id="albumCover" src="https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/" alt="Album Cover" width="500px" height="500px">
+            </div>
+            <div class="trackandartiststuff">
+            <div class="currentTrack2"> </div>
+            <div class="currentartist2" style="font-size: 20px; align-self:flex-start;" >Kanye West</div>
+            </div>
+            <div class="progress-container">
+              <div id="songTime2">0:00</div>
+              <progress id="progress2" value="0" max="100" onclick="seek(event, 'progress2')"></progress>
+              <div id="songDuration2">0:00</div>
+            </div>
+            <div class="control-buttons">
+              <button aria-label="Back" onclick="previousTrack()"><i class="fas fa-backward"></i></button>
+              <button aria-label="Play/Pause" id="playbuttonthung" onclick="playPause()"><i class="fas fa-play"></i></button>
+              <button aria-label="Skip Track" onclick="skipTrack()"><i class="fas fa-forward"></i></button>
+            </div>
           </div>
-          <div class="currentTrack2"> </div>
-          <div class="control-buttons">
-            <button aria-label="Back" onclick="previousTrack()"><i class="fas fa-backward"></i></button>
-            <button aria-label="Play/Pause" id="playbuttonthung" onclick="playPause()"><i class="fas fa-play"></i></button>
-            <button aria-label="Skip Track" onclick="skipTrack()"><i class="fas fa-forward"></i></button>
-          </div>
-          <div class="progress-container">
-            <div id="songTime2">0:00</div>
-            <progress id="progress2" value="0" max="100" onclick="seek(event, 'progress2')"></progress>
-            <div id="songDuration2">0:00</div>
-          </div>
+
           <div id="bottombuttons">
             <button onclick="toggleRepeat()" id="repeatbutton"><i class="fa-solid fa-repeat" style="color: #ffffff;"></i></button>
             <button onclick="lyricsbutton()" id="lyricsbutton"><i class="fas fa-align-left"></i></button>

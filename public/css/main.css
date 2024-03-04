@@ -82,7 +82,7 @@ audio {
 }
 .currentTrack2 {
   color: inherit;
-  font-size: 29px;
+  font-size: 24px;
   font-weight: 400;
 }
 /* Add styles to position the song time and duration */
@@ -197,10 +197,14 @@ audio {
   /* Ensure it appears on top of other elements */
 }
 
+.trackandartiststuff {
+  align-content: start!important;
+}
+
 .audio-controls-full img {
-  width: 200px;
-  /* Adjust the size of the album cover as needed */
-  height: 200px;
+  width: 250px;
+  margin-bottom: 10px;
+  height: 250px;
 }
 .progress-container {
   display: flex;
@@ -216,6 +220,8 @@ audio {
 }
 .audio-controls-full progress {
   width: 500px;
+  padding-top: 5px;
+  margin-top: 5px;
   /* 25% smaller progress bar */
 }
 #arrow-button2 {
@@ -531,4 +537,19 @@ iframe {
   bottom: 0px;
   z-index: 10000;
   border: none;
+
 }
+
+
+.mediacontrols {
+  position: fixed;
+  width: 47%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
