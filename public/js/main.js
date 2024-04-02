@@ -1,89 +1,91 @@
-// https://playcdn-1.onrender.com/
+// https://playmusicstorage.web.app/
 try {
+    
     var albums = [
-        { artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "https://playcdn-1.onrender.com/songs/tylerthecreator/wolf/albumcover.png" },
-        { artist: "Tyler, The Creator", album: "Flower Boy", folder: "tylerthecreator/flowerboy", image: "https://playcdn-1.onrender.com/songs/tylerthecreator/flowerboy/albumcover.png" },
-        { artist: "Tyler, The Creator", album: "Igor", folder: "tylerthecreator/igor", image: "https://playcdn-1.onrender.com/songs/tylerthecreator/igor/igorcover.png" },
-        { artist: "Tyler, The Creator", album: "Cherry Bomb", folder: "tylerthecreator/cherrybomb", image: "https://playcdn-1.onrender.com/songs/tylerthecreator/cherrybomb/cherrybomb.png" },
-        { artist: "Tyler, The Creator", album: "Goblin", folder: "tylerthecreator/goblin", image: "https://playcdn-1.onrender.com/songs/tylerthecreator/goblin/Goblincover.png" },
-        { artist: "Tyler, The Creator", album: "Bastard", folder: "tylerthecreator/bas", image: "https://playcdn-1.onrender.com/songs/tylerthecreator/bas/bas.png" },
-        { artist: "Arctic Monkeys", album: "AM", folder: "arcticmonkeys/am", image: "https://playcdn-1.onrender.com/songs/arcticmonkeys/am/albumcover.jpg"},
-        { artist: "Arctic Monkeys", album: "Humbug", folder: "arcticmonkeys/humbug", image: "https://playcdn-1.onrender.com/songs/arcticmonkeys/humbug/albumcover.jpg"},
-        { artist: "Arctic Monkeys", album: "WPSIATWIN", folder: "arcticmonkeys/wpsiatwin", image: "https://playcdn-1.onrender.com/songs/arcticmonkeys/wpsiatwin/albumcover.jpg"},
-        { artist: "Arctic Monkeys", album: "Favourite Worst Nightmare", folder: "arcticmonkeys/fwn", image: "https://playcdn-1.onrender.com/songs/arcticmonkeys/fwn/albumcover.jpg"},
-        { artist: "Arctic Monkeys", album: "Suck It and See", folder: "arcticmonkeys/sias", image: "https://playcdn-1.onrender.com/songs/arcticmonkeys/sias/albumcover.jpg"},
-        { artist: "Arctic Monkeys", album: "Tranquility Base Hotel & Casino", folder: "arcticmonkeys/tbhc", image: "https://playcdn-1.onrender.com/songs/arcticmonkeys/tbhc/albumcover.png"},
-        { artist: "Arctic Monkeys", album: "The Car", folder: "arcticmonkeys/car", image: "https://playcdn-1.onrender.com/songs/arcticmonkeys/car/albumcover.jpg"},
-        { artist: "Wallows", album: "Nothing Happens", folder: "wallows/nonthinghappens", image: "https://playcdn-1.onrender.com/songs/wallows/nonthinghappens/albumcover.png"},
-        { artist: "Melanie Martinez", album: "Crybaby", folder: "melanie/crybaby", image: "https://playcdn-1.onrender.com/songs/melanie/crybaby/albumcover.png"},
-        { artist: "Melanie Martinez", album: "K-12", folder: "melanie/k12", image: "https://playcdn-1.onrender.com/songs/melanie/k12/albumcover.png"},
-        { artist: "Melanie Martinez", album: "Portals", folder: "melanie/portals", image: "https://playcdn-1.onrender.com/songs/melanie/portals/albumcover.png"},
-        { artist: "The weeknd", album: "Kiss Land", folder: "theweekend/kissland", image: "https://playcdn-1.onrender.com/songs/theweekend/kissland/albumcover.png"},
-        { artist: "The weeknd", album: "Beauty Behind the Madness", folder: "theweekend/bbtm", image: "https://playcdn-1.onrender.com/songs/theweekend/bbtm/albumcover.png"},
-        { artist: "The weeknd", album: "starboy", folder: "theweekend/starboy", image: "https://playcdn-1.onrender.com/songs/theweekend/starboy/albumcover.png"},
-        { artist: "The weeknd", album: "Afterhours", folder: "theweekend/afterhours", image: "https://playcdn-1.onrender.com/songs/theweekend/afterhours/albumcover.png"},
-        { artist: "The weeknd", album: "Dawnfm", folder: "theweekend/dawnfm", image: "https://playcdn-1.onrender.com/songs/theweekend/dawnfm/albumcover.png"},
-        { artist: "Laufey", album: "Bewitched", folder: "laufey/bewitched", image: "https://playcdn-1.onrender.com/songs/laufey/bewitched/albumcover.png"},
-        { artist: "Laufey", album: "Everything I know about love", folder: "laufey/eikal", image: "https://playcdn-1.onrender.com/songs/laufey/eikal/albumcover.png"},
-        { artist: "Roddy Ricch", album: "Life lives fast", folder: "rr/llf", image: "https://playcdn-1.onrender.com/songs/rr/llf/albumcover.png"},
-        { artist: "Roddy Ricch", album: "Please excuse me for being antisocial", folder: "rr/pemfba", image: "https://playcdn-1.onrender.com/songs/rr/pemfba/albumcover.png"},
-        { artist: "Lemon Demon", album: "Spirit phone", folder: "ld/sp", image: "https://playcdn-1.onrender.com/songs/ld/sp/albumcover.png"},
-        { artist: "Lemon Demon", album: "Clown", folder: "ld/cc", image: "https://playcdn-1.onrender.com/songs/ld/cc/albumcover.jpg"},
-        { artist: "Kanye West", album: "The College Dropout", folder: "kanyewest/tcd", image: "https://playcdn-1.onrender.com/songs/kanyewest/tcd/albumcover.webp"},
-        { artist: "Kanye West", album: "Late Registration", folder: "kanyewest/lr", image: "https://playcdn-1.onrender.com/songs/kanyewest/lr/albumcover.webp"},
-        { artist: "Kanye West", album: "Graduation", folder: "kanyewest/grad", image: "https://playcdn-1.onrender.com/songs/kanyewest/grad/albumcover.webp"},
-        { artist: "Kanye West", album: "808s & Heartbreak", folder: "kanyewest/808s", image: "https://playcdn-1.onrender.com/songs/kanyewest/808s/albumcover.webp"},
-        { artist: "Kanye West", album: "My Beautiful Dark Twisted Fantasy", folder: "kanyewest/mbdtf", image: "https://playcdn-1.onrender.com/songs/kanyewest/mbdtf/albumcover.jpg"},
-        { artist: "Kanye West", album: "Watch the Throne", folder: "kanyewest/wtt", image: "https://playcdn-1.onrender.com/songs/kanyewest/wtt/albumcover.webp"},
-        { artist: "Kanye West", album: "Cruel Summer", folder: "kanyewest/cs", image: "https://playcdn-1.onrender.com/songs/kanyewest/cs/albumcover.webp"},
-        { artist: "Kanye West", album: "Yeezus", folder: "kanyewest/yeezus", image: "https://playcdn-1.onrender.com/songs/kanyewest/yeezus/Cover.jpg"},
-        { artist: "Kanye West", album: "The Life of Pablo", folder: "kanyewest/tlop", image: "https://playcdn-1.onrender.com/songs/kanyewest/tlop/albumcover.webp"},
-        { artist: "Kanye West", album: "Ye", folder: "kanyewest/ye", image: "https://playcdn-1.onrender.com/songs/kanyewest/ye/Cover.jpg" },
-        { artist: "Kanye West", album: "Kids See Ghosts", folder: "kanyewest/ksg", image: "https://playcdn-1.onrender.com/songs/kanyewest/ksg/albumcover.webp"},
-        { artist: "Kanye West", album: "Jesus Is King", folder: "kanyewest/jesusisking", image: "https://playcdn-1.onrender.com/songs/kanyewest/jesusisking/Cover.jpg" },
-        { artist: "Kanye West", album: "Donda", folder: "kanyewest/donda", image: "https://playcdn-1.onrender.com/songs/kanyewest/donda/cover.jpg" },
-        { artist: "Kanye West", album: "Donda 2", folder: "kanyewest/donda2", image: "https://playcdn-1.onrender.com/songs/kanyewest/donda2/albumcover.webp" },
-        { artist: "Kanye West", album: "Vultures 1", folder: "kanyewest/vult1", image: "https://playcdn-1.onrender.com/songs/kanyewest/vult1/albumcover.webp"},
-        { artist: "Kanye West", album: "Vultures 2", folder: "kanyewest/vult2", image: "https://playcdn-1.onrender.com/songs/kanyewest/vult2/albumcover.webp"},
-        { artist: "Kanye West", album: "Vultures 3", folder: "kanyewest/vult3", image: "https://playcdn-1.onrender.com/songs/kanyewest/vult3/albumcover.webp"},
-        { artist: "Drake", album: "Thank Me Later", folder: "drake/tml", image: "https://playcdn-1.onrender.com/songs/drake/tml/albumcover.webp"},
-        { artist: "Drake", album: "Take Care", folder: "drake/tc", image: "https://playcdn-1.onrender.com/songs/drake/tc/albumcover.webp" },
-        { artist: "Drake", album: "Nothing Was the Same", folder: "drake/nwts", image: "https://playcdn-1.onrender.com/songs/drake/nwts/albumcover.webp "},
-        { artist: "Drake", album: "Views", folder: "drake/views", image: "https://playcdn-1.onrender.com/songs/drake/views/albumcover.webp "},
-        { artist: "Drake", album: "Scorpion", folder: "drake/scorp", image: "https://playcdn-1.onrender.com/songs/drake/scorp/albumcover.webp "},
-        { artist: "Drake", album: "Certified Lover Boy", folder: "drake/clb", image: "https://playcdn-1.onrender.com/songs/drake/clb/albumcover.webp "},
-        { artist: "Drake", album: "Honestly, Nevermind", folder: "drake/honnvm", image: "https://playcdn-1.onrender.com/songs/drake/honnvm/albumcover.webp "},
-        { artist: "Drake", album: "Her Loss", folder: "drake/herloss", image: "https://playcdn-1.onrender.com/songs/drake/herloss/albumcover.webp "},
-        { artist: "Drake", album: "For All the Dogs", folder: "drake/fatd", image: "https://playcdn-1.onrender.com/songs/drake/fatd/albumcover.webp "},
-        { artist: "Frank Ocean", album: "Channel Orange", folder: "franko/co", image:"https://playcdn-1.onrender.com/songs/franko/co/albumcover.webp" },
-        { artist: "Frank Ocean", album: "Blonde", folder: "franko/blonde", image:"https://playcdn-1.onrender.com/songs/franko/blonde/albumcover.webp" },
-        { artist: "Heaven Pierce Her", album: "Zen, or the  Means Without Ends", folder: "hph/zotmwe", image: "https://playcdn-1.onrender.com/songs/hph/zotmwe/albumcover.webp" },
-        { artist: "Heaven Pierce Her", album: "Flowerworks", folder: "hph/flowerworks", image: "https://playcdn-1.onrender.com/songs/hph/flowerworks/albumcover.webp" },
-        { artist: "Heaven Pierce Her", album: "Ultrakill: Inf Hyperdeath", folder: "hph/ukih", image: "https://playcdn-1.onrender.com/songs/hph/ukih/albumcover.webp" },
-        { artist: "Heaven Pierce Her", album: "Ultrakill: IMperfect Hatred", folder: "hph/ukih2", image: "https://playcdn-1.onrender.com/songs/hph/ukih2/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "With Ears to See and Eyes to Hear", folder: "kq/wetsaeth", image: "https://playcdn-1.onrender.com/songs/kq/wetsaeth/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "Let's Cheers to This", folder: "kq/lctt", image: "https://playcdn-1.onrender.com/songs/kq/lctt/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "Feel", folder: "kq/fe", image: "https://playcdn-1.onrender.com/songs/kq/fe/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "Madness", folder: "kq/mad", image: "https://playcdn-1.onrender.com/songs/kq/mad/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "Gossip", folder: "kq/gos", image: "https://playcdn-1.onrender.com/songs/kq/gos/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "How It Feels to Be Lost", folder: "kq/hif", image: "https://playcdn-1.onrender.com/songs/kq/hif/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "Commplete Collapse", folder: "kq/cc", image: "https://playcdn-1.onrender.com/songs/kq/cc/albumcover.webp" },
-        { artist: "Pierce The Veil", album: "A Flair for the Dramatic", folder: "ptv/afftd", image: "https://playcdn-1.onrender.com/songs/ptv/afftd/albumcover.webp" },
-        { artist: "Pierce The Veil", album: "Selfish Machines", folder: "ptv/sm", image: "https://playcdn-1.onrender.com/songs/ptv/sm/albumcover.webp" },
-        { artist: "Pierce The Veil", album: "Collide with the Sky", folder: "ptv/cwts", image: "https://playcdn-1.onrender.com/songs/ptv/cwts/albumcover.webp" },
-        { artist: "Pierce The Veil", album: "Misadventures", folder: "ptv/madv", image: "https://playcdn-1.onrender.com/songs/ptv/madv/albumcover.webp" },
-        { artist: "Pierce The Veil", album: "The Jaws of Life", folder: "ptv/tjofl", image: "https://playcdn-1.onrender.com/songs/ptv/tjofl/albumcover.webp" },
-        { artist: "The Smiths", album: "Smiths", folder: "smiths/tsm", image: "https://playcdn-1.onrender.com/songs/smiths/tsm/albumcover.webp" },
-        { artist: "The Smiths", album: "Meat is Murder", folder: "smiths/mim", image: "https://playcdn-1.onrender.com/songs/smiths/mim/albumcover.webp" },
-        { artist: "The Smiths", album: "The Queen is Dead", folder: "smiths/tqid", image: "https://playcdn-1.onrender.com/songs/smiths/tqid/albumcover.webp" },
-        { artist: "The Smiths", album: "Strangeways, Here We Come", folder: "smiths/swhwc", image: "https://playcdn-1.onrender.com/songs/smiths/swhwc/albumcover.webp" },
-        { artist: "Billie Eilish", album: "Happy Than Ever", folder: "be/hte", image: "https://playcdn-1.onrender.com/songs/be/hte/albumcover.jpg" },
-        { artist: "SZA", album: "SOS", folder: "sza/sos", image: "https://playcdn-1.onrender.com/songs/sza/sos/albumcover.jpg" },
-        { artist: "Kendrick Lamar", album: "Mr morale and the big steppers", folder: "kenla/mmtbs", image: "https://playcdn-1.onrender.com/songs/kenla/mmtbs/albumcover.jpg" },
-        { artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "https://playcdn-1.onrender.com/songs/kenla/tpabf/albumcover.jpg" }
-    //  { artist: "", album: "", folder: "/", image: "https://playcdn-1.onrender.com/songs///albumcover.webp" },
+        { database: 1, artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "albumcover.webp" },
+        { database: 1, artist: "Tyler, The Creator", album: "Flower Boy", folder: "tylerthecreator/flowerboy", image: "albumcover.webp" },
+        { database: 1, artist: "Tyler, The Creator", album: "Igor", folder: "tylerthecreator/igor", image: "igorcover.webp" },
+        { database: 1, artist: "Tyler, The Creator", album: "Cherry Bomb", folder: "tylerthecreator/cherrybomb", image: "cherrybomb.webp" },
+        { database: 1, artist: "Tyler, The Creator", album: "Goblin", folder: "tylerthecreator/goblin", image: "Goblincover.webp" },
+        { database: 1, artist: "Tyler, The Creator", album: "Bastard", folder: "tylerthecreator/bas", image: "albumcover.webp" },
+        { database: 1, artist: "Arctic Monkeys", album: "AM", folder: "arcticmonkeys/am", image: "albumcover.webp"},
+        { database: 1, artist: "Arctic Monkeys", album: "Humbug", folder: "arcticmonkeys/humbug", image: "albumcover.webp"},
+        { database: 1, artist: "Arctic Monkeys", album: "WPSIATWIN", folder: "arcticmonkeys/wpsiatwin", image: "albumcover.webp"},
+        { database: 1, artist: "Arctic Monkeys", album: "Favourite Worst Nightmare", folder: "arcticmonkeys/fwn", image: "albumcover.webp"},
+        { database: 1, artist: "Arctic Monkeys", album: "Suck It and See", folder: "arcticmonkeys/sias", image: "albumcover.webp"},
+        { database: 1, artist: "Arctic Monkeys", album: "Tranquility Base Hotel & Casino", folder: "arcticmonkeys/tbhc", image: "albumcover.webp"},
+        { database: 1, artist: "Arctic Monkeys", album: "The Car", folder: "arcticmonkeys/car", image: "albumcover.webp"},
+        { database: 1, artist: "Wallows", album: "Nothing Happens", folder: "wallows/nonthinghappens", image: "albumcover.webp"},
+        { database: 1, artist: "Melanie Martinez", album: "Crybaby", folder: "melanie/crybaby", image: "albumcover.webp"},
+        { database: 1, artist: "Melanie Martinez", album: "K-12", folder: "melanie/k12", image: "albumcover.webp"},
+        { database: 1, artist: "Melanie Martinez", album: "Portals", folder: "melanie/portals", image: "albumcover.webp"},
+        { database: 1, artist: "The weeknd", album: "Kiss Land", folder: "theweekend/kissland", image: "albumcover.webp"},
+        { database: 1, artist: "The weeknd", album: "Beauty Behind the Madness", folder: "theweekend/bbtm", image: "albumcover.webp"},
+        { database: 1, artist: "The weeknd", album: "starboy", folder: "theweekend/starboy", image: "albumcover.webp"},
+        { database: 1, artist: "The weeknd", album: "Afterhours", folder: "theweekend/afterhours", image: "albumcover.webp"},
+        { database: 1, artist: "The weeknd", album: "Dawnfm", folder: "theweekend/dawnfm", image: "albumcover.png"},
+        { database: 1, artist: "Laufey", album: "Bewitched", folder: "laufey/bewitched", image: "albumcover.png"},
+        { database: 1, artist: "Laufey", album: "Everything I know about love", folder: "laufey/eikal", image: "albumcover.png"},
+        { database: 1, artist: "Roddy Ricch", album: "Life lives fast", folder: "rr/llf", image: "albumcover.png"},
+        { database: 1, artist: "Roddy Ricch", album: "Please excuse me for being antisocial", folder: "rr/pemfba", image: "albumcover.png"},
+        { database: 1, artist: "Lemon Demon", album: "Spirit phone", folder: "ld/sp", image: "albumcover.png"},
+        { database: 1, artist: "Lemon Demon", album: "Clown", folder: "ld/cc", image: "albumcover.jpg"},
+        { database: 1, artist: "Kanye West", album: "The College Dropout", folder: "kanyewest/tcd", image: "albumcover.webp"},
+        { database: 1, artist: "Kanye West", album: "Late Registration", folder: "kanyewest/lr", image: "albumcover.webp"},
+        { database: 1, artist: "Kanye West", album: "Graduation", folder: "kanyewest/grad", image: "albumcover.webp"},
+        { database: 1, artist: "Kanye West", album: "808s & Heartbreak", folder: "kanyewest/808s", image: "albumcover.webp"},
+        { database: 1, artist: "Kanye West", album: "My Beautiful Dark Twisted Fantasy", folder: "kanyewest/mbdtf", image: "albumcover.jpg"},
+        { database: 1, artist: "Kanye West", album: "Watch the Throne", folder: "kanyewest/wtt", image: "albumcover.webp"},
+        { database: 1, artist: "Kanye West", album: "Cruel Summer", folder: "kanyewest/cs", image: "albumcover.webp"},
+        { database: 1, artist: "Kanye West", album: "Yeezus", folder: "kanyewest/yeezus", image: "Cover.jpg"},
+        { database: 1, artist: "Kanye West", album: "The Life of Pablo", folder: "kanyewest/tlop", image: "albumcover.webp"},
+        { database: 1, artist: "Kanye West", album: "Ye", folder: "kanyewest/ye", image: "Cover.jpg" },
+        { database: 1, artist: "Kanye West", album: "Kids See Ghosts", folder: "kanyewest/ksg", image: "albumcover.webp"},
+        { database: 1, artist: "Kanye West", album: "Jesus Is King", folder: "kanyewest/jesusisking", image: "Cover.jpg" },
+        { database: 1, artist: "Kanye West", album: "Donda", folder: "kanyewest/donda", image: "cover.webp" },
+        { database: 1, artist: "Kanye West", album: "Donda 2", folder: "kanyewest/donda2", image: "albumcover.webp" },
+        { database: 1, artist: "Kanye West", album: "Vultures 1", folder: "kanyewest/vult1", image: "albumcover.webp"},
+        { database: 1, artist: "Kanye West", album: "Vultures 2", folder: "kanyewest/vult2", image: "albumcover.webp"},
+        { database: 1, artist: "Kanye West", album: "Vultures 3", folder: "kanyewest/vult3", image: "albumcover.webp"},
+        { database: 1, artist: "Drake", album: "Thank Me Later", folder: "drake/tml", image: "albumcover.webp"},
+        { database: 1, artist: "Drake", album: "Take Care", folder: "drake/tc", image: "albumcover.webp" },
+        { database: 1, artist: "Drake", album: "Nothing Was the Same", folder: "drake/nwts", image: "albumcover.webp "},
+        { database: 1, artist: "Drake", album: "Views", folder: "drake/views", image: "albumcover.webp "},
+        { database: 1, artist: "Drake", album: "Scorpion", folder: "drake/scorp", image: "albumcover.webp "},
+        { database: 1, artist: "Drake", album: "Certified Lover Boy", folder: "drake/clb", image: "albumcover.webp "},
+        { database: 1, artist: "Drake", album: "Honestly, Nevermind", folder: "drake/honnvm", image: "albumcover.webp "},
+        { database: 1, artist: "Drake", album: "Her Loss", folder: "drake/herloss", image: "albumcover.webp "},
+        { database: 1, artist: "Drake", album: "For All the Dogs", folder: "drake/fatd", image: "albumcover.webp "},
+        { database: 1, artist: "Frank Ocean", album: "Channel Orange", folder: "franko/co", image: "albumcover.webp" },
+        { database: 1, artist: "Frank Ocean", album: "Blonde", folder: "franko/blonde", image: "albumcover.webp" },
+        { database: 1, artist: "Heaven Pierce Her", album: "Zen, or the  Means Without Ends", folder: "hph/zotmwe", image: "albumcover.webp" },
+        { database: 1, artist: "Heaven Pierce Her", album: "Flowerworks", folder: "hph/flowerworks", image: "albumcover.webp" },
+        { database: 1, artist: "Heaven Pierce Her", album: "Ultrakill: Inf Hyperdeath", folder: "hph/ukih", image: "albumcover.webp" },
+        { database: 1, artist: "Heaven Pierce Her", album: "Ultrakill: IMperfect Hatred", folder: "hph/ukih2", image: "albumcover.webp" },
+        { database: 1, artist: "Sleeping with Siren", album: "With Ears to See and Eyes to Hear", folder: "kq/wetsaeth", image: "albumcover.webp" },
+        { database: 1, artist: "Sleeping with Siren", album: "Let's Cheers to This", folder: "kq/lctt", image: "albumcover.webp" },
+        { database: 1, artist: "Sleeping with Siren", album: "Feel", folder: "kq/fe", image: "albumcover.webp" },
+        { database: 1, artist: "Sleeping with Siren", album: "Madness", folder: "kq/mad", image: "albumcover.webp" },
+        { database: 1, artist: "Sleeping with Siren", album: "Gossip", folder: "kq/gos", image: "albumcover.webp" },
+        { database: 1, artist: "Sleeping with Siren", album: "How It Feels to Be Lost", folder: "kq/hif", image: "albumcover.webp" },
+        { database: 1, artist: "Sleeping with Siren", album: "Commplete Collapse", folder: "kq/cc", image: "albumcover.webp" },
+        { database: 1, artist: "Pierce The Veil", album: "A Flair for the Dramatic", folder: "ptv/afftd", image: "albumcover.webp" },
+        { database: 1, artist: "Pierce The Veil", album: "Selfish Machines", folder: "ptv/sm", image: "albumcover.webp" },
+        { database: 1, artist: "Pierce The Veil", album: "Collide with the Sky", folder: "ptv/cwts", image: "albumcover.webp" },
+        { database: 1, artist: "Pierce The Veil", album: "Misadventures", folder: "ptv/madv", image: "albumcover.webp" },
+        { database: 1, artist: "Pierce The Veil", album: "The Jaws of Life", folder: "ptv/tjofl", image: "albumcover.webp" },
+        { database: 1, artist: "The Smiths", album: "Smiths", folder: "smiths/tsm", image: "albumcover.webp" },
+        { database: 1, artist: "The Smiths", album: "Meat is Murder", folder: "smiths/mim", image: "albumcover.webp" },
+        { database: 1, artist: "The Smiths", album: "The Queen is Dead", folder: "smiths/tqid", image: "albumcover.webp" },
+        { database: 1, artist: "The Smiths", album: "Strangeways, Here We Come", folder: "smiths/swhwc", image: "albumcover.webp" },
+        { database: 1, artist: "Billie Eilish", album: "Happy Than Ever", folder: "be/hte", image: "albumcover.jpg" },
+        { database: 1, artist: "SZA", album: "SOS", folder: "sza/sos", image: "albumcover.jpg" },
+        { database: 1, artist: "Kendrick Lamar", album: "Mr morale and the big steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
+        { database: 1, artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "albumcover.jpg" }
+    //  { database: , artist: "", album: "", folder: "/", image: "webp" },
         // Add more albums here
     ];
+    // have more database / storage for to bypass limit
     var audioTracks = {
         "tylerthecreator/wolf": [
             "WOLF.mp3",
@@ -756,6 +758,7 @@ try {
     var currentAlbumIndex = 0;
     var audiotimern;
     var repeatButtonClickCount = 0;
+    var folart = [];
     let playbackMode = "none";
     let currentTime = 0;
     if (localStorage.getItem("Albumindex") !== null) {
@@ -765,7 +768,7 @@ try {
     if (localStorage.getItem("Trackindex") !== null) {
         currentTrackIndex = localStorage.getItem("Trackindex");
     }
-    
+
     if (localStorage.getItem("CurrentAlbum") !== null) {
         currentAlbum = localStorage.getItem("CurrentAlbum");
     }
@@ -773,20 +776,28 @@ try {
     if (localStorage.getItem("timerforaudio") !== null) {
         audiotimern = localStorage.getItem("timerforaudio");
     }
-    
-    var DatabaseDomain = "https://playcdn-1.onrender.com/";
+    const databases = [
+        { id: 0, url: "playmusicstorage.web.app/" },
+        { id: 1, url: "https://playmusicstorage.web.app/" },
+        // Add more databases as needed
+      ];
+      const selectedDatabase = databases.find(databases => databases.id === albums[currentAlbumIndex].database);
+      const DatabaseDomain = selectedDatabase.url;
+    function loadTrack() {        
+            var trackPath = audioTracks[currentAlbum][currentTrackIndex];
 
-    function loadTrack() {
-        var trackPath = audioTracks[currentAlbum][currentTrackIndex];
-        audio.src = DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath;
-        audio.load();
-        updateTrackText();
-        updateAlbumCover();
-        mediathinggy();
-        localStorage.setItem("Albumindex", currentAlbumIndex);
-        localStorage.setItem("Trackindex", currentTrackIndex);
-        localStorage.setItem("CurrentAlbum", currentAlbum);
+            audio.src = DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath;
+            audio.load();
+    
+            updateTrackText();
+            updateAlbumCover();
+            
+            mediathinggy();
+            localStorage.setItem("Albumindex", currentAlbumIndex);
+            localStorage.setItem("Trackindex", currentTrackIndex);
+            localStorage.setItem("CurrentAlbum", currentAlbum);
     }
+    loadTrack();    
 
      // delete this very soon 
 function getLyrics(track) {
@@ -972,11 +983,11 @@ document.addEventListener('keydown', function(event) {
     }
 
     function updateAlbumCover() {
-        const selectedAlbum = albums[currentAlbumIndex];
+        const selectedAlbum = DatabaseDomain + "songs/" + currentAlbum + "/" +albums[currentAlbumIndex].image;
         const image = new Image();
         image.crossOrigin = "Anonymous";
-        image.src = selectedAlbum.image;
-        document.querySelectorAll('[id="albumCover"]').forEach(element => element.src = selectedAlbum.image);
+        image.src = selectedAlbum;
+        document.querySelectorAll('[id="albumCover"]').forEach(element => element.src = selectedAlbum);
 
         image.onload = function() {
             const canvas = document.createElement('canvas');
@@ -1132,6 +1143,8 @@ document.addEventListener('keydown', function(event) {
             songDurationElement2.textContent = durationMinutes + ":" + (durationSeconds < 10 ? "0" : "") + durationSeconds;
         }
     });
+
+
     // load the songs
     
     document.getElementById('hideExplicitCheckbox').addEventListener('change', (event) => {
@@ -1184,7 +1197,10 @@ document.addEventListener('keydown', function(event) {
                             icon.className = "fa-regular fa-star";
                         } else if (clickcount === 1) {
                             icon.className = "fa-solid fa-star";
-                            alert(album.a)
+                            // album.artist
+                            alert(folart)
+                            folart.push(album.artist);
+                            localStorage.setItem("folart", folart.push)
                         }
                     });
                     
@@ -1292,32 +1308,32 @@ function getSelectedSize() {
                 artwork: [{
                         src: albums[currentAlbumIndex].image,
                         sizes: "96x96",
-                        type: "image/png",
+                        type: "image/webp",
                     },
                     {
                         src: albums[currentAlbumIndex].image,
                         sizes: "128x128",
-                        type: "image/png",
+                        type: "image/webp",
                     },
                     {
                         src: albums[currentAlbumIndex].image,
                         sizes: "192x192",
-                        type: "image/png",
+                        type: "image/webp",
                     },
                     {
                         src: albums[currentAlbumIndex].image,
                         sizes: "256x256",
-                        type: "image/png",
+                        type: "image/webp",
                     },
                     {
                         src: albums[currentAlbumIndex].image,
                         sizes: "384x384",
-                        type: "image/png",
+                        type: "image/webp",
                     },
                     {
                         src: albums[currentAlbumIndex].image,
                         sizes: "512x512",
-                        type: "image/png",
+                        type: "image/webp",
                     },
                 ],
             });
@@ -1483,7 +1499,7 @@ if (albumName.includes(input) || artistName.includes(input)) {
     function w() {
         for (let album in audioTracks) {
             audioTracks[album].forEach(trackPath => {
-                let url = `https://playcdn-1.onrender.com/songs/${album}/${trackPath}`;
+                let url = `https://playmusicstorage.web.app/songs/${album}/${trackPath}`;
                 let request = new XMLHttpRequest();
                 request.open('HEAD', url, false);
                 request.send();

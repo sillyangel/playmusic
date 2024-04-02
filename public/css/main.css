@@ -246,7 +246,7 @@ audio {
 }
 
 #lilbrary {
-  left: 20px;
+  right: -60px;
   padding-left: 20px;
   margin-top: 0 10px;
   float: right;
@@ -255,6 +255,7 @@ audio {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  position: relative;
 }
 #accountsettings {
   left: 20px;
@@ -277,7 +278,7 @@ audio {
   /* Additional styling properties */
 }
 #searching input[type=text] {
-  width: 50%;
+  width: 174%;
   box-sizing: border-box;
   border: 2px solid #acacac;
   border-radius: 4px;
@@ -305,16 +306,16 @@ input[type=text]:focus {
 }
 
 #mlogin {
-  left: 20px;
+  right: -60px;
   padding-left: 20px;
   margin-top: 0 10px;
   float: right;
   width: 90%;
   height: auto;
-  display: flex;
+  display: grid ;
   align-content: center;
-  text-align: center;
   align-items: center;
+  position: relative;
 }
 
 .mnkjiu {
