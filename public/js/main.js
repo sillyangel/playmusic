@@ -1,6 +1,4 @@
-// https://playmusicstorage.web.app/
 try {
-    
     var albums = [
         { database: 1, artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "albumcover.webp" },
         { database: 1, artist: "Tyler, The Creator", album: "Flower Boy", folder: "tylerthecreator/flowerboy", image: "albumcover.webp" },
@@ -85,7 +83,6 @@ try {
     //  { database: , artist: "", album: "", folder: "/", image: "webp" },
         // Add more albums here
     ];
-    // have more database / storage for to bypass limit
     var audioTracks = {
         "tylerthecreator/wolf": [
             "WOLF.mp3",
@@ -758,28 +755,16 @@ try {
     var currentAlbumIndex = 0;
     var audiotimern;
     var repeatButtonClickCount = 0;
-    var folart = [];
+    const folart = JSON.parse(localStorage.getItem("folart") || '[]');
     let playbackMode = "none";
-    let currentTime = 0;
-    if (localStorage.getItem("Albumindex") !== null) {
-        currentAlbumIndex = localStorage.getItem("Albumindex");
-    }
-    
-    if (localStorage.getItem("Trackindex") !== null) {
-        currentTrackIndex = localStorage.getItem("Trackindex");
-    }
-
-    if (localStorage.getItem("CurrentAlbum") !== null) {
-        currentAlbum = localStorage.getItem("CurrentAlbum");
-    }
-    
-    if (localStorage.getItem("timerforaudio") !== null) {
-        audiotimern = localStorage.getItem("timerforaudio");
-    }
+    if (localStorage.getItem("Albumindex") !== null) {currentAlbumIndex = localStorage.getItem("Albumindex");}
+    if (localStorage.getItem("Trackindex") !== null) {currentTrackIndex = localStorage.getItem("Trackindex");}
+    if (localStorage.getItem("CurrentAlbum") !== null) {currentAlbum = localStorage.getItem("CurrentAlbum");}
+    if (localStorage.getItem("timerforaudio") !== null) {audiotimern = localStorage.getItem("timerforaudio");}
+    // if (localStorage.getItem("folart") !== null) {folart = localStorage.getItem("folart");}
     const databases = [
         { id: 0, url: "playmusicstorage.web.app/" },
         { id: 1, url: "https://playmusicstorage.web.app/" },
-        // Add more databases as needed
       ];
       const selectedDatabase = databases.find(databases => databases.id === albums[currentAlbumIndex].database);
       const DatabaseDomain = selectedDatabase.url;
@@ -798,41 +783,6 @@ try {
             localStorage.setItem("CurrentAlbum", currentAlbum);
     }
     loadTrack();    
-
-     // delete this very soon 
-function getLyrics(track) {
-  var apiKey = 'fiE1SC2YyfP5bN4Ku6BqChOfU46ltaZMhFxOVjlknfeIZG9Glkp5yCU_Kve1qlvo';
-
-  fetch(`https://api.genius.com/search?q=${track}&access_token=${apiKey}`, {})
-    .then(response => response.json())
-    .then(data => {
-      if (data.response && data.response.hits && data.response.hits.length > 0) {
-        var song = data.response.hits[0].result;
-        console.log(`Title: ${song.title} by ${song.primary_artist.name}`);
-        console.log(`URL: ${song.url}`);
-        console.log(`Thumbnail: ${song.song_art_image_thumbnail_url}`);
-        console.log(`Image: ${song.song_art_image_url}`);
-        console.log(`Lyrics:\n${song.path}`);
-        console.log(`https://api.genius.com/search?q=${track}?access_token=${apiKey}`);
-        console.log(`https://api.genius.com/songs/${song.id}?access_token=${apiKey}`);
-        fetch(`https://api.genius.com/songs/${song.id}?access_token=${apiKey}`, {})
-        
-    .then(response => response.json())
-    .then(data => {
-        let embedContent = `<div id='rg_embed_link_${song.id}' class='rg_embed_link' data-song-id='${song.id}'><a href='https://genius.com/${song.path}'></a></div> <script crossorigin src='//genius.com/songs/${song.id}/embed.js'></script>`;
-    document.getElementById('lyrics').innerHTML = embedContent;
-    navigator.clipboard.writeText(embedContent)
-    alert(document.getElementById('lyrics').innerHTML);
-})
-      } else {
-        console.log('No matching song found.');
-      }
-    })
-    .catch(error => {
-      console.log('Error:', error);
-    });
-}
-
 document.addEventListener('keydown', function(event) {
     if (event.key === '\\') {
       doSomething();
@@ -840,13 +790,13 @@ document.addEventListener('keydown', function(event) {
   });
   
   function doSomething() {
-    var iframethingy = document.getElementById("iframeas");
-    if (iframethingy.style.display === "block") {
-        iframethingy.style.display = "none";
-    } else {
-        iframethingy.style.display = "block";
-    }
-}
+        var iframethingy = document.getElementById("iframeas");
+        if (iframethingy.style.display === "block") {
+            iframethingy.style.display = "none";
+        } else {
+            iframethingy.style.display = "block";
+        }
+   }
 
     
     function playPause() {
@@ -1184,6 +1134,8 @@ document.addEventListener('keydown', function(event) {
                     icon.style.fontSize = "25px";
                     icon.style.marginLeft = "15px";
                     icon.style.color = "#ffffff";
+
+                    
                     songSelector.appendChild(artistHeader);
                     artistHeader.appendChild(buttonstar)
                     buttonstar.appendChild(icon);
@@ -1198,12 +1150,18 @@ document.addEventListener('keydown', function(event) {
                         } else if (clickcount === 1) {
                             icon.className = "fa-solid fa-star";
                             // album.artist
-                            alert(folart)
-                            folart.push(album.artist);
-                            localStorage.setItem("folart", folart.push)
+                            folart.push(`"${albums[albumIndex].artist}"`);
+                            localStorage.setItem("folart", JSON.stringify(folart))
+                            alert("artist faved " + album.artist)
+                            alert("folart var " + folart)
+                            alert("local folart " + localStorage.getItem("folart"))
                         }
                     });
                     
+                    if (folart.includes(album.artist)) {
+                        // Set star icon as filled for favorite artist
+                        icon.className = "fa-solid fa-star";
+                    }
                     // Update the current artist
                     currentArtist = album.artist;
                 }
