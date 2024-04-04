@@ -354,16 +354,49 @@ try {
             "14. Elsewhere.mp3",
         ],
         "kanyewest/tcd": [
-            ""
+            "1. Intro.mp3",
+            "2. We Don't Care.mp3",
+            "3. Graduation Day.mp3",
+            "4. All Falls Down.mp3",
+            "5. I'll Fly Away.mp3",
+            "6. Spaceship.mp3",
+            "7. Jesus Walks.mp3",
+            "8. Never Let Me Down.mp3",
+            "9. Get Them High.mp3",
+            "10. Workout Plan.mp3",
+            "11. The New Workout Plan.mp3",
+            "12. Slow Jams.mp3",
+            "13. Breath In Breath Out.mp3",
+            "14. School Spirit (skit 1).mp3",
+            "15. School Spirit.mp3",
+            "16. School Spirit (skit 2).mp3",
+            "17. Lil Jimmy (skit).mp3",
+            "18. Two Words.mp3",
+            "19. Through The Wire.mp3",
+            "20. Family Business.mp3",
+            "21. Last Call.mp3",
+        
         ],
         "kanyewest/lr": [
+            "",
             ""
         ],
         "kanyewest/grad": [
             ""
         ],
         "kanyewest/808s": [
-            ""
+            "1. Say You Will.mp3",
+            "2. Welcome to Heartbreak (feat. Kid Cudi).mp3",
+            "3. Heartless.mp3",
+            "4. Amazing (ft. Young Jeezy ).mp3",
+            "5. Love Lockdown.mp3",
+            "6. Paranoid (feat. Mr Hudson).mp3",
+            "7. RoboCop.mp3",
+            "8. Street Lights.mp3",
+            "9. Bad News.mp3",   
+            "10. See you in my nightmares.mp3",
+            "11. Coldest Winter.mp3",
+            "12. Pinocchio Story.mp3"
         ],
         "kanyewest/mbdtf": [
             "01. Dark Fantasy.mp3",
@@ -411,7 +444,13 @@ try {
             "07. Violent Crimes.mp3"
         ],
         "kanyewest/ksg": [
-            ""
+            "1. Feel The Love.mp3",
+            "2. Fire.mp3",
+            "3. 4th Dimension.mp3",
+            "4.Freeee.mp3",
+            "5. Reborn.mp3",
+            "6. Kids See Ghosts.mp3",
+            "7. Cudi Montage.mp3"        
         ],
         "kanyewest/jesusisking": [
             "01 Every Hour (feat. Sunday Service.mp3",
