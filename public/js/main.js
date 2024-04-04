@@ -773,7 +773,7 @@ try {
     const databases = [
         { id: 0, url: "playmusicstorage.web.app/" },
         { id: 1, url: "https://playmusicstorage.web.app/" },
-        { id: 2, url: "https://playmusicstorage2.web.app/" }
+        { id: 2, url: "https://playstorage2.web.app/" }
       ];
       function fetchDatabase() {
         selectedDatabase = null;
