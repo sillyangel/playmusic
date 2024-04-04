@@ -28,23 +28,23 @@ try {
         { database: 1, artist: "Roddy Ricch", album: "Please excuse me for being antisocial", folder: "rr/pemfba", image: "albumcover.png"},
         { database: 1, artist: "Lemon Demon", album: "Spirit phone", folder: "ld/sp", image: "albumcover.png"},
         { database: 1, artist: "Lemon Demon", album: "Clown", folder: "ld/cc", image: "albumcover.jpg"},
-        { database: 1, artist: "Kanye West", album: "The College Dropout", folder: "kanyewest/tcd", image: "albumcover.webp"},
-        { database: 1, artist: "Kanye West", album: "Late Registration", folder: "kanyewest/lr", image: "albumcover.webp"},
-        { database: 1, artist: "Kanye West", album: "Graduation", folder: "kanyewest/grad", image: "albumcover.webp"},
+        { database: 2, artist: "Kanye West", album: "The College Dropout", folder: "kanyewest/tcd", image: "albumcover.webp"},
+        { database: 2, artist: "Kanye West", album: "Late Registration", folder: "kanyewest/lr", image: "albumcover.webp"},
+        { database: 2, artist: "Kanye West", album: "Graduation", folder: "kanyewest/grad", image: "albumcover.webp"},
         { database: 1, artist: "Kanye West", album: "808s & Heartbreak", folder: "kanyewest/808s", image: "albumcover.webp"},
         { database: 1, artist: "Kanye West", album: "My Beautiful Dark Twisted Fantasy", folder: "kanyewest/mbdtf", image: "albumcover.jpg"},
-        { database: 1, artist: "Kanye West", album: "Watch the Throne", folder: "kanyewest/wtt", image: "albumcover.webp"},
-        { database: 1, artist: "Kanye West", album: "Cruel Summer", folder: "kanyewest/cs", image: "albumcover.webp"},
+        { database: 2, artist: "Kanye West", album: "Watch the Throne", folder: "kanyewest/wtt", image: "albumcover.webp"},
+        { database: 2, artist: "Kanye West", album: "Cruel Summer", folder: "kanyewest/cs", image: "albumcover.webp"},
         { database: 1, artist: "Kanye West", album: "Yeezus", folder: "kanyewest/yeezus", image: "Cover.jpg"},
-        { database: 1, artist: "Kanye West", album: "The Life of Pablo", folder: "kanyewest/tlop", image: "albumcover.webp"},
+        { database: 2, artist: "Kanye West", album: "The Life of Pablo", folder: "kanyewest/tlop", image: "albumcover.webp"},
         { database: 1, artist: "Kanye West", album: "Ye", folder: "kanyewest/ye", image: "Cover.jpg" },
-        { database: 1, artist: "Kanye West", album: "Kids See Ghosts", folder: "kanyewest/ksg", image: "albumcover.webp"},
+        { database: 2, artist: "Kanye West", album: "Kids See Ghosts", folder: "kanyewest/ksg", image: "albumcover.webp"},
         { database: 1, artist: "Kanye West", album: "Jesus Is King", folder: "kanyewest/jesusisking", image: "Cover.jpg" },
         { database: 1, artist: "Kanye West", album: "Donda", folder: "kanyewest/donda", image: "cover.webp" },
         { database: 1, artist: "Kanye West", album: "Donda 2", folder: "kanyewest/donda2", image: "albumcover.webp" },
-        { database: 1, artist: "Kanye West", album: "Vultures 1", folder: "kanyewest/vult1", image: "albumcover.webp"},
-        { database: 1, artist: "Kanye West", album: "Vultures 2", folder: "kanyewest/vult2", image: "albumcover.webp"},
-        { database: 1, artist: "Kanye West", album: "Vultures 3", folder: "kanyewest/vult3", image: "albumcover.webp"},
+        { database: 2, artist: "Kanye West", album: "Vultures 1", folder: "kanyewest/vult1", image: "albumcover.webp"},
+        { database: 2, artist: "Kanye West", album: "Vultures 2", folder: "kanyewest/vult2", image: "albumcover.webp"},
+        { database: 2, artist: "Kanye West", album: "Vultures 3", folder: "kanyewest/vult3", image: "albumcover.webp"},
         { database: 1, artist: "Drake", album: "Thank Me Later", folder: "drake/tml", image: "albumcover.webp"},
         { database: 1, artist: "Drake", album: "Take Care", folder: "drake/tc", image: "albumcover.webp" },
         { database: 1, artist: "Drake", album: "Nothing Was the Same", folder: "drake/nwts", image: "albumcover.webp "},
@@ -56,26 +56,6 @@ try {
         { database: 1, artist: "Drake", album: "For All the Dogs", folder: "drake/fatd", image: "albumcover.webp "},
         { database: 1, artist: "Frank Ocean", album: "Channel Orange", folder: "franko/co", image: "albumcover.webp" },
         { database: 1, artist: "Frank Ocean", album: "Blonde", folder: "franko/blonde", image: "albumcover.webp" },
-        { database: 1, artist: "Heaven Pierce Her", album: "Zen, or the  Means Without Ends", folder: "hph/zotmwe", image: "albumcover.webp" },
-        { database: 1, artist: "Heaven Pierce Her", album: "Flowerworks", folder: "hph/flowerworks", image: "albumcover.webp" },
-        { database: 1, artist: "Heaven Pierce Her", album: "Ultrakill: Inf Hyperdeath", folder: "hph/ukih", image: "albumcover.webp" },
-        { database: 1, artist: "Heaven Pierce Her", album: "Ultrakill: IMperfect Hatred", folder: "hph/ukih2", image: "albumcover.webp" },
-        { database: 1, artist: "Sleeping with Siren", album: "With Ears to See and Eyes to Hear", folder: "kq/wetsaeth", image: "albumcover.webp" },
-        { database: 1, artist: "Sleeping with Siren", album: "Let's Cheers to This", folder: "kq/lctt", image: "albumcover.webp" },
-        { database: 1, artist: "Sleeping with Siren", album: "Feel", folder: "kq/fe", image: "albumcover.webp" },
-        { database: 1, artist: "Sleeping with Siren", album: "Madness", folder: "kq/mad", image: "albumcover.webp" },
-        { database: 1, artist: "Sleeping with Siren", album: "Gossip", folder: "kq/gos", image: "albumcover.webp" },
-        { database: 1, artist: "Sleeping with Siren", album: "How It Feels to Be Lost", folder: "kq/hif", image: "albumcover.webp" },
-        { database: 1, artist: "Sleeping with Siren", album: "Commplete Collapse", folder: "kq/cc", image: "albumcover.webp" },
-        { database: 1, artist: "Pierce The Veil", album: "A Flair for the Dramatic", folder: "ptv/afftd", image: "albumcover.webp" },
-        { database: 1, artist: "Pierce The Veil", album: "Selfish Machines", folder: "ptv/sm", image: "albumcover.webp" },
-        { database: 1, artist: "Pierce The Veil", album: "Collide with the Sky", folder: "ptv/cwts", image: "albumcover.webp" },
-        { database: 1, artist: "Pierce The Veil", album: "Misadventures", folder: "ptv/madv", image: "albumcover.webp" },
-        { database: 1, artist: "Pierce The Veil", album: "The Jaws of Life", folder: "ptv/tjofl", image: "albumcover.webp" },
-        { database: 1, artist: "The Smiths", album: "Smiths", folder: "smiths/tsm", image: "albumcover.webp" },
-        { database: 1, artist: "The Smiths", album: "Meat is Murder", folder: "smiths/mim", image: "albumcover.webp" },
-        { database: 1, artist: "The Smiths", album: "The Queen is Dead", folder: "smiths/tqid", image: "albumcover.webp" },
-        { database: 1, artist: "The Smiths", album: "Strangeways, Here We Come", folder: "smiths/swhwc", image: "albumcover.webp" },
         { database: 1, artist: "Billie Eilish", album: "Happy Than Ever", folder: "be/hte", image: "albumcover.jpg" },
         { database: 1, artist: "SZA", album: "SOS", folder: "sza/sos", image: "albumcover.jpg" },
         { database: 1, artist: "Kendrick Lamar", album: "Mr morale and the big steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
@@ -165,6 +145,7 @@ try {
           "2-03 Steak Sauce.mp3",
         ],
         "tylerthecreator/bas": [
+
         ],
         "arcticmonkeys/am": [
             "01 - Do I Wanna Know.mp3",
@@ -209,12 +190,16 @@ try {
           "13 A Certain Romance.mp3",
         ],
         "arcticmonkeys/fwn": [
-       ], 
+
+        ], 
         "arcticmonkeys/sias": [
+
         ],
         "arcticmonkeys/tbhc": [
+
         ],
         "arcticmonkeys/car": [
+
         ],
         "wallows/nonthinghappens": [
           "Only Friend.mp3",
@@ -228,7 +213,7 @@ try {
           "Remember When.mp3",
           "I_m Full.mp3",
           "Do Not Wait.mp3"
-      ],
+        ],
         "melanie/crybaby": [
 
         ],
@@ -667,28 +652,7 @@ try {
             "15 Seigfried.mp3",
             "16 Godspeed.mp3",
             "17 Futura Free.mp3",
-        ],
-        "hph/zotmwe": [],
-        "hph/flowerworks": [],
-        "hph/ukih": [],
-        "hph/ukih2": [],
-        "kq/wetsaeth": [],
-        "kq/lctt": [],
-        "kq/fe": [],
-        "kq/mad": [],
-        "kq/gos": [],
-        "kq/hif": [],
-        "kq/cc": [],
-        "kq/cc": [],
-        "ptv/afftd": [],
-        "ptv/sm": [],
-        "ptv/cwts": [],
-        "ptv/madv": [],
-        "ptv/tjofl": [],
-        "smiths/tsm": [],
-        "smiths/mim": [],
-        "smiths/tqid": [],
-        "smiths/swhwc": [],
+        ],   
         "be/hte": [
             "01. Getting Older.mp3",
             "02. I Didn't Change My Number(Explicit).mp3",
@@ -706,6 +670,9 @@ try {
             "14. therefore i am.mp3",
             "15. happier than ever(explicit).mp3",
             "16. male fantasy.mp3"
+        ],
+        "sza/sos": [
+            
         ],
         "kenla/mmtbs": [
             "01. United In Grief.mp3",
@@ -746,6 +713,7 @@ try {
             "16. Mortal Man.mp3"
         ],
     };
+    const folart = JSON.parse(localStorage.getItem("folart") || '[]');
     var audio = document.getElementById("myAudio");
     var playButton = document.querySelectorAll("#playbuttonthung");
     var volumeControl = document.getElementById("volume");
@@ -755,7 +723,8 @@ try {
     var currentAlbumIndex = 0;
     var audiotimern;
     var repeatButtonClickCount = 0;
-    const folart = JSON.parse(localStorage.getItem("folart") || '[]');
+    let selectedDatabase;
+    let DatabaseDomain;
     let playbackMode = "none";
     if (localStorage.getItem("Albumindex") !== null) {currentAlbumIndex = localStorage.getItem("Albumindex");}
     if (localStorage.getItem("Trackindex") !== null) {currentTrackIndex = localStorage.getItem("Trackindex");}
@@ -765,10 +734,18 @@ try {
     const databases = [
         { id: 0, url: "playmusicstorage.web.app/" },
         { id: 1, url: "https://playmusicstorage.web.app/" },
+        { id: 2, url: "https://playmusicstorage2.web.app/" }
       ];
-      const selectedDatabase = databases.find(databases => databases.id === albums[currentAlbumIndex].database);
-      const DatabaseDomain = selectedDatabase.url;
-    function loadTrack() {        
+      function fetchDatabase() {
+        selectedDatabase = null;
+        DatabaseDomain = null;
+        selectedDatabase = databases.find(db => db.id === albums[currentAlbumIndex].database);
+        DatabaseDomain = selectedDatabase.url;
+        // You can add additional database fetching logic here if needed
+      }
+      fetchDatabase();
+    function loadTrack() {      
+            fetchDatabase();  
             var trackPath = audioTracks[currentAlbum][currentTrackIndex];
 
             audio.src = DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath;
@@ -1232,7 +1209,7 @@ function getSelectedSize() {
     function albumsec(albumnumber) {
         // Retrieve the album details from the albums array
         const albumDetails = albums[albumnumber];
-    
+        fetchDatabase();
         if (albumDetails) {
             // Update the currentAlbumIndex
             currentAlbumIndex = albumnumber;
