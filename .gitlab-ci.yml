@@ -13,4 +13,5 @@ deploy-hosting:
   stage: deploy
   script:
     - npm install
+    - ls -a
     - firebase deploy --only hosting --token FIREBASE_TOKEN
