@@ -12,7 +12,5 @@ before_script:
 deploy-hosting:
   stage: deploy
   script:
-    - cd functions
     - npm install
-    - cd ..
     - firebase deploy --only hosting --token $FIREBASE_TOKEN
