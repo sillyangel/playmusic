@@ -4,15 +4,15 @@
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Pages/HTML.gitlab-ci.yml
 
 # Full project: https://gitlab.com/pages/plain-html
-image: busybox
+image: node:21.7.2-alpine
 
-pages:
+before_script:
+  - npm i -g firebase-tools
+
+deploy-hosting:
   stage: deploy
-  environment: production
   script:
-    - echo "The site will be deployed to $CI_PAGES_URL"
-  artifacts:
-    paths:
-      - public
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - cd functions
+    - npm install
+    - cd ..
+    - firebase deploy --only hosting --token $FIREBASE_TOKEN
