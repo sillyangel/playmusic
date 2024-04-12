@@ -59,7 +59,8 @@ try {
         { database: 1, artist: "Billie Eilish", album: "Happy Than Ever", folder: "be/hte", image: "albumcover.jpg" },
         { database: 1, artist: "SZA", album: "SOS", folder: "sza/sos", image: "albumcover.jpg" },
         { database: 1, artist: "Kendrick Lamar", album: "Mr morale and the big steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
-        { database: 1, artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "albumcover.jpg" }
+        { database: 1, artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "albumcover.jpg" },
+        { database: 2, artist: "", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"}
     //  { database: , artist: "", album: "", folder: "/", image: "webp" },
         // Add more albums here
     ];
@@ -771,9 +772,10 @@ try {
     if (localStorage.getItem("timerforaudio") !== null) {audiotimern = localStorage.getItem("timerforaudio");}
     // if (localStorage.getItem("folart") !== null) {folart = localStorage.getItem("folart");}
     const databases = [
-        { id: 0, url: "playmusicstorage.web.app/" },
+        { id: 0, url: "https://playmusicstorage.web.app/" },
         { id: 1, url: "https://playmusicstorage.web.app/" },
-        { id: 2, url: "https://playstorage2.web.app/" }
+        { id: 2, url: "https://playstorage2.web.app/" },
+        { id: 3, url: "https://c.com"}
       ];
       function fetchDatabase() {
         selectedDatabase = null;
