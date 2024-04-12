@@ -60,7 +60,7 @@ try {
         { database: 1, artist: "SZA", album: "SOS", folder: "sza/sos", image: "albumcover.jpg" },
         { database: 1, artist: "Kendrick Lamar", album: "Mr morale and the big steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
         { database: 1, artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "albumcover.jpg" },
-        { database: 2, artist: "", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"}
+        { database: 2, artist: "Billie holiday", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"}
     //  { database: , artist: "", album: "", folder: "/", image: "webp" },
         // Add more albums here
     ];
@@ -752,6 +752,18 @@ try {
             "15. i.mp3",
             "16. Mortal Man.mp3"
         ],
+        "billieh/gbtc": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
     };
     const folart = JSON.parse(localStorage.getItem("folart") || '[]');
     var audio = document.getElementById("myAudio");
@@ -775,7 +787,7 @@ try {
         { id: 0, url: "https://playmusicstorage.web.app/" },
         { id: 1, url: "https://playmusicstorage.web.app/" },
         { id: 2, url: "https://playstorage2.web.app/" },
-        { id: 3, url: "https://c.com"}
+        { id: 3, url: "https://.com"}
       ];
       function fetchDatabase() {
         selectedDatabase = null;
