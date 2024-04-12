@@ -1285,6 +1285,7 @@ function getSelectedSize() {
     
     
     function mediathinggy() {
+        const imagealbum = DatabaseDomain + "songs/" + currentAlbum + "/" +albums[currentAlbumIndex].image;
         var track = audioTracks[currentAlbum][currentTrackIndex]
         track = track.replace(".mp3", "");
         track = track.replace(/^\d+\s*[-.]*\s*/, "");
@@ -1294,32 +1295,32 @@ function getSelectedSize() {
                 artist: albums[currentAlbumIndex].artist,
                 album: albums[currentAlbumIndex].album,
                 artwork: [{
-                        src: albums[currentAlbumIndex].image,
+                        src: imagealbum,
                         sizes: "96x96",
                         type: "image/webp",
                     },
                     {
-                        src: albums[currentAlbumIndex].image,
+                        src: imagealbum,
                         sizes: "128x128",
                         type: "image/webp",
                     },
                     {
-                        src: albums[currentAlbumIndex].image,
+                        src: imagealbum,
                         sizes: "192x192",
                         type: "image/webp",
                     },
                     {
-                        src: albums[currentAlbumIndex].image,
+                        src: imagealbum,
                         sizes: "256x256",
                         type: "image/webp",
                     },
                     {
-                        src: albums[currentAlbumIndex].image,
+                        src: imagealbum,
                         sizes: "384x384",
                         type: "image/webp",
                     },
                     {
-                        src: albums[currentAlbumIndex].image,
+                        src: imagealbum,
                         sizes: "512x512",
                         type: "image/webp",
                     },
