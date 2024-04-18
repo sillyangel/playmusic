@@ -557,10 +557,10 @@
       "cover": "https://playmusicstorage.web.app/songs/kenla/tpabf/albumcover.jpg"
     },
     {
-      "artist": "",
-      "album": "",
-      "folder": "",
-      "cover": "https://"
+      "artist": "Billie holiday",
+      "album": "God Bless The Child",
+      "folder": "billieh/gbtc",
+      "cover": "https://playcdn2-sillyangel-3f7050a040b58bea664bcb93f178bb4a70a83cbea0f.gitlab.io/songs/billieh/gbtc/albbumcover.jpg"
     }
   ]
 }
