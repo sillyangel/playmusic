@@ -7,11 +7,11 @@
 image: node:21.7.2-alpine
 
 deploy-on-firebase:
-  stage: Setup Tools
+  stage: .pre
   script:
     - npm i -g firebase-tools
     - npm install
-  stage: Deploy/Hosting
+  stage: deploy
   script:
     - firebase deploy --only hosting --token FIREBASE_TOKEN
 
