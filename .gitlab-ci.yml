@@ -6,12 +6,22 @@
 # Full project: https://gitlab.com/pages/plain-html
 image: node:21.7.2-alpine
 
-before_script:
-  - npm i -g firebase-tools
-
-deploy-hosting:
-  stage: deploy
+deploy-on-firebase:
+  stage: Setup Tools
   script:
+    - npm i -g firebase-tools
     - npm install
-    - ls -a
+  stage: Deploy/Hosting
+  script:
     - firebase deploy --only hosting --token FIREBASE_TOKEN
+
+pages:
+  stage: deploy
+  environment: production
+  script:
+    - echo "The site will be deployed to $CI_PAGES_URL"
+  artifacts:
+    paths:
+      - ./public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
