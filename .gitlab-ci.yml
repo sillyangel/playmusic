@@ -7,16 +7,16 @@
 image: node:21.7.2-alpine
 
 deploy-on-firebase:
-  stage: .pre
+  stage: pre
   script:
     - npm i -g firebase-tools
     - npm install
-  stage: deploy
+  stage: deploy-firebase
   script:
     - firebase deploy --only hosting --token FIREBASE_TOKEN
 
 pages:
-  stage: deploy
+  stage: deploy-pages
   environment: production
   script:
     - echo "The site will be deployed to $CI_PAGES_URL"
