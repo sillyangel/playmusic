@@ -1,0 +1,31 @@
+body {
+    background-color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+body {
+	text-align: center;
+}
+h3 {
+	text-align: center;
+}
+div {
+	max-width: 400px;
+	margin: auto;
+}
+.input-icons {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.input-icons i {
+	position: absolute;
+}
+.icon {
+	padding: 10px;
+	min-width: 40px;
+}
+.input-field {
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+}
