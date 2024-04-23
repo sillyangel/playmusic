@@ -823,7 +823,6 @@ try {
 
             audio.src = DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath;
             audio.load();
-            alert("audio url", audio.src)
             updateTrackText();
             updateAlbumCover();
             
@@ -1519,8 +1518,8 @@ if (albumName.includes(input) || artistName.includes(input)) {
     
     
     } catch(error) {
-        console.log(error);
-        console.log(error.message);
+        alert(error);
+        alert(error.message);
         console.log(error);
         console.log(error.message);
     }
