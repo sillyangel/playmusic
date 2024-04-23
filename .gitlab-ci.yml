@@ -6,13 +6,6 @@
 # Full project: https://gitlab.com/pages/plain-html
 image: node:21.7.2-alpine
 
-deploy-on-firebase:
-  script:
-    - npm i -g firebase-tools
-  stage: build
-  script:
-    - firebase deploy --only hosting --token FIREBASE_TOKEN
-
 pages:
   stage: build
   script:
