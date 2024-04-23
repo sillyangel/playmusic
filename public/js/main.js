@@ -819,10 +819,11 @@ try {
     function loadTrack() {      
             fetchDatabase();  
             var trackPath = audioTracks[currentAlbum][currentTrackIndex];
+            
 
             audio.src = DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath;
             audio.load();
-    
+            alert("audio url", audio.src)
             updateTrackText();
             updateAlbumCover();
             
