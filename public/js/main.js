@@ -36,7 +36,7 @@ try {
         { database: 2, artist: "Kanye West", album: "Watch the Throne", folder: "kanyewest/wtt", image: "albumcover.webp"},
         { database: 2, artist: "Kanye West", album: "Cruel Summer", folder: "kanyewest/cs", image: "albumcover.webp"},
         { database: 1, artist: "Kanye West", album: "Yeezus", folder: "kanyewest/yeezus", image: "Cover.jpg"},
-        { database: 2, artist: "Kanye West", album: "The Life of Pablo", folder: "kanyewest/tlop", image: "albumcover.webp"},
+        { database: 3, artist: "Kanye West", album: "The Life of Pablo", folder: "kanyewest/tlop", image: "albumcover.webp"},
         { database: 1, artist: "Kanye West", album: "Ye", folder: "kanyewest/ye", image: "Cover.jpg" },
         { database: 2, artist: "Kanye West", album: "Kids See Ghosts", folder: "kanyewest/ksg", image: "albumcover.png"},
         { database: 1, artist: "Kanye West", album: "Jesus Is King", folder: "kanyewest/jesusisking", image: "Cover.jpg" },
@@ -806,7 +806,7 @@ try {
         { id: 0, url: "https://playmusicstorage.web.app/" },
         { id: 1, url: "https://playmusicstorage.web.app/" },
         { id: 2, url: "https://playstorage2.web.app/" },
-        { id: 3, url: "https://.com"}
+        { id: 3, url: "https://playcdn2-sillyangel-3f7050a040b58bea664bcb93f178bb4a70a83cbea0f.gitlab.io/"}
       ];
       function fetchDatabase() {
         selectedDatabase = null;
