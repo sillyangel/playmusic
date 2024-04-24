@@ -806,7 +806,7 @@ try {
         { id: 0, url: "https://playmusicstorage.web.app/" },
         { id: 1, url: "https://playmusicstorage.web.app/" },
         { id: 2, url: "https://playstorage2.web.app/" },
-        { id: 3, url: "https://playcdn2-sillyangel-3f7050a040b58bea664bcb93f178bb4a70a83cbea0f.gitlab.io/"}
+        { id: 3, url: "https://playstorage2.web.app/"}
       ];
       function fetchDatabase() {
         selectedDatabase = null;
@@ -822,6 +822,7 @@ try {
             
 
             audio.src = DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath;
+            alert(DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath);
             audio.load();
             updateTrackText();
             updateAlbumCover();
