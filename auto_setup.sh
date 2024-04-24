@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Clone the repositories
 git clone git@gitlab.com:sillyangel/playmusic.git
 git clone git@gitlab.com:sillyangel/playcdn2.git
