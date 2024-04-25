@@ -10,11 +10,13 @@ pages:
   stage: build
   script:
     - npm install
+    - npm install -g firebase-tools
     - npm run build-prod
   stage: deploy
   environment: production
   script:
-    - echo "The site will be deployed to $CI_PAGES_URL"
+    - echo "The site will be deployed to $CI_PAGES_URL and https://playmusichtml.web.app"
+    - firebase deploy --only hosting --token "$FIREBASE_TOKEN"
   artifacts:
     paths:
       - ./public
