@@ -7,14 +7,12 @@
 image: node:21.7.2-alpine
 
 pages:
-  stage: build
+  stage: deploy
+  environment: production
   script:
     - npm install
     - npm install -g firebase-tools
     - npm run build-prod
-  stage: deploy
-  environment: production
-  script:
     - echo "The site will be deployed to $CI_PAGES_URL and https://playmusichtml.web.app"
     - firebase deploy --only hosting --token `${FIREBASE_TOKEN}`
   artifacts:
