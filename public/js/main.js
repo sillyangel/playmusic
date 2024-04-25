@@ -31,7 +31,7 @@ try {
         { database: 2, artist: "Kanye West", album: "The College Dropout", folder: "kanyewest/tcd", image: "albumcover.jpg"},
         { database: 2, artist: "Kanye West", album: "Late Registration", folder: "kanyewest/lr", image: "albumcover.webp"},
         { database: 2, artist: "Kanye West", album: "Graduation", folder: "kanyewest/grad", image: "albumcover.webp"},
-        { database: 1, artist: "Kanye West", album: "808s & Heartbreak", folder: "kanyewest/808s", image: "albumcover.png"},
+        { database: 2, artist: "Kanye West", album: "808s & Heartbreak", folder: "kanyewest/808s", image: "albumcover.png"},
         { database: 1, artist: "Kanye West", album: "My Beautiful Dark Twisted Fantasy", folder: "kanyewest/mbdtf", image: "albumcover.jpg"},
         { database: 2, artist: "Kanye West", album: "Watch the Throne", folder: "kanyewest/wtt", image: "albumcover.webp"},
         { database: 2, artist: "Kanye West", album: "Cruel Summer", folder: "kanyewest/cs", image: "albumcover.webp"},
@@ -191,16 +191,16 @@ try {
           "13 A Certain Romance.mp3",
         ],
         "arcticmonkeys/fwn": [
-
+            ""
         ], 
         "arcticmonkeys/sias": [
-
+            ""
         ],
         "arcticmonkeys/tbhc": [
-
+            ""
         ],
         "arcticmonkeys/car": [
-
+            ""
         ],
         "wallows/nonthinghappens": [
           "Only Friend.mp3",
@@ -216,13 +216,13 @@ try {
           "Do Not Wait.mp3"
         ],
         "melanie/crybaby": [
-
+            ""
         ],
         "melanie/k12": [
-
+            ""
         ],
         "melanie/portals": [
-
+            ""
         ],
         "theweekend/kissland": [
             "01 - The Weeknd - Professional.mp3",
@@ -327,16 +327,16 @@ try {
             "14 Bewitched.mp3"
         ],
         "laufey/eikal": [
-
+            ""
         ],
         "rr/llf": [
-
+            ""
         ],
         "rr/pemfba": [
-
+            ""
         ],
         "ld/sp": [
-
+            ""
         ],
         "ld/cc": [
             "01. Error.mp3",
@@ -558,7 +558,7 @@ try {
             "14 Thank Me Now.mp3"
         ],
         "drake/tc": [
-
+            ""
         ],
         "drake/nwts": [
             "01 - Drake - Tuscan Leather.mp3",
@@ -651,7 +651,7 @@ try {
             "21. The Remorse.mp3"
         ],
         "drake/honnvm": [
-
+            ""
         ],
         "drake/herloss": [
             "01. Rich Flex.mp3",
@@ -672,7 +672,7 @@ try {
             "16. I Guess It’s Fuck Me.mp3",
         ],
         "drake/fatd": [
-
+            ""
         ],
         "franko/co": [
             "01 Start.mp3",
@@ -731,7 +731,7 @@ try {
             "16. male fantasy.mp3"
         ],
         "sza/sos": [
-            
+            ""
         ],
         "kenla/mmtbs": [
             "01. United In Grief.mp3",
@@ -772,16 +772,16 @@ try {
             "16. Mortal Man.mp3"
         ],
         "billieh/gbtc": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            "1. God Bless The Child.mp3",
+            "2. Lover Man.mp3",
+            "3. That Ole Devil Called Love.mp3",
+            "4. Them There Eyes.mp3",
+            "5. You're My Thrill.mp3",
+            "6. Don't Explain.mp3",
+            "7. Crazy He Calls Me.mp3",
+            "8. Ain't Nobody's Business If I Do.mp3",
+            "9. Keeps On A Rainin.mp3",
+            "10. The Blues Are Brewin'.mp3",
         ],
     };
     const folart = JSON.parse(localStorage.getItem("folart") || '[]');
@@ -822,7 +822,7 @@ try {
             
 
             audio.src = DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath;
-            alert(DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath);
+            alert(DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath)
             audio.load();
             updateTrackText();
             updateAlbumCover();

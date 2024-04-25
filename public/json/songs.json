@@ -221,8 +221,8 @@
       "artist": "Kanye West",
       "album": "808s & Heartbreak",
       "folder": "kanyewest/808s",
-      "cover": "https://playmusicstorage.web.app/songs/kanyewest/808s/albumcover.webp",
-      "explicit": ""
+      "cover": "https://playstorage2.web.app/songs/kanyewest/808s/albumcover.png",
+      "explicit": "true"
     },
     {
       "artist": "Kanye West",
@@ -560,7 +560,7 @@
       "artist": "Billie holiday",
       "album": "God Bless The Child",
       "folder": "billieh/gbtc",
-      "cover": "https://playcdn2-sillyangel-3f7050a040b58bea664bcb93f178bb4a70a83cbea0f.gitlab.io/songs/billieh/gbtc/albbumcover.jpg"
+      "cover": "https://playstorage2.web.app/songs/billieh/gbtc/albumcover.jpg"
     }
   ]
 }
