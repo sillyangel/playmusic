@@ -822,7 +822,6 @@ try {
             
 
             audio.src = DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath;
-            alert(DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath)
             audio.load();
             updateTrackText();
             updateAlbumCover();
