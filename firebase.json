@@ -8,7 +8,8 @@
       "**/node_modules/**",
       "firebase-debug.log",
       "**/.git/**"
-    ]
+    ],
+    "cleanUrls": true
   },
   "firestore": {
     "rules": "firestore.rules",
