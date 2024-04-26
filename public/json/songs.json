@@ -36,13 +36,6 @@
       "explicit": "true"
     },
     {
-      "artist": "Tyler the Creator",
-      "album": "Bas",
-      "folder": "tylerthecreator/bas",
-      "cover": "http",
-      "explicit": "true"
-    },
-    {
       "artist": "Arctic Monkeys",
       "album": "AM",
       "folder": "arcticmonkeys/am",
@@ -417,7 +410,7 @@
       "cover": "https://playmusicstorage.web.app/songs/kenla/tpabf/albumcover.jpg"
     },
     {
-      "artist": "Billie holiday",
+      "artist": "Billie Holiday",
       "album": "God Bless The Child",
       "folder": "billieh/gbtc",
       "cover": "https://playstorage2.web.app/songs/billieh/gbtc/albumcover.jpg"

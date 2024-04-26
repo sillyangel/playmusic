@@ -5,7 +5,6 @@ try {
         { database: 1, artist: "Tyler, The Creator", album: "Igor", folder: "tylerthecreator/igor", image: "igorcover.webp" },
         { database: 1, artist: "Tyler, The Creator", album: "Cherry Bomb", folder: "tylerthecreator/cherrybomb", image: "cherrybomb.webp" },
         { database: 1, artist: "Tyler, The Creator", album: "Goblin", folder: "tylerthecreator/goblin", image: "Goblincover.webp" },
-        { database: 1, artist: "Tyler, The Creator", album: "Bastard", folder: "tylerthecreator/bas", image: "albumcover.webp" },
         { database: 1, artist: "Arctic Monkeys", album: "AM", folder: "arcticmonkeys/am", image: "albumcover.webp"},
         { database: 1, artist: "Arctic Monkeys", album: "Humbug", folder: "arcticmonkeys/humbug", image: "albumcover.webp"},
         { database: 1, artist: "Arctic Monkeys", album: "WPSIATWIN", folder: "arcticmonkeys/wpsiatwin", image: "albumcover.webp"},
@@ -60,7 +59,7 @@ try {
         { database: 1, artist: "SZA", album: "SOS", folder: "sza/sos", image: "albumcover.jpg" },
         { database: 1, artist: "Kendrick Lamar", album: "Mr morale and the big steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
         { database: 1, artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "albumcover.jpg" },
-        { database: 2, artist: "Billie holiday", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"}
+        { database: 2, artist: "Billie Holiday", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"}
     //  { database: , artist: "", album: "", folder: "/", image: "webp" },
         // Add more albums here
     ];
@@ -144,9 +143,6 @@ try {
           "15 Golden.mp3",
           "2-01 Burger (feat. Hodgy Beats).mp3",
           "2-03 Steak Sauce.mp3",
-        ],
-        "tylerthecreator/bas": [
-
         ],
         "arcticmonkeys/am": [
             "01 - Do I Wanna Know.mp3",
@@ -811,18 +807,29 @@ try {
     var repeatButtonClickCount = 0;
     let selectedDatabase;
     let DatabaseDomain;
+    let selectedDatabaseimage;
+    let DatabaseimageDomain;
     let playbackMode = "none";
+
     if (localStorage.getItem("Albumindex") !== null) {currentAlbumIndex = localStorage.getItem("Albumindex");}
     if (localStorage.getItem("Trackindex") !== null) {currentTrackIndex = localStorage.getItem("Trackindex");}
     if (localStorage.getItem("CurrentAlbum") !== null) {currentAlbum = localStorage.getItem("CurrentAlbum");}
     if (localStorage.getItem("timerforaudio") !== null) {audiotimern = localStorage.getItem("timerforaudio");}
     // if (localStorage.getItem("folart") !== null) {folart = localStorage.getItem("folart");}
+
+    //Databases
     const databases = [
         { id: 0, url: "https://playmusicstorage.web.app/" },
         { id: 1, url: "https://playmusicstorage.web.app/" },
         { id: 2, url: "https://playstorage2.web.app/" },
         { id: 3, url: "https://playstorage2.web.app/"}
-      ];
+    ];
+    const databasesimages = [
+        { id: 0, url: "https://playmusicstorage.web.app/" },
+        { id: 1, url: "https://playmusicstorage.web.app/" },
+        { id: 2, url: "https://playstorage2.web.app/" },
+        { id: 3, url: "https://playstorage2.web.app/"}
+    ];
       function fetchDatabase() {
         selectedDatabase = null;
         DatabaseDomain = null;
@@ -830,11 +837,17 @@ try {
         DatabaseDomain = selectedDatabase.url;
         // You can add additional database fetching logic here if needed
       }
+      function fetchDatabaseImages(item) {
+        selectedDatabaseimage = null;
+        DatabaseimageDomain = null;
+        selectedDatabaseimage = databasesimages.find(db => db.id === albums[item].database);
+        DatabaseimageDomain = selectedDatabaseimage.url;
+        // You can add additional database fetching logic here if needed
+      }
       fetchDatabase();
     function loadTrack() {      
             fetchDatabase();  
             var trackPath = audioTracks[currentAlbum][currentTrackIndex];
-            
 
             audio.src = DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath;
             audio.load();
@@ -1423,65 +1436,61 @@ function getSelectedSize() {
         }
     }
 
-    function searchfunction() {
+function searchfunction() {
         const input = document.getElementById('myInput').value.toLowerCase();
         const listHolder = document.querySelector('#list-holder');
         listHolder.innerHTML = "";
+         
+    for (let i = 0; i < albums.length; i++) {
+        const obj = albums[i];
+        const albumName = obj.album.toLowerCase();
+        const artistName = obj.artist.toLowerCase();       
+    if (albumName.includes(input) || artistName.includes(input)) {
+        const div = document.createElement('div');
+        const imagealbum = document.createElement('img');
+        const listitem = document.createElement('li');
+        const label = document.createElement('span');
+        const label2 = document.createElement('span');
+        const br = document.createElement('br');
+        label.style.fontSize = "20px";
+        
+        div.style.padding = "10px";
+        div.style.margin = "10px";
+        div.style.width = "200px";
+        div.style.display = "inline-block";
+        div.style.backgroundColor = "#343434";
+        div.style.borderRadius = "10px";
     
-        for (let i = 0; i < albums.length; i++) {
-            const obj = albums[i];
-            const albumName = obj.album.toLowerCase();
-            const artistName = obj.artist.toLowerCase();
+        imagealbum.style.borderRadius = "5px";
+        imagealbum.style.width = "200px";
+        imagealbum.style.height = "200px";
     
-          // ... (previous code)
-
-if (albumName.includes(input) || artistName.includes(input)) {
-    const div = document.createElement('div');
-    const imagealbum = document.createElement('img');
-    const listitem = document.createElement('li');
-    const label = document.createElement('span');
-    const label2 = document.createElement('span');
-    const br = document.createElement('br');
-    label.style.fontSize = "20px";
-
-    div.style.padding = "10px";
-    div.style.margin = "10px";
-    div.style.width = "200px";
-    div.style.display = "inline-block";
-    div.style.backgroundColor = "#343434";
-    div.style.borderRadius = "10px";
+        label2.style.color = "grey";
     
-    imagealbum.style.borderRadius = "5px";
-    imagealbum.style.width = "200px";
-    imagealbum.style.height = "200px";
-
-    label2.style.color = "grey";
-
-    label.style.color = "white";
-    label.style.overflow = "hidden";
-    label.style.textOverflow = "ellipsis";
-    label.style.whiteSpace = "nowrap";  // Prevents text wrapping
-    label.style.display = "inline-block";
-
-    label.textContent = `${obj.album}`;
-    label2.textContent = `${obj.artist}`;
-
-    div.addEventListener('click', function() {
-        albumsec(i)
-    });
+        label.style.color = "white";
+        label.style.overflow = "hidden";
+        label.style.textOverflow = "ellipsis";
+        label.style.whiteSpace = "nowrap";  // Prevents text wrapping
+        label.style.display = "inline-block";
     
-    imagealbum.src = obj.image;
-    listitem.appendChild(label);
-    listitem.appendChild(br)
-    listitem.appendChild(label2);
-    div.appendChild(imagealbum);
-    div.appendChild(listitem);
-    div.appendChild(document.createElement('br'));
-    listHolder.appendChild(div);
-}
-
-        }
+        label.textContent = `${obj.album}`;
+        label2.textContent = `${obj.artist}`;
+    
+        div.addEventListener('click', function() {
+            albumsec(i)
+        });
+        fetchDatabaseImages(i)
+        imagealbum.src = DatabaseimageDomain + "songs/" + albums[i].folder + "/" + obj.image;
+        listitem.appendChild(label);
+        listitem.appendChild(br)
+        listitem.appendChild(label2);
+        div.appendChild(imagealbum);
+        div.appendChild(listitem);
+        div.appendChild(document.createElement('br'));
+        listHolder.appendChild(div);
     }
+  }
+}
     
     
     function darkmode() {
