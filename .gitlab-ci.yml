@@ -4,7 +4,7 @@
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Pages/HTML.gitlab-ci.yml
 
 # Full project: https://gitlab.com/pages/plain-html
-image: node:21.7.2-alpine
+image: node:18-buster
 
 pages:
   stage: deploy
