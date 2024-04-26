@@ -1428,7 +1428,7 @@ function getSelectedSize() {
                 login.style.display = "block";
                 break;
             case "search":
-                search.style.display = "block";
+                search.style.display = "inline-block";
                 break;
             case "set":
                 settings.style.display = "block";
@@ -1457,9 +1457,9 @@ function searchfunction() {
         div.style.padding = "10px";
         div.style.margin = "10px";
         div.style.width = "200px";
-        div.style.display = "inline-block";
         div.style.backgroundColor = "#343434";
         div.style.borderRadius = "10px";
+        div.style.display = "inline-block";
     
         imagealbum.style.borderRadius = "5px";
         imagealbum.style.width = "200px";
@@ -1471,7 +1471,6 @@ function searchfunction() {
         label.style.overflow = "hidden";
         label.style.textOverflow = "ellipsis";
         label.style.whiteSpace = "nowrap";  // Prevents text wrapping
-        label.style.display = "inline-block";
     
         label.textContent = `${obj.album}`;
         label2.textContent = `${obj.artist}`;

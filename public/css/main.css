@@ -278,8 +278,7 @@ audio {
   /* Additional styling properties */
 }
 #searching input[type=text] {
-  width: 174%;
-  max-width: 174%;
+  width: 1000px;
   box-sizing: border-box;
   border: 2px solid #acacac;
   border-radius: 4px;
@@ -512,6 +511,7 @@ input[type=password] {
 #list-holder {
   list-style-type: none;
   margin: 0;
+  left: 0px;
   height: auto;
   background-color: #222;
   border-right: 5px;
