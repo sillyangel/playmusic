@@ -38,7 +38,7 @@ a {
   margin: 10px;
   padding-left: 20px;
 }
-/* Style the custom audio controls */
+/* Style the custom input audio controls */
 .audio-controls {
   display: flex;
   align-items: center;
@@ -279,6 +279,7 @@ audio {
 }
 #searching input[type=text] {
   width: 174%;
+  max-width: 174%;
   box-sizing: border-box;
   border: 2px solid #acacac;
   border-radius: 4px;
@@ -292,11 +293,8 @@ audio {
 #searching input[type=text] {
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  max-width: 174%;
   outline: none;
-}
-
-input[type=text]:focus {
-  border: 3px solid #ffffff;
 }
 
 #lilbrary button {
@@ -553,4 +551,3 @@ iframe {
   justify-content: center;
   z-index: 999;
 }
-
