@@ -533,7 +533,22 @@ try {
             "16 First Time in a Long Time (feat. Soulja Boy).mp3"
         ],
         "kanyewest/vult1": [
-            ""
+            "01 STARS.mp3",
+            "02 KEYS TO MY LIFE.mp3",
+            "03 PAID.mp3",
+            "04 TALKING.mp3",
+            "05 BACK TO ME.mp3",
+            "06 HOODRAT.mp3",
+            "07 DO IT.mp3",
+            "08 PAPERWORK.mp3",
+            "09 BURN.mp3",
+            "10 FUK SUMN.mp3",
+            "11 VULTURES.mp3",
+            "12 CARNIVAL.mp3",
+            "13 BEG FORGIVENESS.mp3",
+            "14 GOOD DON'T DIE.mp3",
+            "15 PROBLEMATIC.mp3",
+            "16 KING.mp3",
         ],
         "kanyewest/vult2": [
             ""
