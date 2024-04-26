@@ -1,8 +1,2 @@
-# Music Online Player
-
-
-
-
-
-
-
+# Playmusic 
+right now we have two remote repos hosting on [github](github.com/sillyangel/playmusic), and [gitlab](gitlab.com/sillyangel/playmusic), this is just my personal project i have been working since oct of 2023 i made this because my school blocked spotify and some other streaming services, i am soon going to make it so you can run your own database instance, so i can have my own instance so i dont get into legal trouble or things i might have to change things around, but i want it so you can set databases by the settings so non-technical people can still use it, but they have to find they own database that is available to the public, i might/prob add a option for passworded databases for private use but yah that is what this project is all about, i have a old verison of this because i tryed to delete the songs/ on git history but broke everything so i have it as [playmusicold](github.com/sillyangel/playmusicold), i have a demo running which is my personal instance of this right now its hosted by firebase [playmusichtml.web.app](playmusichtml.web.app) 
