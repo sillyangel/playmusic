@@ -22,9 +22,9 @@ try {
         { database: 1, artist: "The weeknd", album: "Afterhours", folder: "theweekend/afterhours", image: "albumcover.webp"},
         { database: 1, artist: "The weeknd", album: "Dawnfm", folder: "theweekend/dawnfm", image: "albumcover.png"},
         { database: 1, artist: "Laufey", album: "Bewitched", folder: "laufey/bewitched", image: "albumcover.png"},
-        { database: 1, artist: "Laufey", album: "Everything I know about love", folder: "laufey/eikal", image: "albumcover.png"},
-        { database: 1, artist: "Roddy Ricch", album: "Life lives fast", folder: "rr/llf", image: "albumcover.png"},
-        { database: 1, artist: "Roddy Ricch", album: "Please excuse me for being antisocial", folder: "rr/pemfba", image: "albumcover.png"},
+        { database: 1, artist: "Laufey", album: "Everything I Know About Love Studio", folder: "laufey/eikal", image: "albumcover.png"},
+        { database: 1, artist: "Roddy Ricch", album: "Live Life Fast", folder: "rr/llf", image: "albumcover.png"},
+        { database: 1, artist: "Roddy Ricch", album: "Please Excuse Me for Being Antisocial", folder: "rr/pemfba", image: "albumcover.png"},
         { database: 1, artist: "Lemon Demon", album: "Spirit phone", folder: "ld/sp", image: "albumcover.png"},
         { database: 1, artist: "Lemon Demon", album: "Clown", folder: "ld/cc", image: "albumcover.jpg"},
         { database: 2, artist: "Kanye West", album: "The College Dropout", folder: "kanyewest/tcd", image: "albumcover.jpg"},
@@ -55,10 +55,10 @@ try {
         { database: 1, artist: "Drake", album: "For All the Dogs", folder: "drake/fatd", image: "albumcover.webp "},
         { database: 1, artist: "Frank Ocean", album: "Channel Orange", folder: "franko/co", image: "albumcover.webp" },
         { database: 1, artist: "Frank Ocean", album: "Blonde", folder: "franko/blonde", image: "albumcover.webp" },
-        { database: 1, artist: "Billie Eilish", album: "Happy Than Ever", folder: "be/hte", image: "albumcover.jpg" },
+        { database: 1, artist: "Billie Eilish", album: "Happyier Than Ever", folder: "be/hte", image: "albumcover.jpg" },
         { database: 1, artist: "SZA", album: "SOS", folder: "sza/sos", image: "albumcover.jpg" },
-        { database: 1, artist: "Kendrick Lamar", album: "Mr morale and the big steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
-        { database: 1, artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "albumcover.jpg" },
+        { database: 1, artist: "Kendrick Lamar", album: "Mr. Morale & the Big Steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
+        { database: 1, artist: "Kendrick Lamar", album: "To Pimp a Butterfly", folder: "kenla/tpabf", image: "albumcover.jpg" },
         { database: 2, artist: "Billie Holiday", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"}
     //  { database: , artist: "", album: "", folder: "/", image: "webp" },
         // Add more albums here
@@ -1452,28 +1452,38 @@ function searchfunction() {
         const label = document.createElement('span');
         const label2 = document.createElement('span');
         const br = document.createElement('br');
-        label.style.fontSize = "20px";
         
         div.style.padding = "10px";
         div.style.margin = "10px";
         div.style.width = "200px";
+        div.style.height = "270px"
+        div.style.maxHeight = "300px"; // Set maximum height
+        div.style.overflow = "hidden"; // or "hidden" if you don't want scrollbars
         div.style.backgroundColor = "#343434";
         div.style.borderRadius = "10px";
         div.style.display = "inline-block";
-    
+        
         imagealbum.style.borderRadius = "5px";
         imagealbum.style.width = "200px";
         imagealbum.style.height = "200px";
-    
+        
         label2.style.color = "grey";
-    
+        
         label.style.color = "white";
+        label.style.fontSize = "1em";
         label.style.overflow = "hidden";
         label.style.textOverflow = "ellipsis";
-        label.style.whiteSpace = "nowrap";  // Prevents text wrapping
-    
+        
         label.textContent = `${obj.album}`;
         label2.textContent = `${obj.artist}`;
+        listitem.style.paddingTop = "10px"
+        div.appendChild(imagealbum);
+        div.appendChild(br); // Add a line break if needed
+        div.appendChild(label);
+        div.appendChild(label2);
+        
+        // Append the div to the document or another parent element
+        
     
         div.addEventListener('click', function() {
             albumsec(i)

@@ -511,6 +511,7 @@ input[type=password] {
 #list-holder {
   list-style-type: none;
   margin: 0;
+  padding: 0px;
   left: 0px;
   height: auto;
   background-color: #222;
