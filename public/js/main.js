@@ -1444,7 +1444,8 @@ function searchfunction() {
     for (let i = 0; i < albums.length; i++) {
         const obj = albums[i];
         const albumName = obj.album.toLowerCase();
-        const artistName = obj.artist.toLowerCase();       
+        const artistName = obj.artist.toLowerCase();
+        fetchDatabaseImages(i)
     if (albumName.includes(input) || artistName.includes(input)) {
         const div = document.createElement('div');
         const imagealbum = document.createElement('img');
@@ -1453,13 +1454,33 @@ function searchfunction() {
         const label2 = document.createElement('span');
         const br = document.createElement('br');
         
+        const image = new Image();
+        image.crossOrigin = "Anonymous";
+        image.src = DatabaseimageDomain + "songs/" + albums[i].folder + "/" + obj.image;
+
+        image.onload = function() {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.width = image.width;
+            canvas.height = image.height;
+            context.drawImage(image, 0, 0, image.width, image.height);
+
+            const [red, green, blue] = context.getImageData(0, 0, canvas.width, canvas.height).data;
+            const rgbColor = `rgb(${red},${green},${blue})`;
+            const textContrastColor = getContrastColor(rgbColor);
+
+            label2.style.color = textContrastColor;
+            label.style.color = textContrastColor;
+            div.style.backgroundColor = rgbColor;
+            
+        };
+
         div.style.padding = "10px";
         div.style.margin = "10px";
         div.style.width = "200px";
         div.style.height = "270px"
         div.style.maxHeight = "300px"; // Set maximum height
         div.style.overflow = "hidden"; // or "hidden" if you don't want scrollbars
-        div.style.backgroundColor = "#343434";
         div.style.borderRadius = "10px";
         div.style.display = "inline-block";
         
@@ -1468,8 +1489,8 @@ function searchfunction() {
         imagealbum.style.height = "200px";
         
         label2.style.color = "grey";
-        
         label.style.color = "white";
+        
         label.style.fontSize = "1em";
         label.style.overflow = "hidden";
         label.style.textOverflow = "ellipsis";
@@ -1488,7 +1509,6 @@ function searchfunction() {
         div.addEventListener('click', function() {
             albumsec(i)
         });
-        fetchDatabaseImages(i)
         imagealbum.src = DatabaseimageDomain + "songs/" + albums[i].folder + "/" + obj.image;
         listitem.appendChild(label);
         listitem.appendChild(br)
