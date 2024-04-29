@@ -4,11 +4,12 @@ cache:
   paths:
     - node_modules/
 
-before-script:
-  - npm install
-  - npm install -g firebase-tools 
+
 
 build:
+  before-script:
+    - npm install
+    - npm install -g firebase-tools 
   stage: build
   script:
     - npm run build-prod
