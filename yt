@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Check if a URL is provided as an argument
+if [ -z "$1" ]; then
+	echo "Usage: yt <URL>"
+	exit 1
+fi
+
+linkss=$1
+
+yt-dlp -x --audio-format mp3 -o '%(title)s.%(ext)s' $linkss
+
+echo "Finished downloading music from $youtube_url"
+
