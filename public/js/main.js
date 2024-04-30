@@ -375,8 +375,27 @@ try {
         
         ],
         "kanyewest/lr": [
-            "",
-            ""
+            "1. Wake Up Mr. West.mp3",
+            "2. Heard 'Em Say.mp3",
+            "3. Touch The Sky.mp3",
+            "4. Gold Digger.mp3",
+            "5. Skit #1.mp3",
+            "6. Drive Slow.mp3",
+            "7. My Way Home.mp3",
+            "8. Crack Music.mp3",
+            "9. Roses.mp3",
+            "10. Bring Me Down.mp3",
+            "11. Addiction.mp3",
+            "12. Skit #2.mp3",
+            "13. Diamonds From Sierra Leone (Remix).mp3",
+            "14. We Major.mp3",
+            "15. Skit #3.mp3",
+            "16. Hey Mama.mp3",
+            "17. Celebration.mp3",
+            "18. Skit #4 .mp3",
+            "19. Gone.mp3",
+            "20. Diamonds From Sierra Leone (Bonus Track).mp3",
+            "21. Late.mp3",
         ],
         "kanyewest/grad": [
             ""
