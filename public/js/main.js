@@ -398,7 +398,20 @@ try {
             "21. Late.mp3",
         ],
         "kanyewest/grad": [
-            ""
+            "1. Good Morning.mp3",
+            "2. Champion.mp3",
+            "3. Stronger.mp3",
+            "4. I Wonder.mp3",
+            "5. Good Life.mp3",
+            "6. Can't Tell Me Nothing.mp3",
+            "7. Barry Bonds.mp3",
+            "8. Drunk and Hot Girls.mp3",
+            "9. Flashing Lights.mp3",
+            "10. Everything I Am.mp3",
+            "11. The Glory.mp3",
+            "12. Homecoming.mp3",
+            "13. Big Brother.mp3",
+            "14. Good Night.mp3",
         ],
         "kanyewest/808s": [
             "1. Say You Will.mp3",
