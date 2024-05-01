@@ -1045,7 +1045,7 @@ document.addEventListener('keydown', function(event) {
         const selectedAlbum = DatabaseDomain + "songs/" + currentAlbum + "/" +albums[currentAlbumIndex].image;
         const image = new Image();
         image.crossOrigin = "Anonymous";
-        image.src = selectedAlbum;
+        image.src = `/image?url=${selectedAlbum}`,
         document.querySelectorAll('[id="albumCover"]').forEach(element => element.src = selectedAlbum);
 
         image.onload = function() {
@@ -1488,7 +1488,7 @@ function searchfunction() {
         
         const image = new Image();
         image.crossOrigin = "Anonymous";
-        image.src = DatabaseimageDomain + "songs/" + albums[i].folder + "/" + obj.image;
+        image.src = `/image?url=${DatabaseimageDomain + "songs/" + albums[i].folder + "/" + obj.image}`
 
         image.onload = function() {
             const canvas = document.createElement('canvas');
