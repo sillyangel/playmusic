@@ -1,65 +1,65 @@
 try {
     var albums = [
-        { database: 1, artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "albumcover.webp" },
-        { database: 1, artist: "Tyler, The Creator", album: "Flower Boy", folder: "tylerthecreator/flowerboy", image: "albumcover.webp" },
-        { database: 1, artist: "Tyler, The Creator", album: "Igor", folder: "tylerthecreator/igor", image: "igorcover.webp" },
-        { database: 1, artist: "Tyler, The Creator", album: "Cherry Bomb", folder: "tylerthecreator/cherrybomb", image: "cherrybomb.webp" },
-        { database: 1, artist: "Tyler, The Creator", album: "Goblin", folder: "tylerthecreator/goblin", image: "Goblincover.webp" },
-        { database: 1, artist: "Arctic Monkeys", album: "AM", folder: "arcticmonkeys/am", image: "albumcover.webp"},
-        { database: 1, artist: "Arctic Monkeys", album: "Humbug", folder: "arcticmonkeys/humbug", image: "albumcover.webp"},
-        { database: 1, artist: "Arctic Monkeys", album: "WPSIATWIN", folder: "arcticmonkeys/wpsiatwin", image: "albumcover.webp"},
-        { database: 1, artist: "Arctic Monkeys", album: "Favourite Worst Nightmare", folder: "arcticmonkeys/fwn", image: "albumcover.webp"},
-        { database: 1, artist: "Arctic Monkeys", album: "Suck It and See", folder: "arcticmonkeys/sias", image: "albumcover.webp"},
-        { database: 1, artist: "Arctic Monkeys", album: "Tranquility Base Hotel & Casino", folder: "arcticmonkeys/tbhc", image: "albumcover.webp"},
-        { database: 1, artist: "Arctic Monkeys", album: "The Car", folder: "arcticmonkeys/car", image: "albumcover.webp"},
-        { database: 1, artist: "Wallows", album: "Nothing Happens", folder: "wallows/nonthinghappens", image: "albumcover.webp"},
-        { database: 1, artist: "Melanie Martinez", album: "Crybaby", folder: "melanie/crybaby", image: "albumcover.webp"},
-        { database: 1, artist: "Melanie Martinez", album: "K-12", folder: "melanie/k12", image: "albumcover.webp"},
-        { database: 1, artist: "Melanie Martinez", album: "Portals", folder: "melanie/portals", image: "albumcover.webp"},
-        { database: 1, artist: "The weeknd", album: "Kiss Land", folder: "theweekend/kissland", image: "albumcover.webp"},
-        { database: 1, artist: "The weeknd", album: "Beauty Behind the Madness", folder: "theweekend/bbtm", image: "albumcover.webp"},
-        { database: 1, artist: "The weeknd", album: "starboy", folder: "theweekend/starboy", image: "albumcover.webp"},
-        { database: 1, artist: "The weeknd", album: "Afterhours", folder: "theweekend/afterhours", image: "albumcover.webp"},
-        { database: 1, artist: "The weeknd", album: "Dawnfm", folder: "theweekend/dawnfm", image: "albumcover.png"},
-        { database: 1, artist: "Laufey", album: "Bewitched", folder: "laufey/bewitched", image: "albumcover.png"},
-        { database: 1, artist: "Laufey", album: "Everything I Know About Love Studio", folder: "laufey/eikal", image: "albumcover.png"},
-        { database: 1, artist: "Roddy Ricch", album: "Live Life Fast", folder: "rr/llf", image: "albumcover.png"},
-        { database: 1, artist: "Roddy Ricch", album: "Please Excuse Me for Being Antisocial", folder: "rr/pemfba", image: "albumcover.png"},
-        { database: 1, artist: "Lemon Demon", album: "Spirit phone", folder: "ld/sp", image: "albumcover.png"},
-        { database: 1, artist: "Lemon Demon", album: "Clown", folder: "ld/cc", image: "albumcover.jpg"},
-        { database: 2, artist: "Kanye West", album: "The College Dropout", folder: "kanyewest/tcd", image: "albumcover.jpg"},
-        { database: 2, artist: "Kanye West", album: "Late Registration", folder: "kanyewest/lr", image: "albumcover.webp"},
-        { database: 2, artist: "Kanye West", album: "Graduation", folder: "kanyewest/grad", image: "albumcover.webp"},
-        { database: 2, artist: "Kanye West", album: "808s & Heartbreak", folder: "kanyewest/808s", image: "albumcover.png"},
-        { database: 1, artist: "Kanye West", album: "My Beautiful Dark Twisted Fantasy", folder: "kanyewest/mbdtf", image: "albumcover.jpg"},
-        { database: 2, artist: "Kanye West", album: "Watch the Throne", folder: "kanyewest/wtt", image: "albumcover.webp"},
-        { database: 2, artist: "Kanye West", album: "Cruel Summer", folder: "kanyewest/cs", image: "albumcover.webp"},
-        { database: 1, artist: "Kanye West", album: "Yeezus", folder: "kanyewest/yeezus", image: "Cover.jpg"},
-        { database: 3, artist: "Kanye West", album: "The Life of Pablo", folder: "kanyewest/tlop", image: "albumcover.webp"},
-        { database: 1, artist: "Kanye West", album: "Ye", folder: "kanyewest/ye", image: "Cover.jpg" },
-        { database: 2, artist: "Kanye West", album: "Kids See Ghosts", folder: "kanyewest/ksg", image: "albumcover.png"},
-        { database: 1, artist: "Kanye West", album: "Jesus Is King", folder: "kanyewest/jesusisking", image: "Cover.jpg" },
-        { database: 1, artist: "Kanye West", album: "Donda", folder: "kanyewest/donda", image: "cover.webp" },
-        { database: 1, artist: "Kanye West", album: "Donda 2", folder: "kanyewest/donda2", image: "albumcover.webp" },
-        { database: 2, artist: "Kanye West", album: "Vultures 1", folder: "kanyewest/vult1", image: "albumcover.webp"},
-        { database: 2, artist: "Kanye West", album: "Vultures 2", folder: "kanyewest/vult2", image: "albumcover.webp"},
-        { database: 2, artist: "Kanye West", album: "Vultures 3", folder: "kanyewest/vult3", image: "albumcover.webp"},
-        { database: 1, artist: "Drake", album: "Thank Me Later", folder: "drake/tml", image: "albumcover.webp"},
-        { database: 1, artist: "Drake", album: "Take Care", folder: "drake/tc", image: "albumcover.webp" },
-        { database: 1, artist: "Drake", album: "Nothing Was the Same", folder: "drake/nwts", image: "albumcover.webp "},
-        { database: 1, artist: "Drake", album: "Views", folder: "drake/views", image: "albumcover.webp "},
-        { database: 1, artist: "Drake", album: "Scorpion", folder: "drake/scorp", image: "albumcover.webp "},
-        { database: 1, artist: "Drake", album: "Certified Lover Boy", folder: "drake/clb", image: "albumcover.webp "},
-        { database: 1, artist: "Drake", album: "Honestly, Nevermind", folder: "drake/honnvm", image: "albumcover.webp "},
-        { database: 1, artist: "Drake", album: "Her Loss", folder: "drake/herloss", image: "albumcover.webp "},
-        { database: 1, artist: "Drake", album: "For All the Dogs", folder: "drake/fatd", image: "albumcover.webp "},
-        { database: 1, artist: "Frank Ocean", album: "Channel Orange", folder: "franko/co", image: "albumcover.webp" },
-        { database: 1, artist: "Frank Ocean", album: "Blonde", folder: "franko/blonde", image: "albumcover.webp" },
-        { database: 1, artist: "Billie Eilish", album: "Happyier Than Ever", folder: "be/hte", image: "albumcover.jpg" },
-        { database: 1, artist: "SZA", album: "SOS", folder: "sza/sos", image: "albumcover.jpg" },
-        { database: 1, artist: "Kendrick Lamar", album: "Mr. Morale & the Big Steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
-        { database: 1, artist: "Kendrick Lamar", album: "To Pimp a Butterfly", folder: "kenla/tpabf", image: "albumcover.jpg" },
-        { database: 2, artist: "Billie Holiday", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"}
+        { database: 1, year: "", artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "albumcover.webp" },
+        { database: 1, year: "", artist: "Tyler, The Creator", album: "Flower Boy", folder: "tylerthecreator/flowerboy", image: "albumcover.webp" },
+        { database: 1, year: "", artist: "Tyler, The Creator", album: "Igor", folder: "tylerthecreator/igor", image: "igorcover.webp" },
+        { database: 1, year: "", artist: "Tyler, The Creator", album: "Cherry Bomb", folder: "tylerthecreator/cherrybomb", image: "cherrybomb.webp" },
+        { database: 1, year: "", artist: "Tyler, The Creator", album: "Goblin", folder: "tylerthecreator/goblin", image: "Goblincover.webp" },
+        { database: 1, year: "", artist: "Arctic Monkeys", album: "AM", folder: "arcticmonkeys/am", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Arctic Monkeys", album: "Humbug", folder: "arcticmonkeys/humbug", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Arctic Monkeys", album: "WPSIATWIN", folder: "arcticmonkeys/wpsiatwin", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Arctic Monkeys", album: "Favourite Worst Nightmare", folder: "arcticmonkeys/fwn", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Arctic Monkeys", album: "Suck It and See", folder: "arcticmonkeys/sias", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Arctic Monkeys", album: "Tranquility Base Hotel & Casino", folder: "arcticmonkeys/tbhc", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Arctic Monkeys", album: "The Car", folder: "arcticmonkeys/car", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Wallows", album: "Nothing Happens", folder: "wallows/nonthinghappens", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Melanie Martinez", album: "Crybaby", folder: "melanie/crybaby", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Melanie Martinez", album: "K-12", folder: "melanie/k12", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Melanie Martinez", album: "Portals", folder: "melanie/portals", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "The weeknd", album: "Kiss Land", folder: "theweekend/kissland", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "The weeknd", album: "Beauty Behind the Madness", folder: "theweekend/bbtm", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "The weeknd", album: "starboy", folder: "theweekend/starboy", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "The weeknd", album: "Afterhours", folder: "theweekend/afterhours", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "The weeknd", album: "Dawnfm", folder: "theweekend/dawnfm", image: "albumcover.png"},
+        { database: 1, year: "", artist: "Laufey", album: "Bewitched", folder: "laufey/bewitched", image: "albumcover.png"},
+        { database: 1, year: "", artist: "Laufey", album: "Everything I Know About Love Studio", folder: "laufey/eikal", image: "albumcover.png"},
+        { database: 1, year: "", artist: "Roddy Ricch", album: "Live Life Fast", folder: "rr/llf", image: "albumcover.png"},
+        { database: 1, year: "", artist: "Roddy Ricch", album: "Please Excuse Me for Being Antisocial", folder: "rr/pemfba", image: "albumcover.png"},
+        { database: 1, year: "", artist: "Lemon Demon", album: "Spirit phone", folder: "ld/sp", image: "albumcover.png"},
+        { database: 1, year: "", artist: "Lemon Demon", album: "Clown", folder: "ld/cc", image: "albumcover.jpg"},
+        { database: 2, year: "", artist: "Kanye West", album: "The College Dropout", folder: "kanyewest/tcd", image: "albumcover.jpg"},
+        { database: 2, year: "", artist: "Kanye West", album: "Late Registration", folder: "kanyewest/lr", image: "albumcover.webp"},
+        { database: 2, year: "", artist: "Kanye West", album: "Graduation", folder: "kanyewest/grad", image: "albumcover.webp"},
+        { database: 2, year: "", artist: "Kanye West", album: "808s & Heartbreak", folder: "kanyewest/808s", image: "albumcover.png"},
+        { database: 1, year: "", artist: "Kanye West", album: "My Beautiful Dark Twisted Fantasy", folder: "kanyewest/mbdtf", image: "albumcover.jpg"},
+        { database: 2, year: "", artist: "Kanye West", album: "Watch the Throne", folder: "kanyewest/wtt", image: "albumcover.webp"},
+        { database: 2, year: "", artist: "Kanye West", album: "Cruel Summer", folder: "kanyewest/cs", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Kanye West", album: "Yeezus", folder: "kanyewest/yeezus", image: "Cover.jpg"},
+        { database: 3, year: "", artist: "Kanye West", album: "The Life of Pablo", folder: "kanyewest/tlop", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Kanye West", album: "Ye", folder: "kanyewest/ye", image: "Cover.jpg" },
+        { database: 2, year: "", artist: "Kanye West", album: "Kids See Ghosts", folder: "kanyewest/ksg", image: "albumcover.png"},
+        { database: 1, year: "", artist: "Kanye West", album: "Jesus Is King", folder: "kanyewest/jesusisking", image: "Cover.jpg" },
+        { database: 1, year: "", artist: "Kanye West", album: "Donda", folder: "kanyewest/donda", image: "cover.webp" },
+        { database: 1, year: "", artist: "Kanye West", album: "Donda 2", folder: "kanyewest/donda2", image: "albumcover.webp" },
+        { database: 2, year: "", artist: "Kanye West", album: "Vultures 1", folder: "kanyewest/vult1", image: "albumcover.webp"},
+        { database: 2, year: "", artist: "Kanye West", album: "Vultures 2", folder: "kanyewest/vult2", image: "albumcover.webp"},
+        { database: 2, year: "", artist: "Kanye West", album: "Vultures 3", folder: "kanyewest/vult3", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Drake", album: "Thank Me Later", folder: "drake/tml", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Drake", album: "Take Care", folder: "drake/tc", image: "albumcover.webp" },
+        { database: 1, year: "", artist: "Drake", album: "Nothing Was the Same", folder: "drake/nwts", image: "albumcover.webp "},
+        { database: 1, year: "", artist: "Drake", album: "Views", folder: "drake/views", image: "albumcover.webp "},
+        { database: 1, year: "", artist: "Drake", album: "Scorpion", folder: "drake/scorp", image: "albumcover.webp "},
+        { database: 1, year: "", artist: "Drake", album: "Certified Lover Boy", folder: "drake/clb", image: "albumcover.webp "},
+        { database: 1, year: "", artist: "Drake", album: "Honestly, Nevermind", folder: "drake/honnvm", image: "albumcover.webp "},
+        { database: 1, year: "", artist: "Drake", album: "Her Loss", folder: "drake/herloss", image: "albumcover.webp "},
+        { database: 1, year: "", artist: "Drake", album: "For All the Dogs", folder: "drake/fatd", image: "albumcover.webp "},
+        { database: 1, year: "", artist: "Frank Ocean", album: "Channel Orange", folder: "franko/co", image: "albumcover.webp" },
+        { database: 1, year: "", artist: "Frank Ocean", album: "Blonde", folder: "franko/blonde", image: "albumcover.webp" },
+        { database: 1, year: "", artist: "Billie Eilish", album: "Happyier Than Ever", folder: "be/hte", image: "albumcover.jpg" },
+        { database: 1, year: "", artist: "SZA", album: "SOS", folder: "sza/sos", image: "albumcover.jpg" },
+        { database: 1, year: "", artist: "Kendrick Lamar", album: "Mr. Morale & the Big Steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
+        { database: 1, year: "", artist: "Kendrick Lamar", album: "To Pimp a Butterfly", folder: "kenla/tpabf", image: "albumcover.jpg" },
+        { database: 2, year: "", artist: "Billie Holiday", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"}
     //  { database: , artist: "", album: "", folder: "/", image: "webp" },
         // Add more albums here
     ];
@@ -850,7 +850,7 @@ try {
     // if (localStorage.getItem("folart") !== null) {folart = localStorage.getItem("folart");}
     // api fetch function
     function fetchProxy(url) {
-     return fetch(`https://proxy.cors.sh/${url}`);
+     return fetch(`/image?url=${url}`);
     }
     //Databases
     const databases = [
@@ -1048,7 +1048,7 @@ document.addEventListener('keydown', function(event) {
         const selectedAlbum = DatabaseDomain + "songs/" + currentAlbum + "/" +albums[currentAlbumIndex].image;
         const image = new Image();
         image.crossOrigin = "Anonymous";
-        image.src = `/image?url=${selectedAlbum}`,
+        image.src = selectedAlbum,
         document.querySelectorAll('[id="albumCover"]').forEach(element => element.src = selectedAlbum);
 
         image.onload = function() {
@@ -1251,7 +1251,6 @@ document.addEventListener('keydown', function(event) {
                     songSelector.appendChild(artistHeader);
                     artistHeader.appendChild(buttonstar)
                     buttonstar.appendChild(icon);
-
                     var clickcount = 0;
                     buttonstar.addEventListener("click", function() {
                         clickcount += 1;
@@ -1269,7 +1268,6 @@ document.addEventListener('keydown', function(event) {
                             alert("local folart " + localStorage.getItem("folart"))
                         }
                     });
-                    
                     if (folart.includes(album.artist)) {
                         // Set star icon as filled for favorite artist
                         icon.className = "fa-solid fa-star";
@@ -1444,6 +1442,7 @@ function getSelectedSize() {
         var login = document.getElementById("mlogin");
         var accountsettings = document.getElementById("accountsettings");
         var settings = document.getElementById("settings");
+        var ap = document.getElementById("albumpage")
     
         home.style.display = "none";
         search.style.display = "none";
@@ -1451,6 +1450,7 @@ function getSelectedSize() {
         login.style.display = "none";
         accountsettings.style.display = "none";
         settings.style.display = "none";
+        ap.style.display = "none";
     
         switch(st) {
             case "hom":
@@ -1468,6 +1468,10 @@ function getSelectedSize() {
             case "set":
                 settings.style.display = "block";
                 break;
+            case "ap":
+                ap.style.display = "block";
+                break;
+                
         }
     }
 
@@ -1491,7 +1495,7 @@ function searchfunction() {
         
         const image = new Image();
         image.crossOrigin = "Anonymous";
-        image.src = fetchProxy(DatabaseimageDomain + "songs/" + albums[i].folder + "/" + obj.image)
+        image.src = DatabaseimageDomain + "songs/" + albums[i].folder + "/" + obj.image
 
         image.onload = function() {
             const canvas = document.createElement('canvas');
@@ -1542,7 +1546,8 @@ function searchfunction() {
         
     
         div.addEventListener('click', function() {
-            albumsec(i)
+            document.getElementById('searching').style.display = "none"
+            albumpage(i)
         });
         imagealbum.src = DatabaseimageDomain + "songs/" + albums[i].folder + "/" + obj.image;
         listitem.appendChild(label);
@@ -1555,8 +1560,29 @@ function searchfunction() {
     }
   }
 }
-    
-    
+    function albumpage(i) {
+        fetchDatabaseImages(i)
+        const albumpagd = document.getElementById("albumpage")
+        const nameap = document.getElementById("h2ap")
+        const porfileart = document.getElementById("imageap") 
+        const artistalbul = document.getElementById("artistalbul");
+        const tracklist = document.getElementById("trackalbumpg")
+        artistalbul.textContent = albums[i].artist;
+        albumpagd.style.display = "block";
+        nameap.textContent = `${albums[i].album}`;
+        porfileart.src = DatabaseimageDomain + "songs/" + albums[i].folder + "/" + albums[i].image
+        var tn = albums[i].folder;
+        for (let ij = 0;ij < audioTracks[tn].length; ij++ ) {
+            // alert(audioTracks[tn][ij])
+            const p = document.createElement("p");
+            p.innerHTML = audioTracks[tn][ij]
+            p.addEventListener("click", function() {
+                
+            });
+            tracklist.appendChild(p);
+        }
+    }   
+    albumpage(41)
     function darkmode() {
         var element = document.body;
         element.classList.toggle("dark-mode");
@@ -1582,15 +1608,6 @@ function searchfunction() {
         const { outcome } = await deferredPrompt.userChoice;
         deferredPrompt = null;
       }
-    }
-    function consoled(text, type) {
-        if (type === 'error') {
-            console.error(text);
-        } else if (type == 'warn') {
-          console.warn(text);
-        } else if (type == 'debug') {
-        console.debug(text);
-        }
     }
     function w() {
         for (let album in audioTracks) {

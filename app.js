@@ -2,10 +2,12 @@ const express = require('express');
 const app = express();
 const port = 8080;
 const axios = require('axios');
+const cors = require('cors')
 
+app.use(cors())
 
 app.use((req, res, next) => {
-    console.log(`Request to ${req.originalUrl}`);
+    console.log(`Gotten Request for ${req.originalUrl}`);
     next();
 });
 

@@ -182,6 +182,17 @@ audio {
   margin-left: 6%; /* Adjust value based on the width of the sidebarmen div */
   /* Additional styling properties */
 }
+#albumpage {
+    float: right;
+    width: fit-content;
+    padding-left: 20px;
+    margin-top: 10px; /* Updated syntax for margin-top */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 6%; /* Adjust value based on the width of the sidebarmen div */
+    /* Additional styling properties */
+  }
 .audio-controls-full {
   position: fixed;
   width: 100%;
