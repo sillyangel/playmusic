@@ -70,9 +70,14 @@
         <button id="logout-button">Logout</button>
         <button id="savebutton">Save Settings</button>
           </div>
-        <div id="albumpage">
-            <div style="display: flex; align-items: center; justify-content: center"><img src="https://placehold.co/200x200" width="105px" height="105px" style="margin-right: 20px;" id="imageap"><h2 id="h2ap">Album Name</h2></div>
-                <p style="color: gray; font-size: 15px;" id="artistalbul">Artist name</p>
+        <div id="albumpage" style="display: none;">
+            <div style="display: flex; align-items: center;">
+              <img src="https://placehold.co/200x200" width="105px" height="105px" style="margin-bottom: 20px;" id="imageap">
+              <div style="flex-direction: column;margin-bottom: 50px;margin-left: 20px;">
+                <h2 id="h2ap" style="margin-bottom: 0px;">Album Name</h2>
+                <p style="color: gray;font-size: 15px;margin-top: 0px;margin-left: 2px;" id="artistalbul">Artist name</p>
+              </div>
+            </div>
             <div id="albumssl">
                 <h1>Tracks</h1>
                 <div id="tracklist">
@@ -85,7 +90,7 @@
                 </div>
             </div>
         </div>
-        <div id="songselector" style="display: none;">
+        <div id="songselector">
           <h2>Home</h2>      
           <div id="user">
             <i class="fas fa-user"></i>
