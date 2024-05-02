@@ -848,7 +848,10 @@ try {
     if (localStorage.getItem("CurrentAlbum") !== null) {currentAlbum = localStorage.getItem("CurrentAlbum");}
     if (localStorage.getItem("timerforaudio") !== null) {audiotimern = localStorage.getItem("timerforaudio");}
     // if (localStorage.getItem("folart") !== null) {folart = localStorage.getItem("folart");}
-
+    // api fetch function
+    function fetchProxy(url) {
+     return fetch(`https://proxy.cors.sh/${url}`);
+    }
     //Databases
     const databases = [
         { id: 0, url: "https://playmusicstorage.web.app/" },
@@ -897,7 +900,7 @@ document.addEventListener('keydown', function(event) {
       doSomething();
     }
   });
-  
+
   function doSomething() {
         var iframethingy = document.getElementById("iframeas");
         if (iframethingy.style.display === "block") {
@@ -1488,7 +1491,7 @@ function searchfunction() {
         
         const image = new Image();
         image.crossOrigin = "Anonymous";
-        image.src = `/image?url=${DatabaseimageDomain + "songs/" + albums[i].folder + "/" + obj.image}`
+        image.src = fetchProxy(DatabaseimageDomain + "songs/" + albums[i].folder + "/" + obj.image)
 
         image.onload = function() {
             const canvas = document.createElement('canvas');
