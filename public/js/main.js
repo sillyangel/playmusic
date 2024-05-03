@@ -22,7 +22,7 @@ try {
         { database: 1, year: "", artist: "The weeknd", album: "Afterhours", folder: "theweekend/afterhours", image: "albumcover.webp"},
         { database: 1, year: "", artist: "The weeknd", album: "Dawnfm", folder: "theweekend/dawnfm", image: "albumcover.png"},
         { database: 1, year: "", artist: "Laufey", album: "Bewitched", folder: "laufey/bewitched", image: "albumcover.png"},
-        { database: 1, year: "", artist: "Laufey", album: "Everything I Know About Love Studio", folder: "laufey/eikal", image: "albumcover.png"},
+        { database: 2, year: "", artist: "Laufey", album: "Everything I Know About Love", folder: "laufey/eikal", image: "albumcover.png"},
         { database: 1, year: "", artist: "Roddy Ricch", album: "Live Life Fast", folder: "rr/llf", image: "albumcover.png"},
         { database: 1, year: "", artist: "Roddy Ricch", album: "Please Excuse Me for Being Antisocial", folder: "rr/pemfba", image: "albumcover.png"},
         { database: 1, year: "", artist: "Lemon Demon", album: "Spirit phone", folder: "ld/sp", image: "albumcover.png"},
@@ -446,7 +446,18 @@ try {
             ""
         ],
         "kanyewest/cs": [
-            ""
+            "1. To The World.mp3",
+            "2. Clique.mp3",
+            "3. Mercy.1.mp3",
+            "4. New God Flow.1.mp3",
+            "5. The Morning.mp3",
+            "6. Cold.1.mp3",
+            "7. Higher.mp3",
+            "8. Sin City.mp3",
+            "9. The One.mp3",
+            "10. Creepers.mp3",
+            "11. Bliss.mp3",
+            "12. Don't Like.1.mp3",
         ],
         "kanyewest/yeezus": [
           "01 Kanye West - On Sight.mp3",
