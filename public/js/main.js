@@ -55,7 +55,9 @@ try {
         { database: 1, year: "", artist: "Drake", album: "For All the Dogs", folder: "drake/fatd", image: "albumcover.webp "},
         { database: 1, year: "", artist: "Frank Ocean", album: "Channel Orange", folder: "franko/co", image: "albumcover.webp" },
         { database: 1, year: "", artist: "Frank Ocean", album: "Blonde", folder: "franko/blonde", image: "albumcover.webp" },
+        { database: 2, year: "", artist: "Billie Eilish", album: "When We All Fall Asleep, Where Do We Go?", folder: "be/wwafawdwg", image: "albumcover.png" },
         { database: 1, year: "", artist: "Billie Eilish", album: "Happyier Than Ever", folder: "be/hte", image: "albumcover.jpg" },
+        { database: 2, year: "2024", artist: "Billie Eilish", album: "Hit Me Hard and Soft", folder: "be/hmhas", image: "albumcover.png" },
         { database: 1, year: "", artist: "SZA", album: "SOS", folder: "sza/sos", image: "albumcover.jpg" },
         { database: 1, year: "", artist: "Kendrick Lamar", album: "Mr. Morale & the Big Steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
         { database: 1, year: "", artist: "Kendrick Lamar", album: "To Pimp a Butterfly", folder: "kenla/tpabf", image: "albumcover.jpg" },
@@ -778,6 +780,22 @@ try {
             "16 Godspeed.mp3",
             "17 Futura Free.mp3",
         ],   
+        "be/wwafawdwg": [
+            "!!!!!!!.mp3",
+            "bad guy.mp3",
+            "xanny.mp3",
+            "you should see me in a crown.mp3",
+            "all the good girls go to hell.mp3",
+            "wish You Were Gay.mp3",
+            "when the party's over.mp3",
+            "8.mp3",
+            "my strange addiction.mp3",
+            "bury a friend.mp3",
+            "ilomilo.mp3",
+            "listen before i go.mp3",
+            "i love you.mp3",
+            "goodbye.mp3"	
+        ],
         "be/hte": [
             "01. Getting Older.mp3",
             "02. I Didn't Change My Number(Explicit).mp3",
@@ -785,16 +803,19 @@ try {
             "04. my future.mp3",
             "05. Oxytocin.mp3",
             "06. GOLDWING.mp3",
-            "07. lost cause(explicit).mp3",
-            "08. halley's comet.mp3",
-            "09. not my responsibility.mp3",
-            "10. overheated(explicit).mp3",
-            "11. everybody dies.mp3",
-            "12. your power.mp3",
-            "13. nda(explicit).mp3",
-            "14. therefore i am.mp3",
-            "15. happier than ever(explicit).mp3",
-            "16. male fantasy.mp3"
+            "07. Lost Cause(Explicit).mp3",
+            "08. Halley's Comet.mp3",
+            "09. Not My Responsibility.mp3",
+            "10. OverHeated(Explicit).mp3",
+            "11. Everybody Dies.mp3",
+            "12. Your Power.mp3",
+            "13. NDA(Explicit).mp3",
+            "14. Therefore I Am.mp3",
+            "15. Happier Than Ever(Explicit).mp3",
+            "16. Male Fantasy.mp3",
+        ],
+        "be/hmhas": [
+            ""
         ],
         "sza/sos": [
             ""
@@ -1649,16 +1670,6 @@ function searchfunction() {
         const { outcome } = await deferredPrompt.userChoice;
         deferredPrompt = null;
       }
-    }
-    function w() {
-        for (let album in audioTracks) {
-            audioTracks[album].forEach(trackPath => {
-                let url = `https://playmusicstorage.web.app/songs/${album}/${trackPath}`;
-                let request = new XMLHttpRequest();
-                request.open('HEAD', url, false);
-                request.send();
-            });
-        }
     }
     navigator.serviceWorker.register("/js/sw.js");
     

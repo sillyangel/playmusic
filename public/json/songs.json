@@ -386,10 +386,22 @@
       "explicit": "true"
     },
     {
-      "artist": "Billie eilish",
-      "album": "Happy than ever",
+      "artist": "Billie Eilish",
+      "album": "When we all fall asleep, where do we go?",
+      "folder": "be/wwafawdwg",
+      "cover": "https://playstorage2.web.app/songs/be/wwafawdwg/albumcover.png"
+    },
+    {
+      "artist": "Billie Eilish",
+      "album": "Happy Than ever",
       "folder": "be/hte",
       "cover": "https://playmusicstorage.web.app/songs/be/hte/albumcover.jpg"
+    },
+    {
+      "artist": "Billie Eilish",
+      "album": "Hit Me Hard and Soft",
+      "folder": "be/hmhas",
+      "cover": "https://playstorage2.web.app/songs/be/hmhas/albumcover.png"
     },
     {
       "artist": "SZA",
