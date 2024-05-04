@@ -1583,12 +1583,16 @@ function searchfunction() {
         nameap.textContent = `${albums[i].album}`;
         porfileart.src = DatabaseimageDomain + "songs/" + albums[i].folder + "/" + albums[i].image
         var tn = albums[i].folder;
+        // have dynamic
         for (let ij = 0;ij < audioTracks[tn].length; ij++ ) {
             // alert(audioTracks[tn][ij])
             const p = document.createElement("p");
             p.innerHTML = audioTracks[tn][ij]
             p.addEventListener("click", function() {
-                
+                currentTrackIndex = ij;
+                currentAlbum = tn;
+                loadTrack();
+                audio.play();
             });
             tracklist.appendChild(p);
         }
