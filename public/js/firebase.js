@@ -1,12 +1,10 @@
-import { initializeApp } from "firebase/app";
-import { getRedirectResult, signInWithPopup, GithubAuthProvider, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
-import { doc, deleteDoc, getFirestore, collection, addDoc, query, where, getDocs, getDoc, setDoc, documentId } from "firebase/firestore";
-import { getAnalytics } from "firebase/analytics";
-import { getPerformance } from "firebase/performance";
-import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
-import { getDownloadURL, getStorage, ref, uploadBytes, listAll } from "firebase/storage"
-
-try {
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+import { getRedirectResult, signInWithPopup, GithubAuthProvider, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, updateProfile } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import { doc, deleteDoc, getFirestore, collection, addDoc, query, where, getDocs, getDoc, setDoc, documentId } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+import { getPerformance } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-performance.js";
+import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app-check.js";
+import { getDownloadURL, getStorage, ref, uploadBytes, listAll } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-storage.js";
 
 
 const firebaseConfig = {
@@ -236,8 +234,8 @@ observer.observe(audio, { attributes: true });
          // User has a playlist, load and display it
          querySnapshot.forEach((doc) => {
            const playlistData = doc.data();
-
-           console.log("Loaded playlist:", playlistData);
+           
+          //  console.log("Loaded playlist:", playlistData);
          });
          playlistdatathn(user);         
        } else {
@@ -368,9 +366,11 @@ async function playlistdatathn(user) {
 }};
 
  auth.onAuthStateChanged(async (user) => {
-  const nameu = docuemnt.getElementById('username');
+  const nameu = document.getElementById('username');
   if (user) {
-    nameu.innerHTML = 'No Username'
+    const user = auth.currentUser;
+    const nameu = document.getElementById('username');
+    nameu.innerHTML = user.displayName;
   } else {
     const nameu = document.getElementById('username');  
     nameu.innerHTML = "Not Logged In"
@@ -464,6 +464,30 @@ auth.onAuthStateChanged(async (user) => {
   }
 });
 
+export async function addSongToHistory(title, artist, album) {
+  onAuthStateChanged(auth, async (user) => {
+    if (user) {
+      const userId = user.uid;
+      const historyCollection = collection(db, `history/${userId}/songs`);
+      const songData = {
+        title,
+        artist,
+        album,
+        timestamp: new Date(),
+      };
+
+      try {
+        await addDoc(historyCollection, songData);
+        alert('Song data saved in Firestore.');
+      } catch (error) {
+        alert('Error adding song data: ' + error.message);
+      }
+    } else {
+      console.log('User is not logged in.');
+    }
+  });
+}
+
 
 auth.onAuthStateChanged(async (user) => {
   if (user) {
@@ -478,16 +502,8 @@ auth.onAuthStateChanged(async (user) => {
     res.items.forEach(async (itemRef) => {
       if (itemRef.name.endsWith('.mp3')) {
         const url = await getDownloadURL(itemRef);
-        console.log(url);
+        // console.log(url);
       }
     });
   }
 });
-
-} catch(error) {
-  alert(error.message);
-  alert(error);
-  console.log(error.message);
-  console.log(error);
-}
-
