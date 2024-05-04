@@ -22,7 +22,7 @@ try {
         { database: 1, year: "", artist: "The weeknd", album: "Afterhours", folder: "theweekend/afterhours", image: "albumcover.webp"},
         { database: 1, year: "", artist: "The weeknd", album: "Dawnfm", folder: "theweekend/dawnfm", image: "albumcover.png"},
         { database: 1, year: "", artist: "Laufey", album: "Bewitched", folder: "laufey/bewitched", image: "albumcover.png"},
-        { database: 2, year: "", artist: "Laufey", album: "Everything I Know About Love", folder: "laufey/eikal", image: "albumcover.png"},
+        { database: 2, year: "", artist: "Laufey", album: "Everything I Know About Love", folder: "laufey/eikal", image: "albumcover.webp"},
         { database: 1, year: "", artist: "Roddy Ricch", album: "Live Life Fast", folder: "rr/llf", image: "albumcover.png"},
         { database: 1, year: "", artist: "Roddy Ricch", album: "Please Excuse Me for Being Antisocial", folder: "rr/pemfba", image: "albumcover.png"},
         { database: 1, year: "", artist: "Lemon Demon", album: "Spirit phone", folder: "ld/sp", image: "albumcover.png"},
@@ -323,7 +323,19 @@ try {
             "14 Bewitched.mp3"
         ],
         "laufey/eikal": [
-            ""
+            "01. Fragile.mp3",
+            "02. Beautiful Stranger.mp3",
+            "03. Valentine.mp3",
+            "04. Above The Chinese Restaurant.mp3",
+            "05. Dear Soulmate.mp3",
+            "06. What Love Will Do to You.mp3",
+            "07. I've Never Been In Love Before.mp3",
+            "08. Just Like Chet.mp3",
+            "09. Everything I Know About Love.mp3",
+            "10. Falling Behind.mp3",
+            "11. Hi.mp3",
+            "12. Dance With You Tonight.mp3",
+            "13. Night Light.mp3",
         ],
         "rr/llf": [
             ""
@@ -838,7 +850,8 @@ try {
             "10. The Blues Are Brewin'.mp3",
         ],
     };
-    const folart = JSON.parse(localStorage.getItem("folart") || '[]');
+    let folartRaw = localStorage.getItem("folart");
+    let folart = folartRaw && folartRaw !== "" ? JSON.parse(folartRaw) : [];
     var audio = document.getElementById("myAudio");
     var playButton = document.querySelectorAll("#playbuttonthung");
     var volumeControl = document.getElementById("volume");
@@ -1241,9 +1254,14 @@ document.addEventListener('keydown', function(event) {
         .then((response) => response.json())
         .then((data) => {
             const songSelector = document.getElementById('farts');
-            
             songSelector.innerHTML = ''; // Clear existing content
     
+            data.albums.sort((a, b) => {
+                const aIsFavorite = folart.includes(a.artist);
+                const bIsFavorite = folart.includes(b.artist);
+                return bIsFavorite - aIsFavorite; // True values (favorites) will come first
+            });
+            
             let currentArtist = ''; // Initialize the current artist
             data.albums.forEach((album, albumIndex) => {
                 if (album.artist !== currentArtist) {
@@ -1262,23 +1280,31 @@ document.addEventListener('keydown', function(event) {
                     songSelector.appendChild(artistHeader);
                     artistHeader.appendChild(buttonstar)
                     buttonstar.appendChild(icon);
-                    var clickcount = 0;
+                    var clickcount = folart.includes(album.artist) ? 1 : 0;
+                    icon.className = clickcount === 1 ? "fa-solid fa-star" : "fa-regular fa-star";
+
                     buttonstar.addEventListener("click", function() {
-                        clickcount += 1;
-                        
-                        if (clickcount > 1) {
-                            clickcount = 0;
-                            icon.className = "fa-regular fa-star";
-                        } else if (clickcount === 1) {
+                        if (clickcount === 0) {
+                            // Toggle star icon to solid
                             icon.className = "fa-solid fa-star";
-                            // album.artist
-                            folart.push(`"${albums[albumIndex].artist}"`);
+                            // Add artist to favorites array and save to localStorage
+                            folart.push(album.artist);
                             localStorage.setItem("folart", JSON.stringify(folart))
-                            alert("artist faved " + album.artist)
-                            alert("folart var " + folart)
-                            alert("local folart " + localStorage.getItem("folart"))
+                        } else {
+                            // Toggle star icon to regular
+                            icon.className = "fa-regular fa-star";
+                            // Remove artist from favorites array and update localStorage
+                            const index = folart.indexOf(album.artist);
+                            if (index > -1) {
+                                folart.splice(index, 1);
+                                localStorage.setItem("folart", JSON.stringify(folart));
+                            }
                         }
+                        // Toggle clickcount between 0 and 1
+                        clickcount = (clickcount === 0) ? 1 : 0;
                     });
+                    
+                    
                     if (folart.includes(album.artist)) {
                         // Set star icon as filled for favorite artist
                         icon.className = "fa-solid fa-star";
@@ -1578,12 +1604,12 @@ function searchfunction() {
         const porfileart = document.getElementById("imageap") 
         const artistalbul = document.getElementById("artistalbul");
         const tracklist = document.getElementById("trackalbumpg")
+        tracklist.innerHTML = ""
         artistalbul.textContent = albums[i].artist;
         albumpagd.style.display = "block";
         nameap.textContent = `${albums[i].album}`;
         porfileart.src = DatabaseimageDomain + "songs/" + albums[i].folder + "/" + albums[i].image
         var tn = albums[i].folder;
-        // have dynamic
         for (let ij = 0;ij < audioTracks[tn].length; ij++ ) {
             // alert(audioTracks[tn][ij])
             const p = document.createElement("p");
@@ -1591,6 +1617,7 @@ function searchfunction() {
             p.addEventListener("click", function() {
                 currentTrackIndex = ij;
                 currentAlbum = tn;
+                currentAlbumIndex = i;
                 loadTrack();
                 audio.play();
             });

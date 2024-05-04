@@ -170,6 +170,17 @@ audio {
   /* Make it inline to adjust to content */
 }
 
+#accountsettings {
+  float: right;
+  width: fit-content;
+  padding-left: 20px;
+  margin-top: 10px; /* Updated syntax for margin-top */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 6%; /* Adjust value based on the width of the sidebarmen div */
+  /* Additional styling properties */
+}
 
 #songselector {
   float: right;
@@ -267,15 +278,6 @@ audio {
   flex-wrap: wrap;
   flex-direction: column;
   position: relative;
-}
-#accountsettings {
-  left: 20px;
-  padding-left: 20px;
-  margin-top: 0 10px;
-  float: right;
-  width: 90%;
-  height: auto;
-  display: flex;
 }
 #searching {
   float: right;
