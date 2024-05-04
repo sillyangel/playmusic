@@ -1097,9 +1097,9 @@ function seek(event, progressBarId) {
 }
 
 function getContrastColor(rgbColor) {
-    const [r, g, b] = rgbColor.match(/\d+/g).map(Number);
-    const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-    return luminance > 0.5 ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)';
+    const [red, green, blue] = rgbColor.match(/\d+/g);
+    const brightness = (red * 299 + green * 587 + blue * 114) / 1000;
+    return brightness >= 195 ? "#222222" : "white";
 }
 
 function updateAlbumCover() {
@@ -1120,14 +1120,26 @@ function updateAlbumCover() {
         const audioControls = document.querySelector(".audio-controls-full");
         const audioControlsMini = document.querySelector(".audio-controls");
         const rgbColor = `rgb(${red},${green},${blue})`;
+        // border color and background color is darker than the background color
+        const backgroundColor = `rgb(${red - 25},${green - 25},${blue - 25})`
+        const borderColor = `rgb(${red + 2},${green + 2},${blue + 2})`;
         const textContrastColor = getContrastColor(rgbColor);
+        const sidebarmen = document.getElementsByClassName("sidebarmen")[0];
 
             audioControls.style.backgroundColor = rgbColor;
             audioControls.style.color = textContrastColor;
 
+
+            sidebarmen.style.borderColor = borderColor;
+            sidebarmen.style.backgroundColor = backgroundColor;
+            // color all i which are all fontawesome icons to the contrast color
+            document.querySelectorAll('i').forEach(element => element.style.color = textContrastColor);
+            document.body.style.backgroundColor = backgroundColor;
+            document.body.style.color = textContrastColor;
+        
             audioControlsMini.style.backgroundColor = rgbColor;
             audioControlsMini.style.color = textContrastColor;
-            audioControlsMini.style.borderColor = rgbColor;
+            audioControlsMini.style.borderColor = borderColor;
     };
 }
                 
@@ -1308,7 +1320,7 @@ fetch('json/songs.json')
                 buttonstar.style.backgroundColor = "none";
                 icon.style.fontSize = "25px";
                 icon.style.marginLeft = "15px";
-                icon.style.color = "#ffffff";
+                buttonstar.style.color = "inherit";
 
                 
                 songSelector.appendChild(artistHeader);

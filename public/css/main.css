@@ -13,17 +13,24 @@
   font-family: Heleovm;
   src: url("/assets/fonts/FreeSans.otf") format("opentype");
 }
+/* add spotify font https://spotify.design/fonts/CircularSpotifyTxT-Medium.woff2 */
+@font-face {
+  font-family: circular;
+  src: url("/assets/fonts/CircularSpotifyTxT-Medium.woff2") format("woff2");
+}
 body {
   background-color: #222;
   color: #fff;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: circularfont, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 h1 {
   font-size: 30px;
+  font-weight: normal;
 }
 h2 {
+  font-weight: normal;
   font-size: 40px;
 }
 
@@ -148,8 +155,10 @@ audio {
 }
 /* Change the link color on hover */
 .sidebarmen img {
-  padding-top: 20px;
-  padding-left: 9px;
+  margin-top: 30px;
+  margin-left: 9px;
+  border-radius: 10%;
+  margin-bottom: 12vh;
 }
 .sidebarmen {
   float: left;
@@ -222,11 +231,15 @@ audio {
 .trackandartiststuff {
   align-content: start!important;
 }
+.trackandartiststuff p {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
 
 .audio-controls-full img {
-  width: 250px;
+  width: 300px;
   margin-bottom: 10px;
-  height: 250px;
+  height: 300px;
 }
 .progress-container {
   display: flex;
@@ -357,6 +370,7 @@ footer {
 }
 h3 {
   font-size: 25px;
+  font-weight: normal;
 }
 input[type=email]:focus {
   border: 3px solid #ffffff;
@@ -527,9 +541,7 @@ input[type=password] {
   padding: 0px;
   left: 0px;
   height: auto;
-  background-color: #222;
   border-right: 5px;
-  border-color: #333;
 }
 
 #lyrics {
