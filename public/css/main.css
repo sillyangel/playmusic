@@ -58,6 +58,9 @@ a {
   bottom: 0px;
   border-top: 2px solid #333;
 }
+#volume {
+  display: none; /* Hidden by default */
+}
 .audio-controls button {
   background: none;
   border: none;
@@ -387,6 +390,18 @@ input[type=email] {
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
 }
+.album-container {
+  display: flex;
+  flex-direction: row; /* Ensure items are laid out horizontally */
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%; /* Ensure it spans the full width of its parent */
+}
+
+.album-container > div { /* Assuming the child elements are divs */
+  min-width: 160px; /* Example min-width, adjust as needed */
+  margin-right: 10px; /* Adjust spacing between items */
+}
 input[type=password] {
   box-sizing: border-box;
   border: 2px solid #acacac;
@@ -420,7 +435,6 @@ input[type=password] {
 #user {
   right: 100px;
   position: absolute;
-  color: #fff;
   text-decoration: none;
   font-size: 30px;
   margin-bottom: 33.2px;

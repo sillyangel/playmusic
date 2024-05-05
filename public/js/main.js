@@ -931,18 +931,33 @@ function fetchDatabaseImages(item) {
 }
 fetchDatabase();
 function loadTrack() {      
-        fetchDatabase();  
-        var trackPath = audioTracks[currentAlbum][currentTrackIndex];
+    fetchDatabase();  
+    var trackPath = audioTracks[currentAlbum][currentTrackIndex];
 
-        audio.src = DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath;
-        audio.load();
-        updateTrackText();
-        updateAlbumCover();
-        
-        mediathinggy();
-        localStorage.setItem("Albumindex", currentAlbumIndex);
-        localStorage.setItem("Trackindex", currentTrackIndex);
-        localStorage.setItem("CurrentAlbum", currentAlbum);
+    audio.src = DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath;
+    audio.load();
+    updateTrackText();
+    updateAlbumCover();
+    
+    mediathinggy();
+    localStorage.setItem("Albumindex", currentAlbumIndex);
+    localStorage.setItem("Trackindex", currentTrackIndex);
+    localStorage.setItem("CurrentAlbum", currentAlbum);
+
+    preloadNextTrack(); // Call the function to preload the next track
+}
+
+function preloadNextTrack() {
+    let nextTrackIndex = currentTrackIndex + 1;
+    let nextAlbum = currentAlbum;
+    // Check if the next track index exceeds the current album's track count
+    if (nextTrackIndex >= audioTracks[nextAlbum].length) {
+        nextTrackIndex = 0; // Reset to the first track of the album
+    }
+    let nextTrackPath = audioTracks[nextAlbum][nextTrackIndex];
+    let nextTrackSrc = DatabaseDomain + "songs/" + nextAlbum + "/" + nextTrackPath;
+    let nextAudio = new Audio(nextTrackSrc);
+    nextAudio.load(); // This starts loading the track without playing it
 }
 loadTrack();    
 document.addEventListener('keydown', function(event) {
@@ -1121,7 +1136,7 @@ function updateAlbumCover() {
         const rgbColor = `rgb(${red},${green},${blue})`;
         // border color and background color is darker than the background color
         const backgroundColor = `rgb(${red - 25},${green - 25},${blue - 25})`
-        const borderColor = `rgb(${red + 2},${green + 2},${blue + 2})`;
+        const borderColor = `rgb(${red + 5},${green + 5},${blue + 5})`;
         const textContrastColor = getContrastColor(rgbColor);
         const sidebarmen = document.getElementsByClassName("sidebarmen")[0];
 
@@ -1277,6 +1292,14 @@ audio.addEventListener("timeupdate", function() {
 
 
 // load the songs
+document.getElementById("volumeIcon").addEventListener("click", function() {
+    var volumeSlider = document.getElementById("volume");
+    if (volumeSlider.style.display === "none" || volumeSlider.style.display === "") {
+        volumeSlider.style.display = "block";
+    } else {
+        volumeSlider.style.display = "none";
+    }
+});
 
 document.getElementById('hideExplicitCheckbox').addEventListener('change', (event) => {
     localStorage.setItem('hideExplicit', event.target.checked ? 'true' : 'false');
@@ -1363,7 +1386,13 @@ fetch('json/songs.json')
             const imageSize = getSelectedSize(); // Call a function to get the selected size
             albumButton.innerHTML = `<img src="${album.cover}" alt="${album.album}" class="album-${imageSize}">`;
             albumButton.onclick = () => albumsec(albumIndex);
-            songSelector.appendChild(albumButton);
+            // Before the forEach loop that processes albums
+            const albumContainer = document.createElement('div');
+            albumContainer.className = 'album-container';
+            songSelector.appendChild(albumContainer);
+                    
+            // Inside the forEach loop, change appending to albumContainer
+            albumContainer.appendChild(albumButton);
 
     
             // if "explicit": "true" hide the album and if localstorage is set to hide explicit albums hide them but hide them is set to true

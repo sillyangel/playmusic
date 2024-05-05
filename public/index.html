@@ -188,7 +188,8 @@
             <button aria-label="Back" onclick="previousTrack()"><i class="fas fa-backward"></i></button>
             <button aria-label="Play/Pause" id="playbuttonthung" onclick="playPause()"><i class="fas fa-play"></i></button>
             <button aria-label="Skip Track" onclick="skipTrack()"><i class="fas fa-forward"></i></button>
-            <input type="range" id="volume" min="0" max="1" step="0.01">
+            <button id="volumeIcon"><i class="fas fa-volume-up"></i></button>
+            <input type="range" id="volume" min="0" max="1" step="0.01" style="display: none;">
             <div id="songTime">0:00</div>
             <progress id="progress" value="0" max="100" onclick="seek(event, 'progress')"></progress>
             <div id="songDuration">0:00</div>
@@ -202,7 +203,7 @@
             <div class="album-cover">
               <img id="albumCover" src="./assets/nonealbum.png" alt="Album Cover" width="500px" height="500px">
             </div>
-            <div class="trackandartiststuff">
+            <div class="trackandartiststuff" style="margin-right: 13.2;">
             <div class="currentTrack2"> </div>
             <div class="currentartist2" style="font-size: 20px; align-self:flex-start;" >Kanye West</div>
             </div>

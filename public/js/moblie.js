@@ -934,17 +934,6 @@ try {
         localStorage.setItem("Trackindex", currentTrackIndex);
         localStorage.setItem("CurrentAlbum", currentAlbum);
 }
-    function w() {
-        for (let album in audioTracks) {
-            for (let i = 0; i < audioTracks[album].length; i++) {
-                let trackPath = audioTracks[album][i];
-                let url = "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/" + album + "/" + trackPath;
-                let request = new XMLHttpRequest();
-                request.open('HEAD', url, false);
-                request.send();
-            }
-        }
-    }
     function playPause() {
         if (audio.paused) {
             audio.play();
@@ -1101,12 +1090,12 @@ try {
     
         // Loop through each element with class "currentTrack" and update its content
         currentTrackElements.forEach(function(element) {
-            element.textContent = artist + " - " + track;
+            element.textContent = track + " - " + artist;
         });
     
         // Loop through each element with class "currentTrack2" and update its content
         currentTrack2Elements.forEach(function(element) {
-            element.textContent = artist + " - " + track;
+            element.textContent = track + " - " + artist;
         });
     }
     
