@@ -1,76 +1,69 @@
 
 try {
     var albums = [
-        { artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/tylerthecreator/wolf/albumcover.png" },
-        { artist: "Tyler, The Creator", album: "Flower Boy", folder: "tylerthecreator/flowerboy", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/tylerthecreator/flowerboy/albumcover.png" },
-        { artist: "Tyler, The Creator", album: "Igor", folder: "tylerthecreator/igor", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/tylerthecreator/igor/igorcover.png" },
-        { artist: "Tyler, The Creator", album: "Cherry Bomb", folder: "tylerthecreator/cherrybomb", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/tylerthecreator/cherrybomb/cherrybomb.png" },
-        { artist: "Tyler, The Creator", album: "Goblin", folder: "tylerthecreator/goblin", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/tylerthecreator/goblin/Goblincover.png" },
-        { artist: "Tyler, The Creator", album: "Bastard", folder: "tylerthecreator/bas", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/tylerthecreator/bas/bas.png" },
-        { artist: "Arctic Monkeys", album: "AM", folder: "arcticmonkeys/am", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/arcticmonkeys/am/albumcover.jpg"},
-        { artist: "Arctic Monkeys", album: "Humbug", folder: "arcticmonkeys/humbug", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/arcticmonkeys/humbug/albumcover.jpg"},
-        { artist: "Arctic Monkeys", album: "WPSIATWIN", folder: "arcticmonkeys/wpsiatwin", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/arcticmonkeys/wpsiatwin/albumcover.jpg"},
-        { artist: "Arctic Monkeys", album: "Favourite Worst Nightmare", folder: "arcticmonkeys/fwn", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/arcticmonkeys/fwn/albumcover.jpg"},
-        { artist: "Arctic Monkeys", album: "Suck It and See", folder: "arcticmonkeys/sias", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/arcticmonkeys/sias/albumcover.jpg"},
-        { artist: "Arctic Monkeys", album: "Tranquility Base Hotel & Casino", folder: "arcticmonkeys/tbhc", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/arcticmonkeys/tbhc/albumcover.png"},
-        { artist: "Arctic Monkeys", album: "The Car", folder: "arcticmonkeys/car", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/arcticmonkeys/car/albumcover.jpg"},
-        { artist: "Wallows", album: "Nothing Happens", folder: "wallows/nonthinghappens", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/wallows/nonthinghappens/albumcover.png"},
-        { artist: "Melanie Martinez", album: "Crybaby", folder: "melanie/crybaby", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/melanie/crybaby/albumcover.png"},
-        { artist: "Melanie Martinez", album: "K-12", folder: "melanie/k12", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/melanie/k12/albumcover.png"},
-        { artist: "Melanie Martinez", album: "Portals", folder: "melanie/portals", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/melanie/portals/albumcover.png"},
-        { artist: "The weeknd", album: "Kiss Land", folder: "theweekend/kissland", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/theweekend/kissland/albumcover.png"},
-        { artist: "The weeknd", album: "Beauty Behind the Madness", folder: "theweekend/bbtm", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/theweekend/bbtm/albumcover.png"},
-        { artist: "The weeknd", album: "starboy", folder: "theweekend/starboy", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/theweekend/starboy/albumcover.png"},
-        { artist: "The weeknd", album: "Afterhours", folder: "theweekend/afterhours", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/theweekend/afterhours/albumcover.png"},
-        { artist: "The weeknd", album: "Dawnfm", folder: "theweekend/dawnfm", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/theweekend/dawnfm/albumcover.png"},
-        { artist: "Laufey", album: "Bewitched", folder: "laufey/bewitched", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/laufey/bewitched/albumcover.png"},
-        { artist: "Laufey", album: "Everything I know about love", folder: "laufey/eikal", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/laufey/eikal/albumcover.png"},
-        { artist: "Roddy Ricch", album: "life lives fast", folder: "rr/llf", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/rr/llf/albumcover.png"},
-        { artist: "Roddy Ricch", album: "Please excuse me for being antisocial", folder: "rr/pemfba", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/rr/pemfba/albumcover.png"},
-        { artist: "Lemon Demon", album: "Spirit phone", folder: "ld/sp", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/ld/sp/albumcover.png"},
-        { artist: "Lemon Demon", album: "Clown", folder: "ld/cc", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/ld/cc/albumcover.jpg"},
-        { artist: "Kanye West", album: "My Beautiful Dark Twisted Fantasy", folder: "kanyewest/mbdtf", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/mbdtf/albumcover.jpg"},
-        { artist: "Kanye West", album: "Yeezus", folder: "kanyewest/yeezus", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/yeezus/Cover.jpg"},
-        { artist: "Kanye West", album: "Ye", folder: "kanyewest/ye", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/ye/Cover.jpg" },
-        { artist: "Kanye West", album: "Jesus Is King", folder: "kanyewest/jesusisking", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/jesusisking/Cover.jpg" },
-        { artist: "Kanye West", album: "Donda", folder: "kanyewest/donda", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/donda/cover.jpg" },
-        { artist: "Kanye West", album: "Donda 2", folder: "kanyewest/donda2", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kanyewest/donda2/" },
-        { artist: "Drake", album: "Thank Me Later", folder: "drake/tml", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/tml/albumcover.webp"},
-        { artist: "Drake", album: "Take Care", folder: "drake/tc", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/tc/albumcover.webp" },
-        { artist: "Drake", album: "Nothing Was the Same", folder: "drake/nwts", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/nwts/albumcover.webp "},
-        { artist: "Drake", album: "Views", folder: "drake/views", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/views/albumcover.webp "},
-        { artist: "Drake", album: "Scorpion", folder: "drake/scorp", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/scorp/albumcover.webp "},
-        { artist: "Drake", album: "Certified Lover Boy", folder: "drake/clb", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/clb/albumcover.webp "},
-        { artist: "Drake", album: "Honestly, Nevermind", folder: "drake/honnvm", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/honnvm/albumcover.webp "},
-        { artist: "Drake", album: "Her Loss", folder: "drake/herloss", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/herloss/albumcover.webp "},
-        { artist: "Drake", album: "For All the Dogs", folder: "drake/fatd", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/drake/fatd/albumcover.webp "},
-        { artist: "Frank Ocean", album: "Channel Orange", folder: "franko/co", image:"https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/franko/co/albumcover.webp" },
-        { artist: "Frank Ocean", album: "Blonde", folder: "franko/blonde", image:"https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/franko/blonde/albumcover.webp" },
-        { artist: "Heaven Pierce Her", album: "Zen, or the  Means Without Ends", folder: "hph/zotmwe", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/hph/zotmwe/albumcover.webp" },
-        { artist: "Heaven Pierce Her", album: "Flowerworks", folder: "hph/flowerworks", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/hph/flowerworks/albumcover.webp" },
-        { artist: "Heaven Pierce Her", album: "Ultrakill: Inf Hyperdeath", folder: "hph/ukih", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/hph/ukih/albumcover.webp" },
-        { artist: "Heaven Pierce Her", album: "Ultrakill: IMperfect Hatred", folder: "hph/ukih2", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/hph/ukih2/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "With Ears to See and Eyes to Hear", folder: "kq/wetsaeth", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kq/wetsaeth/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "Let's Cheers to This", folder: "kq/lctt", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kq/lctt/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "Feel", folder: "kq/fe", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kq/fe/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "Madness", folder: "kq/mad", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kq/mad/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "Gossip", folder: "kq/gos", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kq/gos/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "How It Feels to Be Lost", folder: "kq/hif", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kq/hif/albumcover.webp" },
-        { artist: "Sleeping with Siren", album: "Commplete Collapse", folder: "kq/cc", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kq/cc/albumcover.webp" },
-        { artist: "Pierce The Veil", album: "A Flair for the Dramatic", folder: "ptv/afftd", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/ptv/afftd/albumcover.webp" },
-        { artist: "Pierce The Veil", album: "Selfish Machines", folder: "ptv/sm", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/ptv/sm/albumcover.webp" },
-        { artist: "Pierce The Veil", album: "Collide with the Sky", folder: "ptv/cwts", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/ptv/cwts/albumcover.webp" },
-        { artist: "Pierce The Veil", album: "Misadventures", folder: "ptv/madv", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/ptv/madv/albumcover.webp" },
-        { artist: "Pierce The Veil", album: "The Jaws of Life", folder: "ptv/tjofl", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/ptv/tjofl/albumcover.webp" },
-        { artist: "The Smiths", album: "Smiths", folder: "smiths/tsm", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/smiths/tsm/albumcover.webp" },
-        { artist: "The Smiths", album: "Meat is Murder", folder: "smiths/mim", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/smiths/mim/albumcover.webp" },
-        { artist: "The Smiths", album: "The Queen is Dead", folder: "smiths/tqid", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/smiths/tqid/albumcover.webp" },
-        { artist: "The Smiths", album: "Strangeways, Here We Come", folder: "smiths/swhwc", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/smiths/swhwc/albumcover.webp" },
-        { artist: "Billie Eilish", album: "Happy Than Ever", folder: "be/hte", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/be/hte/albumcover.jpg" },
-        { artist: "SZA", album: "SOS", folder: "sza/sos", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/sza/sos/albumcover.jpg" },
-        { artist: "Kendrick Lamar", album: "Mr morale and the big steppers", folder: "kenla/mmtbs", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kenla/mmtbs/albumcover.jpg" },
-        { artist: "Kendrick Lamar", album: "To a pimp a butterfly", folder: "kenla/tpabf", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs/kenla/tpabf/albumcover.jpg" },
-    //  { artist: "", album: "", folder: "/", image: "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/songs///albumcover.webp" },
+        { database: 1, year: "", artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "albumcover.webp" },
+        { database: 1, year: "", artist: "Tyler, The Creator", album: "Flower Boy", folder: "tylerthecreator/flowerboy", image: "albumcover.webp" },
+        { database: 1, year: "", artist: "Tyler, The Creator", album: "Igor", folder: "tylerthecreator/igor", image: "igorcover.webp" },
+        { database: 1, year: "", artist: "Tyler, The Creator", album: "Cherry Bomb", folder: "tylerthecreator/cherrybomb", image: "cherrybomb.webp" },
+        { database: 1, year: "", artist: "Tyler, The Creator", album: "Goblin", folder: "tylerthecreator/goblin", image: "Goblincover.webp" },
+        { database: 1, year: "", artist: "Arctic Monkeys", album: "AM", folder: "arcticmonkeys/am", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Arctic Monkeys", album: "Humbug", folder: "arcticmonkeys/humbug", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Arctic Monkeys", album: "WPSIATWIN", folder: "arcticmonkeys/wpsiatwin", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Arctic Monkeys", album: "Favourite Worst Nightmare", folder: "arcticmonkeys/fwn", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Arctic Monkeys", album: "Suck It and See", folder: "arcticmonkeys/sias", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Arctic Monkeys", album: "Tranquility Base Hotel & Casino", folder: "arcticmonkeys/tbhc", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Arctic Monkeys", album: "The Car", folder: "arcticmonkeys/car", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Wallows", album: "Nothing Happens", folder: "wallows/nonthinghappens", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Melanie Martinez", album: "Crybaby", folder: "melanie/crybaby", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Melanie Martinez", album: "K-12", folder: "melanie/k12", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Melanie Martinez", album: "Portals", folder: "melanie/portals", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "The weeknd", album: "Kiss Land", folder: "theweekend/kissland", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "The weeknd", album: "Beauty Behind the Madness", folder: "theweekend/bbtm", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "The weeknd", album: "starboy", folder: "theweekend/starboy", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "The weeknd", album: "Afterhours", folder: "theweekend/afterhours", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "The weeknd", album: "Dawnfm", folder: "theweekend/dawnfm", image: "albumcover.png"},
+        { database: 1, year: "", artist: "Laufey", album: "Bewitched", folder: "laufey/bewitched", image: "albumcover.png"},
+        { database: 2, year: "", artist: "Laufey", album: "Everything I Know About Love", folder: "laufey/eikal", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Roddy Ricch", album: "Live Life Fast", folder: "rr/llf", image: "albumcover.png"},
+        { database: 1, year: "", artist: "Roddy Ricch", album: "Please Excuse Me for Being Antisocial", folder: "rr/pemfba", image: "albumcover.png"},
+        { database: 1, year: "", artist: "Lemon Demon", album: "Spirit phone", folder: "ld/sp", image: "albumcover.png"},
+        { database: 1, year: "", artist: "Lemon Demon", album: "Clown", folder: "ld/cc", image: "albumcover.jpg"},
+        { database: 2, year: "", artist: "Kanye West", album: "The College Dropout", folder: "kanyewest/tcd", image: "albumcover.jpg"},
+        { database: 2, year: "", artist: "Kanye West", album: "Late Registration", folder: "kanyewest/lr", image: "albumcover.webp"},
+        { database: 2, year: "", artist: "Kanye West", album: "Graduation", folder: "kanyewest/grad", image: "albumcover.webp"},
+        { database: 2, year: "", artist: "Kanye West", album: "808s & Heartbreak", folder: "kanyewest/808s", image: "albumcover.png"},
+        { database: 1, year: "", artist: "Kanye West", album: "My Beautiful Dark Twisted Fantasy", folder: "kanyewest/mbdtf", image: "albumcover.jpg"},
+        { database: 2, year: "", artist: "Kanye West", album: "Watch the Throne", folder: "kanyewest/wtt", image: "albumcover.webp"},
+        { database: 2, year: "", artist: "Kanye West", album: "Cruel Summer", folder: "kanyewest/cs", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Kanye West", album: "Yeezus", folder: "kanyewest/yeezus", image: "Cover.jpg"},
+        { database: 3, year: "", artist: "Kanye West", album: "The Life of Pablo", folder: "kanyewest/tlop", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Kanye West", album: "Ye", folder: "kanyewest/ye", image: "Cover.jpg" },
+        { database: 2, year: "", artist: "Kanye West", album: "Kids See Ghosts", folder: "kanyewest/ksg", image: "albumcover.png"},
+        { database: 1, year: "", artist: "Kanye West", album: "Jesus Is King", folder: "kanyewest/jesusisking", image: "Cover.jpg" },
+        { database: 1, year: "", artist: "Kanye West", album: "Donda", folder: "kanyewest/donda", image: "cover.webp" },
+        { database: 1, year: "", artist: "Kanye West", album: "Donda 2", folder: "kanyewest/donda2", image: "albumcover.webp" },
+        { database: 2, year: "", artist: "Kanye West", album: "Vultures 1", folder: "kanyewest/vult1", image: "albumcover.webp"},
+        { database: 2, year: "", artist: "Kanye West", album: "Vultures 2", folder: "kanyewest/vult2", image: "albumcover.webp"},
+        { database: 2, year: "", artist: "Kanye West", album: "Vultures 3", folder: "kanyewest/vult3", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Drake", album: "Thank Me Later", folder: "drake/tml", image: "albumcover.webp"},
+        { database: 1, year: "", artist: "Drake", album: "Take Care", folder: "drake/tc", image: "albumcover.webp" },
+        { database: 1, year: "", artist: "Drake", album: "Nothing Was the Same", folder: "drake/nwts", image: "albumcover.webp "},
+        { database: 1, year: "", artist: "Drake", album: "Views", folder: "drake/views", image: "albumcover.webp "},
+        { database: 1, year: "", artist: "Drake", album: "Scorpion", folder: "drake/scorp", image: "albumcover.webp "},
+        { database: 1, year: "", artist: "Drake", album: "Certified Lover Boy", folder: "drake/clb", image: "albumcover.webp "},
+        { database: 1, year: "", artist: "Drake", album: "Honestly, Nevermind", folder: "drake/honnvm", image: "albumcover.webp "},
+        { database: 1, year: "", artist: "Drake", album: "Her Loss", folder: "drake/herloss", image: "albumcover.webp "},
+        { database: 1, year: "", artist: "Drake", album: "For All the Dogs", folder: "drake/fatd", image: "albumcover.webp "},
+        { database: 1, year: "", artist: "Frank Ocean", album: "Channel Orange", folder: "franko/co", image: "albumcover.webp" },
+        { database: 1, year: "", artist: "Frank Ocean", album: "Blonde", folder: "franko/blonde", image: "albumcover.webp" },
+        { database: 2, year: "", artist: "Billie Eilish", album: "When We All Fall Asleep, Where Do We Go?", folder: "be/wwafawdwg", image: "albumcover.png" },
+        { database: 1, year: "", artist: "Billie Eilish", album: "Happier Than Ever", folder: "be/hte", image: "albumcover.jpg" },
+        { database: 2, year: "2024", artist: "Billie Eilish", album: "Hit Me Hard and Soft", folder: "be/hmhas", image: "albumcover.png" },
+        { database: 1, year: "", artist: "SZA", album: "SOS", folder: "sza/sos", image: "albumcover.jpg" },
+        { database: 1, year: "", artist: "Kendrick Lamar", album: "Mr. Morale & the Big Steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
+        { database: 1, year: "", artist: "Kendrick Lamar", album: "To Pimp a Butterfly", folder: "kenla/tpabf", image: "albumcover.jpg" },
+        { database: 2, year: "", artist: "Billie Holiday", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"}
+    //  { database: , artist: "", album: "", folder: "/", image: "webp" },
         // Add more albums here
     ];
     var audioTracks = {
@@ -140,21 +133,19 @@ try {
             "13 OKAGA, CA.mp3"
         ],
         "tylerthecreator/goblin": [
-          "01 Goblin.mp3",
-          "02 Yonkers.mp3",
-          "03 Radicals.mp3",
-          "04 She (feat. Frank Ocean).mp3",
-          "05 Transylvania.mp3",
-          "06 Nightmare.mp3",
-          "07 Tron Cat.mp3",
-          "08 Her.mp3",
-          "13 Window (feat. Domo Genesis, Hodgy Beats, Frank Ocean & Mike G).mp3",
-          "14 AU79.mp3",
-          "15 Golden.mp3",
-          "2-01 Burger (feat. Hodgy Beats).mp3",
-          "2-03 Steak Sauce.mp3",
-        ],
-        "tylerthecreator/bas": [
+            "01 Goblin.mp3",
+            "02 Yonkers.mp3",
+            "03 Radicals.mp3",
+            "04 She (feat. Frank Ocean).mp3",
+            "05 Transylvania.mp3",
+            "06 Nightmare.mp3",
+            "07 Tron Cat.mp3",
+            "08 Her.mp3",
+            "13 Window (feat. Domo Genesis, Hodgy Beats, Frank Ocean & Mike G).mp3",
+            "14 AU79.mp3",
+            "15 Golden.mp3",
+            "2-01 Burger (feat. Hodgy Beats).mp3",
+            "2-03 Steak Sauce.mp3",
         ],
         "arcticmonkeys/am": [
             "01 - Do I Wanna Know.mp3",
@@ -184,61 +175,53 @@ try {
             "11_red right hand(2)(2).mp3"
         ],
         "arcticmonkeys/wpsiatwin": [
-          "01 The View from the Afternoon.mp3",
-          "02 I Bet You Look Good on the Dancefloor.mp3",
-          "03 Fake Tales of San Francisco.mp3",
-          "04 Dancing Shoes.mp3",
-          "05 You Probably Couldn't See for the Lights But You Were Staring.mp3",
-          "06 Still Take You Home.mp3",
-          "07 Riot Van.mp3",
-          "08 Red Light Indicates Doors Are Secured.mp3",
-          "09 Mardy Bum.mp3",
-          "10 Perhaps Vampires Is a Bit Strong But.mp3",
-          "11 When the Sun Goes Down.mp3",
-          "12 From the Ritz to the Rubble.mp3",
-          "13 A Certain Romance.mp3",
+            "01 The View from the Afternoon.mp3",
+            "02 I Bet You Look Good on the Dancefloor.mp3",
+            "03 Fake Tales of San Francisco.mp3",
+            "04 Dancing Shoes.mp3",
+            "05 You Probably Couldn't See for the Lights But You Were Staring.mp3",
+            "06 Still Take You Home.mp3",
+            "07 Riot Van.mp3",
+            "08 Red Light Indicates Doors Are Secured.mp3",
+            "09 Mardy Bum.mp3",
+            "10 Perhaps Vampires Is a Bit Strong But.mp3",
+            "11 When the Sun Goes Down.mp3",
+            "12 From the Ritz to the Rubble.mp3",
+            "13 A Certain Romance.mp3",
         ],
-/*      "arcticmonkeys/fwn": [
-          "01 Brainstorm.mp3",
-          "02 Teddy Picker.mp3",
-          "03 D is For Dangerous.mp3",
-          "04 Balaclava.mp3",
-          "05 Fluorescent Adolescent.mp3",
-          "06 Only Ones Who Know.mp3",
-          "07 Do Me a Favour.mp3",
-          "08 This House Is A Circus.mp3",
-          "09 If You Were There, Beware.mp3",
-          "10 The Bad Thing.mp3",
-          "11 Old Yellow Bricks.mp3",
-          "12 505.mp3",
-       ], */
+        "arcticmonkeys/fwn": [
+            ""
+        ], 
         "arcticmonkeys/sias": [
+            ""
         ],
         "arcticmonkeys/tbhc": [
+            ""
         ],
         "arcticmonkeys/car": [
+            ""
         ],
         "wallows/nonthinghappens": [
-          "Only Friend.mp3",
-          "Treacherous Doctor.mp3",
-          "Sidelines.mp3",
-          "Are You Bored Yet (feat. Clairo).mp3",
-          "Scrawny.mp3",
-          "Ice Cold Pool.mp3",
-          "Worlds Apart.mp3",
-          "What You Like.mp3",
-          "Remember When.mp3",
-          "I_m Full.mp3",
-          "Do Not Wait.mp3"
-      ],
+            "Only Friend.mp3",
+            "Treacherous Doctor.mp3",
+            "Sidelines.mp3",
+            "Are You Bored Yet (feat. Clairo).mp3",
+            "Scrawny.mp3",
+            "Ice Cold Pool.mp3",
+            "Worlds Apart.mp3",
+            "What You Like.mp3",
+            "Remember When.mp3",
+            "I_m Full.mp3",
+            "Do Not Wait.mp3"
+        ],
         "melanie/crybaby": [
-
+            ""
         ],
         "melanie/k12": [
-
+            ""
         ],
         "melanie/portals": [
-
+            ""
         ],
         "theweekend/kissland": [
             "01 - The Weeknd - Professional.mp3",
@@ -343,16 +326,28 @@ try {
             "14 Bewitched.mp3"
         ],
         "laufey/eikal": [
-
+            "01. Fragile.mp3",
+            "02. Beautiful Stranger.mp3",
+            "03. Valentine.mp3",
+            "04. Above The Chinese Restaurant.mp3",
+            "05. Dear Soulmate.mp3",
+            "06. What Love Will Do to You.mp3",
+            "07. I've Never Been In Love Before.mp3",
+            "08. Just Like Chet.mp3",
+            "09. Everything I Know About Love.mp3",
+            "10. Falling Behind.mp3",
+            "11. Hi.mp3",
+            "12. Dance With You Tonight.mp3",
+            "13. Night Light.mp3",
         ],
         "rr/llf": [
-
+            ""
         ],
         "rr/pemfba": [
-
+            ""
         ],
         "ld/sp": [
-
+            ""
         ],
         "ld/cc": [
             "01. Error.mp3",
@@ -370,6 +365,83 @@ try {
             "13. Hyakugojyuuichi 2003.mp3",
             "14. Elsewhere.mp3",
         ],
+        "kanyewest/tcd": [
+            "1. Intro.mp3",
+            "2. We Don't Care.mp3",
+            "3. Graduation Day.mp3",
+            "4. All Falls Down.mp3",
+            "5. I'll Fly Away.mp3",
+            "6. Spaceship.mp3",
+            "7. Jesus Walks.mp3",
+            "8. Never Let Me Down.mp3",
+            "9. Get Them High.mp3",
+            "10. Workout Plan.mp3",
+            "11. The New Workout Plan.mp3",
+            "12. Slow Jams.mp3",
+            "13. Breath In Breath Out.mp3",
+            "14. School Spirit (skit 1).mp3",
+            "15. School Spirit.mp3",
+            "16. School Spirit (skit 2).mp3",
+            "17. Lil Jimmy (skit).mp3",
+            "18. Two Words.mp3",
+            "19. Through The Wire.mp3",
+            "20. Family Business.mp3",
+            "21. Last Call.mp3",
+        
+        ],
+        "kanyewest/lr": [
+            "1. Wake Up Mr. West.mp3",
+            "2. Heard 'Em Say.mp3",
+            "3. Touch The Sky.mp3",
+            "4. Gold Digger.mp3",
+            "5. Skit #1.mp3",
+            "6. Drive Slow.mp3",
+            "7. My Way Home.mp3",
+            "8. Crack Music.mp3",
+            "9. Roses.mp3",
+            "10. Bring Me Down.mp3",
+            "11. Addiction.mp3",
+            "12. Skit #2.mp3",
+            "13. Diamonds From Sierra Leone (Remix).mp3",
+            "14. We Major.mp3",
+            "15. Skit #3.mp3",
+            "16. Hey Mama.mp3",
+            "17. Celebration.mp3",
+            "18. Skit #4 .mp3",
+            "19. Gone.mp3",
+            "20. Diamonds From Sierra Leone (Bonus Track).mp3",
+            "21. Late.mp3",
+        ],
+        "kanyewest/grad": [
+            "1. Good Morning.mp3",
+            "2. Champion.mp3",
+            "3. Stronger.mp3",
+            "4. I Wonder.mp3",
+            "5. Good Life.mp3",
+            "6. Can't Tell Me Nothing.mp3",
+            "7. Barry Bonds.mp3",
+            "8. Drunk and Hot Girls.mp3",
+            "9. Flashing Lights.mp3",
+            "10. Everything I Am.mp3",
+            "11. The Glory.mp3",
+            "12. Homecoming.mp3",
+            "13. Big Brother.mp3",
+            "14. Good Night.mp3",
+        ],
+        "kanyewest/808s": [
+            "1. Say You Will.mp3",
+            "2. Welcome to Heartbreak (feat. Kid Cudi).mp3",
+            "3. Heartless.mp3",
+            "4. Amazing (ft. Young Jeezy ).mp3",
+            "5. Love Lockdown.mp3",
+            "6. Paranoid (feat. Mr Hudson).mp3",
+            "7. RoboCop.mp3",
+            "8. Street Lights.mp3",
+            "9. Bad News.mp3",   
+            "10. See you in my nightmares.mp3",
+            "11. Coldest Winter.mp3",
+            "12. Pinocchio Story.mp3"
+        ],
         "kanyewest/mbdtf": [
             "01. Dark Fantasy.mp3",
             "02. Who Will Survive In America.mp3",
@@ -385,18 +457,57 @@ try {
             "12. Blame Game [feat. John Legend].mp3",
             "13. Lost In The World [feat. Bon Iver].mp3"
         ],
-        "kanyewest/yeezus": [
-          "01 Kanye West - On Sight.mp3",
-          "02 Kanye West - Black Skinhead.mp3",
-          "03 Kanye West - I Am A God.mp3",
-          "04 Kanye West - New Slaves.mp3",
-          "05 Kanye West - Hold My Liquor.mp3",
-          "06 Kanye West - I'm In It.mp3",
-          "07 Kanye West - Blood On The Leaves.mp3",
-          "08 Kanye West - Guilt Trip.mp3",
-          "09 Kanye West - Send It Up.mp3",
-          "10 Kanye West - Bound 2.mp3"
+        "kanyewest/wtt": [
+            ""
         ],
+        "kanyewest/cs": [
+            "1. To The World.mp3",
+            "2. Clique.mp3",
+            "3. Mercy.1.mp3",
+            "4. New God Flow.1.mp3",
+            "5. The Morning.mp3",
+            "6. Cold.1.mp3",
+            "7. Higher.mp3",
+            "8. Sin City.mp3",
+            "9. The One.mp3",
+            "10. Creepers.mp3",
+            "11. Bliss.mp3",
+            "12. Don't Like.1.mp3",
+        ],
+        "kanyewest/yeezus": [
+            "01 Kanye West - On Sight.mp3",
+            "02 Kanye West - Black Skinhead.mp3",
+            "03 Kanye West - I Am A God.mp3",
+            "04 Kanye West - New Slaves.mp3",
+            "05 Kanye West - Hold My Liquor.mp3",
+            "06 Kanye West - I'm In It.mp3",
+            "07 Kanye West - Blood On The Leaves.mp3",
+            "08 Kanye West - Guilt Trip.mp3",
+            "09 Kanye West - Send It Up.mp3",
+            "10 Kanye West - Bound 2.mp3"
+        ],
+        "kanyewest/tlop": [
+            "1. Ultralight Beam - Kanye West.mp3",
+            "2. Father Stretch My Hands Pt. 1 - Kanye West.mp3",
+            "3. Pt. 2 - Kanye West.mp3",
+            "4. Famous - Kanye West.mp3",
+            "5. Feedback - Kanye West.mp3",
+            "6. Low Lights - Kanye West.mp3",
+            "7. Highlights - Kanye West.mp3",
+            "8. Freestyle 4 - Kanye West.mp3",
+            "9. I Love Kanye - Kanye West.mp3",
+            "10. Waves - Kanye West.mp3",
+            "11. FML - Kanye West.mp3",
+            "12. Real Friends - Kanye West.mp3",
+            "13. Wolves - Kanye West.mp3",
+            "14. Frank's Track - Kanye West.mp3",
+            "15. Siiiiiiiiilver Surffffeeeeer Intermission - Kanye West.mp3",
+            "16. 30 Hours - Kanye West.mp3",
+            "17. No More Parties In LA - Kanye West.mp3",
+            "18. Facts (Charlie Heat Version) - Kanye West.mp3",
+            "19. Fade - Kanye West.mp3",
+            "20. Saint Pablo - Kanye West.mp3",
+        ],  
         "kanyewest/ye": [
             "01. I Thought About Killing You.mp3",
             "02. Yikes.mp3",
@@ -405,6 +516,15 @@ try {
             "05. No Mistakes.mp3",
             "06. Ghost Town.mp3",
             "07. Violent Crimes.mp3"
+        ],
+        "kanyewest/ksg": [
+            "1. Feel The Love.mp3",
+            "2. Fire.mp3",
+            "3. 4th Dimension.mp3",
+            "4.Freeee.mp3",
+            "5. Reborn.mp3",
+            "6. Kids See Ghosts.mp3",
+            "7. Cudi Montage.mp3"        
         ],
         "kanyewest/jesusisking": [
             "01 Every Hour (feat. Sunday Service.mp3",
@@ -466,6 +586,30 @@ try {
             "15 City of Gods (with Fivio Foreign _ Alicia Keys).mp3",
             "16 First Time in a Long Time (feat. Soulja Boy).mp3"
         ],
+        "kanyewest/vult1": [
+            "01 STARS.mp3",
+            "02 KEYS TO MY LIFE.mp3",
+            "03 PAID.mp3",
+            "04 TALKING.mp3",
+            "05 BACK TO ME.mp3",
+            "06 HOODRAT.mp3",
+            "07 DO IT.mp3",
+            "08 PAPERWORK.mp3",
+            "09 BURN.mp3",
+            "10 FUK SUMN.mp3",
+            "11 VULTURES.mp3",
+            "12 CARNIVAL.mp3",
+            "13 BEG FORGIVENESS.mp3",
+            "14 GOOD DON'T DIE.mp3",
+            "15 PROBLEMATIC.mp3",
+            "16 KING.mp3",
+        ],
+        "kanyewest/vult2": [
+            ""
+        ],
+        "kanyewest/vult3": [
+            ""
+        ],
         "drake/tml": [
             "01 Fireworks (Ft. Alicia Keys).mp3",
             "02 Karaoke.mp3",
@@ -483,7 +627,7 @@ try {
             "14 Thank Me Now.mp3"
         ],
         "drake/tc": [
-
+            ""
         ],
         "drake/nwts": [
             "01 - Drake - Tuscan Leather.mp3",
@@ -576,7 +720,7 @@ try {
             "21. The Remorse.mp3"
         ],
         "drake/honnvm": [
-
+            ""
         ],
         "drake/herloss": [
             "01. Rich Flex.mp3",
@@ -597,7 +741,7 @@ try {
             "16. I Guess It’s Fuck Me.mp3",
         ],
         "drake/fatd": [
-
+            ""
         ],
         "franko/co": [
             "01 Start.mp3",
@@ -636,45 +780,46 @@ try {
             "15 Seigfried.mp3",
             "16 Godspeed.mp3",
             "17 Futura Free.mp3",
+        ],   
+        "be/wwafawdwg": [
+            "!!!!!!!.mp3",
+            "bad guy.mp3",
+            "xanny.mp3",
+            "you should see me in a crown.mp3",
+            "all the good girls go to hell.mp3",
+            "wish You Were Gay.mp3",
+            "when the party's over.mp3",
+            "8.mp3",
+            "my strange addiction.mp3",
+            "bury a friend.mp3",
+            "ilomilo.mp3",
+            "listen before i go.mp3",
+            "i love you.mp3",
+            "goodbye.mp3"	
         ],
-        "hph/zotmwe": [],
-        "hph/flowerworks": [],
-        "hph/ukih": [],
-        "hph/ukih2": [],
-        "kq/wetsaeth": [],
-        "kq/lctt": [],
-        "kq/fe": [],
-        "kq/mad": [],
-        "kq/gos": [],
-        "kq/hif": [],
-        "kq/cc": [],
-        "kq/cc": [],
-        "ptv/afftd": [],
-        "ptv/sm": [],
-        "ptv/cwts": [],
-        "ptv/madv": [],
-        "ptv/tjofl": [],
-        "smiths/tsm": [],
-        "smiths/mim": [],
-        "smiths/tqid": [],
-        "smiths/swhwc": [],
         "be/hte": [
-            "01. getting older.mp3",
-            "02. i didn't change my number(explicit).mp3",
-            "03. billie bossa nova.mp3",
+            "01. Getting Older.mp3",
+            "02. I Didn't Change My Number(Explicit).mp3",
+            "03. Billie Bossa Nova.mp3",
             "04. my future.mp3",
-            "05. oxytocin.mp3",
-            "06. goldwing.mp3",
-            "07. lost cause(explicit).mp3",
-            "08. halley's comet.mp3",
-            "09. not my responsibility.mp3",
-            "10. overheated(explicit).mp3",
-            "11. everybody dies.mp3",
-            "12. your power.mp3",
-            "13. nda(explicit).mp3",
-            "14. therefore i am.mp3",
-            "15. happier than ever(explicit).mp3",
-            "16. male fantasy.mp3"
+            "05. Oxytocin.mp3",
+            "06. GOLDWING.mp3",
+            "07. Lost Cause(Explicit).mp3",
+            "08. Halley's Comet.mp3",
+            "09. Not My Responsibility.mp3",
+            "10. OverHeated(Explicit).mp3",
+            "11. Everybody Dies.mp3",
+            "12. Your Power.mp3",
+            "13. NDA(Explicit).mp3",
+            "14. Therefore I Am.mp3",
+            "15. Happier Than Ever(Explicit).mp3",
+            "16. Male Fantasy.mp3",
+        ],
+        "be/hmhas": [
+            ""
+        ],
+        "sza/sos": [
+            ""
         ],
         "kenla/mmtbs": [
             "01. United In Grief.mp3",
@@ -714,6 +859,18 @@ try {
             "15. i.mp3",
             "16. Mortal Man.mp3"
         ],
+        "billieh/gbtc": [
+            "1. God Bless The Child.mp3",
+            "2. Lover Man.mp3",
+            "3. That Ole Devil Called Love.mp3",
+            "4. Them There Eyes.mp3",
+            "5. You're My Thrill.mp3",
+            "6. Don't Explain.mp3",
+            "7. Crazy He Calls Me.mp3",
+            "8. Ain't Nobody's Business If I Do.mp3",
+            "9. Keeps On A Rainin.mp3",
+            "10. The Blues Are Brewin'.mp3",
+        ],
     };
     var audio = document.getElementById("myAudio");
     var playButton = document.getElementById("playbuttonthung");
@@ -723,35 +880,60 @@ try {
     var currentAlbum = "tylerthecreator/wolf"
     var currentAlbumIndex = 0;
     var audiotimern;
-    if (localStorage.getItem("Albumindex") !== null) {
-        currentAlbumIndex = localStorage.getItem("Albumindex");
-    }
-    
-    if (localStorage.getItem("Trackindex") !== null) {
-        currentTrackIndex = localStorage.getItem("Trackindex");
-    }
-    
-    if (localStorage.getItem("CurrentAlbum") !== null) {
-        currentAlbum = localStorage.getItem("CurrentAlbum");
-    }
-    
-    if (localStorage.getItem("timerforaudio") !== null) {
-        audiotimern = localStorage.getItem("timerforaudio");
-    }
+    let selectedDatabase;
+    let DatabaseDomain;
+    let selectedDatabaseimage;
+    let DatabaseimageDomain;
+
+    if (localStorage.getItem("Albumindex") !== null) {currentAlbumIndex = localStorage.getItem("Albumindex");}
+    if (localStorage.getItem("Trackindex") !== null) {currentTrackIndex = localStorage.getItem("Trackindex");}
+    if (localStorage.getItem("CurrentAlbum") !== null) {currentAlbum = localStorage.getItem("CurrentAlbum");}
+    if (localStorage.getItem("timerforaudio") !== null) {audiotimern = localStorage.getItem("timerforaudio");}
+
     var currentTrackElements = document.querySelectorAll(".currentTrack");
     var currentTrack2Elements = document.querySelectorAll(".currentTrack2");
     
-    function loadTrack() {
+    const databases = [
+        { id: 0, url: "https://playmusicstorage.web.app/" },
+        { id: 1, url: "https://playmusicstorage.web.app/" },
+        { id: 2, url: "https://playstorage2.web.app/" },
+        { id: 3, url: "https://playstorage2.web.app/"}
+    ];
+    const databasesimages = [
+        { id: 0, url: "https://playmusicstorage.web.app/" },
+        { id: 1, url: "https://playmusicstorage.web.app/" },
+        { id: 2, url: "https://playstorage2.web.app/" },
+        { id: 3, url: "https://playstorage2.web.app/"}
+    ];
+    function fetchDatabase() {
+        selectedDatabase = null;
+        DatabaseDomain = null;
+        selectedDatabase = databases.find(db => db.id === albums[currentAlbumIndex].database);
+         DatabaseDomain = selectedDatabase.url;
+    // You can add additional database fetching logic here if needed
+    }
+    function fetchDatabaseImages(item) {
+        selectedDatabaseimage = null;
+        DatabaseimageDomain = null;
+        selectedDatabaseimage = databasesimages.find(db => db.id === albums[item].database);
+        DatabaseimageDomain = selectedDatabaseimage.url;
+    }
+    fetchDatabase();
+
+    function loadTrack() {      
+        fetchDatabase();  
         var trackPath = audioTracks[currentAlbum][currentTrackIndex];
-        audio.src = "https://8080-sillyangel-playcdn-1hnaf6evqy6.ws-us108.gitpod.io/" + "songs/" + currentAlbum + "/" + trackPath;
+
+        audio.src = DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath;
         audio.load();
         updateTrackText();
         updateAlbumCover();
+        
         mediathinggy();
         localStorage.setItem("Albumindex", currentAlbumIndex);
         localStorage.setItem("Trackindex", currentTrackIndex);
         localStorage.setItem("CurrentAlbum", currentAlbum);
-    }
+}
     function w() {
         for (let album in audioTracks) {
             for (let i = 0; i < audioTracks[album].length; i++) {
@@ -808,15 +990,49 @@ try {
     }
     
     // Modify the updateAlbumCover function
+
+    function getContrastColor(rgbColor) {
+        const [red, green, blue] = rgbColor.match(/\d+/g);
+        const brightness = (red * 299 + green * 587 + blue * 114) / 1000;
+        return brightness >= 195 ? "#222222" : "white";
+    }
+
     function updateAlbumCover() {
-        // Get all elements with the same ID "albumCover"
-        var albumCovers = document.querySelectorAll('[id="albumCover"]');
-        var selectedAlbum = albums[currentAlbumIndex];
+        const selectedAlbum = DatabaseDomain + "songs/" + currentAlbum + "/" +albums[currentAlbumIndex].image;
+        const image = new Image();
+        image.crossOrigin = "Anonymous";
+        image.src = selectedAlbum,
+        document.querySelectorAll('[id="albumCover"]').forEach(element => element.src = selectedAlbum);
     
-        // Loop through each element with the same ID and update its src attribute
-        albumCovers.forEach(function(element) {
-            element.src = selectedAlbum.image;
-        });
+        image.onload = function() {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.width = image.width;
+            canvas.height = image.height;
+            context.drawImage(image, 0, 0, image.width, image.height);
+    
+            const [red, green, blue] = context.getImageData(0, 0, canvas.width, canvas.height).data;
+            const audioControls = document.querySelector('[id="playerfull"]');
+            const audioControlsMini = document.querySelector(".audio-controls");
+            const rgbColor = `rgb(${red},${green},${blue})`;
+            // border color and background color is darker than the background color
+            const backgroundColor = `rgb(${red - 35},${green - 35},${blue - 35})`
+            const borderColor = `rgb(${red + 2},${green + 2},${blue + 2})`;
+            const textContrastColor = getContrastColor(rgbColor);
+    
+                audioControls.style.backgroundColor = rgbColor;
+                audioControls.style.color = textContrastColor;
+    
+    
+                // color all i which are all fontawesome icons to the contrast color
+                document.querySelectorAll('i').forEach(element => element.style.color = textContrastColor);
+                document.body.style.backgroundColor = backgroundColor;
+                document.body.style.color = textContrastColor;
+            
+                audioControlsMini.style.backgroundColor = rgbColor;
+                audioControlsMini.style.color = textContrastColor;
+                audioControlsMini.style.borderColor = borderColor;
+        };
     }
     
     // Call the updateAlbumCover function when changing albums

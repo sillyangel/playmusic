@@ -916,21 +916,20 @@ const databasesimages = [
     { id: 2, url: "https://playstorage2.web.app/" },
     { id: 3, url: "https://playstorage2.web.app/"}
 ];
-    function fetchDatabase() {
+function fetchDatabase() {
     selectedDatabase = null;
     DatabaseDomain = null;
     selectedDatabase = databases.find(db => db.id === albums[currentAlbumIndex].database);
     DatabaseDomain = selectedDatabase.url;
-    // You can add additional database fetching logic here if needed
-    }
-    function fetchDatabaseImages(item) {
+// You can add additional database fetching logic here if needed
+}
+function fetchDatabaseImages(item) {
     selectedDatabaseimage = null;
     DatabaseimageDomain = null;
     selectedDatabaseimage = databasesimages.find(db => db.id === albums[item].database);
     DatabaseimageDomain = selectedDatabaseimage.url;
-    // You can add additional database fetching logic here if needed
-    }
-    fetchDatabase();
+}
+fetchDatabase();
 function loadTrack() {      
         fetchDatabase();  
         var trackPath = audioTracks[currentAlbum][currentTrackIndex];
