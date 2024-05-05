@@ -168,8 +168,8 @@ createPlaylistButton.addEventListener("click", createPlaylistInFirestore);
 const observer = new MutationObserver(function(mutations) {
   mutations.forEach(function(mutation) {
       if (mutation.attributeName === 'src') {
-            console.log("Current Track Index:", currentTrackIndex);
-            console.log("Current Album Index:", currentAlbumIndex);
+            // console.log("Current Track Index:", currentTrackIndex);
+            // console.log("Current Album Index:", currentAlbumIndex);
       }
   });
 });
@@ -234,7 +234,7 @@ observer.observe(audio, { attributes: true });
          // User has a playlist, load and display it
          querySnapshot.forEach((doc) => {
            const playlistData = doc.data();
-           
+
           //  console.log("Loaded playlist:", playlistData);
          });
          playlistdatathn(user);         
