@@ -46,7 +46,6 @@
     </div>
   
   </div>
-  <div class="mnkjiu">
           <div class="sidebarmen" >
             <img src="./assets/nonealbum.png" id="iconsa" alt="main image icon" width="50px" height="50px">
             <ul>
@@ -58,7 +57,7 @@
             </ul>
         </div>
         <div id="accountsettings" style="display: none;">
-          <h2>Account Settings</h2>
+          <h2 style="margin-top: 0px;padding-top: 33.2px;">Account Settings</h2>
           <input id="displayname" type="text" placeholder="Display Name / Username">
           <input id="PhotoUrl" type="url" placeholder="Photo Url">
           <input id="email" type="email" placeholder="Email">
@@ -185,9 +184,9 @@
           <p class="currentTrack" style="margin-bottom: 0px;margin-right: 10px;"></p>
           <p class="currentartist" style="font-size: 10px;text-align: center;flex-direction: row;margin-top: 0px;"></p>
         </div>
-            <button aria-label="Back" onclick="previousTrack()"><i class="fas fa-backward"></i></button>
+            <button aria-label="Back" onclick="previousTrack()"><i class="fa-solid fas fa-backward-step"></i></button>
             <button aria-label="Play/Pause" id="playbuttonthung" onclick="playPause()"><i class="fas fa-play"></i></button>
-            <button aria-label="Skip Track" onclick="skipTrack()"><i class="fas fa-forward"></i></button>
+            <button aria-label="Skip Track" onclick="skipTrack()"><i class="fa-solid fas fa-forward-step"></i></button>
             <button id="volumeIcon"><i class="fas fa-volume-up"></i></button>
             <input type="range" id="volume" min="0" max="1" step="0.01" style="display: none;">
             <div id="songTime">0:00</div>

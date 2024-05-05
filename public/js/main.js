@@ -975,7 +975,6 @@ function doSomething() {
     }
 }
 
-
 function playPause() {
     const isPaused = audio.paused;
     audio[isPaused ? 'play' : 'pause']();
@@ -1331,9 +1330,14 @@ fetch('json/songs.json')
         });
         
         let currentArtist = ''; // Initialize the current artist
+        let albumContainer;
+        
         data.albums.forEach((album, albumIndex) => {
             if (album.artist !== currentArtist) {
                 // Create a new <h1> for a different artist
+                albumContainer = document.createElement('div');
+                albumContainer.className = 'album-container';
+                
                 const artistHeader = document.createElement('h1');
                 const icon = document.createElement('i');
                 const buttonstar = document.createElement('button');
@@ -1387,8 +1391,7 @@ fetch('json/songs.json')
             albumButton.innerHTML = `<img src="${album.cover}" alt="${album.album}" class="album-${imageSize}">`;
             albumButton.onclick = () => albumsec(albumIndex);
             // Before the forEach loop that processes albums
-            const albumContainer = document.createElement('div');
-            albumContainer.className = 'album-container';
+            
             songSelector.appendChild(albumContainer);
                     
             // Inside the forEach loop, change appending to albumContainer
@@ -1465,7 +1468,7 @@ function albumsec(albumnumber) {
         // Load the track and play it
         loadTrack();
         audio.play();
-
+        playButton.forEach(element => element.innerHTML = `<i class="fas fa-play"></i>`);
         // Update the album cover image
         updateAlbumCover();
     } else {

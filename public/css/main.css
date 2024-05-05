@@ -183,27 +183,24 @@ audio {
 }
 
 #accountsettings {
-  float: right;
   width: fit-content;
-  padding-left: 20px;
-  margin-top: 10px; /* Updated syntax for margin-top */
+  /* padding-left: 3vw; */
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 6%; /* Adjust value based on the width of the sidebarmen div */
-  /* Additional styling properties */
+  margin-left: 5%;
 }
 
 #songselector {
   float: right;
-  width: fit-content;
-  padding-left: 20px;
-  margin-top: 10px; /* Updated syntax for margin-top */
+  max-width: 94vw;
+  padding-left: 2vw;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  margin-left: 6%; /* Adjust value based on the width of the sidebarmen div */
-  /* Additional styling properties */
+  /* flex-wrap: wrap; */
+  margin-left: 6%;
 }
 #albumpage {
     float: right;
@@ -286,27 +283,22 @@ audio {
 }
 
 #lilbrary {
-  right: -60px;
-  padding-left: 20px;
-  margin-top: 0 10px;
-  float: right;
-  width: 90%;
-  height: auto;
+  width: fit-content;
+  /* padding-left: 3vw; */
+  margin-top: 10px;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  position: relative;
+  flex-wrap: wrap;
+  margin-left: 5%;
 }
 #searching {
-  float: right;
   width: fit-content;
-  padding-left: 20px;
-  margin-top: 10px; /* Updated syntax for margin-top */
+  /* padding-left: 3vw; */
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 5%; /* Adjust value based on the width of the sidebarmen div */
-  /* Additional styling properties */
+  margin-left: 5%;
 }
 #searching input[type=text] {
   width: 1000px;
@@ -348,6 +340,7 @@ audio {
 
 .mnkjiu {
   display: flex;
+  max-width: 94vh;
 }
 footer {
   float: right;
@@ -509,15 +502,13 @@ input[type=password] {
 }
 
 #settings {
-  left: 20px;
-  padding-left: 20px;
-  margin-top: 0 10px;
-  float: right;
-  width: 90%;
-  height: auto;
+  width: fit-content;
+  /* padding-left: 3vw; */
+  margin-top: 10px;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 5%;
 }
 
 /* Color of the progress bar */
