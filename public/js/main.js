@@ -74,7 +74,9 @@ var albums = [
     { database: 2, year: "", artist: "Kendrick Lamar", album: "Untitled Unmastered", folder: "kenla/um", image: "albumcover.jpg"},
     { database: 2, year: "", artist: "Kendrick Lamar", album: "Damn", folder: "kenla/dang", image: "albumcover.jpg"},
     { database: 1, year: "", artist: "Kendrick Lamar", album: "Mr. Morale & the Big Steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
-    { database: 2, year: "", artist: "Billie Holiday", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"}
+    { database: 2, year: "", artist: "Billie Holiday", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"},
+    // placeholder when starting the app for the first time
+    { database: 0, year: "", artist: "", album: "", folder: "place/holder", image: "nonealbum.png" }
 ];
 var audioTracks = {
     "tylerthecreator/wolf": [
@@ -956,6 +958,9 @@ var audioTracks = {
         "9. Keeps On A Rainin.mp3",
         "10. The Blues Are Brewin'.mp3",
     ],
+    "place/holder": [
+        ""
+    ],
 };
 let folartRaw = localStorage.getItem("folart");
 let folart = folartRaw && folartRaw !== "" ? JSON.parse(folartRaw) : [];
@@ -964,8 +969,8 @@ var playButton = document.querySelectorAll("#playbuttonthung");
 var volumeControl = document.getElementById("volume");
 var progressBar = document.querySelectorAll("progress");
 var currentTrackIndex = 0;
-var currentAlbum = "tylerthecreator/wolf"
-var currentAlbumIndex = 0;
+var currentAlbum = "place/holder";
+var currentAlbumIndex = albums.length - 1;
 var audiotimern;
 var repeatButtonClickCount = 0;
 let selectedDatabase;
@@ -985,13 +990,13 @@ if (localStorage.getItem("timerforaudio") !== null) {audiotimern = localStorage.
 // if (localStorage.getItem("folart") !== null) {folart = localStorage.getItem("folart");}
 //Databases
 const databases = [
-    { id: 0, url: "https://playmusicstorage.web.app/" },
+    { id: 0, url: "https://playmusichtml.web.app/" },
     { id: 1, url: "https://playmusicstorage.web.app/" },
     { id: 2, url: "https://playstorage2.web.app/" },
-    { id: 3, url: "https://playstorage2.web.app/"}
+    { id: 3, url: "https://playstorage3.web.app/"}
 ];
 const databasesimages = [
-    { id: 0, url: "https://playmusicstorage.web.app/" },
+    { id: 0, url: "https://playmusichtml.web.app/" },
     { id: 1, url: "https://playmusicstorage.web.app/" },
     { id: 2, url: "https://playstorage2.web.app/" },
     { id: 3, url: "https://playstorage3.web.app/"}
