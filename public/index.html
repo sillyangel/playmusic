@@ -11,7 +11,6 @@
     <meta name="keywords" content="">
     <meta name="author" content="sillyangel3">
     <meta name="theme-color" content="#222222"> <!-- Set the theme color to match your background/theme -->
-    
     <!-- Open Graph meta tags for social sharing -->
     <meta property="og:title" content="">
     <meta property="og:description" content="">
@@ -121,7 +120,7 @@
         </div>
       </div>
       <div style="display: none;" id="settings">
-        <h2>Settings</h2>
+        <h2 style="margin-top: 0px;padding-top: 33.2px;">Settings</h2>
         <label>
         <input type="checkbox" id="hideExplicitCheckbox">Hide Explicit Songs</label>
         <br>
@@ -172,6 +171,7 @@
     </div>
     </div>
     <footer>
+        <a href="download/">Download</a>
         <a href="privacypolicy/">Privacy Policy</a>
         <a href="https://sillyangel3.notion.site/offbrand-spotify-roadmap-c30b0eddf28143e3847443c5294d9271?pvs=4">Roadmap</a>
     </footer>
@@ -248,5 +248,6 @@
     if (isMobileDevice()) {
         window.location.href = 'moblie.html';
     }
+    navigator.serviceWorker.register("/sw.js");
 </script>
 </html>

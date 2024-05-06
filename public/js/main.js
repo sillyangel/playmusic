@@ -67,8 +67,13 @@ var albums = [
     { database: 1, year: "", artist: "Billie Eilish", album: "Happier Than Ever", folder: "be/hte", image: "albumcover.jpg" },
     { database: 2, year: "2024", artist: "Billie Eilish", album: "Hit Me Hard and Soft", folder: "be/hmhas", image: "albumcover.png" },
     { database: 1, year: "", artist: "SZA", album: "SOS", folder: "sza/sos", image: "albumcover.jpg" },
-    { database: 1, year: "", artist: "Kendrick Lamar", album: "Mr. Morale & the Big Steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
+    { database: 2, year: "", artist: "Kendrick Lamar", album: "Overly Dedicated", folder: "kenla/overded", image: "albumcover.png"},
+    { database: 2, year: "", artist: "Kendrick Lamar", album: "Section.80", folder: "kenla/sec80", image: "albumcover.jpg" },
+    { database: 2, year: "", artist: "Kendrick Lamar", album: "good kid, m.A.A.d city", folder: "kenla/gkmc", image: "albumcover.jpg" },
     { database: 1, year: "", artist: "Kendrick Lamar", album: "To Pimp a Butterfly", folder: "kenla/tpabf", image: "albumcover.jpg" },
+    { database: 2, year: "", artist: "Kendrick Lamar", album: "Untitled Unmastered", folder: "kenla/um", image: "albumcover.jpg"},
+    { database: 2, year: "", artist: "Kendrick Lamar", album: "Damn", folder: "kenla/dang", image: "albumcover.jpg"},
+    { database: 1, year: "", artist: "Kendrick Lamar", album: "Mr. Morale & the Big Steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
     { database: 2, year: "", artist: "Billie Holiday", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"}
 //  { database: , artist: "", album: "", folder: "/", image: "webp" },
     // Add more albums here
@@ -828,6 +833,81 @@ var audioTracks = {
     "sza/sos": [
         ""
     ],
+    "kenla/overded": [
+        "01. Growing Apart (To Get Closer) (feat. Jhene Aiko).mp3",
+        "02. Ignorance Is Bliss.mp3",
+        "03. P & P 1.5 (feat. Ab-Soul).mp3",
+        "04. Alien Girl (Today W⧸ Her).mp3",
+        "05. Opposites Attract (Tomorrow W⧸O Her) (feat. Javonte).mp3",
+        "06. Michael Jordan (feat. Schoolboy Q).mp3",
+        "07. R.O.T.C (Interlude) (feat. Bj The Chicago Kid).mp3",
+        "08. Barbed Wire (feat. Ash Riser).mp3",
+        "09. Average Joe.mp3",
+        "10. H.O.C.mp3",
+        "11. Cut You Off (To Grow Closer).mp3",
+        "12. She Needs Me (Remix) (feat. Dom Kennedy & Murs).mp3",
+    ],
+    "kenla/sec80": [
+        "01. F*ck Your Ethnicity.mp3",
+        "02. Hol' Up.mp3",
+        "03. A.D.H.D.mp3",
+        "04. No Make-Up (Her Vice).mp3",
+        "05. Tammy's Song (Her Evils).mp3",
+        "06. Chapter Six.mp3",
+        "07. Ronald Reagan Era.mp3",
+        "08. Poe Mans Dreams (His Vice).mp3",
+        "09. Chapter Ten.mp3",
+        "10. Keisha's Song (Her Pain).mp3",
+        "11. Rigamortus.mp3",
+        "12. Kush & Corinthians.mp3",
+        "13. Blow My High (Members Only).mp3",
+        "14. Ab-Souls Outro.mp3",
+        "15. HiiiPower.mp3",
+    ],
+    "kenla/gkmc": [
+        "01. Sherane a.k.a Master Splinter’s Daughter.mp3",
+        "02. Bitch, Don’t Kill My Vibe.mp3",
+        "03. Backseat Freestyle.mp3",
+        "04. The Art of Peer Pressure.mp3",
+        "05. Money Trees.mp3",
+        "06. Poetic Justice.mp3",
+        "07. good kid.mp3",
+        "08. m.A.A.d city.mp3",
+        "09. Swimming Pools (Drank) (Extended Version).mp3",
+        "10. Sing About Me, I'm Dying Of Thirst.mp3",
+        "11. Real.mp3",
+        "12. Compton.mp3",
+        "13. The Recipe (Bonus Track).mp3",
+        "14. Black Boy Fly (Bonus Track).mp3",
+        "15. Now Or Never (Bonus Track).mp3",
+        "16. Bitch, Don’t Kill My Vibe (Remix).mp3",
+    ],
+    "kenla/um": [
+        "1. untitled 01 | 08.19.2014..mp3",
+        "2. untitled 02 | 06.23.2014..mp3",
+        "3. untitled 03 | 05.28.2013..mp3",
+        "4. untitled 04 | 08.14.2014..mp3",
+        "5. untitled 05 | 09.21.2014..mp3",
+        "6. untitled 06 | 06.30.2014..mp3",
+        "7. untitled 07 | 2014 - 2016.mp3",
+        "8. untitled 08 | 09.06.2014..mp3",
+    ],
+    "kenla/dang":[
+        "01. DUCKWORTH..mp3",
+        "02. GOD..mp3",
+        "03. FEAR..mp3",
+        "04. XXX..mp3",
+        "05. LOVE..mp3",
+        "06. LUST..mp3",
+        "07. HUMBLE..mp3",
+        "08. PRIDE..mp3",
+        "09. LOYALTY..mp3",
+        "10. FEEL..mp3",
+        "11. ELEMENT..mp3",
+        "12. YAH..mp3",
+        "13. DNA..mp3",
+        "14. BLOOD..mp3",
+    ],
     "kenla/mmtbs": [
         "01. United In Grief.mp3",
         "02. N95.mp3",
@@ -896,6 +976,8 @@ let selectedDatabaseimage;
 let DatabaseimageDomain;
 let playbackMode = "none";
 let savedaudio;
+let backgroundcs;
+let backgroundColorr;
 
 if (localStorage.getItem("Volume") !== null) {volumeControl.value = localStorage.getItem("Volume");}
 if (localStorage.getItem("Albumindex") !== null) {currentAlbumIndex = localStorage.getItem("Albumindex");}
@@ -1115,6 +1197,16 @@ function getContrastColor(rgbColor) {
     return brightness >= 195 ? "#222222" : "white";
 }
 
+function updateThemeColor(color) {
+    let themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
+    if (!themeColorMetaTag) {
+        themeColorMetaTag = document.createElement('meta');
+        themeColorMetaTag.name = "theme-color";
+        document.head.appendChild(themeColorMetaTag);
+    }
+    themeColorMetaTag.content = color;
+}
+
 function updateAlbumCover() {
     const selectedAlbum = DatabaseDomain + "songs/" + currentAlbum + "/" +albums[currentAlbumIndex].image;
     const image = new Image();
@@ -1139,13 +1231,18 @@ function updateAlbumCover() {
         const textContrastColor = getContrastColor(rgbColor);
         const sidebarmen = document.getElementsByClassName("sidebarmen")[0];
 
+            updateThemeColor(backgroundColor)
+            
             audioControls.style.backgroundColor = rgbColor;
             audioControls.style.color = textContrastColor;
 
+            backgroundcs = rgbColor;
+            backgroundColorr = backgroundColor;
 
             sidebarmen.style.borderColor = borderColor;
             sidebarmen.style.backgroundColor = backgroundColor;
-            // color all i which are all fontawesome icons to the contrast color
+
+
             document.querySelectorAll('i').forEach(element => element.style.color = textContrastColor);
             document.body.style.backgroundColor = backgroundColor;
             document.body.style.color = textContrastColor;
@@ -1239,6 +1336,7 @@ const elementsByClassName = ['audio-controls-full', 'audio-controls', 'sidebarme
 }, {});
 
 function hidefullplayer() {
+    updateThemeColor(backgroundColorr);
     elementsById['songselector'].style.display = "flex";
     elementsByClassName['audio-controls-full'][0].style.display = "none";
     elementsByClassName['audio-controls'][0].style.display = "flex";
@@ -1246,6 +1344,7 @@ function hidefullplayer() {
 }
 
 function openfullplayer() {
+    updateThemeColor(backgroundcs);
     Object.values(elementsById).forEach(element => element.style.display = "none");
     elementsById['songselector'].style.display = "none";
     elementsByClassName['audio-controls-full'][0].style.display = "flex";
@@ -1468,7 +1567,7 @@ function albumsec(albumnumber) {
         // Load the track and play it
         loadTrack();
         audio.play();
-        playButton.forEach(element => element.innerHTML = `<i class="fas fa-play"></i>`);
+        playButton.forEach(element => element.innerHTML = `<i class="fas fa-pause"></i>`);
         // Update the album cover image
         updateAlbumCover();
     } else {
@@ -1729,4 +1828,3 @@ async function installApp() {
     deferredPrompt = null;
     }
 }
-navigator.serviceWorker.register("/js/sw.js");

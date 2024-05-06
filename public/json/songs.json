@@ -411,15 +411,45 @@
     },
     {
       "artist": "Kendrick Lamar",
-      "album": "Mr morale and the big steppers",
-      "folder": "kenla/mmtbs",
-      "cover": "https://playmusicstorage.web.app/songs/kenla/mmtbs/albumcover.jpg"
+      "album": "Overly Dedicated",
+      "folder": "kenla/overded",
+      "cover": "https://playstorage2.web.app/songs/kenla/overded/albumcover.png"
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "album": "Section 80",
+      "folder": "kenla/sec80",
+      "cover": "https://playstorage2.web.app/songs/kenla/sec80/albumcover.jpg"
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "album": "Good Kid, M.A.A.D City",
+      "folder": "kenla/gkmc",
+      "cover": "https://playstorage2.web.app/songs/kenla/gkmc/albumcover.jpg"
     },
     {
       "artist": "Kendrick Lamar",
       "album": "To a pimp a butterfly",
       "folder": "kenla/tpabf",
       "cover": "https://playmusicstorage.web.app/songs/kenla/tpabf/albumcover.jpg"
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "album": "Damn",
+      "folder": "kenla/damn",
+      "cover": "https://playstorage2.web.app/songs/kenla/damn/albumcover.jpg"
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "album": "Untitled Unmastered",
+      "folder": "kenla/um",
+      "cover": "https://playstorage2.web.app/songs/kenla/um/albumcover.jpg"
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "album": "Mr morale and the big steppers",
+      "folder": "kenla/mmtbs",
+      "cover": "https://playmusicstorage.web.app/songs/kenla/mmtbs/albumcover.jpg"
     },
     {
       "artist": "Billie Holiday",

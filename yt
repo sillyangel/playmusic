@@ -7,8 +7,9 @@ if [ -z "$1" ]; then
 fi
 
 linkss=$1
-# export as "songtitle.mp3"
-yt-dlp -x --audio-format mp3 -o "%(title)s.%(ext)s" $linkss
+
+# export as "01. title.ext"
+yt-dlp -x --audio-format mp3 -o "%(playlist_index)s. %(title)s.%(ext)s" $linkss 
 
 echo "Finished downloading music from $youtube_url"
 
