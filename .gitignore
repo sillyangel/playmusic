@@ -6,5 +6,6 @@ dev/
 ./node_modules/
 node_modules/
 node_modules
+cdn/
 music/
 .firebase/
