@@ -435,16 +435,17 @@
     },
     {
       "artist": "Kendrick Lamar",
-      "album": "Damn",
-      "folder": "kenla/damn",
-      "cover": "https://playstorage2.web.app/songs/kenla/damn/albumcover.jpg"
-    },
-    {
-      "artist": "Kendrick Lamar",
       "album": "Untitled Unmastered",
       "folder": "kenla/um",
       "cover": "https://playstorage2.web.app/songs/kenla/um/albumcover.jpg"
     },
+    {
+      "artist": "Kendrick Lamar",
+      "album": "Damn",
+      "folder": "kenla/damn",
+      "cover": "https://playstorage2.web.app/songs/kenla/dang/albumcover.jpg"
+    },
+    
     {
       "artist": "Kendrick Lamar",
       "album": "Mr morale and the big steppers",

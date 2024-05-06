@@ -75,8 +75,6 @@ var albums = [
     { database: 2, year: "", artist: "Kendrick Lamar", album: "Damn", folder: "kenla/dang", image: "albumcover.jpg"},
     { database: 1, year: "", artist: "Kendrick Lamar", album: "Mr. Morale & the Big Steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
     { database: 2, year: "", artist: "Billie Holiday", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"}
-//  { database: , artist: "", album: "", folder: "/", image: "webp" },
-    // Add more albums here
 ];
 var audioTracks = {
     "tylerthecreator/wolf": [
@@ -881,6 +879,24 @@ var audioTracks = {
         "14. Black Boy Fly (Bonus Track).mp3",
         "15. Now Or Never (Bonus Track).mp3",
         "16. Bitch, Don’t Kill My Vibe (Remix).mp3",
+    ], 
+    "kenla/tpabf": [
+        "01. Wesley's Theory.mp3",
+        "02. For Free! (Interlude).mp3",
+        "03. King Kunta.mp3",
+        "04. Institutionalized.mp3",
+        "05. These Walls.mp3",
+        "06. u.mp3",
+        "07. Alright.mp3",
+        "08. For Sale! (Interlude).mp3",
+        "09. Momma.mp3",
+        "10. Hood Politics.mp3",
+        "11. How Much A Dollar Cost.mp3",
+        "12. Complexion (A Zulu Love).mp3",
+        "13. The Blacker The Berry.mp3",
+        "14. You Ain't Gotta Lie (Momma Said).mp3",
+        "15. i.mp3",
+        "16. Mortal Man.mp3"
     ],
     "kenla/um": [
         "1. untitled 01 | 08.19.2014..mp3",
@@ -928,24 +944,6 @@ var audioTracks = {
         "17. Mother I Sober.mp3",
         "18. Mirror.mp3",
     ],
-    "kenla/tpabf": [
-        "01. Wesley's Theory.mp3",
-        "02. For Free! (Interlude).mp3",
-        "03. King Kunta.mp3",
-        "04. Institutionalized.mp3",
-        "05. These Walls.mp3",
-        "06. u.mp3",
-        "07. Alright.mp3",
-        "08. For Sale! (Interlude).mp3",
-        "09. Momma.mp3",
-        "10. Hood Politics.mp3",
-        "11. How Much A Dollar Cost.mp3",
-        "12. Complexion (A Zulu Love).mp3",
-        "13. The Blacker The Berry.mp3",
-        "14. You Ain't Gotta Lie (Momma Said).mp3",
-        "15. i.mp3",
-        "16. Mortal Man.mp3"
-    ],
     "billieh/gbtc": [
         "1. God Bless The Child.mp3",
         "2. Lover Man.mp3",
@@ -979,7 +977,7 @@ let savedaudio;
 let backgroundcs;
 let backgroundColorr;
 
-if (localStorage.getItem("Volume") !== null) {volumeControl.value = localStorage.getItem("Volume");}
+if (localStorage.getItem("Volume") !== null) {volumeControl.value = localStorage.getItem("Volume");audio.volume = localStorage.getItem("Volume");}else{audio.volume = 0.5;}
 if (localStorage.getItem("Albumindex") !== null) {currentAlbumIndex = localStorage.getItem("Albumindex");}
 if (localStorage.getItem("Trackindex") !== null) {currentTrackIndex = localStorage.getItem("Trackindex");}
 if (localStorage.getItem("CurrentAlbum") !== null) {currentAlbum = localStorage.getItem("CurrentAlbum");}
@@ -1063,7 +1061,7 @@ function playPause() {
     const iconClass = isPaused ? 'fas fa-pause' : 'fas fa-play';
     playButton.forEach(element => element.innerHTML = `<i class="${iconClass}"></i>`);
 }
-audio.volume = localStorage.getItem("Volume");
+
 function setVolume() {
     // load save volume and set it to the audio if it exists
     audio.volume = volumeControl.value;
