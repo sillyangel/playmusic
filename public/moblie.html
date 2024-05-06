@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>‎</title>
+        <title>offbrand spotify</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
         <link rel="stylesheet" href="css/moblie.css">
         <link rel="stylesheet" href="css/thing.css">
@@ -27,8 +27,7 @@
         navigator.serviceWorker.register("js/sw.js")
         </script>
         <!-- Favicon (you can create a favicon.ico and place it in the root directory of your website) -->
-        <link rel="icon" href="assets/logo/mlogo.png" type="image/png">
-    <script src="https://www.google.com/recaptcha/api.js?render=6LfhO68oAAAAAH-9cGAU4C9VEZHm0gzxXmS0ubbw"></script>
+        <link rel="icon" href="./assets/nonealbum.png" type="image/png">
     </head>
 <body>
   <div id="myModalU" class="modal">
@@ -139,7 +138,7 @@
     </div>
   </div>
 
-    <div id="playerfull">
+  <div id="playerfull" style="background-color: rgb(121, 109, 100);color: white;height: 100%;flex-direction: column;">
       <button onclick="hidefullplayer()" id="arrow-button"><i class="fas fa-chevron-down"></i></button>
         <img id="albumCover" src="https://cdn.sillyangel.me/songs/tylerthecreator/wolf/albumcover.png" alt="Album Cover" width="300px" height="300px">
         <br>
@@ -192,7 +191,7 @@ function hidefullplayer() {
 
 function openfullplayer() {
   songselectorjs.style.display = "none";
-  playerfull.style.display = "block";
+  playerfull.style.display = "flex";
   // Loop through the elements with the class "audio-controls" and set their display style
   for (var i = 0; i < playermini.length; i++) {
     playermini[i].style.display = "none";

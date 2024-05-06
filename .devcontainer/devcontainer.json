@@ -1,8 +1,0 @@
-{
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
-    "forwardPorts": [ 8080 ],
-    "extensions": [
-        "file-icons.file-icons",
-        "arcticicestudio.nord-visual-studio-code"
-    ]
-}

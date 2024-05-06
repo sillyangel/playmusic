@@ -3,6 +3,7 @@
 <head>
     <title>offbrand spotify</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/thing.css">
     <link rel="manifest" href="app.webmanifest">
@@ -10,7 +11,6 @@
     <meta name="keywords" content="">
     <meta name="author" content="sillyangel3">
     <meta name="theme-color" content="#222222"> <!-- Set the theme color to match your background/theme -->
-    
     <!-- Open Graph meta tags for social sharing -->
     <meta property="og:title" content="">
     <meta property="og:description" content="">
@@ -29,8 +29,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://www.google.com/recaptcha/api.js?render=6LfhO68oAAAAAH-9cGAU4C9VEZHm0gzxXmS0ubbw"></script>
     <script src="js/notif.js"></script>
+    <script src="js/devtools.js"></script>
     </head>
-<body>
+<body> 
   <div id="myModalU" class="modal">
 
     <div class="modal-content">
@@ -44,23 +45,18 @@
     </div>
   
   </div>
-  <div class="mnkjiu">
           <div class="sidebarmen" >
             <img src="./assets/nonealbum.png" id="iconsa" alt="main image icon" width="50px" height="50px">
-            <br>
-                        <br>
-                                    <br>
-            <br>
             <ul>
                 <li><button aria-label="Account Menu/button" id="accountmainbutton" onclick="switchthingy('user')"><i class="fa-solid fa-user" style="color: #ffffff;"></i></button></li>
                 <li><button aria-label="Search" onclick="switchthingy('search')"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i> </button></li>
                 <li><button aria-label="Home" onclick="switchthingy('hom')"><i class="fa-solid fa-house" style="color: #ffffff;"></i> </button></li>
-                <li><button aria-label="Library" onclick="switchthingy('lil')"><i class="fa-solid fa-lines-leaning" style="color: #ffffff;"></i> </button></li>
+                <li><button aria-label="Library" onclick="switchthingy('lil')" style="margin-left: 2px;"><i class="fa-solid fa-lines-leaning" style="color: rgb(34, 34, 34);"></i> </button></li>
                 <li><button aria-label="App Settings" onclick="switchthingy('set')"><i class="fa-solid fa-gear" style="color: #ffffff;"></i></button></li>
             </ul>
         </div>
         <div id="accountsettings" style="display: none;">
-          <h2>Account Settings</h2>
+          <h2 style="margin-top: 0px;padding-top: 33.2px;">Account Settings</h2>
           <input id="displayname" type="text" placeholder="Display Name / Username">
           <input id="PhotoUrl" type="url" placeholder="Photo Url">
           <input id="email" type="email" placeholder="Email">
@@ -69,6 +65,26 @@
         <button id="logout-button">Logout</button>
         <button id="savebutton">Save Settings</button>
           </div>
+        <div id="albumpage" style="display: none;">
+            <div style="display: flex; align-items: center;">
+              <img src="https://placehold.co/200x200" width="105px" height="105px" style="margin-bottom: 20px;" id="imageap">
+              <div style="flex-direction: column;margin-bottom: 50px;margin-left: 20px;">
+                <h2 id="h2ap" style="margin-bottom: 0px;">Album Name</h2>
+                <p style="color: gray;font-size: 15px;margin-top: 0px;margin-left: 2px;" id="artistalbul">Artist name</p>
+              </div>
+            </div>
+            <div id="albumssl">
+                <h1>Tracks</h1>
+                <div id="tracklist">
+                    <ul id="trackalbumpg">
+                        <!--mabye use tables to save myself sume time
+                        <div id="track" style="display: flex; align-items: center; justify-content: center">
+                        <p>Number on Track</p> <p>Song Name</p> <p>Length</p>
+                        </div>                        -->
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div id="songselector">
           <h2>Home</h2>      
           <div id="user">
@@ -104,17 +120,17 @@
         </div>
       </div>
       <div style="display: none;" id="settings">
-        <h2>Settings</h2>
+        <h2 style="margin-top: 0px;padding-top: 33.2px;">Settings</h2>
         <label>
-        <input type="checkbox" id="hideExplicitCheckbox">Hide Explicit Songs
-        </label>
+        <input type="checkbox" id="hideExplicitCheckbox">Hide Explicit Songs</label>
+        <br>
+        <h3>album artwork size </h3 style="font-size: 10px;">
             <input type="radio" id="small" name="size" value="small" />
             <label for="small">Small</label>
           <input type="radio" id="medium" name="size" value="medium" checked/>
             <label for="medium">Medium</label>
             <input type="radio" id="large" name="size" value="large" />
             <label for="large">Large</label>
-            <input type="checkbox" id="swithcbox">a</input>
           <button onclick="savesettings()">Save & Apply</button>
       </div>
         <div style="display: none;" id="mlogin">
@@ -155,22 +171,24 @@
     </div>
     </div>
     <footer>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScymP9oW3nYbjWESJlCYK5EWa3NrnmfbCi7DXRjXkczjVB60g/viewform">Request a artist</a>
-      <a href="privacypolicy/">Privacy Policy</a>
-      <a href="https://5502-sillyangel-playmusic-opa077tly2h.ws-us106.gitpod.io/">Beta</a>
-      <a href="https://forms.gle/poUiuvRTsJmWY3LF9">Report Bug</a>
+        <a href="download/">Download</a>
+        <a href="privacypolicy/">Privacy Policy</a>
+        <a href="https://sillyangel3.notion.site/offbrand-spotify-roadmap-c30b0eddf28143e3847443c5294d9271?pvs=4">Roadmap</a>
     </footer>
   </div>
   <div class="audio-controls">
         <div class="album-cover">
-            <img id="albumCover" src="https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/" alt="Album Cover" width="60px" height="60px">
+            <img id="albumCover" src="./assets/nonealbum.png" alt="Album Cover" width="60px" height="60px">
         </div>
-          <div class="currentTrack"> </div>
-          <div class="currentartist"> </div>
-            <button aria-label="Back" onclick="previousTrack()"><i class="fas fa-backward"></i></button>
+        <div class="tranks">
+          <p class="currentTrack" style="margin-bottom: 0px;margin-right: 10px;"></p>
+          <p class="currentartist" style="font-size: 10px;text-align: center;flex-direction: row;margin-top: 0px;"></p>
+        </div>
+            <button aria-label="Back" onclick="previousTrack()"><i class="fa-solid fas fa-backward-step"></i></button>
             <button aria-label="Play/Pause" id="playbuttonthung" onclick="playPause()"><i class="fas fa-play"></i></button>
-            <button aria-label="Skip Track" onclick="skipTrack()"><i class="fas fa-forward"></i></button>
-            <input type="range" id="volume" min="0" max="1" step="0.01">
+            <button aria-label="Skip Track" onclick="skipTrack()"><i class="fa-solid fas fa-forward-step"></i></button>
+            <button id="volumeIcon"><i class="fas fa-volume-up"></i></button>
+            <input type="range" id="volume" min="0" max="1" step="0.01" style="display: none;">
             <div id="songTime">0:00</div>
             <progress id="progress" value="0" max="100" onclick="seek(event, 'progress')"></progress>
             <div id="songDuration">0:00</div>
@@ -182,9 +200,9 @@
           <button onclick="hidefullplayer()" id="arrow-button2"><i class="fas fa-chevron-down"></i></button>
           <div class="mediacontrols"> <!-- Audio Controls-->
             <div class="album-cover">
-              <img id="albumCover" src="https://8080-sillyangel-playcdn-kajk88lqaa4.ws-us108.gitpod.io/" alt="Album Cover" width="500px" height="500px">
+              <img id="albumCover" src="./assets/nonealbum.png" alt="Album Cover" width="500px" height="500px">
             </div>
-            <div class="trackandartiststuff">
+            <div class="trackandartiststuff" style="margin-right: 13.2;">
             <div class="currentTrack2"> </div>
             <div class="currentartist2" style="font-size: 20px; align-self:flex-start;" >Kanye West</div>
             </div>
@@ -209,16 +227,15 @@
         
     <audio id="myAudio" controls>
         Your browser does not support the audio element.
+        <input type="checkbox" id="swithcbox">a</input>
+
     </audio>
    
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<script type="module" src="./js/dist/firebase.bundle.js"></script>
-<iframe style="display: none;" id="iframeas" src="https://klein.schoolobjects.com/eduphoria_webcontrols/login.aspx?studentOrgCustomerId=KLE-17022061-5FA" scrolling="no"></iframe></iframe>
-</body>
-</body>
+<!-- built version of /js/firebase.js using webpack 5 -->
+<script type="module" src="./js/firebase.js"></script>
 <script src="js/main.js"></script>
-<script>
-
+</body>
 
 </script>
 
@@ -231,5 +248,6 @@
     if (isMobileDevice()) {
         window.location.href = 'moblie.html';
     }
+    navigator.serviceWorker.register("/sw.js");
 </script>
 </html>

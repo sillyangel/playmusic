@@ -1,23 +1,56 @@
 {
-  "name": "‎",
-  "short_name": "‎",
-  "theme_color": "blue",
+  "name": "offbrand spotify",
+  "short_name": "offbrand spotify",
+  "description": "a very offbrand clone of spotify",
   "background_color": "#222222",
+  "categories": ["music", "entertainment"],
   "start_url": "./",
   "id": "/",
+  "display_override": ["window-controls-overlay"],
   "display": "standalone",
   "scope": "./",
   "icons": [
      {
-        "src": "assets/nonealbum.png",
+        "src": "assets/icon/icon512.png",
         "type": "image/png",
         "sizes": "512x512"
      },
      {
-        "src": "assets/nonealbum.png",
+        "src": "assets/icon/icon512.png",
         "type": "image/png",
         "sizes": "512x512",
         "purpose": "maskable"
      }
-   ]
+   ],
+   "screenshots": [
+      {
+       "src": "assets/preview1.png",
+        "sizes": "1365x720",
+        "type": "image/png",
+        "platform": "chromeos",
+        "form_factor": "wide",
+        "label": "Preview 1"
+      },
+      {
+        "src": "assets/preview2.png",
+        "sizes": "750x1334",
+        "type": "image/png",
+        "form_factor": "narrow",
+        "label": "Preview 2"
+      }
+   ],
+   "protocol_handlers": [
+      {
+        "protocol": "web+playofs",
+        "url": "/play?type=%s"
+      },
+      {
+         "protocol": "web+pauseofs",
+         "url": "/pause?type=%s"
+         },
+         {
+         "protocol": "web+skipofs",
+         "url": "/skip?type=%s"
+      }
+    ]  
 }

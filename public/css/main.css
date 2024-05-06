@@ -1,29 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Montserrat&display=swap');
+
 @font-face {
   font-family: SFPRO;
   src: url("/assets/fonts/SF-Pro-Rounded-Regular.otf") format("opentype");
 }
+
 @font-face {
   font-family: SFPROS;
   src: url("/assets/fonts/SF-Pro-Text-Medium.otf") format("opentype");
 }
+
 @font-face {
   font-family: Heleovm;
   src: url("/assets/fonts/FreeSans.otf") format("opentype");
 }
+
+/* add spotify font https://spotify.design/fonts/CircularSpotifyTxT-Medium.woff2 */
+@font-face {
+  font-family: circular;
+  src: url("/assets/fonts/CircularSpotifyTxT-Medium.woff2") format("woff2");
+}
+
 body {
   background-color: #222;
   color: #fff;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: circular, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
+
 h1 {
   font-size: 30px;
+  font-weight: normal;
 }
+
+
+
 h2 {
+  font-weight: normal;
   font-size: 40px;
 }
 
@@ -32,13 +48,15 @@ h2 {
   padding: 20px;
   font-size: 15px;
 }
+
 a {
   text-decoration: none;
   color: #ccc;
   margin: 10px;
   padding-left: 20px;
 }
-/* Style the custom audio controls */
+
+/* Style the custom input audio controls */
 .audio-controls {
   display: flex;
   align-items: center;
@@ -51,6 +69,12 @@ a {
   bottom: 0px;
   border-top: 2px solid #333;
 }
+
+#volume {
+  display: none;
+  /* Hidden by default */
+}
+
 .audio-controls button {
   background: none;
   border: none;
@@ -59,6 +83,7 @@ a {
   font-size: 24px;
   /* Increase icon size */
 }
+
 .audio-controls hr {
   width: 100%;
   /* Full width line */
@@ -67,24 +92,29 @@ a {
   border: 1px solid #555;
   /* Line color */
 }
+
 .audio-controls progress {
   width: 80%;
   /* 25% smaller progress bar */
 }
+
 /* Hide the default audio player */
 audio {
   display: none;
 }
+
 .currentTrack {
   text-align: center;
   margin-left: 10px;
   font-size: inherit;
 }
+
 .currentTrack2 {
   color: inherit;
   font-size: 24px;
   font-weight: 400;
 }
+
 /* Add styles to position the song time and duration */
 #audio-controls {
   display: flex;
@@ -98,11 +128,15 @@ audio {
   margin: 0 10px;
   /* Adjust the margin as needed */
 }
-#songTime2, #songDuration2 {
+
+#songTime2,
+#songDuration2 {
   white-space: nowrap;
-  margin: 0 10px; /* Adjust the margin as needed */
+  margin: 0 10px;
+  /* Adjust the margin as needed */
   color: inherit;
 }
+
 .topnav {
   width: 100%;
   top: 0px;
@@ -118,6 +152,7 @@ audio {
   bottom: 0px;
   border-top: 1px solid #333;
 }
+
 .sidebarmen ul {
   list-style-type: none;
   margin: 0;
@@ -127,18 +162,21 @@ audio {
   border-right: 5px;
   border-color: #333;
 }
+
 .sidebarmen li i {
   display: flex;
   color: #fff;
   text-decoration: none;
   font-size: 35px;
 }
+
 .sidebarmen li button {
   text-decoration: none;
   background: none;
   border: none;
   cursor: pointer;
 }
+
 .sidebarmen li {
   display: flex;
   color: #fff;
@@ -146,11 +184,15 @@ audio {
   padding-bottom: 40px;
 
 }
+
 /* Change the link color on hover */
 .sidebarmen img {
-  padding-top: 20px;
-  padding-left: 9px;
+  margin-top: 30px;
+  margin-left: 9px;
+  border-radius: 10%;
+  margin-bottom: 12vh;
 }
+
 .sidebarmen {
   float: left;
   height: 100%;
@@ -165,23 +207,56 @@ audio {
   width: 120px;
   height: 120px;
 }
+
 #playlistContainer {
   display: inline-block;
   /* Make it inline to adjust to content */
 }
 
+#title-bar {
+  position: fixed;
+  left: env(titlebar-area-x, 0);
+  top: env(titlebar-area-y, 0);
+  height: env(titlebar-area-height, 50px);
+  width: env(titlebar-area-width, 100%);
+  -webkit-app-region: drag;
+}
 
-#songselector {
-  float: right;
+#accountsettings {
   width: fit-content;
-  padding-left: 20px;
-  margin-top: 10px; /* Updated syntax for margin-top */
+  /* padding-left: 3vw; */
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 6%; /* Adjust value based on the width of the sidebarmen div */
+  margin-left: 6vw;
+}
+
+#songselector {
+  float: right;
+  max-width: 94vw;
+  padding-left: 2vw;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  margin-left: 6%;
+}
+
+#albumpage {
+  float: right;
+  width: fit-content;
+  padding-left: 20px;
+  margin-top: 10px;
+  /* Updated syntax for margin-top */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 6%;
+  /* Adjust value based on the width of the sidebarmen div */
   /* Additional styling properties */
 }
+
 .audio-controls-full {
   position: fixed;
   width: 100%;
@@ -198,18 +273,24 @@ audio {
 }
 
 .trackandartiststuff {
-  align-content: start!important;
+  align-content: start !important;
 }
 
-.audio-controls-full img {
-  width: 250px;
-  margin-bottom: 10px;
-  height: 250px;
+.trackandartiststuff p {
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
+.audio-controls-full img {
+  width: 300px;
+  margin-bottom: 10px;
+  height: 300px;
+}
+
 .progress-container {
   display: flex;
   align-items: center;
 }
+
 .audio-controls-full button {
   background: none;
   border: none;
@@ -218,22 +299,26 @@ audio {
   font-size: 36px;
   margin: 10px;
 }
+
 .audio-controls-full progress {
   width: 500px;
   padding-top: 5px;
   margin-top: 5px;
   /* 25% smaller progress bar */
 }
+
 #arrow-button2 {
   position: absolute;
   top: 10px;
   right: 10px;
 }
+
 #bottombuttons {
   position: absolute;
   bottom: 10px;
   right: 10px;
 }
+
 #songselector button {
   background: none;
   border: none;
@@ -246,39 +331,27 @@ audio {
 }
 
 #lilbrary {
-  right: -60px;
-  padding-left: 20px;
-  margin-top: 0 10px;
-  float: right;
-  width: 90%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  position: relative;
-}
-#accountsettings {
-  left: 20px;
-  padding-left: 20px;
-  margin-top: 0 10px;
-  float: right;
-  width: 90%;
-  height: auto;
-  display: flex;
-}
-#searching {
-  float: right;
   width: fit-content;
-  padding-left: 20px;
-  margin-top: 10px; /* Updated syntax for margin-top */
+  /* padding-left: 3vw; */
+  /* margin-top: 10px; */
+  /* display: flex; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 6vw;
+}
+
+#searching {
+  width: fit-content;
+  /* padding-left: 3vw; */
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 5%; /* Adjust value based on the width of the sidebarmen div */
-  /* Additional styling properties */
+  margin-left: 6vw;
 }
+
 #searching input[type=text] {
-  width: 174%;
+  width: 1000px;
   box-sizing: border-box;
   border: 2px solid #acacac;
   border-radius: 4px;
@@ -289,14 +362,12 @@ audio {
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
 }
+
 #searching input[type=text] {
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  max-width: 174%;
   outline: none;
-}
-
-input[type=text]:focus {
-  border: 3px solid #ffffff;
 }
 
 #lilbrary button {
@@ -312,7 +383,7 @@ input[type=text]:focus {
   float: right;
   width: 90%;
   height: auto;
-  display: grid ;
+  display: grid;
   align-content: center;
   align-items: center;
   position: relative;
@@ -320,7 +391,9 @@ input[type=text]:focus {
 
 .mnkjiu {
   display: flex;
+  max-width: 94vh;
 }
+
 footer {
   float: right;
   width: 90%;
@@ -342,15 +415,20 @@ footer {
   padding: 12px 20px 12px 20px;
   color: #fff;
 }
+
 #mlogin h2 {
   font-size: 40px;
 }
+
 h3 {
   font-size: 25px;
+  font-weight: normal;
 }
+
 input[type=email]:focus {
   border: 3px solid #ffffff;
 }
+
 input[type=email] {
   box-sizing: border-box;
   border: 2px solid #acacac;
@@ -361,6 +439,25 @@ input[type=email] {
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
 }
+
+.album-container {
+  display: flex;
+  flex-direction: row;
+  /* Ensure items are laid out horizontally */
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  /* Ensure it spans the full width of its parent */
+}
+
+.album-container>div {
+  /* Assuming the child elements are divs */
+  min-width: 160px;
+  /* Example min-width, adjust as needed */
+  margin-right: 10px;
+  /* Adjust spacing between items */
+}
+
 input[type=password] {
   box-sizing: border-box;
   border: 2px solid #acacac;
@@ -371,6 +468,7 @@ input[type=password] {
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
 }
+
 .container input {
   box-sizing: border-box;
   border: 2px solid #acacac;
@@ -381,6 +479,7 @@ input[type=password] {
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
 }
+
 #list-holder li {
   color: white;
   cursor: pointer;
@@ -394,7 +493,6 @@ input[type=password] {
 #user {
   right: 100px;
   position: absolute;
-  color: #fff;
   text-decoration: none;
   font-size: 30px;
   margin-bottom: 33.2px;
@@ -415,9 +513,11 @@ input[type=password] {
   font-size: 18px;
   padding: 6px 6px 6px 6px;
 }
+
 #accountsettings button:hover {
   opacity: 1;
 }
+
 #accountsettings input[type=text] {
   box-sizing: border-box;
   border: 2px solid #acacac;
@@ -428,6 +528,7 @@ input[type=password] {
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
 }
+
 #accountsettings input[type=url] {
   box-sizing: border-box;
   border: 2px solid #acacac;
@@ -438,23 +539,28 @@ input[type=password] {
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
 }
+
 .playlist-item img {
   width: 120px;
   height: 120px;
 }
+
 .playlist-item button {
   border: none;
   background: #5c5c5c;
 }
+
 #deletebutton {
   background: red;
 }
+
 .playlist-item button {
   display: inline;
   color: #fff;
   font-weight: bolder;
   margin: 2px;
 }
+
 .playlist-item {
   left: 20px;
   padding-left: 20px;
@@ -469,15 +575,8 @@ input[type=password] {
 }
 
 #settings {
-  left: 20px;
-  padding-left: 20px;
-  margin-top: 0 10px;
-  float: right;
-  width: 90%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  width: fit-content;
+  margin-left: 6vw;
 }
 
 /* Color of the progress bar */
@@ -485,24 +584,30 @@ input[type=password] {
   background-color: lightblue;
   /* You can change this color to the one you prefer */
 }
+
 #footer a {
   font-weight: bolder;
 }
+
 .grecaptcha-badge {
   visibility: hidden;
 }
+
 .album-small {
   width: 105px;
   height: 105px;
 }
+
 .album-medium {
   width: 140px;
   height: 140px;
 }
+
 .album-large {
   width: 160px;
   height: 160px;
 }
+
 #buttonys {
   background: none;
   border: none;
@@ -511,13 +616,14 @@ input[type=password] {
   font-size: 20px;
   font-weight: bold;
 }
+
 #list-holder {
   list-style-type: none;
   margin: 0;
+  padding: 0px;
+  left: 0px;
   height: auto;
-  background-color: #222;
   border-right: 5px;
-  border-color: #333;
 }
 
 #lyrics {
@@ -553,4 +659,3 @@ iframe {
   justify-content: center;
   z-index: 999;
 }
-

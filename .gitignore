@@ -4,6 +4,9 @@ firebase-debug.log
 dev/
 ./dev/
 ./node_modules/
+ext/
 node_modules/
 node_modules
+cdn/
 music/
+.firebase/
