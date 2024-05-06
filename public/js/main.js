@@ -43,7 +43,7 @@ var albums = [
     { database: 2, year: "", artist: "Kanye West", album: "Watch the Throne", folder: "kanyewest/wtt", image: "albumcover.webp"},
     { database: 2, year: "", artist: "Kanye West", album: "Cruel Summer", folder: "kanyewest/cs", image: "albumcover.webp"},
     { database: 1, year: "", artist: "Kanye West", album: "Yeezus", folder: "kanyewest/yeezus", image: "Cover.jpg"},
-    { database: 3, year: "", artist: "Kanye West", album: "The Life of Pablo", folder: "kanyewest/tlop", image: "albumcover.webp"},
+    { database: 2, year: "", artist: "Kanye West", album: "The Life of Pablo", folder: "kanyewest/tlop", image: "albumcover.webp"},
     { database: 1, year: "", artist: "Kanye West", album: "Ye", folder: "kanyewest/ye", image: "Cover.jpg" },
     { database: 2, year: "", artist: "Kanye West", album: "Kids See Ghosts", folder: "kanyewest/ksg", image: "albumcover.png"},
     { database: 1, year: "", artist: "Kanye West", album: "Jesus Is King", folder: "kanyewest/jesusisking", image: "Cover.jpg" },
@@ -994,7 +994,7 @@ const databasesimages = [
     { id: 0, url: "https://playmusicstorage.web.app/" },
     { id: 1, url: "https://playmusicstorage.web.app/" },
     { id: 2, url: "https://playstorage2.web.app/" },
-    { id: 3, url: "https://playstorage2.web.app/"}
+    { id: 3, url: "https://playstorage3.web.app/"}
 ];
 function fetchDatabase() {
     selectedDatabase = null;
@@ -1105,30 +1105,23 @@ function changeTrack(step) {
 function toggleRepeat() {
     repeatButtonClickCount += 1;
 
-    // After the third click, reset the counter to return to normal playback
-    if (repeatButtonClickCount > 2) {
+    // After the second click, reset the counter to return to normal playback
+    if (repeatButtonClickCount > 1) {
         repeatButtonClickCount = 0;
         playbackMode = "none";
     } else if (repeatButtonClickCount === 1) {
-        // On the first click, enable album repeat
-        playbackMode = "repeat-song";
-
-    } else if (repeatButtonClickCount === 2) {
+        // On the first click, enable repeat
         playbackMode = "repeat";
     }
 
     updatePlaybackModeText();
 }
-
-// repeat function and all of the other stuff
 function updatePlaybackModeText() {
     var buttonrepeat = document.getElementById("repeatbutton");
     if (playbackMode === "none") {
         buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #ffffff;"></i>';
-    } else if (playbackMode === "repeatalbum") {
-        buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #889ab3;"></i>';
-    } else if (playbackMode === "repeat-song") {
-        buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #889ab3;"></i>';
+    } else if (playbackMode === "repeat") {
+        buttonrepeat.innerHTML = '<i class="fa-solid fa-redo" style="color: #ffffff;"></i>';
     }
 }
 // if spacebar is clicked pause without keycode since keycode is deprecated
