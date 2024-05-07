@@ -5,7 +5,7 @@ console.log(`
 | . |  _|  _| . |  _| .'|   | . |  |_ -| . | . |  _| |  _| | |
 |___|_| |_| |___|_| |__,|_|_|___|  |___|  _|___|_| |_|_| |_  |
                                        |_|               |___|
-                                                                by angel
+v2                                                             by angel
 `)
 var albums = [
     { database: 1, year: "", artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "albumcover.webp" },
