@@ -13,7 +13,10 @@
 - [ ] kanyewest/wtt
 - [ ] kanyewest/vult2
 - [ ] kanyewest/vult3
-- [ ] drake/tc
-- [ ] drake/honnvm
-- [ ] drake/fatd
-
+- [ ] sza/sos
+- [x] drake/tc
+- [x] drake/honnvm
+- [x] drake/fatd
+- [x] drake/fatdse
+- [ ] ttc/cmiygl
+- [ ] ttc/edcmiygl

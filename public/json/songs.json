@@ -36,6 +36,20 @@
       "explicit": "true"
     },
     {
+        "artist": "Tyler the Creator",
+        "album": "Call Me If You Get Lost",
+        "folder": "tylerthecreator/cmiygl",
+        "cover": "https://playstorage3.web.app/songs/tylerthecreator/cmiygl/albumcover.jpg",
+        "explicit": "true"
+    },
+    {
+        "artist": "Tyler the Creator",
+        "album": "Call Me If You Get Lost: The Estate Sale",
+        "folder": "tylerthecreator/cmiygles",
+        "cover": "https://playstorage3.web.app/songs/tylerthecreator/cmiygles/albumcover.png",
+        "explicit": "true"
+    },
+    {
       "artist": "Arctic Monkeys",
       "album": "AM",
       "folder": "arcticmonkeys/am",
@@ -330,6 +344,18 @@
       "explicit": "true"
     },
     {
+        "artist": "Drake",
+        "album": "If You're Reading This It's Too Late",
+        "folder": "drake/iyrtitl",
+        "cover": "https://playstorage3.web.app/songs/drake/iyrtitl/toolate.png"
+    },
+    {
+        "artist": "Drake",
+        "album": "What a Time to Be Alive",
+        "folder": "drake/wattba",
+        "cover": "https://playstorage3.web.app/songs/drake/wattba/time.jpg"
+    },
+    {
       "artist": "Drake",
       "album": "Views",
       "folder": "drake/views",
@@ -337,11 +363,47 @@
       "explicit": "true"
     },
     {
+        "artist": "Drake",
+        "album": "More Life",
+        "folder": "drake/ml",
+        "cover": "https://playstorage3.web.app/songs/drake/ml/ml.jpg"
+    },
+    {
+        "artist": "Drake",
+        "album": "Scary Hours",
+        "folder": "drake/sh",
+        "cover": "https://playstorage3.web.app/songs/drake/sh/scaryhours.png"
+    },
+    {
       "artist": "Drake",
       "album": "Scorpion",
       "folder": "drake/scorp",
       "cover": "https://playmusicstorage.web.app/songs/drake/scorp/albumcover.webp",
       "explicit": "true"
+    },
+    {
+        "artist": "Drake",
+        "album": "The Best in the World Pack",
+        "folder": "drake/tbitwp",
+        "cover": "https://playstorage3.web.app/songs/drake/tbitwp/albumcover.png"
+    },
+    {
+        "artist": "Drake",
+        "album": "Care Package",
+        "folder": "drake/carepack",
+        "cover": "https://playstorage3.web.app/songs/drake/carepack/carepack.jpg"
+    },
+    {
+        "artist": "Drake",
+        "album": "Dark Lane Demo Tapes",
+        "folder": "drake/dldt",
+        "cover": "https://playstorage3.web.app/songs/drake/dldt/darklanedemotapes.png"
+    },
+    {
+        "artist": "Drake",
+        "album": "Scary Hours 2",
+        "folder": "drake/sh2",
+        "cover": "https://playstorage3.web.app/songs/drake/sh2/scaryhours2.png"
     },
     {
       "artist": "Drake",
@@ -354,7 +416,7 @@
       "artist": "Drake",
       "album": "Honestly, Nevermind",
       "folder": "drake/honnvm",
-      "cover": "https://playmusicstorage.web.app/songs/drake/honnvm/albumcover.webp",
+      "cover": "https://playstorage3.web.app/songs/drake/honnvm/honestly.png",
       "explicit": "true"
     },
     {
@@ -368,9 +430,16 @@
       "artist": "Drake",
       "album": "For All the Dogs",
       "folder": "drake/fatd",
-      "cover": "https://playmusicstorage.web.app/songs/drake/fatd/albumcover.webp",
+      "cover": "https://playstorage3.web.app/songs/drake/fatd/fatd.png",
       "explicit": "true"
     },
+    {
+        "artist": "Drake",
+        "album": "For All the Dogs:  Scary Hours",
+        "folder": "drake/fatdsh",
+        "cover": "https://playstorage3.web.app/songs/drake/fatdsh/fatdsh.png",
+        "explicit": "true"
+      },
     {
       "artist": "Frank Ocean",
       "album": "Channel Orange",
