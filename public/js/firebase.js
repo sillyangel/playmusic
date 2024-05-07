@@ -464,8 +464,8 @@ auth.onAuthStateChanged(async (user) => {
   }
 });
 
-export async function addSongToHistory(title, artist, album) {
-  onAuthStateChanged(auth, async (user) => {
+async function addSongToHistory(title, artist, album) {
+  auth.onAuthStateChanged(auth, async (user) => {
     if (user) {
       const userId = user.uid;
       const historyCollection = collection(db, `history/${userId}/songs`);
@@ -488,6 +488,7 @@ export async function addSongToHistory(title, artist, album) {
   });
 }
 
+addSongToHistory('Song Title', 'Artist Name', 'Album Name');
 
 auth.onAuthStateChanged(async (user) => {
   if (user) {
