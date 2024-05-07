@@ -464,8 +464,9 @@ auth.onAuthStateChanged(async (user) => {
   }
 });
 
+// History Functoins
 async function addSongToHistory(title, artist, album) {
-  auth.onAuthStateChanged(auth, async (user) => {
+  auth.onAuthStateChanged(async (user) => {
     if (user) {
       const userId = user.uid;
       const historyCollection = collection(db, `history/${userId}/songs`);
@@ -477,19 +478,63 @@ async function addSongToHistory(title, artist, album) {
       };
 
       try {
-        await addDoc(historyCollection, songData);
-        alert('Song data saved in Firestore.');
+        await addDoc(historyCollection, {
+          data: songData,
+        }
+        );
+        console.log('Song data saved in Firestore.');
       } catch (error) {
-        alert('Error adding song data: ' + error.message);
+        alert("Error" + error.message)
       }
     } else {
       console.log('User is not logged in.');
     }
   });
 }
+async function getSongHistory() {
+  auth.onAuthStateChanged(async (user) => {
+    if (user) {
+      const userId = user.uid;
+      const historyCollection = collection(db, `history/${userId}/songs`);
+      const q = query(historyCollection);
 
-addSongToHistory('Song Title', 'Artist Name', 'Album Name');
+      try {
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+          const songData = doc.data().data;
+          console.log('Loaded History:', songData);
+        });
+      } catch (error) {
+        console.error('Error loading song history:', error);
+      }
+    } else {
+      console.log('User is not logged in.');
+    }
+  });
+}
+async function deleteSongHistory() {
+  auth.onAuthStateChanged(async (user) => {
+    if (user) {
+      const userId = user.uid;
+      const historyCollection = collection(db, `history/${userId}/songs`);
+      const q = query(historyCollection);
 
+      try {
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach(async (doc) => {
+          await deleteDoc(doc.ref);
+        });
+        console.log('Deleted all song history.');
+      } catch (error) {
+        console.error('Error deleting song history:', error);
+      }
+    } else {
+      console.log('User is not logged in.');
+    }
+  });
+}
+// End of history functions
+// test function above
 auth.onAuthStateChanged(async (user) => {
   if (user) {
     var userId = user.uid;

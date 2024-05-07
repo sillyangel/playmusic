@@ -22,8 +22,9 @@ service cloud.firestore {
     }
 
     // Allow authenticated users to read and write to /history/{userId} but deny deletions
-    match /history/{userId} {
+    match /history/{userId}/songs/{document=**} {
       allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow delete: if request.auth != null
     }
   }
 }

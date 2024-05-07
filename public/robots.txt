@@ -1,6 +1,0 @@
-User-agent: *
-Crawl-delay: 0
-Disallow: assets/
-Disallow: sm64/
-Disallow: dist/
-Sitemap: https://playmusichtml.web.app/sitemap.xml
