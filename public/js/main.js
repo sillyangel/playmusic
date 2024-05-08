@@ -1228,7 +1228,7 @@ let backgroundColorr;
 
 if (localStorage.getItem("Volume") !== null) {volumeControl.value = localStorage.getItem("Volume");audio.volume = localStorage.getItem("Volume");}else{audio.volume = 0.5;}
 if (localStorage.getItem("Albumindex") !== null) {currentAlbumIndex = localStorage.getItem("Albumindex");}
-if (localStorage.getItem("Trackindex") !== null) {currentTrackIndex = localStorage.getItem("Trackindex");}
+if (localStorage.getItem("Trackindex") !== null) {currentTrackIndex = parseInt(localStorage.getItem("Trackindex"), 10);}
 if (localStorage.getItem("CurrentAlbum") !== null) {currentAlbum = localStorage.getItem("CurrentAlbum");}
 if (localStorage.getItem("timerforaudio") !== null) {audiotimern = localStorage.getItem("timerforaudio");}
 // if (localStorage.getItem("folart") !== null) {folart = localStorage.getItem("folart");}
@@ -1323,7 +1323,9 @@ var volumeControl = document.getElementById('volume');
 volumeControl.addEventListener('input', setVolume);
 
 function changeTrack(step) {
+    console.log(`Saved track from previous: ${localStorage.getItem("Trackindex")}\n Ran ChangeTrack `);
     currentTrackIndex += step;
+    console.log(`Before and After currentTrackIndex: ${currentTrackIndex - step} -> ${currentTrackIndex}`);
     let trackCount = audioTracks[currentAlbum].length;
 
     if (playbackMode === "repeat-song") {
@@ -1547,7 +1549,7 @@ function updateTrackText() {
     track = track.replace(".mp3", "");
 
     // Remove the numbering at the beginning of the track name, handling extra dash or period
-    track = track.replace(/^\d+\s*[-.]*\s*/, "");
+    track = track.replace(/^\d{2,}\s*[-.]*\s*/, "");
 
     currentTrackElements.forEach(function(element) {
         element.textContent = track;
