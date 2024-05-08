@@ -13,10 +13,12 @@
 - [ ] kanyewest/wtt
 - [ ] kanyewest/vult2
 - [ ] kanyewest/vult3
-- [ ] sza/sos
+- [x] sza/sos
 - [x] drake/tc
 - [x] drake/honnvm
 - [x] drake/fatd
 - [x] drake/fatdse
-- [ ] ttc/cmiygl
-- [ ] ttc/edcmiygl
+- [x] ttc/cmiygl
+- [x] ttc/edcmiygl
+lil peep
+nba youngboy

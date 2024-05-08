@@ -151,8 +151,7 @@ function logout(event) {
   event.preventDefault();
   signOut(auth).then(() => {
     // Sign-out successful.
-    alert("Log Out")
-    window.location.href = "https://music.sillyangel.me/"
+    window.location.href = "/"
   }).catch((error) => {
     alert("a error happened when loging out", error.message)
   });

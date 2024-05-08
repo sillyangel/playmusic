@@ -5,7 +5,7 @@ console.log(`
 | . |  _|  _| . |  _| .'|   | . |  |_ -| . | . |  _| |  _| | |
 |___|_| |_| |___|_| |__,|_|_|___|  |___|  _|___|_| |_|_| |_  |
                                        |_|               |___|
-v2                                                             by angel
+v2.0.5                                                        by angel
 `)
 var albums = [
     { database: 1, year: "", artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "albumcover.webp" },
@@ -50,7 +50,7 @@ var albums = [
     { database: 2, year: "", artist: "Kanye West", album: "Kids See Ghosts", folder: "kanyewest/ksg", image: "albumcover.png"},
     { database: 1, year: "", artist: "Kanye West", album: "Jesus Is King", folder: "kanyewest/jesusisking", image: "Cover.jpg" },
     { database: 1, year: "", artist: "Kanye West", album: "Donda", folder: "kanyewest/donda", image: "cover.webp" },
-    { database: 1, year: "", artist: "Kanye West", album: "Donda 2", folder: "kanyewest/donda2", image: "albumcover.webp" },
+    { database: 1, year: "2024", artist: "Kanye West", album: "Donda 2", folder: "kanyewest/donda2", image: "albumcover.webp" },
     { database: 2, year: "", artist: "Kanye West", album: "Vultures 1", folder: "kanyewest/vult1", image: "albumcover.webp"},
     { database: 2, year: "", artist: "Kanye West", album: "Vultures 2", folder: "kanyewest/vult2", image: "albumcover.webp"},
     { database: 2, year: "", artist: "Kanye West", album: "Vultures 3", folder: "kanyewest/vult3", image: "albumcover.webp"},
@@ -77,7 +77,7 @@ var albums = [
     { database: 2, year: "", artist: "Billie Eilish", album: "When We All Fall Asleep, Where Do We Go?", folder: "be/wwafawdwg", image: "albumcover.png" },
     { database: 1, year: "", artist: "Billie Eilish", album: "Happier Than Ever", folder: "be/hte", image: "albumcover.jpg" },
     { database: 2, year: "2024", artist: "Billie Eilish", album: "Hit Me Hard and Soft", folder: "be/hmhas", image: "albumcover.png" },
-    { database: 1, year: "", artist: "SZA", album: "SOS", folder: "sza/sos", image: "albumcover.jpg" },
+    { database: 3, year: "2022", artist: "SZA", album: "SOS", folder: "sza/sos", image: "albumcover.jpg" },
     { database: 2, year: "", artist: "Kendrick Lamar", album: "Overly Dedicated", folder: "kenla/overded", image: "albumcover.png"},
     { database: 2, year: "", artist: "Kendrick Lamar", album: "Section.80", folder: "kenla/sec80", image: "albumcover.jpg" },
     { database: 2, year: "", artist: "Kendrick Lamar", album: "good kid, m.A.A.d city", folder: "kenla/gkmc", image: "albumcover.jpg" },
@@ -1075,7 +1075,29 @@ var audioTracks = {
         ""
     ],
     "sza/sos": [
-        ""
+        "01. SOS.mp3",
+        "02. Kill Bill.mp3",
+        "03. Seek & Destroy.mp3",
+        "04. Low.mp3",
+        "05. Love Language.mp3",
+        "06. Blind.mp3",
+        "07. Used.mp3",
+        "08. Snooze.mp3",
+        "09. Notice Me.mp3",
+        "10. Gone Girl.mp3",
+        "11. Smoking on my Ex Pack.mp3",
+        "12. Ghost in the Machine.mp3",
+        "13. F2F.mp3",
+        "14. Nobody Gets Me.mp3",
+        "15. Conceited.mp3",
+        "16. Special.mp3",
+        "17. Too Late.mp3",
+        "18. Far.mp3",
+        "19. Shirt.mp3",
+        "20. Open Arms.mp3",
+        "21. I Hate U.mp3",
+        "22. Good Days.mp3",
+        "23. Forgiveless.mp3",
     ],
     "kenla/overded": [
         "01. Growing Apart (To Get Closer) (feat. Jhene Aiko).mp3",
@@ -2065,6 +2087,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 });
 
 window.addEventListener('appinstalled', (e) => {
+    
 });
 
 async function installApp() {

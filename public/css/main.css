@@ -508,14 +508,15 @@ input[type=password] {
 }
 
 #accountsettings button {
-  opacity: 0.9;
-  transition: 0.3s;
-  background-color: #5c5c5c;
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-size: 18px;
-  padding: 6px 6px 6px 6px;
+    box-sizing: border-box;
+    border: 2px solid #030303;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #222222;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 20px;
+    color: #fff;
 }
 
 #accountsettings button:hover {

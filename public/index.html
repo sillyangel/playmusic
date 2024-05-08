@@ -165,7 +165,7 @@
             </form>
         </div><br>
         <div id="oauthgi">
-          <button id="githubuttonlogin"><i class="fa-brands fa-github" style="color: #ffffff;"></i></button>
+          <button id="githubuttonlogin"><i class="fa-brands fa-github" style="color: inherit;"></i></button>
           </div>
         <div id="forgotrest">
           <h3>Forgot Password?</h3>
@@ -251,10 +251,11 @@
 </script>
 
 <script>
+    navigator.registerProtocolHandler('web+music', './?play=%s');
     function isMobileDevice() {
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     }
-
+    
     // If the user is on a mobile device, redirect to 'mobile.html'
     if (isMobileDevice()) {
         window.location.href = 'moblie.html';
