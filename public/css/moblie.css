@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Montserrat&display=swap');
+@font-face {
+  font-family: circular;
+  src: url("/assets/fonts/CircularSpotifyTxT-Medium.woff2") format("woff2");
+}
  body {
      background-color: #222;
      color: #fff;
-     font-family: 'Ubuntu', sans-serif;
+     font-family: circular, Arial, sans-serif;
 }
 h1 {
     font-size: 20px;

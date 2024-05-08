@@ -4,13 +4,16 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js --watch ./public"
+    "start": "nodemon -w ./public -x 'npm run minify && node app.js'",
+    "minify:js": "uglifyjs ./public/js/main.js -o ./public/js/main.min.js",
+    "minify:css": "cleancss ./public/css/main.css -o ./public/css/main.min.css",
+    "minify": "npm run minify:js && npm run minify:css"
   },
-  "author": "sillyangel",
   "repository": {
     "type": "git",
     "url": "git@gitlab.com:sillyangel/playmusic.git"
   },
+  "author": "sillyangel",
   "license": "ISC",
   "dependencies": {
     "@types/axios": "^0.14.0",
@@ -19,5 +22,9 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "nodemon": "3.1.0"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "uglify-js": "^3.17.4"
   }
 }
