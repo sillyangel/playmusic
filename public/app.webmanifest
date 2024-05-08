@@ -53,16 +53,8 @@
    ],
    "protocol_handlers": [
       {
-        "protocol": "web+playofs",
+        "protocol": "web+offbrand",
         "url": "/play?type=%s"
-      },
-      {
-         "protocol": "web+pauseofs",
-         "url": "/pause?type=%s"
-         },
-         {
-         "protocol": "web+skipofs",
-         "url": "/skip?type=%s"
       }
     ]  
 }

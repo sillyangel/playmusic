@@ -8,67 +8,97 @@
         body {  
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #1f1f1f;
-            color: #fff;
         }
+        
         h1 {
             margin-top: 50px;
         }
         .download-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(3, 0.5fr);
             gap: 20px;
             justify-items: center;
         }
         .platform-box {
-            background-color: #333;
             border-radius: 5px;
             padding: 20px;
             text-align: center;
         }
         .platform-box h2 {
             margin: 0;
-            color: #fff;
             font-size: 20px;
         }
         .download-button {
             display: inline-block;
             margin-top: 10px;
             padding: 10px 20px;
-            background-color: #555;
-            color: #fff;
             text-decoration: none;
             border-radius: 5px;
             font-size: 18px;
             transition: background-color 0.3s ease;
         }
-        .download-button:hover {
-            background-color: #777;
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1f1f1f;
+                color: #fff;
+            }
+            .platform-box {
+                background: #333;
+            }
+            .platform-box h2 {
+                color: #fff;
+            }
+            .download-button { 
+                background-color: #555;
+                color: #fff;
+            }
+            .download-button:hover {
+                background-color: #777;
+            }
+        }
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: #f7f7f7;
+                color: #3a3a3a;
+            }
+            .platform-box {
+                background: rgb(243, 243, 243);
+            }
+            .platform-box h2 {
+                color: #3a3a3a;
+            }
+            .download-button { 
+                background-color: #555;
+                color: #ffffff;
+            }
+            .download-button:hover {
+                background-color: #777;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Download Page</h1>
+    <h1>Download offbrand spotify</h1>
     <div class="download-grid">
         <div class="platform-box">
             <h2>Windows</h2>
-            <a href="" class="download-button">Download</a>
+            <a href="" class="download-button">(Soon)</a>
         </div>
-        <div class="platform-box">
+        <!-- <div class="platform-box">
             <h2>Mac</h2>
             <a href="" class="download-button">Download</a>
         </div>
         <div class="platform-box">
             <h2>Linux</h2>
             <a href="" class="download-button">Download</a>
-        </div>
+        </div> -->
         <div class="platform-box">
             <h2>Web (Online)</h2>
-            <a href="https://playmusic.web.app/" class="download-button">Download</a>
+            <a href="https://playmusichtml.web.app/" class="download-button">Visit</a>
         </div>
         <div class="platform-box">
             <h2>Mobile (Web App)</h2>
-            <a href="https://playmusic.web.app/" class="download-button">Download</a>
+            <a href="https://playmusichtml.web.app/" class="download-button">Visit</a>
         </div>
     </div>
 </body>
