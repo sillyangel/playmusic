@@ -1705,6 +1705,7 @@ fetch('json/songs.json')
                 const icon = document.createElement('i');
                 const buttonstar = document.createElement('button');
                 icon.className = "fa-regular fa-star";
+                icon.alt = "Favorite Artist";
                 artistHeader.textContent = album.artist;
                 buttonstar.style.backgroundColor = "none";
                 icon.style.fontSize = "25px";
@@ -2109,4 +2110,15 @@ async function installApp() {
     const { outcome } = await deferredPrompt.userChoice;
     deferredPrompt = null;
     }
+}
+
+navigator.serviceWorker.addEventListener('message', (event) => {
+    showSnackbar(event.data);
+});
+
+function showSnackbar(text) {
+    var snackbar = document.getElementById("snackbar");
+    x.innerHTML = text;
+    snackbar.className = "show";
+    setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
 }

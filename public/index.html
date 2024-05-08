@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/thing.css">
     <link rel="manifest" href="app.webmanifest">
-    <meta name="description" content="">
+
+    <meta name="description" content="offbrand spotify app for school, etc">
     <meta name="keywords" content="">
     <meta name="author" content="sillyangel3">
+    
     <meta name="theme-color" content="#222222"> <!-- Set the theme color to match your background/theme -->
     <!-- Open Graph meta tags for social sharing -->
     <meta property="og:title" content="offbrand spotify">
@@ -28,9 +30,10 @@
     <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://www.google.com/recaptcha/api.js?render=6LfhO68oAAAAAH-9cGAU4C9VEZHm0gzxXmS0ubbw"></script>
+    <script rel="preconnect" src="https://www.google.com/recaptcha/api.js?render=6LfhO68oAAAAAH-9cGAU4C9VEZHm0gzxXmS0ubbw"></script>
     </head>
-<body> 
+    <body> 
+  <div id="snackbar">This is a Snackbar notification</div>
   <div id="myModalU" class="modal">
 
     <div class="modal-content">
@@ -198,12 +201,12 @@
             <button aria-label="Back" onclick="previousTrack()"><i class="fa-solid fas fa-backward-step"></i></button>
             <button aria-label="Play/Pause" id="playbuttonthung" onclick="playPause()"><i class="fas fa-play"></i></button>
             <button aria-label="Skip Track" onclick="skipTrack()"><i class="fa-solid fas fa-forward-step"></i></button>
-            <button id="volumeIcon"><i class="fas fa-volume-up"></i></button>
+            <button alt="Volume Control For Audio"  id="volumeIcon"><i class="fas fa-volume-up"></i></button>
             <input type="range" id="volume" min="0" max="1" step="0.01" style="display: none;">
             <div id="songTime">0:00</div>
             <progress id="progress" value="0" max="100" onclick="seek(event, 'progress')"></progress>
             <div id="songDuration">0:00</div>
-      <button onclick="openfullplayer()" id="arrow-button"><i class="fas fa-chevron-up"></i></button>
+      <button onclick="openfullplayer()" alt="Open full screen player" id="arrow-button"><i class="fas fa-chevron-up"></i></button>
         </div>
 
         <!--FULLPLAYER-->
@@ -244,8 +247,7 @@
    
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <!-- built version of /js/firebase.js using webpack 5 -->
-<script type="module" src="./js/firebase.js"></script>
-<script src="js/main.js"></script>
+
 </body>
 
 </script>
@@ -261,5 +263,8 @@
         window.location.href = 'moblie.html';
     }
     navigator.serviceWorker.register("/sw.js");
+    
 </script>
+<script type="module" src="./js/firebase.js"></script>
+<script src="js/main.js"></script>
 </html>
