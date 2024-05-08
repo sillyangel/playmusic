@@ -1043,7 +1043,7 @@ var audioTracks = {
         "xanny.mp3",
         "you should see me in a crown.mp3",
         "all the good girls go to hell.mp3",
-        "wish You Were Gay.mp3",
+        "wish you were gay.mp3",
         "when the party's over.mp3",
         "8.mp3",
         "my strange addiction.mp3",
@@ -1815,7 +1815,20 @@ for (let i = 0; i < radioOptions.length; i++) {
 return selectedSize;
 }
 
-document.getElementById("single").style.display = "none"; 
+navigator.registerProtocolHandler('web+music', './?playalbum=%s');
+// play the selected from the protocol handler
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const playParam = urlParams.get('play');
+    if (playParam !== null) {
+        const albumNumber = playParam.split('://')[1];
+        if (albumNumber !== undefined) {
+            albumsec(parseInt(albumNumber, 10));
+        }
+    }
+};
+
+
 function albumsec(albumnumber) {
     // Retrieve the album details from the albums array
     const albumDetails = albums[albumnumber];
