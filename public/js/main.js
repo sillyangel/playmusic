@@ -1895,7 +1895,8 @@ function switchthingy(st) {
     var login = document.getElementById("mlogin");
     var accountsettings = document.getElementById("accountsettings");
     var settings = document.getElementById("settings");
-    var ap = document.getElementById("albumpage")
+    var ap = document.getElementById("albumpage");
+    var pp = document.getElementById("playlistpage");
 
     home.style.display = "none";
     search.style.display = "none";
@@ -1904,6 +1905,7 @@ function switchthingy(st) {
     accountsettings.style.display = "none";
     settings.style.display = "none";
     ap.style.display = "none";
+    pp.style.display = "none";
 
     switch(st) {
         case "hom":
@@ -1924,7 +1926,9 @@ function switchthingy(st) {
         case "ap":
             ap.style.display = "block";
             break;
-            
+        case "pp":
+            pp.style.display = "block";
+            break;
     }
 }
 

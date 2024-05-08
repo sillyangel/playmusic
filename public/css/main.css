@@ -50,8 +50,7 @@ h2 {
 }
 
 a {
-  text-decoration: none;
-  color: #ccc;
+  color: inherit;
   margin: 10px;
   padding-left: 20px;
 }
@@ -247,13 +246,19 @@ audio {
   width: fit-content;
   padding-left: 20px;
   margin-top: 10px;
-  /* Updated syntax for margin-top */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin-left: 6%;
-  /* Adjust value based on the width of the sidebarmen div */
-  /* Additional styling properties */
+}
+#playlistpage {
+  width: fit-content;
+  padding-left: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 6%;
 }
 
 .audio-controls-full {

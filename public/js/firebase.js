@@ -250,129 +250,58 @@ observer.observe(audio, { attributes: true });
      console.log("User is not authenticated.");
    }
  });
-async function addsongtoplaylist() {
-   
-}
 async function playlistdatathn(user) {
   if (user) {
     const userId = user.uid;
     const playlistsCollection = collection(db, "playlists");
     const q = query(playlistsCollection, where("userId", "==", userId));
     try {
-        const querySnapshot = await getDocs(q);
-        if (!querySnapshot.empty) {
-            querySnapshot.forEach((doc) => {
-                const playlistData = doc.data().data;
-                const playlistName = playlistData.name;
-                
-                // Create a new div for each playlist
-                const playlistDiv = document.createElement("div");
-                playlistDiv.id = playlistName;
-                playlistDiv.classList.add('playlist-item'); // Add the class for CSS styling
-                playlistDiv.style.display = "none"; // Initially set to hidden
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        querySnapshot.forEach((doc) => {
+          const playlistData = doc.data().data;
+          const playlistName = playlistData.name;
 
-                const img = document.createElement("img")
-                img.src = playlistData.imageUrl;
+          // create var for each thing on the playlist page
+          const playlistpage = document.getElementById("playlistpage")
+          const namepp = document.getElementById("h2pp")
+          const playlistimage = document.getElementById("imagepp") 
+          const creatorofplaylist = document.getElementById("artistpp");
+          // const tracklist = document.getElementById("trackalbumpp")
+          console.log(playlistData)
+          namepp.innerHTML = playlistData.name;
+          
+          // user display name exist use it if not use email
+          creatorofplaylist.innerHTML = "Created by: " + (user.displayName ? user.displayName : user.email);
+          playlistimage.src = playlistData.imageUrl;
+          playlistimage.alt = playlistName;
 
-                const addtrack = document.createElement("button")
-                addtrack.id = "bupfb";
-                addtrack.textContent = "Add Custom Music";
-                addtrack.addEventListener("click", () => {
-                  const modulediv = document.createElement("div");
-                  modulediv.id = "divmodule"
-                  modulediv.style.display = "block";
-                  document.body.appendChild(modulediv)
-                });
-                // heading
-                const h3 = document.createElement("h2");
-                h3.textContent = playlistName + ' - Playlist';
-                // spacing
-                const br1 = document.createElement("br");
-                const br2 = document.createElement("br");
-                const br3 = document.createElement("br");
-                const br4 = document.createElement("br");
-                const br5 = document.createElement("br");
-                const br6 = document.createElement("br");
-                const br7 = document.createElement("br");
-                const br8 = document.createElement("br");
-                const br9 = document.createElement("br");
-                const br10 = document.createElement("br");
-                const br11 = document.createElement("br");
-                // Create an exit button
-                const exitButton = document.createElement("button");
-                exitButton.id = "exitbutton";
-                exitButton.textContent = "Exit";
-                exitButton.addEventListener("click", () => {
-                    playlistDiv.style.display = "none"; // Hide the playlist div
-                    document.getElementById("lilbrary").style.display = "flex"; // Show the library
-                });
+          // Button Creaton
+          const showPlaylistButton = document.createElement("button");
+          const buttonpimage = document.createElement("img");
+          buttonpimage.src = playlistData.imageUrl;
+          buttonpimage.alt = playlistName;
+          showPlaylistButton.addEventListener("click", () => {
+            playlistpage.style.display = "block"; // Show the selected playlist div
+            document.getElementById("lilbrary").style.display = "none"; // Hide the library
+          });
+          showPlaylistButton.appendChild(buttonpimage);
+          playlistContainer.appendChild(showPlaylistButton);
 
-                // creating delete button
-                const deleteButton = document.createElement("button");
-                deleteButton.textContent = "Delete";
-                deleteButton.id = "deletebutton";
-                deleteButton.addEventListener("click", async () => {
-                    try {
-                        await deleteDoc(doc.ref);
-                        document.getElementById("lilbrary").style.display = "flex"
-                        document.body.removeChild(playlistDiv); // Remove the playlist div from the body
-                        playlistDiv.style.display = "none"
-                    } catch (error) {
-                        console.error("Error deleting playlist:", error);
-                    }
-                });
-                // append newely created elements 
-                playlistDiv.appendChild(h3);
-                playlistDiv.appendChild(br1);
-                playlistDiv.appendChild(br2);
-                playlistDiv.appendChild(img);
-                playlistDiv.appendChild(exitButton);
-                playlistDiv.appendChild(br3);
-                playlistDiv.appendChild(deleteButton);
-                playlistDiv.appendChild(br4);
-                playlistDiv.appendChild(addtrack);
-                playlistDiv.appendChild(br5);
-                
-                // Append the div to the body
-                playlistDiv.appendChild(br6);
-                document.body.appendChild(playlistDiv);
-
-                // Create a button for each playlist in the library
-                const showPlaylistButton = document.createElement("button");
-                const buttonpimage = document.createElement("img");
-                buttonpimage.src = playlistData.imageUrl;
-                buttonpimage.alt = playlistName;
-                showPlaylistButton.addEventListener("click", () => {
-                  const allDivs = document.querySelectorAll('.playlist-item'); // Select all elements with the class 'playlist-item'
-                  allDivs.forEach((div) => {
-                    div.style.display = "none"; // Hide all playlist divs
-                  });
-                  playlistDiv.style.display = "flex"; // Show the selected playlist div
-                  document.getElementById("lilbrary").style.display = "none"; // Hide the library
-                });
-                showPlaylistButton.appendChild(buttonpimage);
-                playlistContainer.appendChild(showPlaylistButton); // Append the button to the library
-            });
-        } else {
-            // User doesn't have a playlist
-            console.log("User doesn't have a playlist.");
-        }
+        });
+      } else console.log("User doesn't have a playlist.");
     } catch (error) {
-        console.error("Error checking for playlist:", error);
+      console.error("Error checking for playlist:", error);
     }
-} else {
-    // User is not authenticated
+  } else {
     console.log("User is not authenticated.");
-}};
-
+  }};
  auth.onAuthStateChanged(async (user) => {
   const nameu = document.getElementById('username');
   if (user) {
     const user = auth.currentUser;
-    const nameu = document.getElementById('username');
     nameu.innerHTML = user.displayName;
   } else {
-    const nameu = document.getElementById('username');  
     nameu.innerHTML = "Not Logged In"
   }
  });
