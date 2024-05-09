@@ -1,11 +1,11 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-import { getRedirectResult, signInWithPopup, GithubAuthProvider, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, updateProfile } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
-import { doc, deleteDoc, getFirestore, collection, addDoc, query, where, getDocs, getDoc, setDoc, documentId } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
-import { getPerformance } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-performance.js";
-import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app-check.js";
-import { getDownloadURL, getStorage, ref, uploadBytes, listAll } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-storage.js";
-import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-messaging.js"
+import { initializeApp } from "/__/firebase/10.11.1/firebase-app.js";
+import { getRedirectResult, signInWithPopup, GithubAuthProvider, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, updateProfile } from "/__/firebase/10.11.1/firebase-auth.js";
+import { doc, deleteDoc, getFirestore, collection, addDoc, query, where, getDocs, getDoc, setDoc, documentId } from "/__/firebase/10.11.1/firebase-firestore.js";
+import { getAnalytics } from "/__/firebase/10.11.1/firebase-analytics.js";
+import { getPerformance } from "/__/firebase/10.11.1/firebase-performance.js";
+import { initializeAppCheck, ReCaptchaV3Provider } from "/__/firebase/10.11.1/firebase-app-check.js";
+import { getDownloadURL, getStorage, ref, uploadBytes, listAll } from "/__/firebase/10.11.1/firebase-storage.js";
+import { getMessaging, getToken } from "/__/firebase/10.11.1/firebase-messaging.js"
 
 
 const firebaseConfig = {
@@ -42,9 +42,9 @@ messaging.requestPermission()
     return getToken(messaging, { vapidKey: "BIH_uJo9AsIWsO3BKTuPdHFN9iBu9df6f-I79lJQYTnGYfBHh57zONkQ5DBYqYqGUyX0wgZbVmma7SPITN3j4RA" });
   })
   .then((token) => {
-    alert('Token:', token);
-    // Save the token to your database or send it to the server
-  })
+    console('Token:', token);
+    
+})
   .catch((error) => {
     alert('Error:', error);
   });
