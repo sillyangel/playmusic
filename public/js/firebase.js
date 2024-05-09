@@ -5,11 +5,13 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebas
 import { getPerformance } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-performance.js";
 import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app-check.js";
 import { getDownloadURL, getStorage, ref, uploadBytes, listAll } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-storage.js";
+import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-messaging.js"
 
 
 const firebaseConfig = {
   apiKey: "AIzaSyCrXbgrgnkGFfPkbHdJ5oRD4ezbv5ypWbE",
   authDomain: "playmusichtml.firebaseapp.com",
+  databaseURL: "https://plauymusichtml-default-rtdb.firebaseio.com",
   projectId: "playmusichtml",
   storageBucket: "playmusichtml.appspot.com",
   messagingSenderId: "485050816009",
@@ -28,6 +30,30 @@ const appCheck = initializeAppCheck(app, {
 const auth = getAuth();
 const db = getFirestore(app);
 const storage  = getStorage(app);
+const messaging = getMessaging(app);
+
+getToken(messaging, {vapidKey: "BCcDZEmutRkecacPzMhfzJP8PRGIJmFkyqwv-wLhxnh5GIFBngXjXRnRgufviIsuDI89nYYdIqXMcXeQEizNSL4"});
+
+// Request permission for notifications
+messaging.requestPermission()
+  .then(() => {
+    console.log('Notification permission granted.');
+    // Get the registration token
+    return getToken(messaging, { vapidKey: "BCcDZEmutRkecacPzMhfzJP8PRGIJmFkyqwv-wLhxnh5GIFBngXjXRnRgufviIsuDI89nYYdIqXMcXeQEizNSL4" });
+  })
+  .then((token) => {
+    console.log('Token:', token);
+    // Save the token to your database or send it to the server
+  })
+  .catch((error) => {
+    console.log('Error:', error);
+  });
+
+// Handle incoming messages
+messaging.onMessage((payload) => {
+  console.log('Message received:', payload);
+  // Handle the received message
+});
 
 // Get elements
 const ResetEmail = document.getElementById("reset-email");
