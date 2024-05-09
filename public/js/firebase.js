@@ -1,17 +1,16 @@
-import { initializeApp } from "/__/firebase/10.11.1/firebase-app.js";
-import { getRedirectResult, signInWithPopup, GithubAuthProvider, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, updateProfile } from "/__/firebase/10.11.1/firebase-auth.js";
-import { doc, deleteDoc, getFirestore, collection, addDoc, query, where, getDocs, getDoc, setDoc, documentId } from "/__/firebase/10.11.1/firebase-firestore.js";
-import { getAnalytics } from "/__/firebase/10.11.1/firebase-analytics.js";
-import { getPerformance } from "/__/firebase/10.11.1/firebase-performance.js";
-import { initializeAppCheck, ReCaptchaV3Provider } from "/__/firebase/10.11.1/firebase-app-check.js";
-import { getDownloadURL, getStorage, ref, uploadBytes, listAll } from "/__/firebase/10.11.1/firebase-storage.js";
-import { getMessaging, getToken } from "/__/firebase/10.11.1/firebase-messaging.js"
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+import { getRedirectResult, signInWithPopup, GithubAuthProvider, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, updateProfile } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import { doc, deleteDoc, getFirestore, collection, addDoc, query, where, getDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+import { getPerformance } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-performance.js";
+import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app-check.js";
+import { getDownloadURL, getStorage, ref, uploadBytes, listAll } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-storage.js";
+import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-messaging.js"
 
 
 const firebaseConfig = {
   apiKey: "AIzaSyCrXbgrgnkGFfPkbHdJ5oRD4ezbv5ypWbE",
   authDomain: "playmusichtml.firebaseapp.com",
-  databaseURL: "https://plauymusichtml-default-rtdb.firebaseio.com",
   projectId: "playmusichtml",
   storageBucket: "playmusichtml.appspot.com",
   messagingSenderId: "485050816009",
@@ -37,21 +36,27 @@ getToken(messaging, {vapidKey: "BIH_uJo9AsIWsO3BKTuPdHFN9iBu9df6f-I79lJQYTnGYfBH
 // Request permission for notifications
 messaging.requestPermission()
   .then(() => {
-    alert('Notification permission granted.');
+    console.log('Notification permission granted.');
     // Get the registration token
     return getToken(messaging, { vapidKey: "BIH_uJo9AsIWsO3BKTuPdHFN9iBu9df6f-I79lJQYTnGYfBHh57zONkQ5DBYqYqGUyX0wgZbVmma7SPITN3j4RA" });
   })
   .then((token) => {
-    console('Token:', token);
-    
-})
+    alert('Token:', token);
+    // sent to database /tokens/
+    const tokencollection = collection(db, "tokens");
+    const tokenData = {
+      token: token
+    }
+    addDoc(tokencollection, tokenData);
+
+  })
   .catch((error) => {
-    alert('Error:', error);
+    console.log('Error:', error);
   });
 
 // Handle incoming messages
 messaging.onMessage((payload) => {
-  alert('Message received:', payload);
+  console.log('Message received:', payload);
 });
 
 // Get elements
@@ -128,16 +133,16 @@ function handleLogin(event) {
   const email = loginEmail.value;
   const password = loginPassword.value;
   
-  signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    const user = userCredential.user;
-    alert("Logged in as: " + user.email);
-    window.location.href = "./"
-    // Update the UI with user information
-  })
-  .catch((error) => {
-    alert("Login error: " + error.message);
-  });
+signInWithEmailAndPassword(auth, email, password)
+.then((userCredential) => {
+  const user = userCredential.user;
+  const displayNameOrEmail = user.displayName ? user.displayName : user.email;
+  alert("Logged in as: " + displayNameOrEmail);
+  window.location.href = "./"
+})
+.catch((error) => {
+  alert("Login error: " + error.message);
+});
 
 }
 function handlereset(event) {
