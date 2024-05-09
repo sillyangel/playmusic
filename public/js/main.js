@@ -1491,7 +1491,7 @@ function updateAlbumCover() {
         const rgbColor = `rgb(${red},${green},${blue})`;
         // border color and background color is darker than the background color
         const backgroundColor = `rgb(${red - 25},${green - 25},${blue - 25})`
-        const borderColor = `rgb(${red + 5},${green + 5},${blue + 5})`;
+        const borderColor = `rgb(${red + 7},${green + 7},${blue + 7})`;
         const textContrastColor = getContrastColor(rgbColor);
         const sidebarmen = document.getElementsByClassName("sidebarmen")[0];
 
@@ -1705,6 +1705,8 @@ fetch('json/songs.json')
                 const icon = document.createElement('i');
                 const buttonstar = document.createElement('button');
                 icon.className = "fa-regular fa-star";
+                icon.alt = "Star";
+                buttonstar.title = "Favorite Artist"
                 buttonstar.ariaLabel = "Favorite Artist";
                 artistHeader.textContent = album.artist;
                 buttonstar.style.backgroundColor = "none";

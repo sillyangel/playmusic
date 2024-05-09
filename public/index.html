@@ -70,7 +70,7 @@
           </div>
         <div id="albumpage" style="display: none;">
             <div style="display: flex; align-items: center;">
-              <img src="https://placehold.co/200x200" width="105px" height="105px" style="margin-bottom: 20px;" id="imageap">
+              <img src="" width="105px" height="105px" style="margin-bottom: 20px;" id="imageap">
               <div style="flex-direction: column;margin-bottom: 50px;margin-left: 20px;">
                 <h2 id="h2ap" style="margin-bottom: 0px;">Album Name</h2>
                 <p style="color: gray;font-size: 15px;margin-top: 0px;margin-left: 2px;" id="artistalbul">Artist name</p>
@@ -86,7 +86,7 @@
         </div>
         <div id="playlistpage" style="display: none;">
           <div style="display: flex; align-items: center;">
-            <img src="https://placehold.co/200x200" width="105px" height="105px" style="margin-bottom: 20px;" id="imagepp">
+            <img src="" width="105px" height="105px" style="margin-bottom: 20px;" id="imagepp">
             <div style="flex-direction: column;margin-bottom: 50px;margin-left: 20px;">
               <h2 id="h2pp" style="margin-bottom: 0px;">Playlist Name</h2>
               <p style="color: gray;font-size: 15px;margin-top: 0px;margin-left: 2px;" id="artistpp">Creator Name</p>
@@ -202,12 +202,12 @@
             <button aria-label="Back" onclick="previousTrack()"><i class="fa-solid fas fa-backward-step"></i></button>
             <button aria-label="Play/Pause" id="playbuttonthung" onclick="playPause()"><i class="fas fa-play"></i></button>
             <button aria-label="Skip Track" onclick="skipTrack()"><i class="fa-solid fas fa-forward-step"></i></button>
-            <button alt="Volume Control For Audio"  id="volumeIcon"><i class="fas fa-volume-up"></i></button>
+            <button aria-label="Volume Control For Audio"  id="volumeIcon"><i class="fas fa-volume-up"></i></button>
             <input type="range" id="volume" min="0" max="1" step="0.01" style="display: none;">
             <div id="songTime">0:00</div>
             <progress id="progress" value="0" max="100" onclick="seek(event, 'progress')"></progress>
             <div id="songDuration">0:00</div>
-      <button onclick="openfullplayer()" alt="Open full screen player" id="arrow-button"><i class="fas fa-chevron-up"></i></button>
+      <button onclick="openfullplayer()" aria-label="Open full screen player" id="arrow-button"><i class="fas fa-chevron-up"></i></button>
         </div>
 
         <!--FULLPLAYER-->

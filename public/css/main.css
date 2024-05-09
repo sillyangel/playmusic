@@ -179,7 +179,7 @@ audio {
   width: auto;
   left: 2px;
   background-color: #222;
-  border-right: 2px solid #333;
+  border-right: 3px solid #333;
 }
 
 #playlistContainer img {
