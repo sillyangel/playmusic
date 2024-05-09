@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon -w ./public -x 'npm run minify && node app.js'",
+    "start": "nodemon --ignore './public/js/main.min.js' --ignore './public/css/main.min.css' -w ./public -x 'npm run minify && node app.js'",
     "minify:js": "uglifyjs ./public/js/main.js -o ./public/js/main.min.js",
     "minify:css": "cleancss ./public/css/main.css -o ./public/css/main.min.css",
     "minify": "npm run minify:js && npm run minify:css"

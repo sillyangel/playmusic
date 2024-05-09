@@ -3,15 +3,10 @@ image: node:latest
 before_script:
   - npm install -g firebase-tools uglify-js clean-css-cli
 
-minify_js:
+minify:
   stage: build
   script:
-    - 'for file in ./public/js/*.js; do uglifyjs "$file" -o "${file%.js}.min.js"; done'
-
-minify_css:
-  stage: build
-  script:
-    - 'for file in ./public/css/*.css; do cleancss "$file" -o "${file%.css}.min.css"; done'
+    - 'npm run minify'
 
 pages:
   stage: deploy
