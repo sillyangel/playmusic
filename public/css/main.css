@@ -322,12 +322,11 @@ audio {
 
 #searching {
   width: fit-content;
-  /* padding-left: 3vw; */
-  margin-top: 10px;
-  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 6vw;
+  padding-left: 2vw;
+  display: flex;
+  margin-left: 12dvh;
 }
 
 #searching input[type=text] {

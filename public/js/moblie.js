@@ -1488,7 +1488,7 @@ var audioTracks = {
         }
     });
     function fetchAndDisplayAlbums () {
-    fetch('./json/songs.json')
+    fetch('../json/songs.json')
         .then((response) => response.json())
         .then((data) => {
             const songSelector = document.getElementById('farts');

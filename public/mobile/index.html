@@ -3,8 +3,8 @@
     <head>
         <title>offbrand spotify</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-        <link rel="stylesheet" href="css/moblie.css">
-        <link rel="stylesheet" href="css/thing.css">
+        <link rel="stylesheet" href="../css/moblie.css">
+        <link rel="stylesheet" href="../css/thing.css">
         <link rel="manifest" href="app.webmanifest">
         <meta name="description" content="A simple audio player website by angel">
         <meta name="keywords" content="audio player, music, playmusic, angel">
@@ -44,10 +44,10 @@
     </div>
   <div class="sidebarmen">
     <ul>
-        <li><button id="accountmainbutton" onclick="switchthingy('user')"><i class="fa-regular fa-user" style="color: #ffffff;"></i></button></li>
-        <li><button onclick="switchthingy('search')"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i> </button></li>
-        <li><button onclick="switchthingy('hom')"><i class="fa-solid fa-house" style="color: #ffffff;"></i> </button></li>
-        <li><button onclick="switchthingy('lil')"><i class="fa-solid fa-lines-leaning" style="color: #ffffff;"></i> </button></li>
+        <li><button id="accountmainbutton" onclick="switchthingy('user')"><i class="fa-regular fa-user" style="color: inherit;"></i></button></li>
+        <li><button onclick="switchthingy('search')"><i class="fa-solid fa-magnifying-glass" style="color: inherit;"></i> </button></li>
+        <li><button onclick="switchthingy('hom')"><i class="fa-solid fa-house" style="color: inherit;"></i> </button></li>
+        <li><button onclick="switchthingy('lil')"><i class="fa-solid fa-lines-leaning" style="color: inherit;"></i> </button></li>
     </ul>
 </div>
      <div id="songselector">
@@ -170,8 +170,8 @@
     Your browser does not support the audio element.
 </audio>
 </body>
-<script src="./js/moblie.js"></script>
-<script type="module" src="./js/dist/firebase.bundle.js"></script>
+<script src="../js/moblie.js"></script>
+<script type="module" src="../js/firebase.js"></script>
 <script>
 var songselectorjs = document.getElementById("songselector");
 var playerfull = document.getElementById("playerfull");
