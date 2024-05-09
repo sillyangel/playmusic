@@ -32,27 +32,26 @@ const db = getFirestore(app);
 const storage  = getStorage(app);
 const messaging = getMessaging(app);
 
-getToken(messaging, {vapidKey: "BCcDZEmutRkecacPzMhfzJP8PRGIJmFkyqwv-wLhxnh5GIFBngXjXRnRgufviIsuDI89nYYdIqXMcXeQEizNSL4"});
+getToken(messaging, {vapidKey: "BIH_uJo9AsIWsO3BKTuPdHFN9iBu9df6f-I79lJQYTnGYfBHh57zONkQ5DBYqYqGUyX0wgZbVmma7SPITN3j4RA"});
 
 // Request permission for notifications
 messaging.requestPermission()
   .then(() => {
-    console.log('Notification permission granted.');
+    alert('Notification permission granted.');
     // Get the registration token
-    return getToken(messaging, { vapidKey: "BCcDZEmutRkecacPzMhfzJP8PRGIJmFkyqwv-wLhxnh5GIFBngXjXRnRgufviIsuDI89nYYdIqXMcXeQEizNSL4" });
+    return getToken(messaging, { vapidKey: "BIH_uJo9AsIWsO3BKTuPdHFN9iBu9df6f-I79lJQYTnGYfBHh57zONkQ5DBYqYqGUyX0wgZbVmma7SPITN3j4RA" });
   })
   .then((token) => {
-    console.log('Token:', token);
+    alert('Token:', token);
     // Save the token to your database or send it to the server
   })
   .catch((error) => {
-    console.log('Error:', error);
+    alert('Error:', error);
   });
 
 // Handle incoming messages
 messaging.onMessage((payload) => {
-  console.log('Message received:', payload);
-  // Handle the received message
+  alert('Message received:', payload);
 });
 
 // Get elements
