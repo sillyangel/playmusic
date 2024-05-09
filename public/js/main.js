@@ -5,7 +5,7 @@ console.log(`
 | . |  _|  _| . |  _| .'|   | . |  |_ -| . | . |  _| |  _| | |
 |___|_| |_| |___|_| |__,|_|_|___|  |___|  _|___|_| |_|_| |_  |
                                        |_|               |___|
-v2.0.5                                                        by angel
+v2.0.6                                                        by angel
 `)
 var albums = [
     { database: 1, year: "", artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "albumcover.webp" },
@@ -2118,7 +2118,7 @@ navigator.serviceWorker.addEventListener('message', (event) => {
 
 function showSnackbar(text) {
     var snackbar = document.getElementById("snackbar");
-    x.innerHTML = text;
+    snackbar.innerHTML = text;
     snackbar.className = "show";
     setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
 }

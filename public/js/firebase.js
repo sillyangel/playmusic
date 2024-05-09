@@ -304,14 +304,16 @@ async function playlistdatathn(user) {
     nameu.innerHTML = "Not Logged In"
   }
  });
- auth.onAuthStateChanged(async (user) => {
-  var profiled = document.getElementById("iconsa");
-  if (!user.photoURL) {
-    profiled.src = "./assets/nonealubm.png"
-  } else {
-    profiled.src = user.photoURL;
+auth.onAuthStateChanged(async (user) => {
+  if (user) {
+    var profiled = document.getElementById("iconsa");
+    if (!user.photoURL) {
+      profiled.src = "./assets/nonealubm.png"
+    } else {
+      profiled.src = user.photoURL;
+    }
   }
- });
+});
 
  // if userdiv is clicked check if the user is logged if so show the settings
  auth.onAuthStateChanged(async (user) => {

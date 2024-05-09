@@ -2,6 +2,13 @@
   "hosting": {
     "site": "playmusichtml",
     "public": "./public",
+    "headers": [ {
+      "source": "**/*.@(mp3|png|jpg|jpeg|gif|webp)",
+      "headers": [ {
+        "key": "Access-Control-Allow-Origin",
+        "value": "*"
+      } ]
+      } ],
     "ignore": [
       "firebase.json",
       "**/.*",
