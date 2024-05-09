@@ -1705,7 +1705,7 @@ fetch('json/songs.json')
                 const icon = document.createElement('i');
                 const buttonstar = document.createElement('button');
                 icon.className = "fa-regular fa-star";
-                icon.alt = "Favorite Artist";
+                buttonstar.ariaLabel = "Favorite Artist";
                 artistHeader.textContent = album.artist;
                 buttonstar.style.backgroundColor = "none";
                 icon.style.fontSize = "25px";
