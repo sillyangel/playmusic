@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 import { getRedirectResult, signInWithPopup, GithubAuthProvider, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, updateProfile } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
-import { doc, deleteDoc, getFirestore, collection, addDoc, query, where, getDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+import { doc, deleteDoc, getFirestore, collection, addDoc, query, where, getDocs } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
 import { getPerformance } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-performance.js";
 import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app-check.js";
@@ -31,32 +31,14 @@ const db = getFirestore(app);
 const storage  = getStorage(app);
 const messaging = getMessaging(app);
 
-getToken(messaging, {vapidKey: "BIH_uJo9AsIWsO3BKTuPdHFN9iBu9df6f-I79lJQYTnGYfBHh57zONkQ5DBYqYqGUyX0wgZbVmma7SPITN3j4RA"});
-
-// Request permission for notifications
-messaging.requestPermission()
-  .then(() => {
-    console.log('Notification permission granted.');
-    // Get the registration token
-    return getToken(messaging, { vapidKey: "BIH_uJo9AsIWsO3BKTuPdHFN9iBu9df6f-I79lJQYTnGYfBHh57zONkQ5DBYqYqGUyX0wgZbVmma7SPITN3j4RA" });
-  })
-  .then((token) => {
-    alert('Token:', token);
-    // sent to database /tokens/
-    const tokencollection = collection(db, "tokens");
-    const tokenData = {
-      token: token
-    }
-    addDoc(tokencollection, tokenData);
-
-  })
-  .catch((error) => {
-    console.log('Error:', error);
-  });
-
-// Handle incoming messages
-messaging.onMessage((payload) => {
-  console.log('Message received:', payload);
+getToken(messaging, {vapidKey: "BIH_uJo9AsIWsO3BKTuPdHFN9iBu9df6f-I79lJQYTnGYfBHh57zONkQ5DBYqYqGUyX0wgZbVmma7SPITN3j4RA"}).then((currentToken) => {
+  if (currentToken) {
+    console.log(currentToken)
+  } else {
+    console.log('No registration token available. Request permission to generate one.');
+  }
+}).catch((err) => {
+  console.log('An error occurred while retrieving token. ', err);
 });
 
 // Get elements

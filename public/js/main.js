@@ -2114,9 +2114,9 @@ async function installApp() {
     }
 }
 
-navigator.serviceWorker.addEventListener('message', (event) => {
-    showSnackbar(event.data);
-});
+// navigator.serviceWorker.addEventListener('message', (event) => {
+// showSnackbar(event.data);
+// });
 
 function showSnackbar(text) {
     var snackbar = document.getElementById("snackbar");
