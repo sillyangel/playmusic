@@ -1,8 +1,0 @@
-User-agent: *
-Disallow: /assets/
-Disallow: /js/
-Disallow: /css/
-Disallow: /json/
-Disallow: /songs/
-Allow: /download/
-Allow: /index.html/

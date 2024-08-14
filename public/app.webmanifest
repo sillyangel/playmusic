@@ -1,7 +1,7 @@
 {
-  "name": "offbrand spotify",
-  "short_name": "offbrand spotify",
-  "description": "a very offbrand clone of spotify",
+  "name": "local audio player",
+  "short_name": "lap",
+  "description": "a cool local audio player which can play your music files",
   "background_color": "#222222",
   "categories": ["music", "entertainment"],
   "start_url": "./",
@@ -50,11 +50,5 @@
         "form_factor": "narrow",
         "label": "Preview 2"
       }
-   ],
-   "protocol_handlers": [
-      {
-        "protocol": "web+offbrand",
-        "url": "/play?type=%s"
-      }
-    ]  
+   ]
 }

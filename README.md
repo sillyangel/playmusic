@@ -1,2 +1,0 @@
-# Playmusic 
-right now we have two remote repos hosting on [github](https://github.com/sillyangel/playmusic) and [gitlab](https://gitlab.com/sillyangel/playmusic), this is just my personal project i have been working since oct of 2023 i made this because my school blocked spotify and some other streaming services, i have it running which is hosted by firebase [playmusichtml.web.app](https://playmusichtml.web.app) 

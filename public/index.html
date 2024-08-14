@@ -1,110 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>offbrand spotify</title>
+    <title>local files player</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/main.min.css">
-    <link rel="stylesheet" href="css/thing.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="manifest" href="app.webmanifest">
-
-    <meta name="description" content="offbrand spotify app for school, etc">
+    <meta name="description" content="local files player app for school, etc">
     <meta name="keywords" content="">
     <meta name="author" content="sillyangel3">
-    
     <meta name="theme-color" content="#222222"> <!-- Set the theme color to match your background/theme -->
-    
-    <!-- Facebook Tags -->
-    <meta property="og:title" content="offbrand spotify">
-    <meta property="og:description" content="offbrand spotify">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sillyangel.github.io/playmusic"> <!-- Replace with your actual URL -->
-    <meta property="og:image" content="./assets/icons/icon-192.png"> <!-- Replace with a link to your website's image -->
-    
-    <!-- Twitter Card meta tags for Twitter sharing -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="offbrand spotify">
-    <meta name="twitter:description" content="this sucks.">
-    <meta name="twitter:image" content="./assets/icons/icon-192.png"> <!-- Replace with a link to your website's image -->
-
-    <!-- Favicon (you can create a favicon.ico and place it in the root directory of your website) -->
     <link rel="icon" href="./assets/icons/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script rel="preconnect" src="https://www.google.com/recaptcha/api.js?render=6LfhO68oAAAAAH-9cGAU4C9VEZHm0gzxXmS0ubbw"></script>
     </head>
     <body> 
-  <div id="snackbar">This is a Snackbar notification</div>
-  <div id="myModalU" class="modal">
-
-    <div class="modal-content">
-      <span class="closeU">&times;</span>
-      <p>upload mp3 files</p>
-      <form id="mp3file">
-        <input type="file" id="myFile" name="filename"  accept=".mp3">
-        <input type="submit">
-      </form>
-      
-    </div>
   
   </div>
           <div class="sidebarmen" >
             <img src="./assets/nonealbum.png" id="iconsa" alt="main image icon" width="50px" height="50px">
             <ul>
-                <li><button aria-label="Account Menu/button" id="accountmainbutton" onclick="switchthingy('user')"><i class="fa-solid fa-user" style="color: #ffffff;"></i></button></li>
-                <li><button aria-label="Search" onclick="switchthingy('search')"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i> </button></li>
                 <li><button aria-label="Home" onclick="switchthingy('hom')"><i class="fa-solid fa-house" style="color: #ffffff;"></i> </button></li>
-                <li><button aria-label="Library" onclick="switchthingy('lil')" style="margin-left: 2px;"><i class="fa-solid fa-lines-leaning" style="color: #ffffff;"></i> </button></li>
-                <li><button aria-label="App Settings" onclick="switchthingy('set')"><i class="fa-solid fa-gear" style="color: #ffffff;"></i></button></li>
             </ul>
         </div>
-        <div id="accountsettings" style="display: none;">
-          <h2 style="margin-top: 0px;padding-top: 33.2px;">Account Settings</h2>
-          <input id="displayname" type="text" placeholder="Display Name / Username">
-          <input id="PhotoUrl" type="url" placeholder="Photo Url">
-          <input id="email" type="email" placeholder="Email">
-          <label>
-        </label>
-        <button id="logout-button">Logout</button>
-        <button id="savebutton">Save Settings</button>
-          </div>
-        <div id="albumpage" style="display: none;">
-            <div style="display: flex; align-items: center;">
-              <img src="" width="105px" height="105px" style="margin-bottom: 20px;" id="imageap">
-              <div style="flex-direction: column;margin-bottom: 50px;margin-left: 20px;">
-                <h2 id="h2ap" style="margin-bottom: 0px;">Album Name</h2>
-                <p style="font-size: 15px;margin-top: 0px;margin-left: 2px;" id="artistalbul">Artist name</p>
-              </div>
-            </div>
-            <div id="albumssl">
-                <h1>Tracks</h1>
-                <div id="tracklist">
-                    <ul id="trackalbumpg">
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div id="playlistpage" style="display: none;">
-          <div style="display: flex; align-items: center;">
-            <img src="" width="105px" height="105px" style="margin-bottom: 20px;" id="imagepp">
-            <div style="flex-direction: column;margin-bottom: 50px;margin-left: 20px;">
-              <h2 id="h2pp" style="margin-bottom: 0px;">Playlist Name</h2>
-              <p style="color: gray;font-size: 15px;margin-top: 0px;margin-left: 2px;" id="artistpp">Creator Name</p>
-            </div>
-          </div>
-          <div id="albumssl">
-              <h1>Tracks</h1>
-              <div id="tracklist">
-                  <ul id="trackalbumpp">
-                  </ul>
-              </div>
-          </div>
-      </div>
+
         <div id="songselector">
           <h2>Home</h2>      
           <div id="user">
             <i class="fas fa-user"></i>
-            <span id="username">Not Logged In</span>
           </div>
           <div id="farts">
           </div>
@@ -118,78 +40,6 @@
           <br>
           <br>
         </div>
-        <div style="display: none;" id="searching">
-          <h2>Search</h2>
-          <input type="text" id="myInput" onkeyup="searchfunction()" placeholder="Search for songs">
-          <ul id="list-holder">
-          </ul>
-          <br><br><br><br><br><br><br><br><br><br><br><br>
-        </div>
-        <div style="display: none;" id="lilbrary">
-          <h2>Your Library</h2>
-          <span>
-          <button type="submit" id="createplaylist"><img src="assets/addplaylist.png" alt="createa playlist" width="120px" height="120px"></button>
-          <div id="playlistContainer">
-          </div>
-          </span>
-        </div>
-      </div>
-      <div style="display: none;" id="settings">
-        <h2 style="margin-top: 0px;padding-top: 33.2px;">Settings</h2>
-        <label>
-        <input type="checkbox" id="hideExplicitCheckbox">Hide Explicit Songs</label>
-        <br>
-        <h3>album artwork size </h3 style="font-size: 10px;">
-            <input type="radio" id="small" name="size" value="small" />
-            <label for="small">Small</label>
-          <input type="radio" id="medium" name="size" value="medium" checked/>
-            <label for="medium">Medium</label>
-            <input type="radio" id="large" name="size" value="large" />
-            <label for="large">Large</label>
-          <button onclick="savesettings()">Save & Apply</button>
-      </div>
-        <div style="display: none;" id="mlogin">
-          <h2>Account Login</h2>
-      <div class="container">
-        <div class="lisuf">
-        <div id="login">
-            <h3>Login</h3>
-            <form id="login-form">
-                <input type="email" id="login-email" placeholder="Email" required>
-                <input type="password" id="login-password" placeholder="Password" required>
-                <button type="submit">Login</button>
-            </form>
-        </div>
-        <div id="signup">
-            <h3>Sign Up</h3>
-            <form id="signup-form">
-                <input type="email" id="signup-email" placeholder="Email" required>
-                <input type="password" id="signup-password" placeholder="Password" required>
-                <button type="submit">Sign Up</button>
-            </form>
-        </div><br>
-        <div id="oauthgi">
-          <button id="githubuttonlogin"><i class="fa-brands fa-github" style="color: inherit;"></i></button>
-          </div>
-        <div id="forgotrest">
-          <h3>Forgot Password?</h3>
-          <form id="reset-form">
-            <input type="email" id="reset-email" placeholder="Email to reset" required>
-            <button id="resetbutton" type="submit">Send reset email</button>
-            </form> 
-        </div>
-        </div>
-        This site is protected by reCAPTCHA and the Google
-    <a href="https://policies.google.com/privacy">Privacy Policy</a> and
-    <a href="https://policies.google.com/terms">Terms of Service</a> apply. 
-    <br><br><br><br><br><br><br><br><br>
-    </div>
-    </div>
-    <footer>
-        <a href="download/">Download</a>
-        <a href="privacypolicy/">Privacy Policy</a>
-        <a href="https://sillyangel3.notion.site/offbrand-spotify-roadmap-c30b0eddf28143e3847443c5294d9271?pvs=4">Roadmap</a>
-    </footer>
   </div>
   <div class="audio-controls">
         <div class="album-cover">
@@ -247,25 +97,13 @@
     </audio>
    
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<!-- built version of /js/firebase.js using webpack 5 -->
 
 </body>
 
 </script>
 
 <script>
-    
-    function isMobileDevice() {
-        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
-    
-    // If the user is on a mobile device, redirect to 'mobile.html'
-    if (isMobileDevice()) {
-        window.location.href = 'moblie.html';
-    }
     navigator.serviceWorker.register("/sw.js");
-    
 </script>
-<script type="module" src="./js/firebase.js"></script>
-<script src="js/main.min.js"></script>
+<script src="main.js"></script>
 </html>
