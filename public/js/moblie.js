@@ -1471,22 +1471,7 @@ var audioTracks = {
     });
     // load the songs
     
-    document.getElementById('hideExplicitCheckbox').addEventListener('change', (event) => {
-        localStorage.setItem('hideExplicit', event.target.checked ? 'true' : 'false');
-        // Clear existing content and re-fetch the data
-        const songSelector = document.getElementById('farts');
-        songSelector.innerHTML = '';
-        fetchAndDisplayAlbums();
-      });
-      document.getElementById('swithcbox').addEventListener('change', (event) => {
-        if (event.target.checked == true) {
-            document.getElementById('farts').style.display = "none";
-            document.getElementById("single").style.display = "block";
-        } else {
-            document.getElementById('farts').style.display = "block";
-            document.getElementById("single").style.display = "none";
-        }
-    });
+=
     function fetchAndDisplayAlbums () {
     fetch('../json/songs.json')
         .then((response) => response.json())
