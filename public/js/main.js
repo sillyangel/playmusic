@@ -1,94 +1,76 @@
-// Console Log Ascil Art
 console.log(` 
      ___ ___ _                 _                _   _ ___     
  ___|  _|  _| |_ ___ ___ ___ _| |   ___ ___ ___| |_|_|  _|_ _ 
 | . |  _|  _| . |  _| .'|   | . |  |_ -| . | . |  _| |  _| | |
 |___|_| |_| |___|_| |__,|_|_|___|  |___|  _|___|_| |_|_| |_  |
                                        |_|               |___|
-v2.0.6                                                        by angel
-`)
+v3 Offline                                                    by angel`)
+
 var albums = [
-    { database: 1, year: "", artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "albumcover.webp" },
-    { database: 1, year: "", artist: "Tyler, The Creator", album: "Flower Boy", folder: "tylerthecreator/flowerboy", image: "albumcover.webp" },
-    { database: 1, year: "", artist: "Tyler, The Creator", album: "Igor", folder: "tylerthecreator/igor", image: "igorcover.webp" },
-    { database: 1, year: "", artist: "Tyler, The Creator", album: "Cherry Bomb", folder: "tylerthecreator/cherrybomb", image: "cherrybomb.webp" },
-    { database: 1, year: "", artist: "Tyler, The Creator", album: "Goblin", folder: "tylerthecreator/goblin", image: "Goblincover.webp" },
-    { database: 3, year: "", artist: "Tyler, The Creator", album: "Call Me If You Get Lost", folder: "tylerthecreator/cmiygl", image: "albumcover.jpg"},
-    { database: 3, year: "", artist: "Tyler, The Creator", album: "Call Me If You Get Lost: The Estate Sale", folder: "tylerthecreator/cmiygles", image: "albumcover.png"},
-    { database: 1, year: "", artist: "Arctic Monkeys", album: "AM", folder: "arcticmonkeys/am", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "Arctic Monkeys", album: "Humbug", folder: "arcticmonkeys/humbug", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "Arctic Monkeys", album: "WPSIATWIN", folder: "arcticmonkeys/wpsiatwin", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "Arctic Monkeys", album: "Favourite Worst Nightmare", folder: "arcticmonkeys/fwn", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "Arctic Monkeys", album: "Suck It and See", folder: "arcticmonkeys/sias", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "Arctic Monkeys", album: "Tranquility Base Hotel & Casino", folder: "arcticmonkeys/tbhc", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "Arctic Monkeys", album: "The Car", folder: "arcticmonkeys/car", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "Wallows", album: "Nothing Happens", folder: "wallows/nonthinghappens", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "Melanie Martinez", album: "Crybaby", folder: "melanie/crybaby", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "Melanie Martinez", album: "K-12", folder: "melanie/k12", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "Melanie Martinez", album: "Portals", folder: "melanie/portals", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "The weeknd", album: "Kiss Land", folder: "theweekend/kissland", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "The weeknd", album: "Beauty Behind the Madness", folder: "theweekend/bbtm", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "The weeknd", album: "starboy", folder: "theweekend/starboy", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "The weeknd", album: "Afterhours", folder: "theweekend/afterhours", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "The weeknd", album: "Dawnfm", folder: "theweekend/dawnfm", image: "albumcover.png"},
-    { database: 1, year: "", artist: "Laufey", album: "Bewitched", folder: "laufey/bewitched", image: "albumcover.png"},
-    { database: 2, year: "", artist: "Laufey", album: "Everything I Know About Love", folder: "laufey/eikal", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "Roddy Ricch", album: "Live Life Fast", folder: "rr/llf", image: "albumcover.png"},
-    { database: 1, year: "", artist: "Roddy Ricch", album: "Please Excuse Me for Being Antisocial", folder: "rr/pemfba", image: "albumcover.png"},
-    { database: 1, year: "", artist: "Lemon Demon", album: "Spirit phone", folder: "ld/sp", image: "albumcover.png"},
-    { database: 1, year: "", artist: "Lemon Demon", album: "Clown", folder: "ld/cc", image: "albumcover.jpg"},
-    { database: 2, year: "", artist: "Kanye West", album: "The College Dropout", folder: "kanyewest/tcd", image: "albumcover.jpg"},
-    { database: 2, year: "", artist: "Kanye West", album: "Late Registration", folder: "kanyewest/lr", image: "albumcover.webp"},
-    { database: 2, year: "", artist: "Kanye West", album: "Graduation", folder: "kanyewest/grad", image: "albumcover.webp"},
-    { database: 2, year: "", artist: "Kanye West", album: "808s & Heartbreak", folder: "kanyewest/808s", image: "albumcover.png"},
-    { database: 1, year: "", artist: "Kanye West", album: "My Beautiful Dark Twisted Fantasy", folder: "kanyewest/mbdtf", image: "albumcover.jpg"},
-    { database: 2, year: "", artist: "Kanye West", album: "Watch the Throne", folder: "kanyewest/wtt", image: "albumcover.webp"},
-    { database: 2, year: "", artist: "Kanye West", album: "Cruel Summer", folder: "kanyewest/cs", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "Kanye West", album: "Yeezus", folder: "kanyewest/yeezus", image: "Cover.jpg"},
-    { database: 2, year: "", artist: "Kanye West", album: "The Life of Pablo", folder: "kanyewest/tlop", image: "albumcover.webp"},
-    { database: 1, year: "", artist: "Kanye West", album: "Ye", folder: "kanyewest/ye", image: "Cover.jpg" },
-    { database: 2, year: "", artist: "Kanye West", album: "Kids See Ghosts", folder: "kanyewest/ksg", image: "albumcover.png"},
-    { database: 1, year: "", artist: "Kanye West", album: "Jesus Is King", folder: "kanyewest/jesusisking", image: "Cover.jpg" },
-    { database: 1, year: "", artist: "Kanye West", album: "Donda", folder: "kanyewest/donda", image: "cover.webp" },
-    { database: 1, year: "2024", artist: "Kanye West", album: "Donda 2", folder: "kanyewest/donda2", image: "albumcover.webp" },
-    { database: 2, year: "", artist: "Kanye West", album: "Vultures 1", folder: "kanyewest/vult1", image: "albumcover.webp"},
-    { database: 2, year: "", artist: "Kanye West", album: "Vultures 2", folder: "kanyewest/vult2", image: "albumcover.webp"},
-    { database: 2, year: "", artist: "Kanye West", album: "Vultures 3", folder: "kanyewest/vult3", image: "albumcover.webp"},
-    { database: 1, year: "2010", artist: "Drake", album: "Thank Me Later", folder: "drake/tml", image: "albumcover.webp"},
-    { database: 3, year: "2011", artist: "Drake", album: "Take Care", folder: "drake/tc", image: "albumcover.webp" },
-    { database: 1, year: "2013", artist: "Drake", album: "Nothing Was the Same", folder: "drake/nwts", image: "albumcover.webp "},
-    { database: 3, year: "2015", artist: "Drake", album: "If You're Reading This It's Too Late", folder: "drake/iyrtitl", image: "toolate.png"},
-    { database: 3, year: "2015", artist: "Drake", album: "What a Time to Be Alive ", folder: "drake/wattba", image: "time.jpg"},
-    { database: 1, year: "2016", artist: "Drake", album: "Views", folder: "drake/views", image: "albumcover.webp"},
-    { database: 3, year: "2017", artist: "Drake", album: "More Life", folder: "drake/ml", image: "ml.jpg"},
-    { database: 3, year: "2018", artist: "Drake", album: "Scary Hours", folder: "drake/sh", image: "scaryhours.png"},
-    { database: 1, year: "2018", artist: "Drake", album: "Scorpion", folder: "drake/scorp", image: "albumcover.webp"},
-    { database: 3, year: "2019", artist: "Drake", album: "The Best in the World Pack", folder: "drake/tbitwp", image: "albumcover.png"},
-    { database: 3, year: "2019", artist: "Drake", album: "Care Package", folder: "drake/carepack", image: "carepack.jpg"},
-    { database: 3, year: "2020", artist: "Drake", album: "Dark Lane Demo Tapes", folder: "drake/dldt", image: "darklanedemotapes.png"},
-    { database: 3, year: "2021", artist: "Drake", album: "Scary Hours 2", folder: "drake/sh2", image: "scaryhours2.png"},
-    { database: 1, year: "2021", artist: "Drake", album: "Certified Lover Boy", folder: "drake/clb", image: "albumcover.webp"},
-    { database: 3, year: "2022", artist: "Drake", album: "Honestly, Nevermind", folder: "drake/honnvm", image: "honestly.png"},
-    { database: 1, year: "2022", artist: "Drake", album: "Her Loss", folder: "drake/herloss", image: "albumcover.webp"},
-    { database: 3, year: "2023", artist: "Drake", album: "For All the Dogs", folder: "drake/fatd", image: "fatd.png"},
-    { database: 3, year: "2023", artist: "Drake", album: "For All the Dogs: Scary Hours", folder: "drake/fatdsh", image: "fatdsh.png "},
-    { database: 1, year: "", artist: "Frank Ocean", album: "Channel Orange", folder: "franko/co", image: "albumcover.webp" },
-    { database: 1, year: "", artist: "Frank Ocean", album: "Blonde", folder: "franko/blonde", image: "albumcover.webp" },
-    { database: 2, year: "", artist: "Billie Eilish", album: "When We All Fall Asleep, Where Do We Go?", folder: "be/wwafawdwg", image: "albumcover.png" },
-    { database: 1, year: "", artist: "Billie Eilish", album: "Happier Than Ever", folder: "be/hte", image: "albumcover.jpg" },
-    { database: 2, year: "2024", artist: "Billie Eilish", album: "Hit Me Hard and Soft", folder: "be/hmhas", image: "albumcover.png" },
-    { database: 3, year: "2022", artist: "SZA", album: "SOS", folder: "sza/sos", image: "albumcover.jpg" },
-    { database: 2, year: "", artist: "Kendrick Lamar", album: "Overly Dedicated", folder: "kenla/overded", image: "albumcover.png"},
-    { database: 2, year: "", artist: "Kendrick Lamar", album: "Section.80", folder: "kenla/sec80", image: "albumcover.jpg" },
-    { database: 2, year: "", artist: "Kendrick Lamar", album: "good kid, m.A.A.d city", folder: "kenla/gkmc", image: "albumcover.jpg" },
-    { database: 1, year: "", artist: "Kendrick Lamar", album: "To Pimp a Butterfly", folder: "kenla/tpabf", image: "albumcover.jpg" },
-    { database: 2, year: "", artist: "Kendrick Lamar", album: "Untitled Unmastered", folder: "kenla/um", image: "albumcover.jpg"},
-    { database: 2, year: "", artist: "Kendrick Lamar", album: "Damn", folder: "kenla/dang", image: "albumcover.jpg"},
-    { database: 1, year: "", artist: "Kendrick Lamar", album: "Mr. Morale & the Big Steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
-    { database: 2, year: "", artist: "Billie Holiday", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"},
+    { database: 1,   artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "albumcover.webp" },
+    { database: 1,   artist: "Tyler, The Creator", album: "Flower Boy", folder: "tylerthecreator/flowerboy", image: "albumcover.webp" },
+    { database: 1,   artist: "Tyler, The Creator", album: "Igor", folder: "tylerthecreator/igor", image: "igorcover.webp" },
+    { database: 1,   artist: "Tyler, The Creator", album: "Cherry Bomb", folder: "tylerthecreator/cherrybomb", image: "cherrybomb.webp" },
+    { database: 1,   artist: "Tyler, The Creator", album: "Goblin", folder: "tylerthecreator/goblin", image: "Goblincover.webp" },
+    { database: 3,   artist: "Tyler, The Creator", album: "Call Me If You Get Lost", folder: "tylerthecreator/cmiygl", image: "albumcover.jpg"},
+    { database: 3,   artist: "Tyler, The Creator", album: "Call Me If You Get Lost: The Estate Sale", folder: "tylerthecreator/cmiygles", image: "albumcover.png"},
+    { database: 1,   artist: "Arctic Monkeys", album: "AM", folder: "arcticmonkeys/am", image: "albumcover.webp"},
+    { database: 1,   artist: "Arctic Monkeys", album: "Humbug", folder: "arcticmonkeys/humbug", image: "albumcover.webp"},
+    { database: 1,   artist: "Arctic Monkeys", album: "WPSIATWIN", folder: "arcticmonkeys/wpsiatwin", image: "albumcover.webp"},
+    { database: 1,   artist: "Arctic Monkeys", album: "Favourite Worst Nightmare", folder: "arcticmonkeys/fwn", image: "albumcover.webp"},
+    { database: 1,   artist: "Arctic Monkeys", album: "Suck It and See", folder: "arcticmonkeys/sias", image: "albumcover.webp"},
+    { database: 1,   artist: "Arctic Monkeys", album: "Tranquility Base Hotel & Casino", folder: "arcticmonkeys/tbhc", image: "albumcover.webp"},
+    { database: 1,   artist: "Arctic Monkeys", album: "The Car", folder: "arcticmonkeys/car", image: "albumcover.webp"},
+    { database: 1,   artist: "Wallows", album: "Nothing Happens", folder: "wallows/nonthinghappens", image: "albumcover.webp"},
+    { database: 1,   artist: "Melanie Martinez", album: "Crybaby", folder: "melanie/crybaby", image: "albumcover.webp"},
+    { database: 1,   artist: "Melanie Martinez", album: "K-12", folder: "melanie/k12", image: "albumcover.webp"},
+    { database: 1,   artist: "Melanie Martinez", album: "Portals", folder: "melanie/portals", image: "albumcover.webp"},
+    { database: 1,   artist: "The weeknd", album: "Kiss Land", folder: "theweekend/kissland", image: "albumcover.webp"},
+    { database: 1,   artist: "The weeknd", album: "Beauty Behind the Madness", folder: "theweekend/bbtm", image: "albumcover.webp"},
+    { database: 1,   artist: "The weeknd", album: "starboy", folder: "theweekend/starboy", image: "albumcover.webp"},
+    { database: 1,   artist: "The weeknd", album: "Afterhours", folder: "theweekend/afterhours", image: "albumcover.webp"},
+    { database: 1,   artist: "The weeknd", album: "Dawnfm", folder: "theweekend/dawnfm", image: "albumcover.png"},
+    { database: 1,   artist: "Laufey", album: "Bewitched", folder: "laufey/bewitched", image: "albumcover.png"},
+    { database: 2,   artist: "Laufey", album: "Everything I Know About Love", folder: "laufey/eikal", image: "albumcover.webp"},
+    { database: 1,   artist: "Roddy Ricch", album: "Live Life Fast", folder: "rr/llf", image: "albumcover.png"},
+    { database: 1,   artist: "Roddy Ricch", album: "Please Excuse Me for Being Antisocial", folder: "rr/pemfba", image: "albumcover.png"},
+    { database: 1,   artist: "Lemon Demon", album: "Spirit phone", folder: "ld/sp", image: "albumcover.png"},
+    { database: 1,   artist: "Lemon Demon", album: "Clown", folder: "ld/cc", image: "albumcover.jpg"},
+    { database: 2,   artist: "Kanye West", album: "The College Dropout", folder: "kanyewest/tcd", image: "albumcover.jpg"},
+    { database: 2,   artist: "Kanye West", album: "Late Registration", folder: "kanyewest/lr", image: "albumcover.webp"},
+    { database: 2,   artist: "Kanye West", album: "Graduation", folder: "kanyewest/grad", image: "albumcover.webp"},
+    { database: 2,   artist: "Kanye West", album: "808s & Heartbreak", folder: "kanyewest/808s", image: "albumcover.png"},
+    { database: 1,   artist: "Kanye West", album: "My Beautiful Dark Twisted Fantasy", folder: "kanyewest/mbdtf", image: "albumcover.jpg"},
+    { database: 2,   artist: "Kanye West", album: "Watch the Throne", folder: "kanyewest/wtt", image: "albumcover.webp"},
+    { database: 2,   artist: "Kanye West", album: "Cruel Summer", folder: "kanyewest/cs", image: "albumcover.webp"},
+    { database: 1,   artist: "Kanye West", album: "Yeezus", folder: "kanyewest/yeezus", image: "Cover.jpg"},
+    { database: 2,   artist: "Kanye West", album: "The Life of Pablo", folder: "kanyewest/tlop", image: "albumcover.webp"},
+    { database: 1,   artist: "Kanye West", album: "Ye", folder: "kanyewest/ye", image: "Cover.jpg" },
+    { database: 2,   artist: "Kanye West", album: "Kids See Ghosts", folder: "kanyewest/ksg", image: "albumcover.png"},
+    { database: 1,   artist: "Kanye West", album: "Jesus Is King", folder: "kanyewest/jesusisking", image: "Cover.jpg" },
+    { database: 1,   artist: "Kanye West", album: "Donda", folder: "kanyewest/donda", image: "cover.webp" },
+    { database: 1,   artist: "Kanye West", album: "Donda 2", folder: "kanyewest/donda2", image: "albumcover.webp" },
+    { database: 2,   artist: "Kanye West", album: "Vultures 1", folder: "kanyewest/vult1", image: "albumcover.webp"},
+    { database: 2,   artist: "Kanye West", album: "Vultures 2", folder: "kanyewest/vult2", image: "albumcover.webp"},
+    { database: 2,   artist: "Kanye West", album: "Vultures 3", folder: "kanyewest/vult3", image: "albumcover.webp"},
+    { database: 1,   artist: "Frank Ocean", album: "Channel Orange", folder: "franko/co", image: "albumcover.webp" },
+    { database: 1,   artist: "Frank Ocean", album: "Blonde", folder: "franko/blonde", image: "albumcover.webp" },
+    { database: 2,   artist: "Billie Eilish", album: "When We All Fall Asleep, Where Do We Go?", folder: "be/wwafawdwg", image: "albumcover.png" },
+    { database: 1,   artist: "Billie Eilish", album: "Happier Than Ever", folder: "be/hte", image: "albumcover.jpg" },
+    { database: 2,   artist: "Billie Eilish", album: "Hit Me Hard and Soft", folder: "be/hmhas", image: "albumcover.png" },
+    { database: 3,   artist: "SZA", album: "SOS", folder: "sza/sos", image: "albumcover.jpg" },
+    { database: 2,   artist: "Kendrick Lamar", album: "Overly Dedicated", folder: "kenla/overded", image: "albumcover.png"},
+    { database: 2,   artist: "Kendrick Lamar", album: "Section.80", folder: "kenla/sec80", image: "albumcover.jpg" },
+    { database: 2,   artist: "Kendrick Lamar", album: "good kid, m.A.A.d city", folder: "kenla/gkmc", image: "albumcover.jpg" },
+    { database: 1,   artist: "Kendrick Lamar", album: "To Pimp a Butterfly", folder: "kenla/tpabf", image: "albumcover.jpg" },
+    { database: 2,   artist: "Kendrick Lamar", album: "Untitled Unmastered", folder: "kenla/um", image: "albumcover.jpg"},
+    { database: 2,   artist: "Kendrick Lamar", album: "Damn", folder: "kenla/dang", image: "albumcover.jpg"},
+    { database: 1,   artist: "Kendrick Lamar", album: "Mr. Morale & the Big Steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
+    { database: 2,   artist: "Billie Holiday", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"},
     // placeholder when starting the app for the first time
-    { database: 0, year: "", artist: "", album: "", folder: "place/holder", image: "nonealbum.png" }
+    { database: 0,   artist: "", album: "", folder: "place/holder", image: "nonealbum.png" }
 ];
+
 var audioTracks = {
     "tylerthecreator/wolf": [
         "WOLF.mp3",
@@ -389,7 +371,7 @@ var audioTracks = {
         "10 From The Start.mp3",
         "11 Misty.mp3",
         "12 Serendipity.mp3",
-        "13 Letter To My 13 Year Old Self.mp3",
+        "13 Letter To My 13 OSelf.mp3",
         "14 Bewitched.mp3"
     ],
     "laufey/eikal": [
@@ -419,7 +401,7 @@ var audioTracks = {
     "ld/cc": [
         "01. Error.mp3",
         "02. Lemon Demon.mp3",
-        "03. Ten Thousand Light Years Away.mp3",
+        "03. Ten Thousand Light  y.mp3",
         "04. Don't Be Like the Sun.mp3",
         "05. Bowling Alley.mp3",
         "06. Wrong.mp3",
@@ -677,328 +659,6 @@ var audioTracks = {
     "kanyewest/vult3": [
         ""
     ],
-    "drake/tml": [
-        "01 Fireworks (Ft. Alicia Keys).mp3",
-        "02 Karaoke.mp3",
-        "03 The Resistance.mp3",
-        "04 Over.mp3",
-        "05 Show Me A Good Time.mp3",
-        "06 Up All Night (Ft. Nicki Minaj).mp3",
-        "07 Fancy (Ft. T.I. & Swizz Beatz).mp3",
-        "08 Shut It Down (Ft. The-Dream).mp3",
-        "09 Unforgettable (Ft. Young Jeezy).mp3",
-        "10 Light Up (Ft. Jay-Z).mp3",
-        "11 Miss Me (Ft. Lil Wayne).mp3",
-        "12 Cece's Interlude.mp3",
-        "13 Find Your Love.mp3",
-        "14 Thank Me Now.mp3"
-    ],
-    "drake/tc": [
-        "01. Over My Dead Body.mp3",
-        "02. Shot For Me.mp3",
-        "03. Headlines (Explicit).mp3",
-        "04. Crew Love.mp3",
-        "05. Take Care.mp3",
-        "06. Marvins Room.mp3",
-        "07. Buried Alive Interlude.mp3",
-        "08. Under Ground Kings.mp3",
-        "09. We'll Be Fine.mp3",
-        "10. Make Me Proud.mp3",
-        "11. Lord Knows.mp3",
-        "12. Cameras ⧸ Good Ones Go Interlude (Medley).mp3",
-        "13. Doing It Wrong.mp3",
-        "14. The Real Her.mp3",
-        "15. Look What You've Done.mp3",
-        "16. HYFR (Hell Ya Fucking Right).mp3",
-        "17. Practice.mp3",
-        "18. The Ride.mp3",
-        "19. The Motto.mp3",
-    ],
-    "drake/nwts": [
-        "01 - Drake - Tuscan Leather.mp3",
-        "02 - Drake - Furthest Thing.mp3",
-        "03 - Drake - Started From The Bottom.mp3",
-        "04 - Drake - Wu-Tang Forever.mp3",
-        "05 - Drake - Own It.mp3",
-        "06 - Drake - Worst Behavior.mp3",
-        "07 - Drake - From Time (Feat. Jhene Aiko).mp3",
-        "08 - Drake - Hold On, We're Going Home (Feat. Majid Jordan).mp3",
-        "09 - Drake - Connect.mp3",
-        "10 - Drake - The Language.mp3",
-        "11 - Drake - 305 To My City (Feat. Detail).mp3",
-        "12 - Drake - Too Much (Feat. Sampha).mp3",
-        "13 - Drake - Pound Cake-Paris Morton Music 2 (Feat. Jay-Z).mp3",
-        "14 - Drake - Come Thru.mp3",
-        "15 - Drake - All Me (Feat. Big Sean & 2 Chainz).mp3",
-        "16 - Drake - The Motion (Feat. Sampha).mp3"
-    ],
-    "drake/iyrtitl": [
-        "01. Legend.mp3",
-        "02. Energy.mp3",
-        "03. 10 Bands.mp3",
-        "04. Know Yourself.mp3",
-        "05. No Tellin'.mp3",
-        "06. Madonna.mp3",
-        "07. 6 God.mp3",
-        "08. Star67.mp3",
-        "09. Preach.mp3",
-        "10. Wednesday Night Interlude.mp3",
-        "11. Used To.mp3",
-        "12. 6 Man.mp3",
-        "13. Now & Forever.mp3",
-        "14. Company.mp3",
-        "15. You & The 6.mp3",
-        "16. Jungle.mp3",
-        "17. 6PM In New York.mp3",
-    ],
-    "drake/wattba": [
-        "01. Digital Dash.mp3",
-        "02. Big Rings.mp3",
-        "03. Live From The Gutter.mp3",
-        "04. Diamonds Dancing.mp3",
-        "05. Scholarships.mp3",
-        "06. Plastic Bag.mp3",
-        "07. I'm The Plug.mp3",
-        "08. Change Locations.mp3",
-        "09. Jumpman.mp3",
-        "10. Jersey.mp3",
-        "11. 30 for 30 Freestyle.mp3",
-    ],
-    "drake/views": [
-        "01 Keep the Family Close.mp3",
-        "02 9.mp3",
-        "03 U With Me_.mp3",
-        "04 Feel No Ways.mp3",
-        "05 Hype.mp3",
-        "06 Weston Road Flows.mp3",
-        "07 Redemption.mp3",
-        "08 With You (feat. PARTYNEXTDOOR).mp3",
-        "09 Faithful (feat. Pimp C & dvsn).mp3",
-        "10 Still Here.mp3",
-        "11 Controlla.mp3",
-        "12 One Dance (feat. Wizkid & Kyla).mp3",
-        "13 Grammys (feat. Future).mp3",
-        "14 Childs Play.mp3",
-        "15 Pop Style.mp3",
-        "16 Too Good (feat. Rihanna).mp3",
-        "17 Summers Over Interlude.mp3",
-        "18 Fire & Desire.mp3",
-        "19 Views.mp3",
-        "20 Hotline Bling.mp3"
-    ],
-    "drake/ml": [
-        "01. Free Smoke.mp3",
-        "02. No Long Talk.mp3",
-        "03. Passionfruit.mp3",
-        "04. Jorja Interlude.mp3",
-        "05. Get It Together.mp3",
-        "06. Madiba Riddim.mp3",
-        "07. Blem.mp3",
-        "08. 4422.mp3",
-        "09. Gyalchester.mp3",
-        "10. Skepta Interlude.mp3",
-        "11. Portland.mp3",
-        "12. Sacrifices.mp3",
-        "13. Nothings Into Somethings.mp3",
-        "14. Teenage Fever.mp3",
-        "15. KMT.mp3",
-        "16. Lose You.mp3",
-        "17. Can't Have Everything.mp3",
-        "18. Glow.mp3",
-        "19. Since Way Back.mp3",
-        "20. Fake Love.mp3",
-        "21. Ice Melts.mp3",
-        "22. Do Not Disturb.mp3",
-    ],
-    "drake/sh": [
-        "1. God's Plan.mp3",
-        "2. Diplomatic Immunity.mp3",
-    ],
-    "drake/scorp": [
-        "1-01 Survival.mp3",
-        "1-02 Nonstop.mp3",
-        "1-03 Elevate.mp3",
-        "1-04 Emotionless.mp3",
-        "1-05 God's Plan.mp3",
-        "1-06 I'm Upset.mp3",
-        "1-07 8 Out Of 10.mp3",
-        "1-08 Mob Ties.mp3",
-        "1-09 Can't Take a Joke.mp3",
-        "1-10 Sandra's Rose.mp3",
-        "1-11 Talk Up (feat. JAY-Z).mp3",
-        "1-12 Is There More.mp3",
-        "2-01 Peak.mp3",
-        "2-02 Summer Games.mp3",
-        "2-03 Jaded.mp3",
-        "2-04 Nice For What.mp3",
-        "2-05 Finesse.mp3",
-        "2-06 Ratchet Happy Birthday.mp3",
-        "2-07 That's How You Feel.mp3",
-        "2-08 Blue Tint.mp3",
-        "2-09 In My Feelings.mp3",
-        "2-10 Don't Matter to Me (feat. Michael Jackson).mp3",
-        "2-11 After Dark (feat. Static Major & Ty Dolla $ign).mp3",
-        "2-12 Final Fantasy.mp3",
-        "2-13 March 14.mp3"
-    ],
-    "drake/tbitwp": [
-        "1. Omertà.mp3",
-        "2. Money In The Grave.mp3",
-    ],
-    "drake/carepack": [
-        "01. Dreams Money Can Buy.mp3",
-        "02. The Motion.mp3",
-        "03. How Bout Now.mp3",
-        "04. Trust Issues.mp3",
-        "05. Days in The East.mp3",
-        "06. Draft Day.mp3",
-        "07. 4pm in Calabasas.mp3",
-        "08. 5 Am in Toronto.mp3",
-        "09. I Get Lonely.mp3",
-        "10. My Side.mp3",
-        "11. Jodeci Freestyle.mp3",
-        "12. Club Paradise.mp3",
-        "13. Free Spirit.mp3",
-        "14. Heat Of The Moment.mp3",
-        "15. Girls Love Beyoncé.mp3",
-        "16. Paris Morton Music.mp3",
-        "17. Can I.mp3",
-    ],
-    "drake/dldt": [
-        "01. Deep Pockets.mp3",
-        "02. When To Say When.mp3",
-        "03. Chicago Freestyle.mp3",
-        "04. Not You Too.mp3",
-        "05. Toosie Slide.mp3",
-        "06. Desires.mp3",
-        "07. Time Flies.mp3",
-        "08. Landed.mp3",
-        "09. D4L.mp3",
-        "10. Pain 1993.mp3",
-        "11. Losses.mp3",
-        "12. From Florida With Love.mp3",
-        "13. Demons.mp3",
-        "14. War.mp3",        
-    ],
-    "drake/sh2": [
-        "1. What's Next.mp3",
-        "2. Wants and Needs.mp3",
-        "3. Lemon Pepper Freestyle.mp3",
-    ],
-    "drake/clb": [
-        "01. Champagne Poetry.mp3",
-        "02. Papi’s Home.mp3",
-        "03. Girls Want Girls.mp3",
-        "04. In The Bible.mp3",
-        "05. Love All.mp3",
-        "06. Fair Trade.mp3",
-        "07. Way 2 Sexy.mp3",
-        "08. TSU.mp3",
-        "09. N 2 Deep.mp3",
-        "10. Pipe Down.mp3",
-        "11. Yebba’s Heartbreak.mp3",
-        "12. No Friends In The Industry.mp3",
-        "13. Knife Talk.mp3",
-        "14. 7am On Bridle Path.mp3",
-        "15. Race My Mind.mp3",
-        "16. Fountains.mp3",
-        "17. Get Along Better.mp3",
-        "18. You Only Live Twice.mp3",
-        "19. IMY2.mp3",
-        "20. Fucking Fans.mp3",
-        "21. The Remorse.mp3"
-    ],
-    
-    "drake/honnvm": [
-        "01. Intro.mp3",
-        "02. Falling Back.mp3",
-        "03. Texts Go Green.mp3",
-        "04. Currents.mp3",
-        "05. A Keeper.mp3",
-        "06. Calling My Name.mp3",
-        "07. Sticky.mp3",
-        "08. Massive.mp3",
-        "09. Flight's Booked.mp3",
-        "10. Overdrive.mp3",
-        "11. Down Hill.mp3",
-        "12. Tie That Binds.mp3",
-        "13. Liability.mp3",
-        "14. Jimmy Cooks.mp3"
-    ],
-    "drake/herloss": [
-        "01. Rich Flex.mp3",
-        "02. Major Distribution.mp3",
-        "03. On BS.mp3",
-        "04. BackOutsideBoyz.mp3",
-        "05. Privileged Rappers.mp3",
-        "06. Spin Bout U.mp3",
-        "07. Hours In Silence.mp3",
-        "08. Treacherous Twins.mp3",
-        "09. Circo Loco.mp3",
-        "10. Pussy & Millions.mp3",
-        "11. Broke Boys.mp3",
-        "12. Middle of the Ocean.mp3",
-        "13. Jumbotron Shit Poppin.mp3",
-        "14. More M’s.mp3",
-        "15. 3AM on Glenwood.mp3",
-        "16. I Guess It’s Fuck Me.mp3",
-    ],
-    "drake/fatd": [
-        "01. Virginia Beach.mp3",
-        "02. Amen.mp3",
-        "03. Calling For You.mp3",
-        "04. Fear Of Heights.mp3",
-        "05. Daylight.mp3",
-        "06. First Person Shooter.mp3",
-        "07. IDGAF.mp3",
-        "08. 7969 Santa.mp3",
-        "09. Slime You Out.mp3",
-        "10. Bahamas Promises.mp3",
-        "11. Tried Our Best.mp3",
-        "12. Screw The World (Interlude).mp3",
-        "13. Drew A Picasso.mp3",
-        "14. Members Only.mp3",
-        "15. What Would Pluto Do.mp3",
-        "16. All The Parties.mp3",
-        "17. 8am in Charlotte.mp3",
-        "18. BBL Love (Interlude).mp3",
-        "19. Gently.mp3",
-        "20. Rich Baby Daddy.mp3",
-        "21. Another Late Night.mp3",
-        "22. Away From Home.mp3",
-        "23. Polar Opposites.mp3",
-    ],
-    "drake/fatdsh": [
-        "01. Virginia Beach.mp3",
-        "02. Amen.mp3",
-        "03. Calling For You.mp3",
-        "04. Fear Of Heights.mp3",
-        "05. Daylight.mp3",
-        "06. First Person Shooter.mp3",
-        "07. IDGAF.mp3",
-        "08. 7969 Santa.mp3",
-        "09. Slime You Out.mp3",
-        "10. Bahamas Promises.mp3",
-        "11. Tried Our Best.mp3",
-        "12. Screw The World (Interlude).mp3",
-        "13. Drew A Picasso.mp3",
-        "14. Members Only.mp3",
-        "15. What Would Pluto Do.mp3",
-        "16. All The Parties.mp3",
-        "17. 8am in Charlotte.mp3",
-        "18. BBL Love (Interlude).mp3",
-        "19. Gently.mp3",
-        "20. Rich Baby Daddy.mp3",
-        "21. Another Late Night.mp3",
-        "22. Away From Home.mp3",
-        "23. Polar Opposites.mp3",
-        "24. Red Button.mp3",
-        "25. Stories About My Brother.mp3",
-        "26. The Shoe Fits.mp3",
-        "27. Wick Man.mp3",
-        "28. Evil Ways.mp3",
-        "29. You Broke My Heart.mp3",
-    ],
     "franko/co": [
         "01 Start.mp3",
         "02 Thinkin Bout You.mp3",
@@ -1228,8 +888,6 @@ var audioTracks = {
         ""
     ],
 };
-let folartRaw = localStorage.getItem("folart");
-let folart = folartRaw && folartRaw !== "" ? JSON.parse(folartRaw) : [];
 var audio = document.getElementById("myAudio");
 var playButton = document.querySelectorAll("#playbuttonthung");
 var volumeControl = document.getElementById("volume");
@@ -1247,14 +905,11 @@ let playbackMode = "none";
 let savedaudio;
 let backgroundcs;
 let backgroundColorr;
-
-if (localStorage.getItem("Volume") !== null) {volumeControl.value = localStorage.getItem("Volume");audio.volume = localStorage.getItem("Volume");}else{audio.volume = 0.5;}
-if (localStorage.getItem("Albumindex") !== null) {currentAlbumIndex = localStorage.getItem("Albumindex");}
-if (localStorage.getItem("Trackindex") !== null) {currentTrackIndex = parseInt(localStorage.getItem("Trackindex"), 10);}
-if (localStorage.getItem("CurrentAlbum") !== null) {currentAlbum = localStorage.getItem("CurrentAlbum");}
-if (localStorage.getItem("timerforaudio") !== null) {audiotimern = localStorage.getItem("timerforaudio");}
-// if (localStorage.getItem("folart") !== null) {folart = localStorage.getItem("folart");}
-//Databases
+var songTimeElement = document.querySelectorAll("#songTime");
+var songDurationElement = document.querySelectorAll("#songDuration");
+var songTimeElement2 = document.getElementById("songTime2");
+var songDurationElement2 = document.getElementById("songDuration2");
+var volumeControl = document.getElementById('volume');
 const databases = [
     { id: 0, url: "https://playmusichtml.web.app/" },
     { id: 1, url: "https://playmusicstorage.web.app/" },
@@ -1267,12 +922,16 @@ const databasesimages = [
     { id: 2, url: "https://playstorage2.web.app/" },
     { id: 3, url: "https://playstorage3.web.app/"}
 ];
+if (localStorage.getItem("Volume") !== null) {volumeControl.value = localStorage.getItem("Volume");audio.volume = localStorage.getItem("Volume");}else{audio.volume = 0.5;}
+if (localStorage.getItem("Albumindex") !== null) {currentAlbumIndex = localStorage.getItem("Albumindex");}
+if (localStorage.getItem("Trackindex") !== null) {currentTrackIndex = parseInt(localStorage.getItem("Trackindex"), 10);}
+if (localStorage.getItem("CurrentAlbum") !== null) {currentAlbum = localStorage.getItem("CurrentAlbum");}
+if (localStorage.getItem("timerforaudio") !== null) {audiotimern = localStorage.getItem("timerforaudio");}
 function fetchDatabase() {
     selectedDatabase = null;
     DatabaseDomain = null;
     selectedDatabase = databases.find(db => db.id === albums[currentAlbumIndex].database);
     DatabaseDomain = selectedDatabase.url;
-// You can add additional database fetching logic here if needed
 }
 function fetchDatabaseImages(item) {
     selectedDatabaseimage = null;
@@ -1284,24 +943,19 @@ fetchDatabase();
 function loadTrack() {      
     fetchDatabase();  
     var trackPath = audioTracks[currentAlbum][currentTrackIndex];
-
     audio.src = DatabaseDomain + "songs/" + currentAlbum + "/" + trackPath;
     audio.load();
     updateTrackText();
     updateAlbumCover();
-    
     mediathinggy();
     localStorage.setItem("Albumindex", currentAlbumIndex);
     localStorage.setItem("Trackindex", currentTrackIndex);
     localStorage.setItem("CurrentAlbum", currentAlbum);
-
     preloadNextTrack(); // Call the function to preload the next track
 }
-
 function preloadNextTrack() {
     let nextTrackIndex = currentTrackIndex + 1;
     let nextAlbum = currentAlbum;
-    // Check if the next track index exceeds the current album's track count
     if (nextTrackIndex >= audioTracks[nextAlbum].length) {
         nextTrackIndex = 0; // Reset to the first track of the album
     }
@@ -1311,45 +965,22 @@ function preloadNextTrack() {
     nextAudio.load(); // This starts loading the track without playing it
 }
 loadTrack();    
-document.addEventListener('keydown', function(event) {
-if (event.key === '\\') {
-    doSomething();
-}
-});
-
-function doSomething() {
-    var iframethingy = document.getElementById("iframeas");
-    if (iframethingy.style.display === "block") {
-        iframethingy.style.display = "none";
-    } else {
-        iframethingy.style.display = "block";
-    }
-}
-
 function playPause() {
     const isPaused = audio.paused;
     audio[isPaused ? 'play' : 'pause']();
     const iconClass = isPaused ? 'fas fa-pause' : 'fas fa-play';
     playButton.forEach(element => element.innerHTML = `<i class="${iconClass}"></i>`);
 }
-
 function setVolume() {
-    // load save volume and set it to the audio if it exists
     audio.volume = volumeControl.value;
     localStorage.setItem("Volume", volumeControl.value);
 }
-
-
-
-var volumeControl = document.getElementById('volume');
 volumeControl.addEventListener('input', setVolume);
-
 function changeTrack(step) {
     console.log(`Saved track from previous: ${localStorage.getItem("Trackindex")}\n Ran ChangeTrack `);
     currentTrackIndex += step;
     console.log(`Before and After currentTrackIndex: ${currentTrackIndex - step} -> ${currentTrackIndex}`);
     let trackCount = audioTracks[currentAlbum].length;
-
     if (playbackMode === "repeat-song") {
         audio.currentTime = 0;
         audio.play();
@@ -1373,20 +1004,14 @@ function changeTrack(step) {
         audio.play();
     };
 }
-
-
 function toggleRepeat() {
     repeatButtonClickCount += 1;
-
-    // After the second click, reset the counter to return to normal playback
     if (repeatButtonClickCount > 1) {
         repeatButtonClickCount = 0;
         playbackMode = "none";
     } else if (repeatButtonClickCount === 1) {
-        // On the first click, enable repeat
         playbackMode = "repeat";
     }
-
     updatePlaybackModeText();
 }
 function updatePlaybackModeText() {
@@ -1397,7 +1022,6 @@ function updatePlaybackModeText() {
         buttonrepeat.innerHTML = '<i class="fa-solid fa-redo" style="color: #ffffff;"></i>';
     }
 }
-// if spacebar is clicked pause without keycode since keycode is deprecated
 document.addEventListener('keydown', function(event) {
     const target = event.target;
     const nodeName = target.nodeName.toLowerCase();
@@ -1405,7 +1029,6 @@ document.addEventListener('keydown', function(event) {
     if (nodeName === 'input' || nodeName === 'textarea') {
         return; // Skip the keyboard shortcuts if the target is an input or textarea
     }
-    
     if (event.code === 'Space') {
         event.preventDefault();
         playPause();
@@ -1437,30 +1060,22 @@ document.addEventListener('keydown', function(event) {
         event.preventDefault();
         toggleRepeat();
     }
-    });
-    
-
-
-
+});
 function skipTrack() {
     changeTrack(1);
 }
-
 function previousTrack() {
     changeTrack(-1);
 }
-
 function seek(event, progressBarId) {
     const percent = event.offsetX / document.getElementById(progressBarId).offsetWidth;
     audio.currentTime = isFinite(percent * audio.duration) ? percent * audio.duration : console.error("Invalid seek time");
 }
-
 function getContrastColor(rgbColor) {
     const [red, green, blue] = rgbColor.match(/\d+/g);
     const brightness = (red * 299 + green * 587 + blue * 114) / 1000;
     return brightness >= 195 ? "#222222" : "white";
 }
-
 function updateThemeColor(color) {
     let themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
     if (!themeColorMetaTag) {
@@ -1470,56 +1085,38 @@ function updateThemeColor(color) {
     }
     themeColorMetaTag.content = color;
 }
-
 function updateAlbumCover() {
     const selectedAlbum = DatabaseDomain + "songs/" + currentAlbum + "/" +albums[currentAlbumIndex].image;
     const image = new Image();
     image.crossOrigin = "Anonymous";
     image.src = selectedAlbum,
     document.querySelectorAll('[id="albumCover"]').forEach(element => element.src = selectedAlbum);
-
     image.onload = function() {
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');
         canvas.width = image.width;
         canvas.height = image.height;
         context.drawImage(image, 0, 0, image.width, image.height);
-
         const [red, green, blue] = context.getImageData(0, 0, canvas.width, canvas.height).data;
         const audioControls = document.querySelector(".audio-controls-full");
         const audioControlsMini = document.querySelector(".audio-controls");
         const rgbColor = `rgb(${red},${green},${blue})`;
-        // border color and background color is darker than the background color
         const backgroundColor = `rgb(${red - 25},${green - 25},${blue - 25})`
         const borderColor = `rgb(${red + 7},${green + 7},${blue + 7})`;
         const textContrastColor = getContrastColor(rgbColor);
-        const sidebarmen = document.getElementsByClassName("sidebarmen")[0];
-
-            updateThemeColor(backgroundColor)
-            
-            audioControls.style.backgroundColor = rgbColor;
-            audioControls.style.color = textContrastColor;
-
-            backgroundcs = rgbColor;
-            backgroundColorr = backgroundColor;
-
-            sidebarmen.style.borderColor = borderColor;
-            sidebarmen.style.backgroundColor = backgroundColor;
-
-
-            document.querySelectorAll('i').forEach(element => element.style.color = textContrastColor);
-            document.body.style.backgroundColor = backgroundColor;
-            document.body.style.color = textContrastColor;
-        
-            audioControlsMini.style.backgroundColor = rgbColor;
-            audioControlsMini.style.color = textContrastColor;
-            audioControlsMini.style.borderColor = borderColor;
+        updateThemeColor(backgroundColor)
+        audioControls.style.backgroundColor = rgbColor;
+        audioControls.style.color = textContrastColor;
+        backgroundcs = rgbColor;
+        backgroundColorr = backgroundColor;
+        document.querySelectorAll('i').forEach(element => element.style.color = textContrastColor);
+        document.body.style.backgroundColor = backgroundColor;
+        document.body.style.color = textContrastColor;
+        audioControlsMini.style.backgroundColor = rgbColor;
+        audioControlsMini.style.color = textContrastColor;
+        audioControlsMini.style.borderColor = borderColor;
     };
 }
-                
-
-
-// Call the updateAlbumCover function when changing albums
 function changeAlbum(step) {
     currentAlbumIndex += step;
     let albumCount = albums.length;
@@ -1534,15 +1131,12 @@ function changeAlbum(step) {
         console.error(`Album not found: ${currentAlbum}`);
     }
 }
-
 function nextAlbum() {
     changeAlbum(1);
 }
-
 function previousAlbum() {
     changeAlbum(-1);
 }
-
 audio.addEventListener("timeupdate", function() {
     const duration = audio.duration;
     if (isFinite(duration)) {
@@ -1551,40 +1145,27 @@ audio.addEventListener("timeupdate", function() {
     }
     localStorage.setItem("timerforaudio", audio.currentTime);
 });
-
 audio.currentTime = localStorage.getItem("timerforaudio");
-
 loadTrack();
-
 audio.addEventListener("ended", skipTrack);
-
 function updateTrackText() {
     var currentTrackElements = document.querySelectorAll(".currentTrack");
     var currentTrack2Elements = document.querySelectorAll(".currentTrack2");
     var currentartist = document.querySelectorAll(".currentartist");
     var currentartist2  = document.querySelectorAll('.currentartist2')
-    
     var artist = albums[currentAlbumIndex].artist;
     var track = audioTracks[currentAlbum][currentTrackIndex];
-
-    // Remove the .mp3 extension from the track name
     track = track.replace(".mp3", "");
-
-    // Remove the numbering at the beginning of the track name, handling extra dash or period
     track = track.replace(/^\d{2,}\s*[-.]*\s*/, "");
-
     currentTrackElements.forEach(function(element) {
         element.textContent = track;
     });
-    
     currentartist.forEach(function(element) {
         element.textContent = artist;
     });
-
     currentartist2.forEach(function(element){
         element.textContent = artist;
     });
-
     currentTrack2Elements.forEach(function(element) {
         element.textContent =  track;
     });
@@ -1593,54 +1174,35 @@ const elementsById = ['songselector', 'accountsettings', 'searching', 'lilbrary'
     obj[id] = document.getElementById(id);
     return obj;
 }, {});
-
 const elementsByClassName = ['audio-controls-full', 'audio-controls', 'sidebarmen'].reduce((obj, className) => {
     obj[className] = document.getElementsByClassName(className);
     return obj;
 }, {});
-
 function hidefullplayer() {
     updateThemeColor(backgroundColorr);
     elementsById['songselector'].style.display = "flex";
     elementsByClassName['audio-controls-full'][0].style.display = "none";
     elementsByClassName['audio-controls'][0].style.display = "flex";
-    elementsByClassName['sidebarmen'][0].style.display = "block";
 }
-
 function openfullplayer() {
     updateThemeColor(backgroundcs);
-    Object.values(elementsById).forEach(element => element.style.display = "none");
     elementsById['songselector'].style.display = "none";
     elementsByClassName['audio-controls-full'][0].style.display = "flex";
     elementsByClassName['audio-controls'][0].style.display = "none";
-    elementsByClassName['sidebarmen'][0].style.display = "none";
 }
-
-
-
-// Call the function to update both elements
 updateTrackText();
-// Add these lines to update the song duration and current time
-var songTimeElement = document.querySelectorAll("#songTime");
-var songDurationElement = document.querySelectorAll("#songDuration");
-var songTimeElement2 = document.getElementById("songTime2");
-var songDurationElement2 = document.getElementById("songDuration2");
 audio.addEventListener("timeupdate", function() {
     var currentTime = audio.currentTime;
     var duration = audio.duration;
-    // Check if duration is a finite number before calculating percentComplete
     if (isFinite(duration)) {
         var percentComplete = (currentTime / duration) * 100;
-        
         progressBar.forEach(function(element) {
             element.value = percentComplete;
         });
-        // Update the song duration and current time
         var currentMinutes = Math.floor(currentTime / 60);
         var currentSeconds = Math.floor(currentTime % 60);
         var durationMinutes = Math.floor(duration / 60);
         var durationSeconds = Math.floor(duration % 60);
-        // Display current time and duration in the format "M:SS"
         songTimeElement.forEach(function(element) {
             element.textContent = textContent = currentMinutes + ":" + (currentSeconds < 10 ? "0" : "") + currentSeconds;
         });
@@ -1651,9 +1213,6 @@ audio.addEventListener("timeupdate", function() {
         songDurationElement2.textContent = durationMinutes + ":" + (durationSeconds < 10 ? "0" : "") + durationSeconds;
     }
 });
-
-
-// load the songs
 document.getElementById("volumeIcon").addEventListener("click", function() {
     var volumeSlider = document.getElementById("volume");
     if (volumeSlider.style.display === "none" || volumeSlider.style.display === "") {
@@ -1662,14 +1221,6 @@ document.getElementById("volumeIcon").addEventListener("click", function() {
         volumeSlider.style.display = "none";
     }
 });
-
-document.getElementById('hideExplicitCheckbox').addEventListener('change', (event) => {
-    localStorage.setItem('hideExplicit', event.target.checked ? 'true' : 'false');
-    // Clear existing content and re-fetch the data
-    const songSelector = document.getElementById('farts');
-    songSelector.innerHTML = '';
-    fetchAndDisplayAlbums();
-    });
     document.getElementById('swithcbox').addEventListener('change', (event) => {
     if (event.target.checked == true) {
         document.getElementById('farts').style.display = "none";
@@ -1685,86 +1236,22 @@ fetch('json/songs.json')
     .then((data) => {
         const songSelector = document.getElementById('farts');
         songSelector.innerHTML = ''; // Clear existing content
-
-        data.albums.sort((a, b) => {
-            const aIsFavorite = folart.includes(a.artist);
-            const bIsFavorite = folart.includes(b.artist);
-            return bIsFavorite - aIsFavorite; // True values (favorites) will come first
-        });
-        
         let currentArtist = ''; // Initialize the current artist
         let albumContainer;
-        
         data.albums.forEach((album, albumIndex) => {
             if (album.artist !== currentArtist) {
-                // Create a new <h1> for a different artist
                 albumContainer = document.createElement('div');
                 albumContainer.className = 'album-container';
-                
                 const artistHeader = document.createElement('h1');
-                const icon = document.createElement('i');
-                const buttonstar = document.createElement('button');
-                icon.className = "fa-regular fa-star";
-                icon.alt = "Star";
-                buttonstar.title = "Favorite Artist"
-                buttonstar.ariaLabel = "Favorite Artist";
                 artistHeader.textContent = album.artist;
-                buttonstar.style.backgroundColor = "none";
-                icon.style.fontSize = "25px";
-                icon.style.marginLeft = "15px";
-                buttonstar.style.color = "inherit";
-
-                
                 songSelector.appendChild(artistHeader);
-                artistHeader.appendChild(buttonstar)
-                buttonstar.appendChild(icon);
-                var clickcount = folart.includes(album.artist) ? 1 : 0;
-                icon.className = clickcount === 1 ? "fa-solid fa-star" : "fa-regular fa-star";
-
-                buttonstar.addEventListener("click", function() {
-                    if (clickcount === 0) {
-                        // Toggle star icon to solid
-                        icon.className = "fa-solid fa-star";
-                        // Add artist to favorites array and save to localStorage
-                        folart.push(album.artist);
-                        localStorage.setItem("folart", JSON.stringify(folart))
-                    } else {
-                        // Toggle star icon to regular
-                        icon.className = "fa-regular fa-star";
-                        // Remove artist from favorites array and update localStorage
-                        const index = folart.indexOf(album.artist);
-                        if (index > -1) {
-                            folart.splice(index, 1);
-                            localStorage.setItem("folart", JSON.stringify(folart));
-                        }
-                    }
-                    // Toggle clickcount between 0 and 1
-                    clickcount = (clickcount === 0) ? 1 : 0;
-                });
-                
-                
-                if (folart.includes(album.artist)) {
-                    // Set star icon as filled for favorite artist
-                    icon.className = "fa-solid fa-star";
-                }
-                // Update the current artist
                 currentArtist = album.artist;
             }
-
-            // Create a button for the album
             const albumButton = document.createElement('button');
-            const imageSize = getSelectedSize(); // Call a function to get the selected size
-            albumButton.innerHTML = `<img src="${album.cover}" alt="${album.album}" class="album-${imageSize}">`;
+            albumButton.innerHTML = `<img src="${album.cover}" alt="${album.album}" class="album-medium">`;
             albumButton.onclick = () => albumsec(albumIndex);
-            // Before the forEach loop that processes albums
-            
             songSelector.appendChild(albumContainer);
-                    
-            // Inside the forEach loop, change appending to albumContainer
             albumContainer.appendChild(albumButton);
-
-    
-            // if "explicit": "true" hide the album and if localstorage is set to hide explicit albums hide them but hide them is set to true
             if (album.explicit === "true" && localStorage.getItem("hideExplicit") === "true") {
                 albumButton.style.display = "none";
                 console.log('albumButton:', albumButton);
@@ -1776,10 +1263,6 @@ fetch('json/songs.json')
                 }});
             }
         });
-        const selectedSize = getSelectedSize();
-        localStorage.setItem('selectedSize', selectedSize);
-        // After all albums have been processed, check if all albums of an artist are explicit
-
     })
     .catch((error) => {
         console.log('Error loading JSON data:', error);
@@ -1787,76 +1270,21 @@ fetch('json/songs.json')
     });
 }
 fetchAndDisplayAlbums();
-const radioOptions = document.getElementsByName('size');
-radioOptions.forEach(option => {
-    option.addEventListener('click', fetchAndDisplayAlbums);
-});
-// Function to get the selected size from the radio button
-function getSelectedSize() {
-const radioOptions = document.getElementsByName('size');
-let selectedSize = localStorage.getItem('selectedSize'); // Check if a value is saved in localStorage
-
-// If no value is saved in localStorage, set the default to "medium"
-if (!selectedSize) {
-    selectedSize = 'medium';
-}
-
-for (let i = 0; i < radioOptions.length; i++) {
-    if (radioOptions[i].value === selectedSize) {
-        radioOptions[i].checked = true; // Check the appropriate radio button based on the saved value
-    }
-    radioOptions[i].addEventListener('click', function() {
-        if (this.checked && this.value !== selectedSize) { // Check if the selected size is different
-            selectedSize = this.value;
-            localStorage.setItem('selectedSize', selectedSize); // Save the selected size to localStorage
-            fetchAndDisplayAlbums(); // Fetch and display albums with the updated size
-        }
-    });
-}
-
-// Return the selected size
-return selectedSize;
-}
-
-navigator.registerProtocolHandler('web+music', './?playalbum=%s');
-// play the selected from the protocol handler
-window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const playParam = urlParams.get('play');
-    if (playParam !== null) {
-        const albumNumber = playParam.split('://')[1];
-        if (albumNumber !== undefined) {
-            albumsec(parseInt(albumNumber, 10));
-        }
-    }
-};
-
-
 function albumsec(albumnumber) {
-    // Retrieve the album details from the albums array
     const albumDetails = albums[albumnumber];
     fetchDatabase();
     if (albumDetails) {
-        // Update the currentAlbumIndex
         currentAlbumIndex = albumnumber;
-
-        // Update the currentAlbum and currentTrackIndex
         currentAlbum = albumDetails.folder;
         currentTrackIndex = 0;
-
-        // Load the track and play it
         loadTrack();
         audio.play();
         playButton.forEach(element => element.innerHTML = `<i class="fas fa-pause"></i>`);
-        // Update the album cover image
         updateAlbumCover();
     } else {
         console.error(`Album with index ${albumnumber} not found in the albums array.`);
     }
 }
-
-
-
 function mediathinggy() {
     const imagealbum = DatabaseDomain + "songs/" + currentAlbum + "/" +albums[currentAlbumIndex].image;
     var track = audioTracks[currentAlbum][currentTrackIndex]
@@ -1867,40 +1295,14 @@ function mediathinggy() {
             title: track,
             artist: albums[currentAlbumIndex].artist,
             album: albums[currentAlbumIndex].album,
-            artwork: [{
-                    src: imagealbum,
-                    sizes: "96x96",
-                    type: "image/webp",
-                },
-                {
-                    src: imagealbum,
-                    sizes: "128x128",
-                    type: "image/webp",
-                },
-                {
-                    src: imagealbum,
-                    sizes: "192x192",
-                    type: "image/webp",
-                },
-                {
-                    src: imagealbum,
-                    sizes: "256x256",
-                    type: "image/webp",
-                },
-                {
-                    src: imagealbum,
-                    sizes: "384x384",
-                    type: "image/webp",
-                },
-                {
-                    src: imagealbum,
-                    sizes: "512x512",
-                    type: "image/webp",
-                },
+            artwork: [{ src: imagealbum, sizes: "96x96", type: "image/webp",},
+                { src: imagealbum, sizes: "128x128",type: "image/webp",},
+                { src: imagealbum, sizes: "192x192", type: "image/webp",},
+                { src: imagealbum, sizes: "256x256", type: "image/webp",},
+                { src: imagealbum, sizes: "384x384", type: "image/webp", },
+                { src: imagealbum, sizes: "512x512", type: "image/webp", },
             ],
         });
-
-
         navigator.mediaSession.setActionHandler("play", () => {
             playPause();
         });
@@ -1918,209 +1320,11 @@ function mediathinggy() {
                 console.error("Invalid or missing details for seekto operation");
             }
         });
-        
         navigator.mediaSession.setActionHandler("previoustrack", () => {
             previousTrack();
         });
         navigator.mediaSession.setActionHandler("nexttrack", () => {
             skipTrack();
         });
-
     }
-}
-function switchthingy(st) {
-    var home = document.getElementById("songselector");
-    var search = document.getElementById("searching");
-    var libaraby = document.getElementById("lilbrary");
-    var login = document.getElementById("mlogin");
-    var accountsettings = document.getElementById("accountsettings");
-    var settings = document.getElementById("settings");
-    var ap = document.getElementById("albumpage");
-    var pp = document.getElementById("playlistpage");
-
-    home.style.display = "none";
-    search.style.display = "none";
-    libaraby.style.display = "none";
-    login.style.display = "none";
-    accountsettings.style.display = "none";
-    settings.style.display = "none";
-    ap.style.display = "none";
-    pp.style.display = "none";
-
-    switch(st) {
-        case "hom":
-            home.style.display = "flex";
-            break;
-        case "lil":
-            libaraby.style.display = "flex";
-            break;
-        case "user":
-            login.style.display = "block";
-            break;
-        case "search":
-            search.style.display = "inline-block";
-            break;
-        case "set":
-            settings.style.display = "block";
-            break;
-        case "ap":
-            ap.style.display = "block";
-            break;
-        case "pp":
-            pp.style.display = "block";
-            break;
-    }
-}
-
-function searchfunction() {
-    const input = document.getElementById('myInput').value.toLowerCase();
-    const listHolder = document.querySelector('#list-holder');
-    listHolder.innerHTML = "";
-        
-for (let i = 0; i < albums.length; i++) {
-    const obj = albums[i];
-    const albumName = obj.album.toLowerCase();
-    const artistName = obj.artist.toLowerCase();
-    fetchDatabaseImages(i)
-if (albumName.includes(input) || artistName.includes(input)) {
-    const div = document.createElement('div');
-    const imagealbum = document.createElement('img');
-    const listitem = document.createElement('li');
-    const label = document.createElement('span');
-    const label2 = document.createElement('span');
-    const br = document.createElement('br');
-    
-    const image = new Image();
-    image.crossOrigin = "Anonymous";
-    image.src = DatabaseimageDomain + "songs/" + albums[i].folder + "/" + obj.image
-
-    image.onload = function() {
-        const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d');
-        canvas.width = image.width;
-        canvas.height = image.height;
-        context.drawImage(image, 0, 0, image.width, image.height);
-
-        const [red, green, blue] = context.getImageData(0, 0, canvas.width, canvas.height).data;
-        const rgbColor = `rgb(${red},${green},${blue})`;
-        const textContrastColor = getContrastColor(rgbColor);
-
-        label2.style.color = textContrastColor;
-        label.style.color = textContrastColor;
-        div.style.backgroundColor = rgbColor;
-        
-    };
-
-    div.style.padding = "10px";
-    div.style.margin = "10px";
-    div.style.width = "200px";
-    div.style.height = "270px"
-    div.style.maxHeight = "300px"; // Set maximum height
-    div.style.overflow = "hidden"; // or "hidden" if you don't want scrollbars
-    div.style.borderRadius = "10px";
-    div.style.display = "inline-block";
-    
-    imagealbum.style.borderRadius = "5px";
-    imagealbum.style.width = "200px";
-    imagealbum.style.height = "200px";
-    
-    label2.style.color = "grey";
-    label.style.color = "white";
-    
-    label.style.fontSize = "1em";
-    label.style.overflow = "hidden";
-    label.style.textOverflow = "ellipsis";
-    
-    label.textContent = `${obj.album}`;
-    label2.textContent = `${obj.artist}`;
-    listitem.style.paddingTop = "10px"
-    div.appendChild(imagealbum);
-    div.appendChild(br); // Add a line break if needed
-    div.appendChild(label);
-    div.appendChild(label2);
-    
-    // Append the div to the document or another parent element
-    
-
-    div.addEventListener('click', function() {
-        document.getElementById('searching').style.display = "none"
-        albumpage(i)
-    });
-    imagealbum.src = DatabaseimageDomain + "songs/" + albums[i].folder + "/" + obj.image;
-    listitem.appendChild(label);
-    listitem.appendChild(br)
-    listitem.appendChild(label2);
-    div.appendChild(imagealbum);
-    div.appendChild(listitem);
-    div.appendChild(document.createElement('br'));
-    listHolder.appendChild(div);
-}
-}
-}
-function albumpage(i) {
-    fetchDatabaseImages(i)
-    const albumpagd = document.getElementById("albumpage")
-    const nameap = document.getElementById("h2ap")
-    const porfileart = document.getElementById("imageap") 
-    const artistalbul = document.getElementById("artistalbul");
-    const tracklist = document.getElementById("trackalbumpg")
-    tracklist.innerHTML = ""
-    artistalbul.textContent = albums[i].artist;
-    albumpagd.style.display = "block";
-    nameap.textContent = `${albums[i].album}`;
-    porfileart.src = DatabaseimageDomain + "songs/" + albums[i].folder + "/" + albums[i].image
-    var tn = albums[i].folder;
-    for (let ij = 0;ij < audioTracks[tn].length; ij++ ) {
-        // alert(audioTracks[tn][ij])
-            trackname = audioTracks[tn][ij].replace(".mp3", "");
-            trackname = trackname.replace(/^\d+\s*[-.]*\s*/, "");
-        const p = document.createElement("p");
-        p.innerHTML = trackname;
-        p.addEventListener("click", function() {
-            currentTrackIndex = ij;
-            currentAlbum = tn;
-            currentAlbumIndex = i;
-            loadTrack();
-            audio.play();
-        });
-        tracklist.appendChild(p);
-    }
-}   
-function darkmode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-}
-
-window.addEventListener("DOMContentLoaded", async event => {
-    installApp()
-});
-
-let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-});
-
-window.addEventListener('appinstalled', (e) => {
-    
-});
-
-async function installApp() {
-    if (deferredPrompt) {
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    deferredPrompt = null;
-    }
-}
-
-// navigator.serviceWorker.addEventListener('message', (event) => {
-// showSnackbar(event.data);
-// });
-
-function showSnackbar(text) {
-    var snackbar = document.getElementById("snackbar");
-    snackbar.innerHTML = text;
-    snackbar.className = "show";
-    setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
 }

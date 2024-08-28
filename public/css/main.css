@@ -59,7 +59,7 @@ a {
   border: none;
   cursor: pointer;
   color: inherit;
-  font-size: 24px;
+  font-size: 20px;
   /* Increase icon size */
 }
 
@@ -212,10 +212,9 @@ audio {
 }
 
 #songselector {
-    padding-left: 2vw;
     display: flex;
     flex-direction: column;
-    margin-left: 12dvh;
+    margin-left: 3dvh;
 }
 
 #albumpage {
@@ -470,12 +469,13 @@ input[type=password] {
 }
 
 #user {
-  right: 100px;
+  right: 1%;
   position: absolute;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 20px;
+  color: gray;
   margin-bottom: 33.2px;
-  margin-top: 33.2px;
+  margin-top: 21px;
 }
 
 #user {
@@ -572,20 +572,9 @@ input[type=password] {
 .grecaptcha-badge {
   visibility: hidden;
 }
-
-.album-small {
-  width: 105px;
-  height: 105px;
-}
-
 .album-medium {
   width: 140px;
   height: 140px;
-}
-
-.album-large {
-  width: 160px;
-  height: 160px;
 }
 
 #buttonys {
