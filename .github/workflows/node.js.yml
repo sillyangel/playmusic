@@ -1,0 +1,28 @@
+name: Deploy to Firebase
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 'latest'
+
+    - name: Deploy to Firebase
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      run: |
+        echo "Deploying to Firebase"
+        firebase deploy --only hosting --token $FIREBASE_TOKEN
+        echo "The site will be deployed to https://playmusichtml.web.app"
