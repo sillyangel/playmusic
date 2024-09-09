@@ -59,7 +59,7 @@ a {
   border: none;
   cursor: pointer;
   color: inherit;
-  font-size: 20px;
+  font-size: 22px;
   /* Increase icon size */
 }
 
@@ -318,7 +318,6 @@ audio {
   flex-wrap: wrap;
   margin-left: 6vw;
 }
-
 #searching {
   width: fit-content;
   flex-direction: column;

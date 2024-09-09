@@ -1086,10 +1086,33 @@ function updateThemeColor(color) {
     themeColorMetaTag.content = color;
 }
 function updateAlbumCover() {
-    const selectedAlbum = DatabaseDomain + "songs/" + currentAlbum + "/" +albums[currentAlbumIndex].image;
+    if (!currentAlbum || currentAlbumIndex === undefined || !albums[currentAlbumIndex]) {
+
+        const defaultColor = "rgb(50, 50, 50)";
+        const defaultTextColor = getContrastColor(defaultColor);
+        const defaultBorderColor = "rgb(75, 75, 75)";
+        
+        updateThemeColor(defaultColor);
+        document.querySelectorAll('[id="albumCover"]').forEach(element => element.src = ""); // Clear album cover
+        const audioControls = document.querySelector(".audio-controls-full");
+        const audioControlsMini = document.querySelector(".audio-controls");
+        
+        audioControls.style.backgroundColor = defaultColor;
+        audioControls.style.color = defaultTextColor;
+        document.querySelectorAll('i').forEach(element => element.style.color = defaultTextColor);
+        document.body.style.backgroundColor = defaultColor;
+        document.body.style.color = defaultTextColor;
+        audioControlsMini.style.backgroundColor = defaultColor;
+        audioControlsMini.style.color = defaultTextColor;
+        audioControlsMini.style.borderColor = defaultBorderColor;
+        
+        return;
+    }
+
+    const selectedAlbum = DatabaseDomain + "songs/" + currentAlbum + "/" + albums[currentAlbumIndex].image;
     const image = new Image();
     image.crossOrigin = "Anonymous";
-    image.src = selectedAlbum,
+    image.src = selectedAlbum;
     document.querySelectorAll('[id="albumCover"]').forEach(element => element.src = selectedAlbum);
     image.onload = function() {
         const canvas = document.createElement('canvas');
@@ -1101,10 +1124,11 @@ function updateAlbumCover() {
         const audioControls = document.querySelector(".audio-controls-full");
         const audioControlsMini = document.querySelector(".audio-controls");
         const rgbColor = `rgb(${red},${green},${blue})`;
-        const backgroundColor = `rgb(${red - 25},${green - 25},${blue - 25})`
+        const backgroundColor = `rgb(${red - 25},${green - 25},${blue - 25})`;
         const borderColor = `rgb(${red + 7},${green + 7},${blue + 7})`;
         const textContrastColor = getContrastColor(rgbColor);
-        updateThemeColor(backgroundColor)
+        
+        updateThemeColor(backgroundColor);
         audioControls.style.backgroundColor = rgbColor;
         audioControls.style.color = textContrastColor;
         backgroundcs = rgbColor;
