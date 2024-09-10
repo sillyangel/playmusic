@@ -28,9 +28,9 @@ jobs:
       shell: bash
 
     - name: Deploy to Firebase
-      env:
-        GOOGLE_APPLICATION_CREDENTIALS: "${HOME}/firebase-service-account.json"
-      run: |
-        echo "Deploying to Firebase"
-        firebase deploy --only hosting
-        echo "The site will be deployed to https://playmusichtml.web.app"
+    - run: npm ci && npm run build
+    - uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PLAYMUSICHTML }}
+          projectId: playmusichtml
