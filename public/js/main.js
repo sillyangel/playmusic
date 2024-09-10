@@ -1267,8 +1267,53 @@ fetch('json/songs.json')
                 albumContainer = document.createElement('div');
                 albumContainer.className = 'album-container';
                 const artistHeader = document.createElement('h1');
+                const icon = document.createElement('i');
+                const buttonstar = document.createElement('button');
+                icon.className = "fa-regular fa-star";
+                icon.alt = "Star";
+                buttonstar.title = "Favorite Artist"
+                buttonstar.ariaLabel = "Favorite Artist";
+                artistHeader.textContent = album.artist;
+                buttonstar.style.backgroundColor = "none";
+                icon.style.fontSize = "25px";
+                icon.style.marginLeft = "15px";
+                buttonstar.style.color = "inherit";
+
+                
                 artistHeader.textContent = album.artist;
                 songSelector.appendChild(artistHeader);
+                artistHeader.appendChild(buttonstar)
+                buttonstar.appendChild(icon);
+                var clickcount = folart.includes(album.artist) ? 1 : 0;
+                icon.className = clickcount === 1 ? "fa-solid fa-star" : "fa-regular fa-star";
+                
+                buttonstar.addEventListener("click", function() {
+                    if (clickcount === 0) {
+                        // Toggle star icon to solid
+                        icon.className = "fa-solid fa-star";
+                        // Add artist to favorites array and save to localStorage
+                        folart.push(album.artist);
+                        localStorage.setItem("folart", JSON.stringify(folart))
+                    } else {
+                        // Toggle star icon to regular
+                        icon.className = "fa-regular fa-star";
+                        // Remove artist from favorites array and update localStorage
+                        const index = folart.indexOf(album.artist);
+                        if (index > -1) {
+                            folart.splice(index, 1);
+                            localStorage.setItem("folart", JSON.stringify(folart));
+                        }
+                    }
+                    // Toggle clickcount between 0 and 1
+                    clickcount = (clickcount === 0) ? 1 : 0;
+                });
+                
+                
+                if (folart.includes(album.artist)) {
+                    // Set star icon as filled for favorite artist
+                    icon.className = "fa-solid fa-star";
+                }
+
                 currentArtist = album.artist;
             }
             const albumButton = document.createElement('button');
