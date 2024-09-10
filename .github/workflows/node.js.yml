@@ -19,7 +19,7 @@ jobs:
       with:
         node-version: 'latest'
 
-    - name: Install dependencies
+    - name: Install Firebase CLI
       run: npm install -g firebase-tools
 
     - name: Set up Firebase service account
