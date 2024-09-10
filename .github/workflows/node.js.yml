@@ -18,12 +18,19 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 'latest'
+
     - name: Install dependencies
       run: npm install -g firebase-tools
+
+    - name: Set up Firebase service account
+      run: |
+        echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}" > "${HOME}/firebase-service-account.json"
+      shell: bash
+
     - name: Deploy to Firebase
       env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PLAYMUSICHTML }}
+        GOOGLE_APPLICATION_CREDENTIALS: "${HOME}/firebase-service-account.json"
       run: |
         echo "Deploying to Firebase"
-        firebase deploy --only hosting --token $FIREBASE_SERVICE_ACCOUNT_PLAYMUSICHTML
+        firebase deploy --only hosting
         echo "The site will be deployed to https://playmusichtml.web.app"
