@@ -27,9 +27,11 @@ jobs:
         echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}" > "${HOME}/firebase-service-account.json"
       shell: bash
 
+    - name: Install dependencies and build
+      run: npm ci && npm run build
+
     - name: Deploy to Firebase
-    - run: npm ci && npm run build
-    - uses: FirebaseExtended/action-hosting-deploy@v0
+      uses: FirebaseExtended/action-hosting-deploy@v0
       with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PLAYMUSICHTML }}
