@@ -4,7 +4,6 @@
     <title>offbrand spotify</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/thing.css">
     <link rel="manifest" href="app.webmanifest">
     <meta name="theme-color" content="#222222"> <!-- Set the theme color to match your background/theme -->
     <link rel="icon" href="./assets/icons/favicon.ico" sizes="any">
@@ -30,7 +29,7 @@
           <p class="currentTrack" style="margin-bottom: 0px;margin-right: 10px;"></p>
           <p class="currentartist" style="font-size: 10px;text-align: center;flex-direction: row;margin-top: 0px;"></p>
         </div>
-        <div class="topbuttons" style="font-size: 25px; width: 100px">
+        <div class="topbuttons" style="font-size: 25px; max-width: 135px;width: 110px;">
           <button aria-label="Back" onclick="previousTrack()"><i class="fa-solid fas fa-backward-step"></i></button>
           <button aria-label="Play/Pause" id="playbuttonthung" onclick="playPause()"><i class="fas fa-play"></i></button>
           <button aria-label="Skip Track" onclick="skipTrack()"><i class="fa-solid fas fa-forward-step"></i></button>
@@ -54,14 +53,17 @@
             <div class="currentTrack2"> </div>
             <div class="currentartist2" style="font-size: 20px; align-self:flex-start;" >Kanye West</div>
             </div>
-           
+            <div class="progress-container">
+              <div id="songTime2">0:00</div>
+              <progress id="progress2" value="0" max="100" onclick="seek(event, 'progress2')"></progress>
+              <div id="songDuration2">0:00</div>
+            </div>
             <div class="control-buttons">
               <button aria-label="Back" onclick="previousTrack()"><i class="fas fa-backward"></i></button>
               <button aria-label="Play/Pause" id="playbuttonthung" onclick="playPause()"><i class="fas fa-play"></i></button>
               <button aria-label="Skip Track" onclick="skipTrack()"><i class="fas fa-forward"></i></button>
             </div>
           </div>
-
           <div id="bottombuttons">
             <button onclick="toggleRepeat()" id="repeatbutton"><i class="fa-solid fa-repeat" style="color: #ffffff;"></i></button>
             <button onclick="lyricsbutton()" id="lyricsbutton"><i class="fas fa-align-left"></i></button>

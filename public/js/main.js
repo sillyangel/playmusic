@@ -1,11 +1,13 @@
-console.log(` 
-     ___ ___ _                 _                _   _ ___     
- ___|  _|  _| |_ ___ ___ ___ _| |   ___ ___ ___| |_|_|  _|_ _ 
-| . |  _|  _| . |  _| .'|   | . |  |_ -| . | . |  _| |  _| | |
-|___|_| |_| |___|_| |__,|_|_|___|  |___|  _|___|_| |_|_| |_  |
-                                       |_|               |___|
-v3 Offline                                                    by angel`)
-
+// ascii art
+////////////////////////////////////////////////////////////////////////// 
+//     ___ ___ _                 _                _   _ ___             //
+// ___|  _|  _| |_ ___ ___ ___ _| |   ___ ___ ___| |_|_|  _|_ _         //
+//| . |  _|  _| . |  _| .'|   | . |  |_ -| . | . |  _| |  _| | |        //
+//|___|_| |_| |___|_| |__,|_|_|___|  |___|  _|___|_| |_|_| |_  |        //
+//                                       |_|               |___|        //
+//v3                                                            by angel//
+//////////////////////////////////////////////////////////////////////////
+// data for the albums
 var albums = [
     { database: 1,   artist: "Tyler, The Creator", album: "Wolf", folder: "tylerthecreator/wolf", image: "albumcover.webp" },
     { database: 1,   artist: "Tyler, The Creator", album: "Flower Boy", folder: "tylerthecreator/flowerboy", image: "albumcover.webp" },
@@ -70,7 +72,7 @@ var albums = [
     // placeholder when starting the app for the first time
     { database: 0,   artist: "", album: "", folder: "place/holder", image: "nonealbum.png" }
 ];
-
+// data for the audiotracks
 var audioTracks = {
     "tylerthecreator/wolf": [
         "WOLF.mp3",
@@ -888,6 +890,9 @@ var audioTracks = {
         ""
     ],
 };
+// varibles for the player (yes)
+let folartRaw = localStorage.getItem("folart");
+let folart = folartRaw && folartRaw !== "" ? JSON.parse(folartRaw) : [];
 var audio = document.getElementById("myAudio");
 var playButton = document.querySelectorAll("#playbuttonthung");
 var volumeControl = document.getElementById("volume");
@@ -910,6 +915,16 @@ var songDurationElement = document.querySelectorAll("#songDuration");
 var songTimeElement2 = document.getElementById("songTime2");
 var songDurationElement2 = document.getElementById("songDuration2");
 var volumeControl = document.getElementById('volume');
+
+// functions to get saved data from local storage
+if (localStorage.getItem("Volume") !== null) {volumeControl.value = localStorage.getItem("Volume");audio.volume = localStorage.getItem("Volume");}else{audio.volume = 0.5;}
+if (localStorage.getItem("Albumindex") !== null) {currentAlbumIndex = localStorage.getItem("Albumindex");}
+if (localStorage.getItem("Trackindex") !== null) {currentTrackIndex = parseInt(localStorage.getItem("Trackindex"), 10);}
+if (localStorage.getItem("CurrentAlbum") !== null) {currentAlbum = localStorage.getItem("CurrentAlbum");}
+if (localStorage.getItem("timerforaudio") !== null) {audiotimern = localStorage.getItem("timerforaudio");}
+
+
+// databases for images and the audio files
 const databases = [
     { id: 0, url: "https://playmusichtml.web.app/" },
     { id: 1, url: "https://playmusicstorage.web.app/" },
@@ -922,11 +937,6 @@ const databasesimages = [
     { id: 2, url: "https://playstorage2.web.app/" },
     { id: 3, url: "https://playstorage3.web.app/"}
 ];
-if (localStorage.getItem("Volume") !== null) {volumeControl.value = localStorage.getItem("Volume");audio.volume = localStorage.getItem("Volume");}else{audio.volume = 0.5;}
-if (localStorage.getItem("Albumindex") !== null) {currentAlbumIndex = localStorage.getItem("Albumindex");}
-if (localStorage.getItem("Trackindex") !== null) {currentTrackIndex = parseInt(localStorage.getItem("Trackindex"), 10);}
-if (localStorage.getItem("CurrentAlbum") !== null) {currentAlbum = localStorage.getItem("CurrentAlbum");}
-if (localStorage.getItem("timerforaudio") !== null) {audiotimern = localStorage.getItem("timerforaudio");}
 function fetchDatabase() {
     selectedDatabase = null;
     DatabaseDomain = null;
@@ -940,6 +950,8 @@ function fetchDatabaseImages(item) {
     DatabaseimageDomain = selectedDatabaseimage.url;
 }
 fetchDatabase();
+
+// function to handle load the audio file
 function loadTrack() {      
     fetchDatabase();  
     var trackPath = audioTracks[currentAlbum][currentTrackIndex];
@@ -953,6 +965,8 @@ function loadTrack() {
     localStorage.setItem("CurrentAlbum", currentAlbum);
     preloadNextTrack(); // Call the function to preload the next track
 }
+
+// says what it does in the function name
 function preloadNextTrack() {
     let nextTrackIndex = currentTrackIndex + 1;
     let nextAlbum = currentAlbum;
@@ -965,6 +979,35 @@ function preloadNextTrack() {
     nextAudio.load(); // This starts loading the track without playing it
 }
 loadTrack();    
+// media functions controls
+function skipTrack() {
+    changeTrack(1);
+}
+function previousTrack() {
+    changeTrack(-1);
+}
+function seek(event, progressBarId) {
+    const percent = event.offsetX / document.getElementById(progressBarId).offsetWidth;
+    audio.currentTime = isFinite(percent * audio.duration) ? percent * audio.duration : console.error("Invalid seek time");
+}
+function toggleRepeat() {
+    repeatButtonClickCount += 1;
+    if (repeatButtonClickCount > 1) {
+        repeatButtonClickCount = 0;
+        playbackMode = "none";
+    } else if (repeatButtonClickCount === 1) {
+        playbackMode = "repeat";
+    }
+    updatePlaybackModeText();
+}
+function updatePlaybackModeText() {
+    var buttonrepeat = document.getElementById("repeatbutton");
+    if (playbackMode === "none") {
+        buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #ffffff;"></i>';
+    } else if (playbackMode === "repeat") {
+        buttonrepeat.innerHTML = '<i class="fa-solid fa-redo" style="color: #ffffff;"></i>';
+    }
+}
 function playPause() {
     const isPaused = audio.paused;
     audio[isPaused ? 'play' : 'pause']();
@@ -1004,24 +1047,7 @@ function changeTrack(step) {
         audio.play();
     };
 }
-function toggleRepeat() {
-    repeatButtonClickCount += 1;
-    if (repeatButtonClickCount > 1) {
-        repeatButtonClickCount = 0;
-        playbackMode = "none";
-    } else if (repeatButtonClickCount === 1) {
-        playbackMode = "repeat";
-    }
-    updatePlaybackModeText();
-}
-function updatePlaybackModeText() {
-    var buttonrepeat = document.getElementById("repeatbutton");
-    if (playbackMode === "none") {
-        buttonrepeat.innerHTML = '<i class="fa-solid fa-repeat" style="color: #ffffff;"></i>';
-    } else if (playbackMode === "repeat") {
-        buttonrepeat.innerHTML = '<i class="fa-solid fa-redo" style="color: #ffffff;"></i>';
-    }
-}
+// shortcuts 4 player
 document.addEventListener('keydown', function(event) {
     const target = event.target;
     const nodeName = target.nodeName.toLowerCase();
@@ -1061,16 +1087,7 @@ document.addEventListener('keydown', function(event) {
         toggleRepeat();
     }
 });
-function skipTrack() {
-    changeTrack(1);
-}
-function previousTrack() {
-    changeTrack(-1);
-}
-function seek(event, progressBarId) {
-    const percent = event.offsetX / document.getElementById(progressBarId).offsetWidth;
-    audio.currentTime = isFinite(percent * audio.duration) ? percent * audio.duration : console.error("Invalid seek time");
-}
+// more functions to handle the color of the album cover
 function getContrastColor(rgbColor) {
     const [red, green, blue] = rgbColor.match(/\d+/g);
     const brightness = (red * 299 + green * 587 + blue * 114) / 1000;
@@ -1085,6 +1102,7 @@ function updateThemeColor(color) {
     }
     themeColorMetaTag.content = color;
 }
+// function to get the color, and display the album cover
 function updateAlbumCover() {
     if (!currentAlbum || currentAlbumIndex === undefined || !albums[currentAlbumIndex]) {
 
@@ -1141,6 +1159,7 @@ function updateAlbumCover() {
         audioControlsMini.style.borderColor = borderColor;
     };
 }
+// change the album with the arrow buttons
 function changeAlbum(step) {
     currentAlbumIndex += step;
     let albumCount = albums.length;
@@ -1172,6 +1191,7 @@ audio.addEventListener("timeupdate", function() {
 audio.currentTime = localStorage.getItem("timerforaudio");
 loadTrack();
 audio.addEventListener("ended", skipTrack);
+// update the track text on the full player and the mini player
 function updateTrackText() {
     var currentTrackElements = document.querySelectorAll(".currentTrack");
     var currentTrack2Elements = document.querySelectorAll(".currentTrack2");
@@ -1202,6 +1222,7 @@ const elementsByClassName = ['audio-controls-full', 'audio-controls', 'sidebarme
     obj[className] = document.getElementsByClassName(className);
     return obj;
 }, {});
+// 2 functions to show and hide the Full Display Song
 function hidefullplayer() {
     updateThemeColor(backgroundColorr);
     elementsById['songselector'].style.display = "flex";
@@ -1215,6 +1236,7 @@ function openfullplayer() {
     elementsByClassName['audio-controls'][0].style.display = "none";
 }
 updateTrackText();
+// change the progress bar to the time of the current song playing
 audio.addEventListener("timeupdate", function() {
     var currentTime = audio.currentTime;
     var duration = audio.duration;
@@ -1237,6 +1259,7 @@ audio.addEventListener("timeupdate", function() {
         songDurationElement2.textContent = durationMinutes + ":" + (durationSeconds < 10 ? "0" : "") + durationSeconds;
     }
 });
+// volume icon display function
 document.getElementById("volumeIcon").addEventListener("click", function() {
     var volumeSlider = document.getElementById("volume");
     if (volumeSlider.style.display === "none" || volumeSlider.style.display === "") {
@@ -1245,6 +1268,7 @@ document.getElementById("volumeIcon").addEventListener("click", function() {
         volumeSlider.style.display = "none";
     }
 });
+// singles and album switcher
     document.getElementById('swithcbox').addEventListener('change', (event) => {
     if (event.target.checked == true) {
         document.getElementById('farts').style.display = "none";
@@ -1254,51 +1278,107 @@ document.getElementById("volumeIcon").addEventListener("click", function() {
         document.getElementById("single").style.display = "none";
     }
 });
+// display the albums on the html page using json data (located at json/songs.json)
 function fetchAndDisplayAlbums () {
-fetch('json/songs.json')
-    .then((response) => response.json())
-    .then((data) => {
-        const songSelector = document.getElementById('farts');
-        songSelector.innerHTML = ''; // Clear existing content
-        let currentArtist = ''; // Initialize the current artist
-        let albumContainer;
-        data.albums.forEach((album, albumIndex) => {
-            if (album.artist !== currentArtist) {
-                albumContainer = document.createElement('div');
-                albumContainer.className = 'album-container';
-                const artistHeader = document.createElement('h1');
-                artistHeader.textContent = album.artist;
-                songSelector.appendChild(artistHeader);
-                currentArtist = album.artist;
-            }
-            const albumButton = document.createElement('button');
-            albumButton.innerHTML = `<img src="${album.cover}" alt="${album.album}" class="album-medium">`;
-            albumButton.onclick = () => albumsec(albumIndex);
-            songSelector.appendChild(albumContainer);
-            albumContainer.appendChild(albumButton);
-            if (album.explicit === "true" && localStorage.getItem("hideExplicit") === "true") {
-                albumButton.style.display = "none";
-                console.log('albumButton:', albumButton);
-                const artistHeaders = document.querySelectorAll('h1');
-                artistHeaders.forEach((artistHeader) => {
-                    const artistAlbums = data.albums.filter(album => album.artist === artistHeader.textContent);
-                        if (artistAlbums.every(album => album.explicit === "true")) {
-                        artistHeader.style.display = "none";
-                }});
-            }
+    fetch('json/songs.json')
+        .then((response) => response.json())
+        .then((data) => {
+            const songSelector = document.getElementById('farts');
+            songSelector.innerHTML = ''; // Clear existing content
+
+            data.albums.sort((a, b) => {
+                const aIsFavorite = folart.includes(a.artist);
+                const bIsFavorite = folart.includes(b.artist);
+                return bIsFavorite - aIsFavorite; // True values (favorites) will come first
+            });
+
+            let currentArtist = ''; // Initialize the current artist
+            let albumContainer;
+            data.albums.forEach((album) => {
+                if (album.artist !== currentArtist) {
+                    albumContainer = document.createElement('div');
+                    albumContainer.className = 'album-container';
+                    const artistHeader = document.createElement('h1');
+                    const icon = document.createElement('i');
+                    const buttonstar = document.createElement('button');
+                    icon.className = "fa-regular fa-star";
+                    icon.alt = "Star";
+                    buttonstar.title = "Favorite Artist"
+                    buttonstar.ariaLabel = "Favorite Artist";
+                    artistHeader.textContent = album.artist;
+                    buttonstar.style.backgroundColor = "none";
+                    icon.style.fontSize = "25px";
+                    icon.style.marginLeft = "15px";
+                    buttonstar.style.color = "inherit";
+
+                    artistHeader.textContent = album.artist;
+                    songSelector.appendChild(artistHeader);
+                    artistHeader.appendChild(buttonstar)
+                    buttonstar.appendChild(icon);
+                    var clickcount = folart.includes(album.artist) ? 1 : 0;
+                    icon.className = clickcount === 1 ? "fa-solid fa-star" : "fa-regular fa-star";
+
+                    buttonstar.addEventListener("click", function() {
+                        if (clickcount === 0) {
+                            // Toggle star icon to solid
+                            icon.className = "fa-solid fa-star";
+                            // Add artist to favorites array and save to localStorage
+                            folart.push(album.artist);
+                            localStorage.setItem("folart", JSON.stringify(folart))
+                        } else {
+                            // Toggle star icon to regular
+                            icon.className = "fa-regular fa-star";
+                            // Remove artist from favorites array and update localStorage
+                            const index = folart.indexOf(album.artist);
+                            if (index > -1) {
+                                folart.splice(index, 1);
+                                localStorage.setItem("folart", JSON.stringify(folart));
+                            }
+                        }
+                        // Toggle clickcount between 0 and 1
+                        clickcount = (clickcount === 0) ? 1 : 0;
+                    });
+
+                    if (folart.includes(album.artist)) {
+                        // Set star icon as filled for favorite artist
+                        icon.className = "fa-solid fa-star";
+                    }
+
+                    currentArtist = album.artist;
+                }
+                // Create a button for each album and points to the function to load up the chosen album
+                const albumButton = document.createElement('button');
+                albumButton.innerHTML = `<img src="${album.cover}" alt="${album.album}" class="album-medium">`;
+                albumButton.onclick = () => albumsec(album.folder);
+                songSelector.appendChild(albumContainer);
+                albumContainer.appendChild(albumButton);
+
+                // delete this very soon
+                if (album.explicit === "true" && localStorage.getItem("hideExplicit") === "true") {
+                    albumButton.style.display = "none";
+                    console.log('albumButton:', albumButton);
+                    const artistHeaders = document.querySelectorAll('h1');
+                    artistHeaders.forEach((artistHeader) => {
+                        const artistAlbums = data.albums.filter(album => album.artist === artistHeader.textContent);
+                            if (artistAlbums.every(album => album.explicit === "true")) {
+                            artistHeader.style.display = "none";
+                    }});
+                }
+            });
+        })
+        .catch((error) => {
+            console.log('Error loading JSON data:', error);
+            console.log('Error loading JSON data:', error);
         });
-    })
-    .catch((error) => {
-        console.log('Error loading JSON data:', error);
-        console.log('Error loading JSON data:', error);
-    });
 }
 fetchAndDisplayAlbums();
-function albumsec(albumnumber) {
-    const albumDetails = albums[albumnumber];
+
+// album selector button
+function albumsec(folder) {
+    const albumDetails = albums.find(album => album.folder === folder);
     fetchDatabase();
     if (albumDetails) {
-        currentAlbumIndex = albumnumber;
+        currentAlbumIndex = albums.indexOf(albumDetails);
         currentAlbum = albumDetails.folder;
         currentTrackIndex = 0;
         loadTrack();
@@ -1306,9 +1386,10 @@ function albumsec(albumnumber) {
         playButton.forEach(element => element.innerHTML = `<i class="fas fa-pause"></i>`);
         updateAlbumCover();
     } else {
-        console.error(`Album with index ${albumnumber} not found in the albums array.`);
+        console.error(`Album with folder ${folder} not found in the albums array.`);
     }
 }
+// fancy media session stuff
 function mediathinggy() {
     const imagealbum = DatabaseDomain + "songs/" + currentAlbum + "/" +albums[currentAlbumIndex].image;
     var track = audioTracks[currentAlbum][currentTrackIndex]
