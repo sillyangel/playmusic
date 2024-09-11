@@ -69,6 +69,8 @@ var albums = [
     { database: 2,   artist: "Kendrick Lamar", album: "Damn", folder: "kenla/dang", image: "albumcover.jpg"},
     { database: 1,   artist: "Kendrick Lamar", album: "Mr. Morale & the Big Steppers", folder: "kenla/mmtbs", image: "albumcover.jpg" },
     { database: 2,   artist: "Billie Holiday", album: "God Bless The Child", folder: "billieh/gbtc", image: "albumcover.jpg"},
+    { database: 2,   artist: "TV Girl", album: "French Exit", folder: "tvgirl/fe", image: "nonealbum.png" },
+    { database: 2,   artist: "TV Girl", album: "Who Really Cares", folder: "tvgirl/wrc", image: "nonealbum.png" },
     // placeholder when starting the app for the first time
     { database: 0,   artist: "", album: "", folder: "place/holder", image: "nonealbum.png" }
 ];

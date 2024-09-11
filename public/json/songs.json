@@ -408,6 +408,18 @@
       "album": "God Bless The Child",
       "folder": "billieh/gbtc",
       "cover": "https://playstorage2.web.app/songs/billieh/gbtc/albumcover.jpg"
+    },
+    {
+      "artist": "TV Girl",
+      "album": "French Exit",
+      "folder": "tvgirl/fe",
+      "cover": "https://playstorage2.web.app/songs/tvgirl/fe/albumcover.jpg"
+    },
+    {
+      "artist": "TV Girl",
+      "album": "Who Really Cares",
+      "folder": "tvgirl/wrc",
+      "cover": "https://playstorage2.web.app/songs/tvgirl/wrc/albumcover.jpg"
     }
   ]
 }
