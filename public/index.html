@@ -16,6 +16,9 @@
           <h2>offbrand spotify</h2>      
           <div id="user"><p>v3</p></div>
           <div id="farts"></div>
+          <div id="no-internet" style="display: none; color: red; text-align: center;">
+            No Internet Connection. Please check your connection and try again.
+          </div>
           <div id="single"></div>
           <br><br><br><br><br><br>
         </div>
@@ -74,6 +77,14 @@
     </audio>
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
-<script>navigator.serviceWorker.register("/sw.js");</script>
+<script>
+  if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').then((registration) => {
+          console.log('Service Worker registered with scope:', registration.scope);
+      }).catch((error) => {
+          console.log('Service Worker registration failed:', error);
+      });
+  }
+</script>
 <script src="js/main.js"></script>
 </html>
