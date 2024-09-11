@@ -1368,7 +1368,9 @@ function fetchAndDisplayAlbums () {
         })
         .catch((error) => {
             console.log('Error loading JSON data:', error);
-            console.log('Error loading JSON data:', error);
+            // Display offline message if fetch fails
+            const songSelector = document.getElementById('farts');
+            songSelector.innerHTML = '<h1>You are offline</h1><p>Please check your internet connection.</p>';
         });
 }
 fetchAndDisplayAlbums();

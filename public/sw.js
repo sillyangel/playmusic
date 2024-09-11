@@ -32,11 +32,12 @@ self.addEventListener('fetch', event => {
 
     // Only handle requests within the same origin
     if (requestURL.origin !== location.origin) {
-        return fetch(event.request);
+        return;
     }
 
     if (event.request.url.includes(EXCLUDE_URL) || event.request.url.endsWith('.mp3')) {
-        return fetch(event.request);
+        event.respondWith(fetch(event.request));
+        return;
     }
 
     event.respondWith(
@@ -49,7 +50,7 @@ self.addEventListener('fetch', event => {
                     return networkResponse;
                 }).catch(() => {
                     // Handle fetch errors
-                    return response || caches.match(OFFLINE_URL);
+                    return caches.match(OFFLINE_URL);
                 });
 
                 return response || fetchPromise;
