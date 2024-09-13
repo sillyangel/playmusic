@@ -15,15 +15,42 @@
         <div id="songselector">
           <h2>offbrand spotify</h2>      
           <div id="user"><p>v3</p></div>
+                   <!-- start of thign-->
+          <div class="header-container">
+              <h2>Home</h2>
+              <h2 id="h23d"><button>Search</button></h2>
+          </div>
           <div id="farts"></div>
+          <!-- no internet thingy-->
           <div id="no-internet" style="display: none; color: red; text-align: center;">
             No Internet Connection. Please check your connection and try again.
           </div>
           <div id="single"></div>
           <br><br><br><br><br><br>
         </div>
+  <div id="albumpage" style="display: none;">
+    <div style="display: flex; align-items: center;">
+      <img src="" width="105px" height="105px" style="margin-bottom: 20px;" id="imageap">
+      <div style="flex-direction: column;margin-bottom: 50px;margin-left: 20px;">
+        <h2 id="h2ap" style="margin-bottom: 0px;">Album Name</h2>
+        <p style="font-size: 15px;margin-top: 0px;margin-left: 2px;" id="artistalbul">Artist name</p>
       </div>
-  </div>
+    </div>
+    <div id="albumssl">
+        <h1>Tracks</h1>
+        <div id="tracklist">
+            <ul id="trackalbumpg">
+            </ul>
+        </div>
+    </div>
+</div>
+<div style="display: none;" id="searching">
+  <h2>Search</h2>
+  <input type="text" id="myInput" onkeyup="searchfunction()" placeholder="Search for songs">
+  <ul id="list-holder">
+  </ul>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
   <div class="audio-controls">
         <div class="album-cover">
             <img id="albumCover" src="./assets/nonealbum.png" alt="Album Cover" width="60px" height="60px">

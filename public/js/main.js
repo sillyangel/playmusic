@@ -888,6 +888,32 @@ var audioTracks = {
         "9. Keeps On A Rainin.mp3",
         "10. The Blues Are Brewin'.mp3",
     ],
+    "tvgirl/fe": [
+        "1. Pantyhose.mp3",
+        "2. Birds Don't Sing.mp3",
+        "3. Louise.mp3",
+        "4. Hate Yourself.mp3",
+        "5. The Getaway.mp3",
+        "6. Talk to Strangers.mp3",
+        "7. The Blonde.mp3",
+        "8. Daughter of a Cop.mp3",
+        "9. Lovers Rock.mp3",
+        "10. Her and Her Friend.mp3",
+        "11. Come When You Call.mp3",
+        "12. Anjela.mp3"
+    ],
+    "tvgirl/wrc": [
+        "1.	Taking What's Not Yours.mp3",
+        "2.	Song About Me.mp3",
+        "3.	Cigarettes out the Window.mp3",
+        "4.	Till You Tell Me to Leave.mp3",
+        "5.	Not Allowed.mp3",
+        "6.	[Do The] Act Like You Never Met Me.mp3",
+        "7.	Safeword.mp3",
+        "8.	For You.mp3",
+        "9.	Loving Machine.mp3",
+        "10. Heaven is a Bedroom.mp3"
+    ],     
     "place/holder": [
         ""
     ],
@@ -1201,11 +1227,16 @@ function updateTrackText() {
     var currentTrackElements = document.querySelectorAll(".currentTrack");
     var currentTrack2Elements = document.querySelectorAll(".currentTrack2");
     var currentartist = document.querySelectorAll(".currentartist");
-    var currentartist2  = document.querySelectorAll('.currentartist2')
+    var currentartist2  = document.querySelectorAll('.currentartist2');
     var artist = albums[currentAlbumIndex].artist;
     var track = audioTracks[currentAlbum][currentTrackIndex];
+    
+    // Remove the number, .mp3 extension, content inside parentheses, and underscores
     track = track.replace(".mp3", "");
     track = track.replace(/^\d{2,}\s*[-.]*\s*/, "");
+    track = track.replace(/\(.*?\)/g, "");
+    track = track.replace(/_/g, " ");
+    
     currentTrackElements.forEach(function(element) {
         element.textContent = track;
     });
@@ -1216,7 +1247,7 @@ function updateTrackText() {
         element.textContent = artist;
     });
     currentTrack2Elements.forEach(function(element) {
-        element.textContent =  track;
+        element.textContent = track;
     });
 }
 const elementsById = ['songselector', 'accountsettings', 'searching', 'lilbrary', 'settings', 'mlogin'].reduce((obj, id) => {
@@ -1440,3 +1471,120 @@ function mediathinggy() {
         });
     }
 }
+
+// search function
+
+function searchfunction() {
+    const input = document.getElementById('myInput').value.toLowerCase();
+    const listHolder = document.querySelector('#list-holder');
+    listHolder.innerHTML = "";
+        
+for (let i = 0; i < albums.length; i++) {
+    const obj = albums[i];
+    const albumName = obj.album.toLowerCase();
+    const artistName = obj.artist.toLowerCase();
+    fetchDatabaseImages(i)
+if (albumName.includes(input) || artistName.includes(input)) {
+    const div = document.createElement('div');
+    const imagealbum = document.createElement('img');
+    const listitem = document.createElement('li');
+    const label = document.createElement('span');
+    const label2 = document.createElement('span');
+    const br = document.createElement('br');
+    
+    const image = new Image();
+    image.crossOrigin = "Anonymous";
+    image.src = DatabaseimageDomain + "songs/" + albums[i].folder + "/" + obj.image
+
+    image.onload = function() {
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        canvas.width = image.width;
+        canvas.height = image.height;
+        context.drawImage(image, 0, 0, image.width, image.height);
+
+        const [red, green, blue] = context.getImageData(0, 0, canvas.width, canvas.height).data;
+        const rgbColor = `rgb(${red},${green},${blue})`;
+        const textContrastColor = getContrastColor(rgbColor);
+
+        label2.style.color = textContrastColor;
+        label.style.color = textContrastColor;
+        div.style.backgroundColor = rgbColor;
+        
+    };
+
+    div.style.padding = "10px";
+    div.style.margin = "10px";
+    div.style.width = "200px";
+    div.style.height = "270px"
+    div.style.maxHeight = "300px"; // Set maximum height
+    div.style.overflow = "hidden"; // or "hidden" if you don't want scrollbars
+    div.style.borderRadius = "10px";
+    div.style.display = "inline-block";
+    
+    imagealbum.style.borderRadius = "5px";
+    imagealbum.style.width = "200px";
+    imagealbum.style.height = "200px";
+    
+    label2.style.color = "grey";
+    label.style.color = "white";
+    
+    label.style.fontSize = "1em";
+    label.style.overflow = "hidden";
+    label.style.textOverflow = "ellipsis";
+    
+    label.textContent = `${obj.album}`;
+    label2.textContent = `${obj.artist}`;
+    listitem.style.paddingTop = "10px"
+    div.appendChild(imagealbum);
+    div.appendChild(br); // Add a line break if needed
+    div.appendChild(label);
+    div.appendChild(label2);
+    
+    // Append the div to the document or another parent element
+    
+
+    div.addEventListener('click', function() {
+        document.getElementById('searching').style.display = "none"
+        albumpage(i)
+    });
+    imagealbum.src = DatabaseimageDomain + "songs/" + albums[i].folder + "/" + obj.image;
+    listitem.appendChild(label);
+    listitem.appendChild(br)
+    listitem.appendChild(label2);
+    div.appendChild(imagealbum);
+    div.appendChild(listitem);
+    div.appendChild(document.createElement('br'));
+    listHolder.appendChild(div);
+}
+}
+}
+function albumpage(i) {
+    fetchDatabaseImages(i)
+    const albumpagd = document.getElementById("albumpage")
+    const nameap = document.getElementById("h2ap")
+    const porfileart = document.getElementById("imageap") 
+    const artistalbul = document.getElementById("artistalbul");
+    const tracklist = document.getElementById("trackalbumpg")
+    tracklist.innerHTML = ""
+    artistalbul.textContent = albums[i].artist;
+    albumpagd.style.display = "block";
+    nameap.textContent = `${albums[i].album}`;
+    porfileart.src = DatabaseimageDomain + "songs/" + albums[i].folder + "/" + albums[i].image
+    var tn = albums[i].folder;
+    for (let ij = 0;ij < audioTracks[tn].length; ij++ ) {
+        // alert(audioTracks[tn][ij])
+            trackname = audioTracks[tn][ij].replace(".mp3", "");
+            trackname = trackname.replace(/^\d+\s*[-.]*\s*/, "");
+        const p = document.createElement("p");
+        p.innerHTML = trackname;
+        p.addEventListener("click", function() {
+            currentTrackIndex = ij;
+            currentAlbum = tn;
+            currentAlbumIndex = i;
+            loadTrack();
+            audio.play();
+        });
+        tracklist.appendChild(p);
+    }
+}   
