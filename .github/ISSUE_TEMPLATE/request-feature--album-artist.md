@@ -1,0 +1,11 @@
+---
+name: Request Feature, Album/Artist
+about: Suggest an idea/Music for this project
+title: "[Request]"
+labels: enhancement, Request
+assignees: ''
+
+---
+
+[comment]: <> ask for anything below or add anything
+[comment]; <> and in the title choose between Song, Artist, Album or Feature
