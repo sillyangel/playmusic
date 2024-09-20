@@ -25,8 +25,13 @@ app.use(express.static('public'));
 
 app.get('/image', async (req, res) => {
     const imageUrl = req.query.url;
+    const allowedDomains = ['example.com', 'another-example.com']; // Add your trusted domains here
     if (imageUrl) {
       try {
+        const url = new URL(imageUrl);
+        if (!allowedDomains.includes(url.hostname)) {
+          return res.status(400).send('Invalid image URL domain.');
+        }
         const response = await axios.get(imageUrl, { responseType: 'arraybuffer' });
         const contentType = response.headers['content-type'];
         res.set('Content-Type', contentType);
