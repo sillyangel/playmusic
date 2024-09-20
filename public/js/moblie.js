@@ -1470,8 +1470,6 @@ var audioTracks = {
         }
     });
     // load the songs
-    
-=
     function fetchAndDisplayAlbums () {
     fetch('../json/songs.json')
         .then((response) => response.json())
