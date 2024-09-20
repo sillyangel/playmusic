@@ -25,7 +25,7 @@ app.use(express.static('public'));
 
 app.get('/image', async (req, res) => {
     const imageUrl = req.query.url;
-    const allowedDomains = ['example.com', 'another-example.com']; // Add your trusted domains here
+    const allowedDomains = ['playmusichtml.web.app', 'sillyangel.github.io']; // Add your trusted domains here
     if (imageUrl) {
       try {
         const url = new URL(imageUrl);
