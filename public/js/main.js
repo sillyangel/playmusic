@@ -1588,3 +1588,14 @@ function albumpage(i) {
         tracklist.appendChild(p);
     }
 }   
+
+// switch between the search and the album page
+function switchpages(a) {
+    if (a == "search") {
+        document.getElementById("searching").style.display = "block";
+        document.getElementById("farts").style.display = "none";
+    } else {
+        document.getElementById("searching").style.display = "none";
+        document.getElementById("farts").style.display = "block";
+    }
+}

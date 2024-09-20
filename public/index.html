@@ -17,9 +17,10 @@
           <div id="user"><p>v3</p></div>
                    <!-- start of thign-->
           <div class="header-container">
-              <h2>Home</h2>
-              <h2 id="h23d"><button>Search</button></h2>
-          </div>
+            <h2 onclick="switchpages('home')" class="clickable">Home</h2>
+            <h2 id="h23d" onclick="switchpages('search')" class="clickable">Search</h2>
+            <h2 id="h23d" onclick="switchpages('settings')" class="clickable">Settings</h2>
+         </div>
           <div id="farts"></div>
           <!-- no internet thingy-->
           <div id="no-internet" style="display: none; color: red; text-align: center;">
@@ -45,7 +46,6 @@
     </div>
 </div>
 <div style="display: none;" id="searching">
-  <h2>Search</h2>
   <input type="text" id="myInput" onkeyup="searchfunction()" placeholder="Search for songs">
   <ul id="list-holder">
   </ul>

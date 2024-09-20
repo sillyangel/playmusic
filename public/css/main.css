@@ -327,7 +327,6 @@ audio {
   flex-wrap: wrap;
   padding-left: 2vw;
   display: flex;
-  margin-left: 12dvh;
 }
 
 #searching input[type=text] {
