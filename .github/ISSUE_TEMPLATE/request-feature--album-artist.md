@@ -7,5 +7,5 @@ assignees: ''
 
 ---
 
-[comment]: <> ask for anything below or add anything
-[comment]; <> and in the title choose between Song, Artist, Album or Feature
+<!-- ask for anything below or add anything
+and in the title, choose between Song, Artist, Album, or Feature-->
