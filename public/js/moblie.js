@@ -1491,7 +1491,11 @@ var audioTracks = {
                 // Create a button for the album
                 const albumButton = document.createElement('button');
                 const imageSize = getSelectedSize(); // Call a function to get the selected size
-                albumButton.innerHTML = `<img src="${album.cover}" alt="${album.album}" class="album-${imageSize}">`;
+                const albumImage = document.createElement('img');
+                albumImage.src = album.cover;
+                albumImage.alt = album.album;
+                albumImage.className = `album-${imageSize}`;
+                albumButton.appendChild(albumImage);
                 albumButton.onclick = () => albumsec(albumIndex);
                 songSelector.appendChild(albumButton);
     
