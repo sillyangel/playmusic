@@ -3,8 +3,8 @@
 <head>
     <title>offbrand spotify</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="manifest" href="app.webmanifest">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="manifest" href="./app.webmanifest">
     <meta name="theme-color" content="#222222"> <!-- Set the theme color to match your background/theme -->
     <link rel="icon" href="./assets/icons/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
@@ -55,7 +55,7 @@
 </div>
   <div class="audio-controls">
         <div class="album-cover">
-            <img id="albumCover" src="./assets/nonealbum.png" alt="Album Cover" width="60px" height="60px">
+            <img id="albumCover" src="songs/place/holder/nonealbum.png" alt="Album Cover" width="60px" height="60px">
         </div>
         <div class="tranks">
           <p class="currentTrack" style="margin-bottom: 0px;margin-right: 10px;"></p>
@@ -108,7 +108,7 @@
 </body>
 <script>
   if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').then((registration) => {
+      navigator.serviceWorker.register('./sw.js').then((registration) => {
           console.log('Service Worker registered with scope:', registration.scope);
       }).catch((error) => {
           console.log('Service Worker registration failed:', error);

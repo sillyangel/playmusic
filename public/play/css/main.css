@@ -1,6 +1,6 @@
 @font-face {
   font-family: circular;
-  src: url("/assets/fonts/CircularSpotifyTxT-Medium.woff2") format("woff2");
+  src: url("../assets/fonts/CircularSpotifyTxT-Medium.woff2") format("woff2");
 }
 
 body {
