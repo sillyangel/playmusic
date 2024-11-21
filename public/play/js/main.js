@@ -1316,7 +1316,7 @@ document.getElementById("volumeIcon").addEventListener("click", function() {
 });
 // display the albums on the html page using json data (located at json/songs.json)
 function fetchAndDisplayAlbums () {
-    fetch('json/songs.json')
+    fetch('play/json/songs.json')
         .then((response) => response.json())
         .then((data) => {
             const songSelector = document.getElementById('farts');
