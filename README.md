@@ -1,7 +1,7 @@
 # playmusic / offbrand spotify
 a very awesome web music player, pwa installable and used to run on firebase 
 demo : [playmusichtml.web.app](https://playmusichtml.web.app/)
-![screenshot](image.png)
+![screenshot]([image.png](https://raw.githubusercontent.com/sillyangel/playmusic/refs/heads/main/image.png))
 > some album work and don't; this isn't perfect
 
 ## backstory
